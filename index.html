@@ -13,22 +13,14 @@
 	<link rel="apple-touch-icon" href="icon/dh-70.png"/>
 	<link rel="apple-touch-icon" sizes="114x114" href="icon/dh-114.png" />
     <link rel="apple-touch-icon" sizes="144x144" href="icon/dh-144.png" />
-	<link rel="stylesheet" type="text/css" href="style.css?ver=1.4">
+	<link rel="stylesheet" type="text/css" href="style.css?ver=1.5">
     <link rel="stylesheet" type="text/css" href="animate.css?ver=1.0">
-
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,300,400" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
-
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js"></script>
 
-	<title>if (name=="한영광") { develop(); }</title>
+	<title>if ($name == "한영광") { develop(); }</title>
 
     <style>
     </style>
@@ -40,7 +32,7 @@
 <div id="header" class="text--center align--middle">
 	<div class="max--width text--left no--transition">
 		<a href="/" class="no--transition">
-			<div id="name">if (name=="한영광") { develop(); }</div>
+			<div id="name">if ($name == "한영광") { develop(); }</div>
 		</a>
 	</div>
 </div>
@@ -164,12 +156,10 @@
 
 </div>
 
+
 <script type="text/javascript">
 
 window.onbeforeunload = function() { window.scrollTo(0,0); }
-
-var skills = true;
-var progresses = document.getElementsByClassName('progress');
 
 window.onscroll = function() { scroll() };
 
@@ -198,7 +188,7 @@ function scroll() {
 
 	} else {
 
-		if (document.body.scrollTop > 880 || document.documentElement.scrollTop > 880) {
+		if (document.body.scrollTop > 780 || document.documentElement.scrollTop > 780) {
 			document.getElementById("header").style.borderBottom = "0.5px solid #ededed";
 			document.getElementById("header").style.position = "fixed";
 			document.getElementById("header").style.background = "rgba(254,254,254,0.93)";
@@ -216,25 +206,6 @@ function scroll() {
 
 	}
 
-}
-
-function skill_progress() {
-	if (!skills) {
-		for (var i = 0; i < progresses.length; i++) {
-			var c = progresses[i].className;
-			c = c[16]+c[17];
-			progresses[i].style.width = c+'%';
-			if (c == '10') {
-				progresses[i].style.width = '100%';
-			}
-		}
-		skills = true;
-	} else {
-		for (var i = 0; i < progresses.length; i++) {
-			progresses[i].style.width = '0%';
-		}
-		skills = false;
-	}
 }
 
 </script>
