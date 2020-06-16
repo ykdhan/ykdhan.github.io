@@ -167,7 +167,7 @@ function scroll() {
 	console.log(document.documentElement.scrollTop+" "+document.documentElement.scrollTop);
 	console.log(window.innerWidth);
 
-	if (window.innerWidth >= 800) {
+	if (window.innerWidth >= 1200) {
 
 
 		if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
@@ -185,10 +185,28 @@ function scroll() {
 
 		}
 
+	} elseif (window.innerWidth >= 800) {
+
+
+			if (document.body.scrollTop > 770 || document.documentElement.scrollTop > 770) {
+				document.getElementById("header").style.borderBottom = "0.5px solid #ededed";
+				document.getElementById("header").style.position = "fixed";
+				document.getElementById("header").style.background = "rgba(254,254,254,0.93)";
+				document.getElementById("header").style.color = "#060606";
+				document.getElementById("top").style.marginTop = "3rem";
+			} else {
+				document.getElementById("header").style.borderBottom = "none";
+				document.getElementById("header").style.position = "inherit";
+				document.getElementById("header").style.background = "#060606";
+				document.getElementById("header").style.color = "#fefefe";
+				document.getElementById("top").style.marginTop = "0";
+
+			}
+
 
 	} else {
 
-		if (document.body.scrollTop > 780 || document.documentElement.scrollTop > 780) {
+		if (document.body.scrollTop > 720 || document.documentElement.scrollTop > 720) {
 			document.getElementById("header").style.borderBottom = "0.5px solid #ededed";
 			document.getElementById("header").style.position = "fixed";
 			document.getElementById("header").style.background = "rgba(254,254,254,0.93)";
