@@ -318,7 +318,7 @@ h1 {
 
 #top {
     background: #060606;
-    background-image: url('img/formal-wide.jpg');
+    background-image: url('src/formal-wide.jpg');
     background-position: top, center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -340,7 +340,7 @@ h1 {
     background-repeat: no-repeat;
     background-position: center -10px;
     background-size: cover;
-    background-image: url('img/profile.jpg');
+    background-image: url('src/profile.jpg');
 }
 
 #info {
@@ -405,7 +405,7 @@ h1 {
     margin: 0 auto;
     padding-top: 6rem;
     padding-bottom: 8rem;
-    //background-image: url("img/dh-pattern.svg");
+    //background-image: url("src/dh-pattern.svg");
     //background-repeat: none;
     //background-size: cover;
     //background-position: center;
@@ -608,7 +608,7 @@ h1 {
 
 @media all and (max-width: 1500px) and (min-width: 1201px) {
     #top {
-        background-image: url('img/formal-wide.jpg');
+        background-image: url('src/formal-wide.jpg');
         padding-top: 3rem;
         padding-bottom: 20rem;
     }
@@ -622,7 +622,7 @@ h1 {
 @media all and (max-width: 1200px) and (min-width: 801px) {
 
     #top {
-        background-image: url('img/formal-wide.jpg');
+        background-image: url('src/formal-wide.jpg');
         padding-top: 3rem;
         padding-bottom: 14rem;
     }
@@ -660,7 +660,7 @@ h1 {
     }
 
     #top {
-        background-image: url('img/formal.jpg');
+        background-image: url('src/formal.jpg');
         padding-top: 3rem;
         padding-bottom: 11rem;
         transition: none;
@@ -756,7 +756,7 @@ h1 {
 @media all and (max-width: 600px) and (min-width: 50px) {
 
     #top {
-        background-image: url('img/formal.jpg');
+        background-image: url('src/formal.jpg');
         padding-top: 3rem;
         padding-bottom: 9rem;
         transition: none;
