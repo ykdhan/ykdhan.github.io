@@ -275,7 +275,7 @@ h1 {
     //font-family: 'Iropke Batang';
     font-family: 'Nanum Gothic Coding', monospace;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
     float: left;
     margin: 1.2rem;
 }
@@ -589,7 +589,7 @@ h1 {
     }
 
     #name {
-        font-size: 1.03rem;
+        font-size: 1.1rem;
     }
 
     #info {
@@ -602,12 +602,7 @@ h1 {
         margin-right: inherit;
     }
     #keywords span {
-        padding: 0.4rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        padding-bottom: 0.5rem;
-        margin: 0.35rem 0.22rem;
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     #skills {
@@ -688,11 +683,23 @@ h1 {
         padding-bottom: 10rem;
     }
 
+    #name {
+        font-size: 0.96rem;
+        margin: 1.2rem 0.5rem;
+    }
 
     #keywords {
         margin-top: 25rem;
         float: inherit;
         margin-right: inherit;
+    }
+    #keywords span {
+        padding: 0.4rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 0.5rem;
+        margin: 0.35rem 0.22rem;
+        font-size: 0.9rem;
     }
 
     .work-info {
