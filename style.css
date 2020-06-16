@@ -769,17 +769,17 @@ h1 {
     }
 
     .work-info {
-        padding: 1.8rem 0.2rem;
+        padding: 1.8rem 0;
     }
 
     .block {
-        height: 6.5rem;
+        height: 6rem;
     }
 
     .skill {
         width: 95%;
-        max-width: 7.2rem;
-        padding: 1.5rem;
+        max-width: 7rem;
+        padding: 1.3rem;
     }
 
 }
