@@ -331,7 +331,7 @@ h1 {
     background-size: cover;
     color: #fefefe;
     padding-top: 3rem;
-    padding-bottom: 26rem;
+    padding-bottom: 29rem;
     transition: none;
 }
 
@@ -551,7 +551,7 @@ h1 {
     #top {
         background-image: url('src/formal-wide.jpg');
         padding-top: 3rem;
-        padding-bottom: 20rem;
+        padding-bottom: 22rem;
     }
     #keywords {
         margin-top: -18rem;
