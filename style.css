@@ -277,7 +277,7 @@ h1 {
 }
 
 #name {
-    font-size: 1.15rem;
+    font-size: 1.25rem;
     //font-family: 'Iropke Batang';
     font-family: 'Nanum Gothic Coding', monospace;
     font-style: normal;
@@ -614,7 +614,7 @@ h1 {
     }
 
     #name {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 
     #info {
@@ -713,7 +713,7 @@ h1 {
     }
 
     #name {
-        font-size: 0.96rem;
+        font-size: 1rem;
         margin: 1.2rem 0.5rem;
     }
 
