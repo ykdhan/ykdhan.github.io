@@ -200,6 +200,9 @@ h1 {
 .align--middle {
     vertical-align: middle;
 }
+.align--top {
+    vertical-align: top;
+}
 
 .box--shadow {
     -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
@@ -208,7 +211,7 @@ h1 {
 }
 
 .max--width {
-    max-width: 900px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 .margin--center {
@@ -235,6 +238,9 @@ h1 {
 }
 .flex--hor {
     flex-direction: column;
+}
+.flex--top {
+    align-items: flex-start;
 }
 .width--100 { width: 100%; }
 .width--95 { width: 95%; }
@@ -404,12 +410,8 @@ h1 {
 #skills {
     transition: all ease-out 0.3s, transform 0s;
     margin: 0 auto;
-    padding-top: 6rem;
-    padding-bottom: 8rem;
-    //background-image: url("src/dh-pattern.svg");
-    //background-repeat: none;
-    //background-size: cover;
-    //background-position: center;
+    padding-top: 9.5rem;
+    padding-bottom: 10.5rem;
 }
 .skill {
     display: inline-block;
@@ -447,6 +449,29 @@ h1 {
     transition: all ease-out 0.3s, width ease-out 0.8s;
 }
 
+
+#infos {
+    font-size: 1rem;
+    color: #060606;
+}
+.info-title {
+    font-size: 1rem;
+    font-weight: 700;
+    padding-top: 1rem;
+}
+.info-skill {
+    font-size: 0.9rem;
+    color: #666;
+}
+.info-info {
+    padding: 2.5rem 3.3rem;
+    text-align: left;
+    line-height: 1.5;
+}
+.info-info p {
+    margin: 0;
+    margin-bottom: 0.6rem;
+}
 
 #works {
     font-size: 1rem;
@@ -606,8 +631,8 @@ h1 {
     }
 
     #skills {
-        padding-top: 4rem;
-        padding-bottom: 4rem;
+        padding-top: 6.5rem;
+        padding-bottom: 7.5rem;
     }
     .skill {
         width: 95%;
@@ -616,6 +641,11 @@ h1 {
     }
     .skill img {
         width: 4rem;
+    }
+
+
+    .info-info {
+        padding: 2rem 4.3rem;
     }
 
 
@@ -644,7 +674,6 @@ h1 {
     .work-logo.long img {
         width: 12.5rem;
     }
-
 
     #bottom {
         padding: 0;
@@ -679,8 +708,8 @@ h1 {
         -webkit-clip-path: polygon(50% 0.7%, 100% 0, 100% 100%, 50% 99.3%, 0 100%, 0 0);
         clip-path: polygon(50% 0.7%, 100% 0, 100% 100%, 50% 99.3%, 0 100%, 0 0);
         padding: 0.3rem;
-        padding-top: 10rem;
-        padding-bottom: 10rem;
+        padding-top: 7rem;
+        padding-bottom: 8rem;
     }
 
     #name {
@@ -700,6 +729,11 @@ h1 {
         padding-bottom: 0.5rem;
         margin: 0.35rem 0.22rem;
         font-size: 0.9rem;
+    }
+
+
+    .info-info {
+        padding: 1.3rem 1rem;
     }
 
     .work-info {

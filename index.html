@@ -13,7 +13,7 @@
 	<link rel="apple-touch-icon" href="icon/dh-70.png"/>
 	<link rel="apple-touch-icon" sizes="114x114" href="icon/dh-114.png" />
     <link rel="apple-touch-icon" sizes="144x144" href="icon/dh-144.png" />
-	<link rel="stylesheet" type="text/css" href="style.css?ver=1.6">
+	<link rel="stylesheet" type="text/css" href="style.css?ver=1.7">
     <link rel="stylesheet" type="text/css" href="animate.css?ver=1.0">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.css" rel="stylesheet">
@@ -59,6 +59,35 @@
 
 <div id="page">
 
+
+	<div id="infos">
+		<div class="max--width text--center">
+			<div class="flexbox mobile--ver flex--top">
+				<div class="flex flex--1 align--top">
+					<div class="item-content work-info">
+						<p class="info-title">1995.10.8</p>
+						<p>서울특별시 관악구 신림동</p>
+					</div>
+				</div>
+				<div class="flex flex--1 align--top">
+					<div class="item-content work-info">
+						<p class="info-title">테일러대학교 (14.8 ~ 18.5)</p>
+						<p>4학년 졸업</p>
+						<p class="info-skill">3.73/4.0</p>
+					</div>
+				</div>
+				<div class="flex flex--1 align--top">
+					<div class="item-content work-info">
+						<p class="info-title">리눅스마스터 2급 (19.4)</p>
+						<p>최종합격</p>
+						<p class="info-title">TOEIC (18.9)</p>
+						<p>945점</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div id="skills">
 		<div class="max--width text--center">
 			<div class="skill">
@@ -90,8 +119,6 @@
 		</div>
 	</div>
 
-
-	<div class="block"></div>
 
 
 	<div class="max--width text--center">
@@ -164,8 +191,8 @@ window.onbeforeunload = function() { window.scrollTo(0,0); }
 window.onscroll = function() { scroll() };
 
 function scroll() {
-	console.log(document.documentElement.scrollTop+" "+document.documentElement.scrollTop);
-	console.log(window.innerWidth);
+	//console.log(document.documentElement.scrollTop+" "+document.documentElement.scrollTop);
+	//console.log(window.innerWidth);
 
 	if (window.innerWidth >= 1200) {
 
