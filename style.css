@@ -163,15 +163,15 @@ input[type='submit'], button {
     font-size: 1.1rem;
     border: 0.5px solid #222222;
     border-radius: 0.2rem;
-    background: #222222;
-    color: #fefefe;
+    color: #222222;
+    background: #fefefe;
     padding: 0.9rem;
     cursor: pointer;
     transition: all 0.2s ease-out;
 }
 input[type='submit']:hover, button:hover {
-    color: #222222;
-    background: #fefefe;
+    background: #222222;
+    color: #fefefe;
 }
 
 
@@ -519,7 +519,7 @@ h1 {
 .work-logo.preview img {
     width: 95%;
     border-radius: 0.4rem;
-    box-shadow: 0 0.03rem 0.08rem #606060;
+    box-shadow: 0 1px 3px #606060;
 }
 .work-logo.long img {
     width: 13rem;
@@ -546,8 +546,16 @@ h1 {
 }
 .work-skill button {
     float: right;
-    padding: 0.4rem 0.9rem;
-    margin-top: -0.5rem;
+    padding: 0;
+    font-size: 0.9rem;
+    color: #666;
+    border: none;
+    background: none;
+    margin-top: 0.05rem;
+}
+.work-skill button:hover {
+    color: #060606;
+    background: none;
 }
 
 
@@ -569,12 +577,12 @@ h1 {
     margin-bottom: 4rem;
     font-size: 1.1rem;
     border: 1px solid #fefefe;
-    color: #fefefe;
-    background: none;
-}
-#bottom button:hover {
     background: #fefefe;
     color: #060606;
+}
+#bottom button:hover {
+    color: #fefefe;
+    background: #060606;
 }
 
 
@@ -844,6 +852,11 @@ h1 {
 
 @media all and (max-width: 600px) and (min-width: 50px) {
 
+
+    .flexbox {
+        padding: 1.5rem;
+    }
+
     #top {
         background-image: url('src/formal.jpg');
         padding-top: 3rem;
@@ -887,6 +900,9 @@ h1 {
 
     .work-logo.preview {
         padding: 1.8rem 0;
+    }
+    .work-logo.preview img {
+        width: 99%;
     }
     .work-info {
         padding: 1.8rem 0;
