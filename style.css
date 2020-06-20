@@ -519,7 +519,7 @@ h1 {
 .work-logo.preview img {
     width: 95%;
     border-radius: 0.4rem;
-    box-shadow: 0 1px 3px #999;
+    box-shadow: 0 1px 3px #bbb;
 }
 .work-logo.long img {
     width: 13rem;
