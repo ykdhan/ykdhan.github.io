@@ -351,10 +351,10 @@ h1 {
     background-image: url('src/formal-wide.jpg');
     background-position: top, center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     color: #fefefe;
     padding-top: 3rem;
-    padding-bottom: 29rem;
+    padding-bottom: 21rem;
     transition: none;
 }
 
@@ -403,8 +403,8 @@ h1 {
 #page {
     margin-top: -10rem;
     margin-bottom: -5rem;
-    -webkit-clip-path: polygon(50% 2%, 100% 0, 100% 100%, 50% 98%, 0 100%, 0 0);
-    clip-path: polygon(50% 2%, 100% 0, 100% 100%, 50% 98%, 0 100%, 0 0);
+    -webkit-clip-path: polygon(50% 3%, 100% 0, 100% 100%, 50% 97%, 0 100%, 0 0);
+    clip-path: polygon(50% 3%, 100% 0, 100% 100%, 50% 97%, 0 100%, 0 0);
     background: #fefefe;
     padding: 1rem;
     padding-top: 10rem;
@@ -518,7 +518,7 @@ h1 {
 }
 .work-logo.preview img {
     width: 95%;
-    border-radius: 0.4rem;
+    border-radius: 4px;
     box-shadow: 0 1px 3px #bbb;
 }
 .work-logo.long img {
@@ -569,8 +569,8 @@ h1 {
     font-size: 1rem;
 }
 #bottom button {
-    width: 22rem;
-    border-radius: 100px;
+    width: 20rem;
+    border-radius: 4px;
     padding-top: 0.7rem;
     padding-bottom: 0.7rem;
     margin-top: 4rem;
@@ -704,6 +704,7 @@ h1 {
 @media all and (max-width: 1500px) and (min-width: 1201px) {
     #top {
         background-image: url('src/formal-wide.jpg');
+        background-size: contain;
         padding-top: 3rem;
         padding-bottom: 22rem;
     }
@@ -718,6 +719,7 @@ h1 {
 
     #top {
         background-image: url('src/formal-wide.jpg');
+        background-size: cover;
         padding-top: 3rem;
         padding-bottom: 14rem;
     }
@@ -756,6 +758,7 @@ h1 {
 
     #top {
         background-image: url('src/formal.jpg');
+        background-size: cover;
         padding-top: 3rem;
         padding-bottom: 11rem;
         transition: none;
@@ -859,8 +862,9 @@ h1 {
 
     #top {
         background-image: url('src/formal.jpg');
-        padding-top: 3rem;
-        padding-bottom: 9rem;
+        background-size: cover;
+        padding-top: 2.5rem;
+        padding-bottom: 8rem;
         transition: none;
     }
 
