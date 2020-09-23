@@ -1,87 +1,15 @@
-
-@font-face {
-  font-family: 'Iropke Batang';
-  font-style: normal;
-  font-weight: 400;
-  src: url(//cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.eot);
-  src: url(//cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.eot?#iefix) format('embedded-opentype'),
-       url(//cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.woff) format('woff'),
-       url(//cdn.jsdelivr.net/font-iropke-batang/1.2/IropkeBatangM.ttf) format('truetype');
-}
-
 @font-face {
     font-family: 'NEXON Lv1 Gothic OTF';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
-
 @font-face {
-  font-family: 'NanumBarunGothic';
-  font-style: normal;
-  font-weight: 400;
-  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
-  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'),
-       url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'),
-       url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+    font-family: 'NEXON Lv1 Gothic OTF Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
-@font-face {
-  font-family: 'NanumBarunGothic';
-  font-style: normal;
-  font-weight: 700;
-  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot');
-  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix') format('embedded-opentype'),
-       url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff') format('woff'),
-       url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'NanumBarunGothic';
-  font-style: normal;
-  font-weight: 300;
-  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot');
-  src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'),
-       url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'),
-       url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype');
-}
-
-
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@700&display=swap');
-
-@font-face {
-  font-family: "San Francisco Display Ultralight";
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.eot?#iefix) format("embedded-opentype"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff2) format("woff2"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff) format("woff"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.ttf) format("truetype"), url("fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.svg#San Francisco Display Ultralight") format("svg")
-}
-
-@font-face {
-  font-family: "San Francisco Display Thin";
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.eot?#iefix) format("embedded-opentype"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff2) format("woff2"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff) format("woff"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.ttf) format("truetype"), url("fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.svg#San Francisco Display Thin") format("svg")
-}
-
-@font-face {
-  font-family: "San Francisco Display Medium";
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.eot?#iefix) format("embedded-opentype"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff2) format("woff2"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff) format("woff"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.ttf) format("truetype"), url("fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.svg#San Francisco Display Medium") format("svg")
-}
-
-@font-face {
-  font-family: "San Francisco Display Semibold";
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.eot?#iefix) format("embedded-opentype"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff2) format("woff2"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff) format("woff"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.ttf) format("truetype"), url("fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.svg#San Francisco Display Semibold") format("svg")
-}
-
-@font-face {
-  font-family: "San Francisco Display Bold";
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.eot?#iefix) format("embedded-opentype"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff2) format("woff2"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff) format("woff"), url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.ttf) format("truetype"), url("fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.svg#San Francisco Display Bold") format("svg")
-}
-
 
 .animated {
   animation-duration: 1s;
@@ -119,20 +47,21 @@
 html {
     box-sizing: border-box;
     display: block;
-	background: #fefefe;
+	background: #fafafa;
 }
 
 body {
     box-sizing: border-box;
     padding: 0;
-    margin: 0;
-    font-family: 'NanumBarunGothic';
+    margin: 0 auto;
+    font-family: 'NEXON Lv1 Gothic OTF';
     font-style: normal;
     font-weight: 400;
-	color : #fefefe;
-	font-size: 1.1rem;
-	background: #060606;
+	color : #2d2d2d;
+	font-size: 0.9rem;
     width: 100%;
+    max-width: 950px;
+    border: 0;
 }
 
 a {
@@ -147,12 +76,17 @@ a, a * {
     cursor: pointer;
 }
 
+p {
+    margin: 0;
+    padding: 0;
+}
+
 input, select, button, textarea, pre {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
 	font-size: 0.9rem;
-    font-family: 'NanumBarunGothic';
+    font-family: 'NEXON Lv1 Gothic OTF';
     font-style: normal;
     font-weight: 400;
     outline: none;
@@ -161,32 +95,17 @@ input, select, button, textarea, pre {
 
 input[type='submit'], button {
     font-size: 1.1rem;
-    border: 0.5px solid #222222;
+    border: 1px solid #2d2d2d;
     border-radius: 0.2rem;
-    color: #222222;
-    background: #fefefe;
-    padding: 0.9rem;
+    color: #2d2d2d;
+    background: #fff;
+    padding: 0.85rem;
     cursor: pointer;
     transition: all 0.2s ease-out;
 }
 input[type='submit']:hover, button:hover {
-    background: #222222;
-    color: #fefefe;
-}
-
-
-h1 {
-    display: block;
-    font-size: 1.5rem;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 400;
-    text-transform: uppercase;
-    padding: 0.6rem 2rem;
-    background: #222222;
-    color: #fefefe;
-    width: 15rem;
-    margin: 1rem auto;
-    border-radius: 100px;
+    background: #2d2d2d;
+    color: #fff;
 }
 
 .mobile {
@@ -194,14 +113,14 @@ h1 {
 }
 
 .font--highlight {
-    color: #222222;
+    color: #2d2d2d;
 }
 .font--white {
     color: #fefefe;
 }
 
 .font--bold {
-    font-weight: 700;
+    font-family: 'NEXON Lv1 Gothic OTF Bold';
 }
 .bg--color {
     background: #313541;
@@ -210,9 +129,6 @@ h1 {
 .bg--white {
     background: #fefefe;
     color: #313541;
-}
-.bg--gradient {
-    background-image: linear-gradient(60deg, #222222 0%, #485563 100%);
 }
 .text--center { text-align: center; }
 .text--left { text-align: left; }
@@ -234,7 +150,7 @@ h1 {
 }
 
 .max--width {
-    max-width: 1100px;
+    max-width: 950px;
     margin: 0 auto;
 }
 .margin--center {
@@ -290,302 +206,240 @@ h1 {
 
 #header {
     width: 100%;
-    //position: fixed;
+    position: fixed;
     z-index: 20;
     top: 0;
-    //background: rgba(254,254,254,0.93);
-    transition: all ease-out 0.3s, border 0s, background 0s, color 0s;
-    background: rgb(3,3,3);
-    color: #fefefe;
+    left: 0;
+    background: #fff;
+    color: #2d2d2d;
+    border: 0;
+    border-bottom: 1px solid #eaeaea;
+}
+#header #logo {
+    font-size: 1.2rem;
+    margin: 1.3rem 0;
+    font-family: 'NEXON Lv1 Gothic OTF Bold';
+    letter-spacing: 0.4rem;
+}
+#header #logo span {
+    color: #1335d6;
+    letter-spacing: 0.4rem;
 }
 
-#name {
-    font-size: 1.25rem;
-    //font-family: 'Iropke Batang';
-    font-family: 'Nanum Gothic Coding', monospace;
-    font-style: normal;
-    font-weight: 400;
-    float: left;
-    margin: 1.2rem;
-}
-#name div {
-    display: inline;
-    font-size: 1.4rem;
-    animation: font-appear 2s ease-out;
-}
-@keyframes font-appear {
-    0% { font-size: 0; }
-    70% { font-size: 0; }
-    100% { font-size: 1.4rem; }
-}
-
-#logo {
-    width: auto;
-    height: 2.5rem;
-    padding: 0;
-    margin: 1rem;
-}
-
-#menu {
-    float: right;
-    text-align: right;
-    margin-top: 1.55rem;
-    transition: all ease-out 0.3s, color 0s;
-}
-#menu div {
-    margin-left: 2rem;
-    margin-right: 1rem;
-    font-size: 1.1rem;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 400;
-    transition: all ease-out 0.3s, color 0s;
-    display: inline-block;
-}
-#menu div.now {
-    font-weight: 500;
-}
-
-
-#top {
-    background: #060606;
-    background-image: url('src/formal-wide.jpg');
-    background-position: top, center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    color: #fefefe;
-    padding-top: 3rem;
-    padding-bottom: 21rem;
-    transition: none;
-}
 
 #profile {
-    margin: 2rem;
+    position: fixed;
+    right: calc(50% - 475px);
+    top: 0;
+    padding-top: 6rem;
+    width: 300px;
 }
-
-#picture {
-    width: 15rem;
-    height: 15rem;
+#profile #picture {
+    width: 10rem;
+    height: 10rem;
     margin: 0 auto;
     border-radius: 50%;
     background-repeat: no-repeat;
-    background-position: center -10px;
+    background-position: center -1.5rem;
     background-size: cover;
-    background-image: url('src/profile.jpg');
+    background-image: url('src/formal.jpg');
+}
+#profile #name {
+    font-size: 1.1rem;
+    font-family: 'NEXON Lv1 Gothic OTF Bold';
+    text-align: center;
+    margin: 1.5rem auto;
+}
+#profile #link {
+    text-align: center;
+    margin: 1.5rem auto;
+    margin-bottom: 1rem;
+    padding: 0 2rem;
+}
+#profile #link a {
+    width: auto;
+    height: auto;
+}
+#profile #link button {
+    width: 100%;
+    display: block;
+    background: #fff;
+    color: #2d2d2d;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    padding-top: 0.3rem;
+    padding-bottom: 0.2rem;
+    margin: 0;
+    font-size: 0.9rem;
+    font-family: 'NEXON Lv1 Gothic OTF Bold';
+}
+#profile #link button.github {
+    margin-bottom: 0.2rem;
+    background: #1a1414;
+}
+#profile #link button.mail {
+    background: #1335d6;
+}
+#profile #link button.github:hover {
+    background: #302b2b;
+}
+#profile #link button.mail:hover {
+    background: #2a49da;
+}
+#profile #link img {
+    width: 1.8rem;
+    height: auto;
+    margin: 0;
 }
 
 #info {
-    margin-bottom: 32rem;
+    font-size: 0.9rem;
 }
-
-#keywords {
-    width: 90%;
-    max-width: 20rem;
-    margin: 2rem auto;
-    margin-top: -15rem;
-    margin-right: 2rem;
-    float: right;
+#info .section {
+    padding: 0.7rem 2rem;
 }
-#keywords span {
-    background: #111;
-    border-radius: 100px;
-    padding: 0.5rem;
-    padding-left: 1.1rem;
-    padding-right: 1.1rem;
-    padding-bottom: 0.6rem;
-    color: #fefefe;
-    display: inline-block;
-    margin: 0.5rem 0.25rem;
-    font-size: 1rem;
+#info .section p {
+    margin: 0.8rem auto;
 }
-
+#info .section .title {
+    font-family: 'NEXON Lv1 Gothic OTF Bold';
+}
+#info .section img {
+    width: 1.7rem;
+    height: auto;
+    margin: 0;
+    margin-right: 0.7rem;
+    margin-bottom: -0.5rem;
+}
 
 
 #page {
-    margin-top: -10rem;
-    margin-bottom: -5rem;
-    -webkit-clip-path: polygon(50% 3%, 100% 0, 100% 100%, 50% 97%, 0 100%, 0 0);
-    clip-path: polygon(50% 3%, 100% 0, 100% 100%, 50% 97%, 0 100%, 0 0);
-    background: #fefefe;
-    padding: 1rem;
-    padding-top: 10rem;
-    padding-bottom: 10rem;
+    padding: 6rem 0;
+    padding-right: calc(300px + 1rem);
 }
-.title {
-    font-size: 1.1rem;
-    font-family: 'Quicksand', sans-serif !important;
-    font-weight: 400;
-    color: #222;
-    text-transform: lowercase;
-    border-bottom: 0.1rem solid #222;
-    padding: 0.7rem;
-    margin: 2rem auto;
-    width: 85%;
+
+#keywords {
+    margin: 0;
+    margin-bottom: 2rem;
+    text-align: left;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
 }
-.title.white {
-    color: #fefefe;
-    border-bottom: 0.1rem solid #fefefe;
-}
-.block {
-    height: 7rem;
+#keywords span {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    margin-right: 1rem;
+    font-size: 0.9rem;
 }
 
 
 #skills {
-    transition: all ease-out 0.3s, transform 0s;
-    margin: 0 auto;
-    padding-top: 9.5rem;
-    padding-bottom: 10.5rem;
+    background: #fff;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    padding: 1.2rem 1.8rem;
+    margin: 0;
+    margin-bottom: 2rem;
+    text-align: left;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    transition: all ease-out 0.2s, transform 0s;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+#skills::-webkit-scrollbar {
+   display: none;
 }
 .skill {
     display: inline-block;
-    width: 95%;
-    max-width: 10rem;
-    padding: 2rem;
+}
+.skill:not(:last-child) {
+    margin-right: 2rem;
 }
 .skill img {
-    width: 5rem;
+    width: 3.5rem;
     height: auto;
     vertical-align: middle;
     transform-origin: center;
 }
 .skill:hover img {
-    transform: scale(1.06);
+    transform: scale(1.05);
 }
 
 
 
-.progressbar {
-    text-align: left;
-    margin: 0 auto;
-    border: 0.1rem solid #222;
-    padding: 0;
-    border-radius: 100px;
+.experience {
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    background: #fff;
+    margin-bottom: 2rem;
 }
-.progress {
-    background: #222;
-    color: #fefefe;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    padding: 0;
-    border-radius: 100px 0 0 100px;
-    height: 0.7rem;
-    transition: all ease-out 0.3s, width ease-out 0.8s;
-}
-
-
-#infos {
-    font-size: 1rem;
-    color: #060606;
-}
-.info-title {
-    font-size: 1rem;
-    font-weight: 700;
-    padding-top: 1rem;
-}
-.info-skill {
-    font-size: 0.9rem;
-    color: #666;
-}
-.info-info {
-    padding: 2.5rem 3.3rem;
-    text-align: left;
-    line-height: 1.5;
-}
-.info-info p {
-    margin: 0;
-    margin-bottom: 0.6rem;
-}
-
-#works {
-    font-size: 1rem;
-    color: #060606;
-}
-.item-content {
-    vertical-align: middle;
-    box-sizing: content-box;
-    height: auto;
-    flex: 1;
-    align-self: center;
-}
-.work-logo {
-    padding: 3rem 0;
-}
-.work-logo img {
+.experience .logo img {
     width: 9rem;
     height: auto;
     vertical-align: middle;
     transform-origin: center;
 }
-.work-logo.preview img {
-    width: 95%;
-    border-radius: 4px;
-    box-shadow: 0 1px 3px #bbb;
-}
-.work-logo.long img {
-    width: 13rem;
-}
-.work-logo img:hover {
-    transform: scale(1.06);
-}
-.work-info {
-    padding: 2.5rem 3.3rem;
-    text-align: left;
-    line-height: 1.5;
-}
-.work-info p {
-    margin: 0;
-    margin-bottom: 0.6rem;
-}
-.work-title {
-    font-size: 1rem;
-    font-weight: 700;
-}
-.work-skill {
-    font-size: 0.9rem;
-    color: #666;
-}
-.work-skill button {
-    float: right;
-    padding: 0;
-    font-size: 0.9rem;
-    color: #666;
-    border: none;
-    background: none;
-    margin-top: 0.05rem;
-}
-.work-skill button:hover {
-    color: #060606;
-    background: none;
-}
-
-
-
-#bottom {
+.experience .preview img {
     width: 100%;
-    padding: 10rem;
-    background: #060606;
-    color: #fefefe;
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+}
+.experience .top {
+    text-align: left;
+    padding: 1.2rem;
+}
+.experience .top a {
+    float: right;
+    margin-top: -2rem;
+}
+.experience .top a img {
+    width: 1.5rem;
+    height: auto;
+    margin: 0;
+    margin-top: -0.15rem;
+}
+.experience .top .title {
+    font-size: 0.9rem;
+    font-family: 'NEXON Lv1 Gothic OTF Bold';
+    margin-bottom: 0.5rem;
+}
+.experience .top .date {
+    font-size: 0.85rem;
+    color: #777;
+}
+.experience .content {
+    text-align: left;
+    padding: 1.7rem 1.2rem;
+}
+.experience .content p {
+    line-height: 1.6;
+    margin-bottom: 1.3rem;
+    font-size: 0.9rem;
+}
+.experience .content .skill {
+    margin: 0;
+}
+.experience .content .skill span {
+    display: inline-block;
+    width: auto;
+    color: #1335d6;
+    font-family: 'NEXON Lv1 Gothic OTF Bold';
+    font-size: 0.85rem;
+    margin-right: 0.8rem;
+}
+
+
+#footer {
+    width: 100%;
+    padding: 2rem 0;
+    color: #9d9d9d;
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
-#bottom button {
-    width: 20rem;
-    border-radius: 4px;
-    padding-top: 0.7rem;
-    padding-bottom: 0.7rem;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
-    font-size: 1.1rem;
-    border: 1px solid #fefefe;
-    background: #fefefe;
-    color: #060606;
-}
-#bottom button:hover {
-    color: #fefefe;
-    background: #060606;
-}
-
-
 
 
 
@@ -835,13 +689,13 @@ h1 {
         width: 12.5rem;
     }
 
-    #bottom {
+    #footer {
         padding: 0;
         padding-top: 7rem;
         padding-bottom: 7rem;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
-    #bottom button {
+    #footer button {
         width: 18rem;
         padding-top: 0.7rem;
         padding-bottom: 0.7rem;
@@ -894,7 +748,7 @@ h1 {
         padding-right: 1rem;
         padding-bottom: 0.5rem;
         margin: 0.35rem 0.22rem;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
 
 
@@ -922,7 +776,7 @@ h1 {
         padding: 1.3rem;
     }
 
-    #bottom button {
+    #footer button {
         width: 17rem;
         padding-top: 0.6rem;
         padding-bottom: 0.6rem;
