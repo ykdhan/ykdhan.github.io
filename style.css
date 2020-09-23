@@ -455,11 +455,10 @@ input[type='submit']:hover, button:hover {
     font-size: 1rem;
     background: #fafafa;
     color: #2d2d2d;
+    z-index: 999;
+    overflow: hidden;
+    padding-top: 10rem;
 }
-
-
-
-
 
 
 
@@ -467,6 +466,6 @@ input[type='submit']:hover, button:hover {
 
 @media all and (max-width: 950px) and (min-width: 50px) {
     #not-yet {
-        display: block;
+        display: block !important;
     }
 }
