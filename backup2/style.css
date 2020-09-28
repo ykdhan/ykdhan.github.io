@@ -47,7 +47,7 @@
 html {
     box-sizing: border-box;
     display: block;
-	background: #fff;
+	background: #fafafa;
 }
 
 body {
@@ -181,6 +181,19 @@ input[type='submit']:hover, button:hover {
 .flex--top {
     align-items: flex-start;
 }
+.width--100 { width: 100%; }
+.width--95 { width: 95%; }
+.width--90 { width: 90%; }
+.width--85 { width: 85%; }
+.width--80 { width: 80%; }
+.width--75 { width: 75%; }
+.width--70 { width: 70%; }
+.width--65 { width: 65%; }
+.width--60 { width: 60%; }
+.width--55 { width: 55%; }
+.width--50 { width: 50%; }
+.width--45 { width: 45%; }
+.width--40 { width: 40%; }
 .margin-top--1 { margin-top: 1rem; }
 .margin-top--2 { margin-top: 2rem; }
 .margin-bottom--1 { margin-bottom: 1rem; }
@@ -197,17 +210,18 @@ input[type='submit']:hover, button:hover {
     z-index: 20;
     top: 0;
     left: 0;
-    background: none;
+    background: #fff;
     color: #2d2d2d;
     border: 0;
+    border-bottom: 1px solid #eaeaea;
 }
-#logo {
-    font-size: 1.1rem;
-    margin: 2.5rem 0;
+#header #logo {
+    font-size: 1.2rem;
+    margin: 1.3rem 0;
     font-family: 'NEXON Lv1 Gothic OTF Bold';
     letter-spacing: 0.4rem;
 }
-#logo span {
+#header #logo span {
     color: #1335d6;
     letter-spacing: 0.4rem;
 }
@@ -217,8 +231,8 @@ input[type='submit']:hover, button:hover {
     position: fixed;
     right: calc(50% - 475px);
     top: 0;
-    padding-top: 7rem;
-    width: 270px;
+    padding-top: 6rem;
+    width: 300px;
 }
 #profile #picture {
     width: 10rem;
@@ -247,8 +261,8 @@ input[type='submit']:hover, button:hover {
     height: auto;
 }
 #profile #link button {
-    width: 48%;
-    display: inline-block;
+    width: 100%;
+    display: block;
     background: #fff;
     color: #2d2d2d;
     border: 1px solid #eaeaea;
@@ -300,8 +314,8 @@ input[type='submit']:hover, button:hover {
 
 
 #page {
-    padding: 7rem 0;
-    padding-right: calc(270px + 2rem);
+    padding: 6rem 0;
+    padding-right: calc(300px + 1rem);
 }
 
 #keywords {
@@ -322,7 +336,6 @@ input[type='submit']:hover, button:hover {
 
 
 #skills {
-    z-index: 30;
     background: #fff;
     border: 1px solid #eaeaea;
     border-radius: 5px;
@@ -363,7 +376,6 @@ input[type='submit']:hover, button:hover {
     border-radius: 5px;
     background: #fff;
     margin-bottom: 2rem;
-    z-index: 30;
 }
 .experience .logo img {
     width: 9rem;
@@ -435,11 +447,16 @@ input[type='submit']:hover, button:hover {
 
 @media all and (max-width: 950px) and (min-width: 50px) {
 
+    #header {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
     #profile {
         position: unset;
         right: unset;
         top: unset;
-        padding-top: 4rem;
+        padding-top: 6rem;
         width: 100%;
     }
     #profile #me,
@@ -481,7 +498,7 @@ input[type='submit']:hover, button:hover {
     }
 
     #profile {
-        padding-top: 2rem;
+        padding-top: 4rem;
     }
     #profile #me,
     #profile #info {
@@ -501,6 +518,10 @@ input[type='submit']:hover, button:hover {
     }
     #profile #link {
         padding: 0 1rem;
+    }
+    #profile #link button {
+        width: 48%;
+        display: inline-block;
     }
 
     #info .section {
