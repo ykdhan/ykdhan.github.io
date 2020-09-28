@@ -512,10 +512,10 @@ input[type='submit']:hover, button:hover {
         margin-bottom: 2rem;
     }
     .skill:not(:last-child) {
-        margin-right: 1.6rem;
+        margin-right: 1.5rem;
     }
     .skill img {
-        width: 3rem;
+        width: 2.8rem;
     }
 
     .experience {
