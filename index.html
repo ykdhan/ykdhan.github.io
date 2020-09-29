@@ -181,10 +181,10 @@
 
 	
 <script type="text/javascript">
-$(function() {
-	$("#skills").mousewheel(function(event, delta) {
-		this.scrollLeft -= (delta * 30);
-		event.preventDefault();
+$(document).ready(function() {
+	$('#skills').mousewheel(function(e, delta) {
+		this.scrollLeft -= (delta*30);
+		e.preventDefault();
 	});
 });
 </script>
