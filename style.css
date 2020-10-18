@@ -672,10 +672,34 @@ left: 70vw;
 }
 
 
+.mobile {
+    display: none;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    vertical-align: middle;
+    color: #212529;
+    font-size: 1rem;
+    font-family: 'NEXON Lv1 Gothic OTF Bold';
+    z-index: 999;
+}
+.mobile p {
+    text-align: center;
+    margin: 30vh auto;
+}
 
 
 
 
+@media all and (max-width: 1240px) and (min-width: 50px) {
+    .mobile {
+        display: block;
+    }
+
+}
 
 @media all and (max-width: 950px) and (min-width: 50px) {
 
