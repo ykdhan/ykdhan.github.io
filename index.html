@@ -28,6 +28,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
 
 	<title>YKDHAN</title>
 
@@ -235,9 +236,10 @@
 			<img alt="Flask" src="src/flask-icon.png">
 		</div>
 		<div class="skill">
-			<img alt="React" src="src/react-icon.png">
+			<img alt="Sketch" src="src/sketch-icon.png">
 		</div>
 		<div class="skill">
+<<<<<<< HEAD
 			<img alt="NodeJS" src="src/nodejs-icon.png">
 		</div>
 		<div class="skill">
@@ -248,6 +250,61 @@
 		</div>
 		<div class="skill">
 			<img alt="Adobe Photoshop" src="src/photoshop-icon.png">
+=======
+			<img alt="ReactJS" src="src/react-icon.png">
+		</div>
+		<div class="skill">
+			<img alt="NodeJS" src="src/nodejs-icon.png">
+		</div>
+	</div>
+
+
+
+	<div id="works">
+		<div class="text--center">
+			<div class="experience">
+				<div class="top">
+					<p class="title">프리랜서</p>
+					<p class="date">18.1 ~ 18.4</p>
+					<a target="_blank" href="http://www.dograntcounty.com/"><img src="src/icon-link.png"/></a>
+				</div>
+				<div class="preview">
+					<img alt="" src="src/preview-dograntcounty.png">
+				</div>
+				<div class="content">
+					<p>미국 인디애나주에 있는 Grant County라는 지역군에서 일어나는 행사 또는 작은 이벤트를 검색하고
+                       검색하는 웹사이트를 만들어 현재 여러 사람이 사용 중 입니다.</p>
+					<p class="skill"><span>#PythonFlask</span><span>#JavaScript</span><span>#MySQL</span><span>#Linux</span><span>#SSL</span><span>#UX</span><span>#UI</span></p>
+				</div>
+			</div>
+			<div class="experience">
+				<div class="top">
+					<p class="title">창업 아이디어 경진대회 우승</p>
+					<p class="date">17.11</p>
+				</div>
+				<div class="preview">
+					<img alt="" src="src/preview-fivetwo.png">
+				</div>
+				<div class="content">
+					<p>주변 지역주민들을 포함하여 Taylor University 학생들이 작은 아르바이트 또는 일자리를 구할 수 있는
+                       웹사이트를 만들고 데모버전을 선보여 우승했습니다.</p>
+					<p class="skill"><span>#PythonFlask</span><span>#JavaScript</span><span>#MySQL</span><span>#Linux</span><span>#API</span><span>#UX</span><span>#UI</span></p>
+				</div>
+			</div>
+			<div class="experience">
+				<div class="top">
+					<p class="title">인턴</p>
+					<p class="date">17.6 ~ 17.8</p>
+				</div>
+				<div class="preview">
+					<img alt="" src="src/preview-adoptaverse.png">
+				</div>
+				<div class="content">
+					<p>좋아하는 성경구절을 골라 그에 따른 금액을 Wycliffe Bible Translators 라는 성경번역단체에 기부하는 웹사이트를 만들어 데모버전을 선보였습니다.</p>
+					<p class="skill"><span>#PHP</span><span>#MySQL</span><span>#jQuery</span><span>#JSON</span><span>#AJAX</span><span>#UX</span><span>#UI</span></p>
+				</div>
+			</div>
+>>>>>>> fb614676d457f0ea7a9948b78e2cf3ba4bdfa1f5
 		</div>
 	</div>
 
@@ -259,6 +316,16 @@
 </div>
 
 
+	
+<script type="text/javascript">
+console.log(window.navigator.platform);
+$(document).ready(function() {
+	$('#skills').mousewheel(function(e, delta) {
+		this.scrollLeft -= (delta*20);
+		e.preventDefault();
+	});
+});
+</script>
 
 
 
