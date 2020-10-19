@@ -600,7 +600,7 @@ left: 70vw;
     justify-content: center;
     align-items: center;
     margin: 0;
-    width: 50vw;
+    width: 49.5vw;
     height: 50vh;
     box-sizing: border-box;
     text-align: center;
@@ -629,7 +629,8 @@ left: 70vw;
     display: block;
 }
 .experience .preview img {
-    width: 80%;
+    width: 90%;
+    max-width: 25rem;
     height: auto;
     border-radius: 5px;
     border: 0.1rem solid #e9ecef;
@@ -655,7 +656,6 @@ left: 70vw;
 #footer {
     width: 100%;
     margin-top: -3.5rem;
-    padding-bottom: 1.5rem;
     color: #212529;
     text-align: center;
     font-size: 0.95rem;
