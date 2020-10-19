@@ -649,6 +649,7 @@ left: 70vw;
     margin: 0 auto;
     max-width: 25rem;
     padding: 2rem 0;
+    color: #868e96;
 }
 .experience .preview {
     display: block;
@@ -660,20 +661,14 @@ left: 70vw;
     border-radius: 5px;
     border: 0.1rem solid #e9ecef;
 }
-.experience .content {
+.experience .skill {
     text-align: left;
-    display: block;
-}
-.experience .content p {
-}
-.experience .content .skill {
     margin: 0;
 }
-.experience .content .skill span {
+.experience .skill span {
     display: inline-block;
     width: auto;
     font-family: 'NEXON Lv1 Gothic OTF Bold';
-    font-size: 0.9rem;
     margin-right: 0.8rem;
 }
 
