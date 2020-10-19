@@ -60,12 +60,11 @@ body {
     font-family: 'NEXON Lv1 Gothic OTF';
     font-style: normal;
     font-weight: 400;
-	color : #343a40;
-	font-size: 0.9rem;
+    color : #343a40;
+    font-size: 0.9rem;
     width: 100%;
     border: 0;
     background: #fff;
-    overflow-x: hidden !important;
 }
 
 a {
@@ -630,7 +629,7 @@ left: 70vw;
 }
 .experience .preview img {
     width: 90%;
-    max-width: 25rem;
+    max-width: 40rem;
     height: auto;
     border-radius: 5px;
     border: 0.1rem solid #e9ecef;
