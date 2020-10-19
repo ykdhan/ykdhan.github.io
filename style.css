@@ -255,10 +255,14 @@ input[type='submit']:hover, button:hover {
 #header .last {
     margin-top: 0.3rem;
 }
+#header input {
+    display: none;
+}
 #name {
     z-index: 99;
     font-family: 'NEXON Lv1 Gothic OTF Bold';
 }
+
 
 
 .text-big {
@@ -282,6 +286,27 @@ input[type='submit']:hover, button:hover {
 
 
 
+.main-title {
+    font-size: 20vh;
+    font-family: 'NEXON Lv1 Gothic OTF Bold';
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    color: #212529;
+    position: absolute;
+}
+.title-design {
+    transform: rotate(-90deg);
+    left: -11vw;
+    top: 24vh;
+    z-index: 1;
+}
+.title-develop {
+    transform: rotate(90deg);
+    right: -15vw;
+    top: 95vh;
+    z-index: 10;
+}
 
 
 
@@ -325,6 +350,7 @@ input[type='submit']:hover, button:hover {
     animation-iteration-count: infinite;
     animation-fill-mode: none;
     animation-play-state: running;
+    z-index: 3;
 }
 
 @keyframes stretch {
@@ -523,15 +549,15 @@ left: 70vw;
 }
 .keyword:nth-of-type(2) {
     animation-delay: 0.2s;
-    margin-top: 10rem;
+    margin-top: 13rem;
 }
 .keyword:nth-of-type(3) {
     animation-delay: 0.4s;
-    margin-top: -5rem;
+    margin-top: -10rem;
 }
 .keyword:nth-of-type(4) {
     animation-delay: 0.6s;
-    margin-top: 3rem;
+    margin-top: 5rem;
 }
 .keyword:nth-of-type(2) div {
     animation-delay: 0.15s;
@@ -575,7 +601,7 @@ left: 70vw;
     margin-right: 5rem;
 }
 .skill img {
-    width: 4.1rem;
+    width: 4rem;
     height: auto;
     margin: 0 auto;
     vertical-align: middle;
@@ -629,7 +655,8 @@ left: 70vw;
     display: block;
 }
 .experience .preview img {
-    width: 80%;
+    width: 90%;
+    max-width: 40rem;
     height: auto;
     border-radius: 5px;
     border: 0.1rem solid #e9ecef;

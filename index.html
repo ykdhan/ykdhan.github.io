@@ -22,8 +22,8 @@
 	<link rel="apple-touch-icon" href="icon/dh-70.png"/>
 	<link rel="apple-touch-icon" sizes="114x114" href="icon/dh-114.png" />
     <link rel="apple-touch-icon" sizes="144x144" href="icon/dh-144.png" />
-	<link rel="stylesheet" type="text/css" href="style.css?ver=5.2">
-    <link rel="stylesheet" type="text/css" href="animate.css?ver=1.2">
+	<link rel="stylesheet" type="text/css" href="style.css?ver=5.5">
+    <link rel="stylesheet" type="text/css" href="animate.css?ver=1.3">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
@@ -58,6 +58,9 @@
 		</div>
 	</div>
 
+	<div class="main-title title-design">Design</div>
+	<div class="main-title title-develop">Develop</div>
+
 	<div class="circle"></div>
 	<div class="circle"></div>
 	<div class="circle"></div>
@@ -68,14 +71,14 @@
 
 	<div id="header" class="animated fadeIn">
 		<div class="section">
-			<p id="name">한영광</p>
+			<a href="/"><p id="name">한영광</p></a>
 		</div>
 		<div class="header-hide">
 			<div class="section">
-				<p class="title">+82 010-6525-3538</p>
+				<p class="title" onclick="copyThis('myPhone')">+82 010-6525-3538<input id="myPhone" type="text" value="01065253538"></p>
 			</div>
 			<div class="section">
-				<a href="mailto:ykdhan@naver.com"><p class="title">ykdhan@naver.com</p></a>
+				<p class="title" onclick="copyThis('myEmail')">ykdhan@naver.com<input id="myEmail" type="text" value="ykdhan@naver.com"></p>
 			</div>
 			<div class="section last">
 				<a href="https://github.com/ykdhan" target="_blank"><p><img src="src/icon-github-button.png" alt="Github"></p></a>
@@ -139,11 +142,11 @@
 		<div class="top">
 			<div class="title">프리랜서</div>
 			<div class="date">18.1 ~ 18.4</div>
-			<div class="info">미국 인디애나주에 있는 Grant County라는 지역군에서 일어나는 행사 또는 작은 이벤트를 검색하고
-               검색하는 웹사이트를 만들어 현재 여러 사람이 사용 중 입니다.
+			<div class="info">미국 인디애나주 Grant County 지역군에서 일어나는 행사 또는 작은 이벤트를 주민들이 검색하고
+              등록하는 웹사이트를 만들어 현재 여러 사람이 사용 중 입니다.
 		    </div>
 			<div class="content">
-   				<p class="skill"><span>#PythonFlask</span><span>#JavaScript</span><span>#MySQL</span><span>#Linux</span></p>
+   				<p class="skill"><span>#PythonFlask</span><span>#JavaScript</span><span>#MVC</span><span>#MySQL</span><span>#Linux</span></p>
    			</div>
 		</div>
 	</div>
@@ -161,11 +164,11 @@
 		<div class="top">
 			<div class="title">창업 아이디어 경진대회 우승</div>
 			<div class="date">17.11</div>
-			<div class="info">주변 지역주민들을 포함하여 Taylor University 학생들이 작은 아르바이트 또는 일자리를 구할 수 있는
-               웹사이트를 만들고 데모버전을 선보여 우승했습니다.
+			<div class="info">학교 주변지역 주민들을 포함하여 Taylor University 학생들이 아르바이트 또는 작은 일자리를 구할 수 있는
+               웹사이트를 만들고 데모를 선보여 대회에서 우승했습니다.
 		    </div>
 			<div class="content">
-				<p class="skill"><span>#PythonFlask</span><span>#JavaScript</span><span>#MySQL</span><span>#Linux</span><span>#SSL</span></p>
+				<p class="skill"><span>#PythonFlask</span><span>#JavaScript</span><span>#MVC</span><span>#MySQL</span><span>#Linux</span><span>#SSL</span></p>
 			</div>
 		</div>
 	</div>
@@ -173,7 +176,7 @@
 		<div class="top">
 			<div class="title">인턴</div>
 			<div class="date">17.6 ~ 17.8</div>
-			<div class="info">좋아하는 성경구절을 골라 그에 따른 금액을 Wycliffe Bible Translators 성경번역단체에 기부하는 웹사이트를 만들어 데모를 선보였습니다.
+			<div class="info">좋아하는 성경구절을 골라 그에 따른 금액을 Wycliffe Bible Translators 성경번역단체에 기부하는 웹사이트를 만들었습니다.
 			</div>
 			<div class="content">
 				<p class="skill"><span>#PHP</span><span>#MySQL</span><span>#jQuery</span><span>#JSON</span><span>#AJAX</span></p>
@@ -299,6 +302,14 @@ $(document).ready(function() {
 		});
 	}
 });
+
+function copyThis(id) {
+	var copyText = document.getElementById(id);
+	copyText.select();
+	copyText.setSelectionRange(0, 99999);
+	document.execCommand("copy");
+	alert("복사 완료! \n" + copyText.value);
+}
 
 </script>
 
