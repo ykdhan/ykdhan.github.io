@@ -716,9 +716,6 @@ left: 70vw;
 
 
 @media all and (max-width: 1300px) and (min-width: 50px) {
-    .mobile {
-        display: block;
-    }
 	#profile {
 		top: 20vh;
 		left: 20vw;
@@ -766,7 +763,9 @@ left: 70vw;
 }
 
 @media all and (max-width: 950px) and (min-width: 50px) {
-
+    .mobile {
+        display: block;
+    }
 
 }
 
