@@ -8,5 +8,5 @@ Old style.
 ### RELEASE 2
 Instagram style.
 
-### RELEASE 1
+### RELEASE 3
 Full-screen with CSS animation.
