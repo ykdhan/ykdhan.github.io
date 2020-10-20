@@ -61,7 +61,7 @@ body {
     font-style: normal;
     font-weight: 400;
     color : #343a40;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     width: 100%;
     border: 0;
     background: #fff;
@@ -90,7 +90,7 @@ input, select, button, textarea, pre {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
-	font-size: 0.9rem;
+	font-size: 0.95rem;
     font-family: 'NEXON Lv1 Gothic OTF';
     font-style: normal;
     font-weight: 400;
@@ -453,7 +453,7 @@ left: 70vw;
 
 
 #info {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     padding: 6rem;
     position: absolute;
     margin: 0;
@@ -716,25 +716,29 @@ left: 70vw;
 
 
 @media all and (max-width: 1300px) and (min-width: 50px) {
+	
+	#header {
+		padding: 1rem 1.5rem;
+	}
+	
 	#profile {
-		top: 20vh;
+		top: 18vh;
 		left: 20vw;
 		width: 15rem;
 		height: 15rem;
 	}
 	#profile-box {
-		top: 20vh;
+		top: 18vh;
 		left: 20vw;
 		width: 15rem;
 		height: 15rem;
 	}
 	#info {
-		font-size: 0.9rem;
 		padding: 5rem;
-		top: 30vh;
+		top: 28vh;
 		left: 30vw;
-		width: 25rem;
-		height: 25rem;
+		width: 27.5rem;
+		height: 27.5rem;
 	}
 	.circle-big {
 		top: -7rem;
@@ -756,6 +760,7 @@ left: 70vw;
 		width: 4.5rem;
 		margin-bottom: 1.3rem;
 	}
+	
 	.experience {
 		width: 49vw;
 		height: 50vh;
