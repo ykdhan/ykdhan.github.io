@@ -739,6 +739,12 @@ left: 70vw;
 		width: 25rem;
 		height: 25rem;
 	}
+	.circle-big {
+		top: -7rem;
+		right: -12rem;
+		width: 33rem;
+		height: 33rem;
+	}
 
 }
 
