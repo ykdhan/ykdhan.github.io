@@ -349,7 +349,7 @@ input[type='submit']:hover, button:hover {
     animation-iteration-count: infinite;
     animation-fill-mode: none;
     animation-play-state: running;
-    z-index: 3;
+    z-index: 4;
 }
 
 @keyframes stretch {
@@ -464,6 +464,7 @@ left: 70vw;
     background: #f8f9fa;
     border-radius: 50%;
     animation-delay: 0.3s;
+	z-index: 5;
 }
 #info .section {
     padding: 0.7rem 2rem;
@@ -718,6 +719,26 @@ left: 70vw;
     .mobile {
         display: block;
     }
+	#profile {
+		top: 20vh;
+		left: 20vw;
+		width: 15rem;
+		height: 15rem;
+	}
+	#profile-box {
+		top: 20vh;
+		left: 20vw;
+		width: 15rem;
+		height: 15rem;
+	}
+	#info {
+		font-size: 0.9rem;
+		padding: 5rem;
+		top: 30vh;
+		left: 30vw;
+		width: 25rem;
+		height: 25rem;
+	}
 
 }
 
