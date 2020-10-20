@@ -745,6 +745,20 @@ left: 70vw;
 		width: 33rem;
 		height: 33rem;
 	}
+	
+	.keyword {
+		padding-bottom: 0.8rem;
+		margin: 2rem 1rem;
+	}
+	.keyword div {
+		padding: 4rem 1rem;
+		width: 14rem;
+		height: 14rem;
+	}
+	.keyword img {
+		width: 4.5rem;
+		margin-bottom: 1.3rem;
+	}
 
 }
 
