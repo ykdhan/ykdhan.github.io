@@ -767,6 +767,20 @@ left: 70vw;
 	    width: 90%;
 	    max-width: 32rem;
 	}
+	
+	#section-4 {
+	    padding: 4rem 0;
+	}
+	#skillbox {
+	    padding: 2rem 6rem;
+	}
+	.skill:not(:last-child) {
+	    margin-right: 4.5rem;
+	}
+	.skill img {
+	    width: 3.7rem;
+	}
+	
 }
 
 @media all and (max-width: 950px) and (min-width: 50px) {
