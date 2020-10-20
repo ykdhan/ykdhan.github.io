@@ -763,6 +763,10 @@ left: 70vw;
 		width: 49vw;
 		height: 50vh;
 	}
+	.experience .preview img {
+	    width: 90%;
+	    max-width: 32rem;
+	}
 }
 
 @media all and (max-width: 950px) and (min-width: 50px) {
