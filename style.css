@@ -715,7 +715,7 @@ left: 70vw;
 
 
 
-@media all and (max-width: 1240px) and (min-width: 50px) {
+@media all and (max-width: 1300px) and (min-width: 50px) {
     .mobile {
         display: block;
     }
@@ -759,7 +759,10 @@ left: 70vw;
 		width: 4.5rem;
 		margin-bottom: 1.3rem;
 	}
-
+	.experience {
+		width: 49vw;
+		height: 50vh;
+	}
 }
 
 @media all and (max-width: 950px) and (min-width: 50px) {
