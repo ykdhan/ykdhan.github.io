@@ -494,7 +494,6 @@ left: 70vw;
 }
 .keyword {
     display: inline-block;
-    padding-bottom: 0.8rem;
     margin: 2rem 1rem;
     font-size: 1rem;
     text-transform: uppercase;
@@ -748,13 +747,12 @@ left: 70vw;
 	}
 	
 	.keyword {
-		padding-bottom: 0.8rem;
-		margin: 2rem 1rem;
+		margin: 2rem 0.5rem;
 	}
 	.keyword div {
 		padding: 4rem 1rem;
-		width: 14rem;
-		height: 14rem;
+		width: 16rem;
+		height: 16rem;
 	}
 	.keyword img {
 		width: 4.5rem;
