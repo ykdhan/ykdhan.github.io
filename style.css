@@ -45,12 +45,9 @@
 }
 
 html {
-    box-sizing: border-box;
-    display: block;
-	background: #fff;
+    background: #fff;
     padding: 0;
     margin: 0;
-	height: 100%;
 }
 
 body {
@@ -60,13 +57,20 @@ body {
     font-family: 'NEXON Lv1 Gothic OTF';
     font-style: normal;
     font-weight: 400;
+	font-size: 0.95rem;
     color : #343a40;
-    font-size: 0.95rem;
-    width: 100%;
-	height: 100%;
     border: 0;
     background: #fff;
-    overflow-x: hidden !important;
+	height: 100%;
+	overflow-x: hidden;
+}
+
+#wrapper {
+	height: 100%;
+	position: relative;
+	overflow-x: hidden;
+	padding: 0;
+    margin: 0;
 }
 
 a {
@@ -86,6 +90,7 @@ p {
     margin: 0;
     padding: 0;
     transition: none;
+	line-height: 1.7;
 }
 
 input, select, button, textarea, pre {
@@ -348,7 +353,7 @@ input[type='submit']:hover, button:hover {
 #section-1 {
     height: 100vh;
     width: 100%;
-    position: relative;
+	position: relative;
 }
 
 #introduce {
@@ -573,8 +578,9 @@ left: 70vw;
 }
 
 #section-3 {
-    height: 95vh;
+    height: 110vh;
     text-align: center;
+	position: relative;
 }
 .keyword {
     display: inline-block;
@@ -991,11 +997,14 @@ left: 70vw;
 
 @media all and (max-width: 550px) and (min-width: 50px) {
     #header {
-        padding: 0.6rem 1rem;
+        padding: 0.6rem 0.8rem;
     }
     #header .section {
         margin-right: 0.8rem;
     }
+	#header p {
+		padding: 0.6rem;
+	}
     #header .header-hide .section:not(.last) {
         display: none;
     }
@@ -1021,6 +1030,7 @@ left: 70vw;
         font-size: 0.8rem;
     }
     .circle-big {
+	    display: none;
         top: -6rem;
         right: -8rem;
         width: 15rem;
@@ -1057,11 +1067,12 @@ left: 70vw;
         top: 97vh;
         z-index: 10;
     }
-
+	
     #section-3 .content {
         padding-top: 9vh;
     }
     #back-circle {
+	    display: none;
         width: 100vh;
         height: 100vh;
         margin-top: 10vh;
@@ -1090,12 +1101,10 @@ left: 70vw;
         margin-top: 0rem;
     }
 
-
-
     #section-5 {
         height: auto;
         padding: 4rem 0;
-        padding-top: 60vh;
+        padding-top: 45vh;
     }
     .experience {
         float: unset;
@@ -1104,6 +1113,9 @@ left: 70vw;
         margin: 0 auto;
         padding: 2rem 0;
     }
+	.experience .top {
+		width: 90%;
+	}
     .experience .preview img {
         width: 90%;
         max-width: 40rem;
@@ -1130,4 +1142,10 @@ left: 70vw;
     #footer p {
         padding: 0.4rem;
     }
+	
+	
+.mobile {
+    display: block;
+	}
+	
 }
