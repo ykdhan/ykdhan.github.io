@@ -481,9 +481,6 @@ left: 70vw;
 }
 
 
-
-
-
 #info {
     font-size: 0.95rem;
     padding: 6rem;
@@ -771,12 +768,21 @@ left: 70vw;
 		width: 27.5rem;
 		height: 27.5rem;
 	}
+
+    .text-small {
+        width: 60%;
+    }
+
 	.circle-big {
 		top: -7rem;
 		right: -12rem;
-		width: 33rem;
-		height: 33rem;
+		width: 30rem;
+		height: 30rem;
 	}
+    .circle {
+        width: 4rem;
+        height: 4rem;
+    }
 
 	.keyword {
 		margin: 2rem 0.5rem;
@@ -844,9 +850,9 @@ left: 70vw;
 	}
 	.circle-big {
 		top: -7rem;
-		right: -12rem;
-		width: 25rem;
-		height: 25rem;
+		right: -14rem;
+		width: 23rem;
+		height: 23rem;
 	}
 
     .text-big {
@@ -897,8 +903,6 @@ left: 70vw;
         margin-top: 2rem;
     }
 
-
-
     #section-5 {
         height: auto;
         padding: 4rem 0;
@@ -935,7 +939,10 @@ left: 70vw;
         padding: 0.6rem 1rem;
     }
     #header .section {
-        margin-right: 1rem;
+        margin-right: 0.8rem;
+    }
+    #header .header-hide .section:not(.last) {
+        display: none;
     }
 
     #profile {
@@ -951,12 +958,12 @@ left: 70vw;
         height: 12rem;
     }
     #info {
-        padding: 3rem 4rem;
-        top: 33vh;
+        padding: 3.5rem;
+        top: 31vh;
         left: 10vw;
         width: 24rem;
         height: 24rem;
-        font-size: 0.85rem;
+        font-size: 0.8rem;
     }
     .circle-big {
         top: -6rem;
@@ -968,39 +975,41 @@ left: 70vw;
         width: 3rem;
         height: 3rem;
     }
+
     .text-big {
         font-size: 1rem;
-        padding: 25vh 0;
-        padding-bottom: 15vh;
+        padding: 30vh 0;
+        padding-bottom: 5vh;
+        width: 80%;
     }
     .text-small {
         font-size: 0.95rem;
         padding-top: 10vh;
-        width: 70%;
+        width: 80%;
     }
 
     .main-title {
-        font-size: 12vh;
+        font-size: 10vh;
     }
     .title-design {
-        left: -18vw;
-        top: 14vh;
+        left: -19vw;
+        top: 12vh;
         z-index: 1;
     }
     .title-develop {
         transform: rotate(90deg);
-        right: -26vw;
+        right: -27vw;
         top: 97vh;
         z-index: 10;
     }
 
     #section-3 .content {
-        padding-top: 7vh;
+        padding-top: 9vh;
     }
     #back-circle {
-        width: 120vh;
-        height: 120vh;
-        margin-top: 20vh;
+        width: 100vh;
+        height: 100vh;
+        margin-top: 10vh;
         left: calc(50% - 60vh);
     }
     .keyword {
@@ -1031,6 +1040,7 @@ left: 70vw;
     #section-5 {
         height: auto;
         padding: 4rem 0;
+        padding-top: 60vh;
     }
     .experience {
         float: unset;
