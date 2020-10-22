@@ -90,6 +90,7 @@ p {
     margin: 0;
     padding: 0;
     transition: none;
+	line-height: 1.7;
 }
 
 input, select, button, textarea, pre {
@@ -974,6 +975,7 @@ left: 70vw;
         font-size: 0.8rem;
     }
     .circle-big {
+	    display: none;
         top: -6rem;
         right: -8rem;
         width: 15rem;
