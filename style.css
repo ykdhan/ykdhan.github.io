@@ -357,15 +357,10 @@ input[type='submit']:hover, button:hover {
 }
 
 #introduce {
-  color:#999;
-  text-transform: uppercase;
-  font-size:36px;
-  font-weight:bold;
-  padding-top:200px;
-  position:fixed;
-  width:100%;
-  bottom:45%;
-  display:block;
+    display:block;
+    font-size: 4rem;
+    padding: 5rem;
+    color: #212529;
 }
 
 #flip {
@@ -386,16 +381,16 @@ input[type='submit']:hover, button:hover {
 }
 
 #flip div div {
-  background:#212529;
+  background: #212529;
 }
 #flip div:first-child div {
-  background:#5c7cfa;
+  background: #5c7cfa;
 }
 #flip div:nth-child(2)-child div {
-  background:#94d82d;
+  background: #94d82d;
 }
 #flip div:last-child div {
-  background:#ff6b6b;
+  background: #ff6b6b;
 }
 
 @keyframes show {
@@ -1067,7 +1062,7 @@ left: 70vw;
         top: 97vh;
         z-index: 10;
     }
-	
+
     #section-3 .content {
         padding-top: 9vh;
     }
@@ -1142,10 +1137,10 @@ left: 70vw;
     #footer p {
         padding: 0.4rem;
     }
-	
-	
+
+
 .mobile {
     display: block;
 	}
-	
+
 }
