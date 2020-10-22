@@ -54,7 +54,7 @@ html {
 }
 
 body {
-	position: fixed;
+	position: relative;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
