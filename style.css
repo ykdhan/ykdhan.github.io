@@ -61,9 +61,16 @@ body {
     color : #343a40;
     border: 0;
     background: #fff;
-	position: relative;
 	height: 100%;
 	overflow-x: hidden;
+}
+
+#wrapper {
+	height: 100%;
+	position: relative;
+	overflow-x: hidden;
+	padding: 0;
+    margin: 0;
 }
 
 a {
@@ -346,6 +353,7 @@ input[type='submit']:hover, button:hover {
     height: 100vh;
     width: 100%;
     position: relative;
+	overflow-x: hidden;
 }
 
 #profile {
