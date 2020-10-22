@@ -525,6 +525,8 @@ left: 70vw;
 #section-3 {
     height: 95vh;
     text-align: center;
+	position: relative;
+	overflow-x: hidden;
 }
 .keyword {
     display: inline-block;
