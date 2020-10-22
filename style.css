@@ -354,6 +354,7 @@ input[type='submit']:hover, button:hover {
     width: 100%;
     position: relative;
 	overflow-x: hidden;
+	overflow-y: visible;
 }
 
 #profile {
@@ -523,10 +524,11 @@ left: 70vw;
 }
 
 #section-3 {
-    height: 95vh;
+    height: 110vh;
     text-align: center;
 	position: relative;
 	overflow-x: hidden;
+	overflow-y: visible;
 }
 .keyword {
     display: inline-block;
@@ -1050,7 +1052,7 @@ left: 70vw;
     #section-5 {
         height: auto;
         padding: 4rem 0;
-        padding-top: 60vh;
+        padding-top: 45vh;
     }
     .experience {
         float: unset;
