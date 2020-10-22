@@ -46,28 +46,29 @@
 
 html {
     box-sizing: border-box;
-    display: block;
 	background: #fff;
     padding: 0;
     margin: 0;
-	height: 100%;
 }
 
 body {
-	position: relative;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-family: 'NEXON Lv1 Gothic OTF';
     font-style: normal;
     font-weight: 400;
+	font-size: 0.95rem;
     color : #343a40;
-    font-size: 0.95rem;
-    width: 100%;
-	height: 100%;
     border: 0;
     background: #fff;
-    overflow-x: hidden !important;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
 }
 
 a {
