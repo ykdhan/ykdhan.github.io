@@ -937,11 +937,14 @@ left: 70vw;
 
 @media all and (max-width: 550px) and (min-width: 50px) {
     #header {
-        padding: 0.6rem 1rem;
+        padding: 0.6rem 0.8rem;
     }
     #header .section {
         margin-right: 0.8rem;
     }
+	#header p {
+		padding: 0.6rem;
+	}
     #header .header-hide .section:not(.last) {
         display: none;
     }
