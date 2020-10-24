@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -24,7 +23,7 @@
 	<link rel="apple-touch-icon" sizes="114x114" href="icon/dh-114.png" />
     	<link rel="apple-touch-icon" sizes="144x144" href="icon/dh-144.png" />
 	-->
-	<link rel="stylesheet" type="text/css" href="style.css?ver=4.0">
+	<link rel="stylesheet" type="text/css" href="style.css?ver=3.0">
     <link rel="stylesheet" type="text/css" href="animate.css?ver=1.3">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.css" rel="stylesheet">
@@ -33,177 +32,152 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
 
 	<title>YKDHAN</title>
-
-    <style>
-    </style>
-
 </head>
 <body>
 
 
-
-<div id="section-1" class="page">
-<!--
-	<div id="introduce">
-	  저는
-	  <div id="flip">
-	    <div><div>한영광</div></div>
-	    <div><div>프론트엔드 개발자</div></div>
-	    <div><div>백엔드 개발자</div></div>
-		<div><div>UI/UX 디자이너</div></div>
-	  </div>
-	  입니다.
-	</div>
--->
-	<div id="profile" class="animated fadeIn"></div>
-	<div id="profile-box" class=""></div>
-	<div id="info" class="animated fadeIn">
-		<div class="section">
-			<p class="title">Taylor University (14.8 ~ 18.5)</p>
-			<p>컴퓨터디지털미디어학과 졸업</p>
-			<p class="info">3.73/4.0</p>
+<div id="section-1" class="flexbox">
+	<div class="flex flex--1 bg--white">
+		<div id="introduce">
+			I am
+			<div id="flip">
+				<div><div>UI/UX 디자이너</div></div>
+				<div><div>백엔드 개발자</div></div>
+				<div><div>프론트엔드 개발자</div></div>
+				<div><div>한영광</div></div>
+			</div>
 		</div>
-		<div class="section">
-			<p class="title">리눅스마스터 (19.4)</p>
-			<p>2급</p>
-			<p class="title">TOEIC (18.9)</p>
-			<p>945점</p>
-		</div>
-	</div>
-
-	<div class="main-title title-design">Design</div>
-	<div class="main-title title-develop">Develop</div>
-
-	<div class="circle"></div>
-	<div class="circle"></div>
-	<div class="circle"></div>
-	<div class="circle"></div>
-	<div class="circle"></div>
-	<div class="circle-big"></div>
-
-
-	<div id="header" class="animated fadeIn">
-		<div class="section">
-			<a href="/"><p id="name">한영광</p></a>
-		</div>
-		<div class="header-hide">
+		<div id="contact">
 			<div class="section">
 				<p class="title" onclick="copyThis('myPhone')">+82 010-6525-3538<input id="myPhone" type="text" value="01065253538"><!--<span class="tooltip">클릭해서 복사</span>--></p>
 			</div>
 			<div class="section">
 				<p class="title" onclick="copyThis('myEmail')">ykdhan@naver.com<input id="myEmail" type="text" value="ykdhan@naver.com"><!--<span class="tooltip">클릭해서 복사</span>--></p>
 			</div>
+		</div>
+	</div>
+
+	<div id="header" class="animated fadeIn">
+		<div class="section">
+			<a href="/"><p id="name">한영광</p></a>
+		</div>
+		<div class="header-hide">
 			<div class="section last">
 				<a href="https://github.com/ykdhan" target="_blank"><p><img src="src/icon-github-button.png" alt="Github"></p></a>
 			</div>
 		</div>
 	</div>
-
 </div>
 
-<div id="section-2">
-	<div class="max--width">
-		<div id="saying" class="text-big font--white">
-			새로운 기술을 찾아 내면화하고 지속적으로 역량을 키워나갑니다.
-			<div class="text-small">
-				새로운 것을 찾고 접하기를 좋아하고 다른 사람의 능력과 경험에서 나온 것을 내면화 시키려고 노력합니다.<br>
-				다른 사람들이 가지고 있는 지식과 경험을 배워 한층 더 업그레이드시킨 자신만의 것을 만들고 또 그것을 다른 사람들과 공유하는 것이 요즘 개발자의 성장 방식이라고 생각합니다.
+
+<div id="section-2" class="flexbox">
+	<div class="flex left flex--1 flex--center bg--white">
+		<div id="section-2-left" class="content animated">
+			<div id="saying" class="text big">
+				새로운 기술을 찾아 내면화하고<br>지속적으로 역량을 키워나갑니다.
+			</div>
+			<div class="text small">
+				새로운 것을 접하고 다른 사람의 경험과 기술을 내면화 시키려고 노력합니다.
+			 	다른 개발자의 기술에 한층 더 업그레이드시켜 자신의 것을 만들고, 그것을 또 다른 사람과 공유하는 것이 요즘 개발자의 성장 방식이라고 생각합니다.
+			</div>
+			<div id="keywords">
+				<div class="keyword animated">
+					<div>
+					<img src="src/icon-uiux-white.png" alt="">
+					UI / UX
+					</div>
+				</div>
+				<div class="keyword animated">
+					<div>
+					<img src="src/icon-code-white.png" alt="">
+					Front & Back
+					</div>
+				</div>
+				<div class="keyword animated">
+					<div>
+					<img src="src/icon-server-white.png" alt="">
+					Server & Database
+					</div>
+				</div>
+				<div class="keyword animated">
+					<div>
+					<img src="src/icon-api-white.png" alt="">
+					RESTful API
+					</div>
+				</div>
 			</div>
 		</div>
-
+	</div>
+	<div class="flex right flex--1 flex--center bg--white">
+		<div id="section-2-right" class="content animated">
+			<div id="info">
+				<div id="photo" class="animated fadeIn"></div>
+				<div id="photobox" class=""></div>
+				<div class="section">
+					<p class="title">Taylor University (14.8 ~ 18.5)</p>
+					<p>컴퓨터디지털미디어학과 졸업</p>
+					<p class="info">3.73/4.0</p>
+				</div>
+				<div class="section">
+					<p class="title">리눅스마스터 (19.4)</p>
+					<p>2급</p>
+					<p class="title">TOEIC (18.9)</p>
+					<p>945점</p>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 
 
-
-<div id="section-3" class="">
-	<div class="triangle"></div>
-	<div class="triangle left"></div>
-	<div id="back-circle"></div>
-	<div class="content">
-		<div class="keyword animated">
-			<div>
-			<img src="src/icon-uiux-white.png" alt="">
-			UI / UX
-			</div>
-		</div>
-		<div class="keyword animated">
-			<div>
-			<img src="src/icon-code-white.png" alt="">
-			Front & Back
-			</div>
-		</div>
-		<div class="keyword animated">
-			<div>
-			<img src="src/icon-server-white.png" alt="">
-			Server & Database
-			</div>
-		</div>
-		<div class="keyword animated">
-			<div>
-			<img src="src/icon-api-white.png" alt="">
-			REST API
-			</div>
-		</div>
-	</div>
-</div>
-
-
-<div id="section-5">
-
-	<div class="experience exp-left animated">
-		<div class="top">
-			<div class="title">프리랜서</div>
-			<div class="date">18.1 ~ 18.4</div>
+<div id="section-3">
+	<div class="experience animated">
+		<div class="content">
+			<div class="title">Do! Grant County</div>
+			<div class="date">프리랜서 (18.1 ~ 18.4)</div>
 			<div class="info">미국 인디애나주 Grant County 지역군에서 일어나는 행사 또는 작은 이벤트를 주민들이 검색하고
               등록하는 웹사이트를 만들어 현재 여러 사람이 사용 중 입니다.
 		    </div>
 			<div class="skill"><span>#PythonFlask</span><span>#JavaScript</span><span>#MVC</span><span>#MySQL</span><span>#Linux</span></div>
 		</div>
-	</div>
-	<div class="experience exp-right animated">
 		<div class="preview">
 			<img alt="" src="src/preview-dograntcounty.png">
 		</div>
 	</div>
-	<div class="experience exp-left animated">
-		<div class="preview">
-			<img alt="" src="src/preview-fivetwo.png">
-		</div>
-	</div>
-	<div class="experience exp-right animated">
-		<div class="top">
-			<div class="title">창업 아이디어 경진대회 우승</div>
-			<div class="date">17.11</div>
+	<div class="experience animated">
+		<div class="content">
+			<div class="title">FiveTwo</div>
+			<div class="date">창업 아이디어 경진대회 우승 (17.11)</div>
 			<div class="info">학교 주변지역 주민들을 포함하여 Taylor University 학생들이 아르바이트 또는 작은 일자리를 구할 수 있는
                웹사이트를 만들고 데모를 선보여 대회에서 우승했습니다.
 		    </div>
 			<div class="skill"><span>#PythonFlask</span><span>#JavaScript</span><span>#MVC</span><span>#MySQL</span><span>#Linux</span><span>#SSL</span></div>
 		</div>
+		<div class="preview">
+			<img alt="" src="src/preview-fivetwo.png">
+		</div>
 	</div>
-	<div class="experience exp-left animated">
-		<div class="top">
-			<div class="title">인턴</div>
-			<div class="date">17.6 ~ 17.8</div>
+	<div class="experience animated">
+		<div class="content">
+			<div class="title">Adobe a Verse</div>
+			<div class="date">인턴 (17.6 ~ 17.8)</div>
 			<div class="info">좋아하는 성경구절을 골라 그에 따른 금액을 Wycliffe Bible Translators 성경번역단체에 기부하는 웹사이트를 만들었습니다.
 			</div>
 			<div class="skill"><span>#PHP</span><span>#MySQL</span><span>#jQuery</span><span>#JSON</span><span>#AJAX</span></div>
 		</div>
-	</div>
-	<div class="experience exp-right animated">
 		<div class="preview">
 			<img alt="" src="src/preview-adoptaverse.png">
 		</div>
 	</div>
-
+	<div class="experience animated">
+		<div class="content">
+			<div class="title">What's next?</div>
+		</div>
+	</div>
 </div>
 
 
-
-
-
-<div id="section-4" class="">
-
+<div id="section-skill" class="">
 	<div id="skillbox" class="animated fadeIn">
 		<div class="skill">
 			<img alt="Python" src="src/python-icon.png" class="animating">
@@ -251,59 +225,61 @@
 			<img alt="Adobe Photoshop" src="src/photoshop-icon.png">
 		</div>
 	</div>
-
-
 </div>
 
 
-<div id="footer">
-	<p>2020 &copy; All rights reserved.</p>
-</div>
+<div id="footer"><p>2020 &copy; All rights reserved.</p></div>
+<div id="copied" class="animated">알림</div>
 
 
-<div class="mobile"><p>모바일 버전은 아직 준비중입니다.</p></div>
 
 
 <script type="text/javascript">
 
 window.onscroll = function() { whenScroll() };
 
-// Get the navbar
 var navbar = document.getElementById("header");
 var keywords = document.getElementsByClassName("keyword");
+var experiences = document.getElementsByClassName("experience");
 var saying = document.getElementById("saying");
-var exps_left = document.getElementsByClassName("exp-left");
-var exps_right = document.getElementsByClassName("exp-right");
+var copied = document.getElementById("copied");
 
 var nav = navbar.offsetTop;
 var say = saying.offsetTop;
-var circle = document.getElementById("back-circle").offsetTop;
 
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function whenScroll() {
-  if (window.pageYOffset >= nav) {
-    navbar.classList.add("sticky");
-	for (var i = 0; i < keywords.length; i++) {
-		keywords[i].classList.add("fadeInUp");
+	if (window.pageYOffset >= nav) {
+		navbar.classList.add("sticky");
+	} else {
+		navbar.classList.remove("sticky");
 	}
-  } else {
-    navbar.classList.remove("sticky");
-	for (var i = 0; i < keywords.length; i++) {
-		keywords[i].classList.remove("fadeInUp");
+	if (window.pageYOffset >= nav-(window.screen.height * 0.25)) {
+		for (var i = 0; i < keywords.length; i++) {
+			keywords[i].classList.add("fadeInUp");
+		}
+	} else {
+		for (var i = 0; i < keywords.length; i++) {
+			keywords[i].classList.remove("fadeInUp");
+		}
 	}
-  }
-
-  if(window.pageYOffset >= circle) {
-	  for (var i = 0; i < exps_left.length; i++) {
-		  exps_left[i].classList.add("fadeInLeft");
-		  exps_right[i].classList.add("fadeInRight");
-	  }
-  }
+	if (window.pageYOffset >= say-(window.screen.height * 0.1)) {
+		for (var i = 0; i < experiences.length; i++) {
+			experiences[i].classList.add("fadeInRight");
+		}
+	} else {
+		for (var i = 0; i < experiences.length; i++) {
+			experiences[i].classList.remove("fadeInRight");
+		}
+	}
 }
 
 $(document).ready(function() {
 	if (window.navigator.platform.includes('Win')) {
 		$('#skillbox').mousewheel(function(e, delta) {
+			this.scrollLeft -= (delta * 30);
+			e.preventDefault();
+		});
+		$('#section-3').mousewheel(function(e, delta) {
 			this.scrollLeft -= (delta * 30);
 			e.preventDefault();
 		});
@@ -315,10 +291,22 @@ function copyThis(id) {
 	copyText.select();
 	copyText.setSelectionRange(0, 99999);
 	document.execCommand("copy");
-	alert("복사 완료! \n" + copyText.value);
+	switch (id) {
+		case 'myPhone':
+			copied.innerHTML = '전화번호 클립보드에 복사!';
+			break;
+		case 'myEmail':
+			copied.innerHTML = '이메일 클립보드에 복사!';
+			break;
+		default:
+			break;
+	}
+	copied.classList.add("fadeInUp");
+	setTimeout(function() {copied.classList.remove("fadeInUp");copied.classList.add("fadeOutDown"); setTimeout(function() {copied.classList.remove("fadeOutDown");}, 600); }, 1500);
 }
 
 </script>
+
 
 </body>
 </html>
