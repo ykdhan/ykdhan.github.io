@@ -1020,9 +1020,6 @@ left: 70vw;
 }
 /* Mobile */
 @media all and (max-width: 450px) and (min-width: 50px) {
-    #section-1 {
-        height: 100%;
-    }
     #introduce {
         padding: 2rem;
         font-size: 1.7rem;
