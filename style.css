@@ -45,6 +45,7 @@
 }
 
 html {
+    height: 100%;
     background: #fff;
     padding: 0;
     margin: 0;
@@ -1019,6 +1020,9 @@ left: 70vw;
 }
 /* Mobile */
 @media all and (max-width: 450px) and (min-width: 50px) {
+    #section-1 {
+        height: 100%;
+    }
     #introduce {
         padding: 2rem;
         font-size: 1.7rem;
@@ -1125,14 +1129,14 @@ left: 70vw;
 
     #section-3 {
         padding: 0 1rem;
-        margin: 2.5rem 0;
+        margin: 2rem 0;
         margin-top: 1rem;
     }
     .experience {
         flex-direction: column;
         justify-content: space-between;
         display: inline-flex;
-        height: 63vh;
+        height: 70vh;
         width: 82vw;
         margin-right: 1rem;
     }
@@ -1140,8 +1144,7 @@ left: 70vw;
         display: block;
         font-size: 0.85rem;
         width: 100%;
-        padding: 1.5rem;
-        padding-top: 3rem;
+        padding: 3rem 1.5rem;
     }
     .experience .content div {
         margin: 0 1rem;
@@ -1154,6 +1157,9 @@ left: 70vw;
     }
     .experience:last-of-type {
         display: none;
+    }
+    .experience:nth-last-of-type(2) {
+        margin-right: 0;
     }
 
     #footer {
