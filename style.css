@@ -299,7 +299,8 @@ input[type='submit']:hover, button:hover {
     width: 100%;
 }
 #section-1 {
-    height: 100vh;
+    height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 100);
     margin: 0;
 }
 
