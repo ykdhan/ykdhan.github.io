@@ -799,66 +799,65 @@ input[type='submit']:hover, button:hover {
 
 
 #mouse{
-    margin: 5rem auto;
+    margin: 4rem;
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 100px;
     opacity: 0;
-    animation-delay: 1s;
+    animation-delay: 0.8s;
 }.mouse-icon{
-    width: 25px;
-    height: 45px;
-    border: 2px solid #212529;
-    border-radius: 15px;
+    width: 1.8rem;
+    height: 3.24rem;
+    border: 0.2rem solid #212529;
+    border-radius: 100rem;
     cursor: pointer;
     position: relative;
     text-align: center;
 }.mouse-wheel{
-    height: 6px;
-    margin: 2px auto 0;
+    height: 0.5rem;
+    margin: 0.3rem auto;
     display: block;
-    width: 3px;
+    width: 0.2rem;
     background-color: #212529;
-    border-radius: 50%;
+    border-radius: 100rem;
     -webkit-animation: 1.6s ease infinite wheel-up-down;
     -moz-animation: 1.6s ease infinite wheel-up-down;
     animation: 1.6s ease infinite wheel-up-down;
 }
 @-webkit-keyframes wheel-up-down {
     0% {
-        margin-top: 2px;
+        margin-top: 0.3rem;
         opacity: 0;
     }
     30% {
         opacity: 1;
     }
     100% {
-        margin-top: 20px;
+        margin-top: 1.2rem;
         opacity: 0;
     }
 }@-moz-keyframes wheel-up-down {
 	0% {
-	    margin-top: 2px;
+	    margin-top: 0.3rem;
 	    opacity: 0;
 	}
 	30% {
 	    opacity: 1;
 	}
 	100% {
-	    margin-top: 20px;
+	    margin-top: 1.2rem;
 	    opacity: 0;
 	}
 }@keyframes wheel-up-down {
 	0% {
-	    margin-top: 2px;
+	    margin-top: 0.3rem;
 	    opacity: 0;
 	}
 	30% {
 	    opacity: 1;
 	}
 	100% {
-	    margin-top: 20px;
+	    margin-top: 1.2rem;
 	    opacity: 0;
 	}
 }
@@ -1176,6 +1175,9 @@ input[type='submit']:hover, button:hover {
         margin: 1rem;
         width: 12rem;
         font-size: 0.85rem;
+    }
+    #mouse{
+        margin: 2rem;
     }
 }
 @media all and (max-width: 390px) and (min-width: 50px) {

@@ -23,7 +23,7 @@
 	<link rel="apple-touch-icon" sizes="114x114" href="icon/dh-114.png" />
     	<link rel="apple-touch-icon" sizes="144x144" href="icon/dh-144.png" />
 	-->
-	<link rel="stylesheet" type="text/css" href="style.css?ver=3.6">
+	<link rel="stylesheet" type="text/css" href="style.css?ver=3.7">
     <link rel="stylesheet" type="text/css" href="animate.css?ver=1.3">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.css" rel="stylesheet">
@@ -321,7 +321,7 @@ function copyThis(id) {
 function showMouse() {
 	var mouse = document.getElementById('mouse');
 	mouse.classList.add("fadeInDown");
-	setTimeout(function() {mouse.classList.remove("fadeInDown");mouse.classList.add("fadeOut"); setTimeout(function() {mouse.classList.remove("fadeOut");}, 1500); }, 4000);
+	setTimeout(function() {mouse.classList.remove("fadeInDown");mouse.classList.add("fadeOutDown"); setTimeout(function() {mouse.classList.remove("fadeOutDown");}, 2000); }, 3500);
 }
 showMouse();
 </script>
