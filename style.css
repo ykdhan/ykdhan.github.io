@@ -170,6 +170,7 @@ input[type='submit']:hover, button:hover {
     padding: 1.5rem 2rem;
     padding-left: 2.6rem;
     transition: margin-top 0s;
+    animation-delay: 0.3s;
 }
 #header .header-hide {
     display: inline-block;
@@ -301,7 +302,7 @@ input[type='submit']:hover, button:hover {
     width: 100%;
 }
 #section-1 {
-    /*height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+    height: 100vh; /* Fallback for browsers that do not support Custom Properties */
     /*height: calc(var(--vh, 1vh) * 100);*/
     box-sizing: border-box;
     margin: 0;
@@ -314,6 +315,7 @@ input[type='submit']:hover, button:hover {
     font-family: 'NEXON Lv1 Gothic OTF Bold';
     line-height: 1.5;
     padding: 3.5rem;
+    animation-delay: 0.1s;
 }
 #flip {
     height: 4rem;
@@ -370,6 +372,7 @@ input[type='submit']:hover, button:hover {
     float: left;
     bottom: 5rem;
     left: 2.6rem;
+    animation-delay: 0.2s;
 }
 #contact .section {
     margin-bottom: 0.5rem;
@@ -966,11 +969,10 @@ input[type='submit']:hover, button:hover {
 
     #contact {
         left: 1.1rem;
-        bottom: 3.5rem;
+        bottom: 4.5rem;
     }
     #header {
         padding-left: 1.1rem;
-        display: none;
     }
     #header .section {
         margin-right: 1rem;
