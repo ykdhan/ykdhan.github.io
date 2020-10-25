@@ -799,16 +799,18 @@ input[type='submit']:hover, button:hover {
 
 
 #mouse{
-    margin: 4rem;
+    margin: 0;
     position: absolute;
-    bottom: 0;
+    width: 100%;
+    top: 30%;
     right: 0;
     opacity: 0;
     animation-delay: 0.8s;
 }.mouse-icon{
+    margin: 0 auto;
     width: 1.5rem;
     height: 2.7rem;
-    border: 0.19rem solid #868e96;
+    border: 0.19rem solid #adb5bd;
     border-radius: 100rem;
     cursor: pointer;
     position: relative;
@@ -818,7 +820,7 @@ input[type='submit']:hover, button:hover {
     margin: 0.1rem auto;
     display: block;
     width: 0.19rem;
-    background-color: #868e96;
+    background-color: #adb5bd;
     border-radius: 100rem;
     -webkit-animation: 1.6s ease infinite wheel-up-down;
     -moz-animation: 1.6s ease infinite wheel-up-down;
@@ -1010,9 +1012,6 @@ input[type='submit']:hover, button:hover {
         margin-right: 3.3rem;
     }
 
-    #mouse {
-        margin: 3.5rem;
-    }
 }
 /* Mobile */
 @media all and (max-width: 450px) and (min-width: 50px) {
@@ -1179,13 +1178,11 @@ input[type='submit']:hover, button:hover {
         width: 12rem;
         font-size: 0.85rem;
     }
-    #mouse{
-        margin: 2.5rem;
-    }
+
     .mouse-icon{
         width: 1.2rem;
         height: 2.2rem;
-        border: 0.15rem solid #868e96;
+        border: 0.15rem solid #adb5bd;
     }.mouse-wheel{
         height: 0.3rem;
         width: 0.15rem;
