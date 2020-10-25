@@ -808,7 +808,7 @@ input[type='submit']:hover, button:hover {
 }.mouse-icon{
     width: 1.5rem;
     height: 2.7rem;
-    border: 0.19rem solid #212529;
+    border: 0.19rem solid #868e96;
     border-radius: 100rem;
     cursor: pointer;
     position: relative;
@@ -818,7 +818,7 @@ input[type='submit']:hover, button:hover {
     margin: 0.1rem auto;
     display: block;
     width: 0.19rem;
-    background-color: #212529;
+    background-color: #868e96;
     border-radius: 100rem;
     -webkit-animation: 1.6s ease infinite wheel-up-down;
     -moz-animation: 1.6s ease infinite wheel-up-down;
@@ -1011,7 +1011,7 @@ input[type='submit']:hover, button:hover {
     }
 
     #mouse {
-        margin: 3.3rem;
+        margin: 3.5rem;
     }
 }
 /* Mobile */
@@ -1180,22 +1180,16 @@ input[type='submit']:hover, button:hover {
         font-size: 0.85rem;
     }
     #mouse{
-        margin: 2rem;
+        margin: 2.5rem;
     }
     .mouse-icon{
         width: 1.2rem;
         height: 2.2rem;
-        border: 0.15rem solid #212529;
+        border: 0.15rem solid #868e96;
     }.mouse-wheel{
         height: 0.3rem;
-        margin: 0.1rem auto;
-        display: block;
         width: 0.15rem;
-        background-color: #212529;
-        border-radius: 100rem;
-        -webkit-animation: 1.6s ease infinite wheel-up-down;
-        -moz-animation: 1.6s ease infinite wheel-up-down;
-        animation: 1.6s ease infinite wheel-up-down;
+        margin: 0.1rem auto;
     }
     @-webkit-keyframes wheel-up-down {
         0% {
