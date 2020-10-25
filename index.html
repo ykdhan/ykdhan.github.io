@@ -23,7 +23,7 @@
 	<link rel="apple-touch-icon" sizes="114x114" href="icon/dh-114.png" />
     	<link rel="apple-touch-icon" sizes="144x144" href="icon/dh-144.png" />
 	-->
-	<link rel="stylesheet" type="text/css" href="style.css?ver=3.4">
+	<link rel="stylesheet" type="text/css" href="style.css?ver=3.5">
     <link rel="stylesheet" type="text/css" href="animate.css?ver=1.3">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.css" rel="stylesheet">
@@ -54,7 +54,11 @@
 			<div class="section">
 				<p class="title" onclick="copyThis('myEmail')">ykdhan@naver.com<input id="myEmail" type="text" value="ykdhan@naver.com"><!--<span class="tooltip">클릭해서 복사</span>--></p>
 			</div>
+			<div class="section last">
+				<a href="https://github.com/ykdhan" target="_blank"><p><img src="src/icon-github-button.png" alt="Github"></p></a>
+			</div>
 		</div>
+		<!--
 		<div id="header" class="animated fadeIn">
 			<div class="section">
 				<a href="/"><p id="name">한영광</p></a>
@@ -65,6 +69,7 @@
 				</div>
 			</div>
 		</div>
+		-->
 	</div>
 </div>
 
@@ -235,28 +240,33 @@
 
 <script type="text/javascript">
 $('#section-1').height($(window).height());
+window.onresize = function(e) {
+	$('#section-1').height($(window).height());
+}
 //$('#header').css('bottom', '0.1rem');
 //alert($('#header').css('bottom'));
 //$('#header').css('display', 'block');
 //alert($('#header').css('bottom'));
 window.onscroll = function() { whenScroll() };
 
-var navbar = document.getElementById("header");
+var contact = document.getElementById("contact");
 var keywords = document.getElementsByClassName("keyword");
 var experiences = document.getElementsByClassName("experience");
 var saying = document.getElementById("saying");
 var copied = document.getElementById("copied");
 
-var nav = navbar.offsetTop;
+var cont = contact.offsetTop;
 var say = saying.offsetTop;
 
 function whenScroll() {
+	/*
 	if (window.pageYOffset >= nav) {
 		navbar.classList.add("sticky");
 	} else {
 		navbar.classList.remove("sticky");
 	}
-	if (window.pageYOffset >= nav-(window.screen.height * 0.25)) {
+	*/
+	if (window.pageYOffset >= cont-(window.screen.height * 0.25)) {
 		for (var i = 0; i < keywords.length; i++) {
 			keywords[i].classList.add("fadeInUp");
 		}
