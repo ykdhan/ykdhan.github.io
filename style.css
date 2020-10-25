@@ -781,7 +781,10 @@ input[type='submit']:hover, button:hover {
     position: fixed;
     bottom: 6vh;
     width: 15rem;
-    left: calc(50% - 10rem);
+    height: fit-content;
+    right: 0;
+    margin: 2rem;
+    top: 0;
     background-color: #212529;
     font-size: 0.9rem;
     color: #fff;
@@ -793,6 +796,74 @@ input[type='submit']:hover, button:hover {
 #copied.animated {
     animation-duration: 0.5s;
 }
+
+
+#mouse{
+    margin: 5rem auto;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    opacity: 0;
+    animation-delay: 1s;
+}.mouse-icon{
+    width: 25px;
+    height: 45px;
+    border: 2px solid #212529;
+    border-radius: 15px;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+}.mouse-wheel{
+    height: 6px;
+    margin: 2px auto 0;
+    display: block;
+    width: 3px;
+    background-color: #212529;
+    border-radius: 50%;
+    -webkit-animation: 1.6s ease infinite wheel-up-down;
+    -moz-animation: 1.6s ease infinite wheel-up-down;
+    animation: 1.6s ease infinite wheel-up-down;
+}
+@-webkit-keyframes wheel-up-down {
+    0% {
+        margin-top: 2px;
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    100% {
+        margin-top: 20px;
+        opacity: 0;
+    }
+}@-moz-keyframes wheel-up-down {
+	0% {
+	    margin-top: 2px;
+	    opacity: 0;
+	}
+	30% {
+	    opacity: 1;
+	}
+	100% {
+	    margin-top: 20px;
+	    opacity: 0;
+	}
+}@keyframes wheel-up-down {
+	0% {
+	    margin-top: 2px;
+	    opacity: 0;
+	}
+	30% {
+	    opacity: 1;
+	}
+	100% {
+	    margin-top: 20px;
+	    opacity: 0;
+	}
+}
+
+
 
 .hide-mobile {
     display: none;
@@ -829,7 +900,7 @@ input[type='submit']:hover, button:hover {
         font-size: 2rem;
     }
     #contact .section {
-        margin-bottom: 0.2rem;
+        margin-bottom: 0.3rem;
     }
     .text.big {
         font-size: 1.3rem;
@@ -983,6 +1054,13 @@ input[type='submit']:hover, button:hover {
     #contact {
         left: 1.1rem;
         bottom: 2rem;
+        font-size: 0.9rem;
+    }
+    #contact .section {
+        margin-bottom: 0.1rem;
+    }
+    #contact .section.last {
+        margin-top: 0.8rem;
     }
     #contact p {
         padding: 0.5rem 0.9rem;
@@ -1094,6 +1172,11 @@ input[type='submit']:hover, button:hover {
         margin-top: -2.5rem;
     }
 
+    #copied {
+        margin: 1rem;
+        width: 12rem;
+        font-size: 0.85rem;
+    }
 }
 @media all and (max-width: 390px) and (min-width: 50px) {
     #section-2 {
