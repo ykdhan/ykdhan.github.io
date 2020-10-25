@@ -159,14 +159,14 @@ input[type='submit']:hover, button:hover {
 
 #header {
     width: 100%;
+    display: block;
     height: fit-content;
     position: absolute;
+    float: left;
     z-index: 999;
     bottom: 0;
     left: 0;
-    background: none;
     font-size: 1rem;
-    border: 0;
     padding: 1.5rem 2rem;
     padding-left: 2.6rem;
     transition: margin-top 0s;
