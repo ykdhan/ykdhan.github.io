@@ -236,8 +236,11 @@
 
 <script type="text/javascript">
 $('#section-1').height($(window).height());
+alert($('#header').css('bottom'));
 $('#header').css('bottom', '0');
+alert($('#header').css('bottom'));
 $('#header').css('display', 'block');
+alert($('#header').css('bottom'));
 window.onscroll = function() { whenScroll() };
 
 var navbar = document.getElementById("header");
