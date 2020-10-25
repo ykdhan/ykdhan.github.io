@@ -802,7 +802,7 @@ input[type='submit']:hover, button:hover {
     margin: 0;
     position: absolute;
     width: 100%;
-    top: 30%;
+    top: 40%;
     right: 0;
     opacity: 0;
     animation-delay: 0.8s;
@@ -1134,20 +1134,22 @@ input[type='submit']:hover, button:hover {
         padding: 0 1rem;
         margin: 2rem 0;
         margin-top: 1rem;
+        vertical-align: top;
     }
     .experience {
         flex-direction: column;
         justify-content: space-between;
         display: inline-flex;
-        height: 70vh;
+        height: fit-content;
         width: 82vw;
         margin-right: 1rem;
+        vertical-align: top;
     }
     .experience .content {
         display: block;
         font-size: 0.85rem;
         width: 100%;
-        padding: 3rem 1.5rem;
+        padding: 3rem 1.3rem;
     }
     .experience .content div {
         margin: 0 1rem;
@@ -1160,6 +1162,7 @@ input[type='submit']:hover, button:hover {
         max-height: unset;
         border: none;
         border-top: 0.1rem solid #f1f3f5;
+        height: auto;
     }
     .experience:last-of-type {
         display: none;
@@ -1237,8 +1240,7 @@ input[type='submit']:hover, button:hover {
     }
 
     .experience .content {
-        padding: 0.8rem;
-        padding-top: 3rem;
+        padding: 3rem 0.8rem;
     }
 
     #skillbox {
