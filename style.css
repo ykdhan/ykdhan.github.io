@@ -413,34 +413,34 @@ input[type='submit']:hover, button:hover {
     z-index: 2;
 }
 .circle:nth-of-type(3) {
-background-color: #5c7cfa;
-animation-duration: 1s;
-top: 70vh;
-left: 50vw;
+    background-color: #5c7cfa;
+    animation-duration: 1s;
+    top: 70vh;
+    left: 50vw;
 }
 .circle:nth-of-type(4) {
-background-color: #20c997;
-animation-duration: 1.2s;
-top: 10vh;
-left: 40vw;
+    background-color: #20c997;
+    animation-duration: 1.2s;
+    top: 10vh;
+    left: 40vw;
 }
 .circle:nth-of-type(5) {
-background-color: #845ef7;
-animation-duration: 1.4s;
-top: 80vh;
-left: 10vw;
+    background-color: #845ef7;
+    animation-duration: 1.4s;
+    top: 80vh;
+    left: 10vw;
 }
 .circle:nth-of-type(6) {
-background-color: #fcc419;
-animation-duration: 1.6s;
-top: 33vh;
-left: 80vw;
+    background-color: #fcc419;
+    animation-duration: 1.6s;
+    top: 33vh;
+    left: 80vw;
 }
 .circle:nth-of-type(7) {
-background-color: #f06595;
-animation-duration: 1.8s;
-top: 25vh;
-left: 70vw;
+    background-color: #f06595;
+    animation-duration: 1.8s;
+    top: 25vh;
+    left: 70vw;
 }
 .circle-big {
     position: absolute;
@@ -964,10 +964,11 @@ left: 70vw;
 
     #contact {
         left: 1.1rem;
-        bottom: 4.5rem;
+        bottom: 3.5rem;
     }
     #header {
         padding-left: 1.1rem;
+        display: none;
     }
     #header .section {
         margin-right: 1rem;
@@ -1018,7 +1019,7 @@ left: 70vw;
         font-size: 0.85rem;
     }
     #info .section {
-        padding: 0.5rem;
+        padding: 0.4rem;
     }
     #photo, #photobox {
         width: 8rem;
@@ -1062,6 +1063,9 @@ left: 70vw;
     .experience .content div {
         margin: 0 1rem;
     }
+    .experience .title {
+        margin-bottom: 0.4rem;
+    }
     .experience .preview img {
         width: 100%;
         max-height: unset;
@@ -1096,15 +1100,11 @@ left: 70vw;
         padding-top: 3rem;
     }
 
-    .skill:not(:last-child) {
-        margin-right: 2.6rem;
-    }
-
-    #section-skill {
-        padding: 3.5rem 0;
-    }
     #skillbox {
         padding: 1rem 3.5rem;
+    }
+    .skill:not(:last-child) {
+        margin-right: 2.6rem;
     }
 
     #footer {
