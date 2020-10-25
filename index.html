@@ -242,7 +242,7 @@ window.addEventListener('resize', () => {
 });
 */
 
-document.getElementById('section-1').style.height = window.innerHeight;
+$('#section-1').height($(window).height());
 window.onscroll = function() { whenScroll() };
 
 var navbar = document.getElementById("header");

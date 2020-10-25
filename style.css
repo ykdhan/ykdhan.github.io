@@ -301,8 +301,9 @@ input[type='submit']:hover, button:hover {
     width: 100%;
 }
 #section-1 {
-    height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+    /*height: 100vh; /* Fallback for browsers that do not support Custom Properties */
     /*height: calc(var(--vh, 1vh) * 100);*/
+    box-sizing: border-box;
     margin: 0;
 }
 
@@ -658,10 +659,10 @@ input[type='submit']:hover, button:hover {
     display: inline-block;
 }
 .skill:not(:last-child) {
-    margin-right: 5rem;
+    margin-right: 4.7rem;
 }
 .skill img {
-    width: 4rem;
+    width: 3.5rem;
     height: auto;
     margin: 0 auto;
     vertical-align: middle;
@@ -733,7 +734,7 @@ input[type='submit']:hover, button:hover {
     display: block;
     width: auto;
     max-height: 45vh;
-    border-left: 0.15rem solid #f1f3f5;
+    border-left: 0.1rem solid #f1f3f5;
 }
 .experience .skill {
     text-align: left;
@@ -865,10 +866,10 @@ input[type='submit']:hover, button:hover {
     }
 
     .skill:not(:last-child) {
-        margin-right: 3.9rem;
+        margin-right: 3.5rem;
     }
     .skill img {
-        width: 3.1rem;
+        width: 3.3rem;
     }
 
     #footer {
@@ -921,6 +922,7 @@ input[type='submit']:hover, button:hover {
     }
     .experience .preview img {
         max-height: 62vh;
+        height: -webkit-fill-available;
     }
     .experience:last-of-type {
         max-width: 26vw;
@@ -930,7 +932,7 @@ input[type='submit']:hover, button:hover {
         padding: 1.3rem 5rem;
     }
     .skill:not(:last-child) {
-        margin-right: 3.7rem;
+        margin-right: 3.3rem;
     }
 
 }
@@ -1070,7 +1072,7 @@ input[type='submit']:hover, button:hover {
         width: 100%;
         max-height: unset;
         border: none;
-        border-top: 0.15rem solid #f1f3f5;
+        border-top: 0.1rem solid #f1f3f5;
     }
     .experience:last-of-type {
         display: none;
