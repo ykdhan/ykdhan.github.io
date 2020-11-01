@@ -240,6 +240,9 @@
 
 <script type="text/javascript">
 $('#section-1').height($(window).height());
+goTop();
+function goTop() { window.scrollTo(0, 0); }
+
 window.onresize = function(e) {
 	$('#section-1').height($(window).height());
 }

@@ -395,7 +395,61 @@ input[type='submit']:hover, button:hover {
 }
 
 
+#skills {
+    background-color: red;
+    height: 95vh;
+    width: 50vw;
+    float: right;
+    position: absolute;
+    right: 5vw;
+    top: 2.5vh;
+}
+#skills .skill {
+    margin: auto;
+    position: absolute;
+    align-self: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+    height: auto;
+    background: #ddd;
+}
+#skills .skill:nth-of-type(2) {
+    transform: translate(calc(-50% - 4rem),calc(-50% - 4rem));
+}
+#skills .skill:nth-of-type(3) {
+    transform: translate(calc(-50% + 4rem),calc(-50% + 4rem));
+}
+#skills .skill:nth-of-type(4) {
+    transform: translate(calc(-50% + 4rem),calc(-50% - 4rem));
+}
+#skills .skill:nth-of-type(5) {
+    transform: translate(calc(-50% - 4rem),calc(-50% + 4rem));
+}
+#skills .skill:nth-of-type(6) {
+    transform: translate(calc(-50%),calc(-50% + 4rem));
+}
+#skills .skill:nth-of-type(7) {
+    transform: translate(calc(-50%),calc(-50% - 4rem));
+}
+#skills .skill:nth-of-type(8) {
+    transform: translate(calc(-50% + 4rem),calc(-50%));
+}
+#skills .skill:nth-of-type(9) {
+    transform: translate(calc(-50% - 4rem),calc(-50%));
+}
 
+#skills .skill img {
+    width: 3.5rem;
+    height: auto;
+    margin: 0 auto;
+    vertical-align: middle;
+    transform-origin: center;
+}
+#skills .skill img:hover {
+    width: 5rem;
+}
 
 
 .circle {
@@ -658,20 +712,20 @@ input[type='submit']:hover, button:hover {
 #skillbox::-webkit-scrollbar {
    display: none;
 }
-.skill {
+#skillbox .skill {
     display: inline-block;
 }
-.skill:not(:last-child) {
+#skillbox .skill:not(:last-child) {
     margin-right: 4.7rem;
 }
-.skill img {
+#skillbox .skill img {
     width: 3.5rem;
     height: auto;
     margin: 0 auto;
     vertical-align: middle;
     transform-origin: center;
 }
-.skill:hover img {
+#skillbox .skill:hover img {
     transform: scale(1.1);
 }
 
@@ -739,11 +793,11 @@ input[type='submit']:hover, button:hover {
     max-height: 45vh;
     border-left: 0.1rem solid #f1f3f5;
 }
-.experience .skill {
+.experience #skillbox .skill {
     text-align: left;
     margin: 0;
 }
-.experience .skill span {
+.experience #skillbox .skill span {
     display: inline-block;
     width: auto;
     font-family: 'NEXON Lv1 Gothic OTF Bold';
@@ -939,10 +993,10 @@ input[type='submit']:hover, button:hover {
         max-height: 59vh;
     }
 
-    .skill:not(:last-child) {
+    #skillbox .skill:not(:last-child) {
         margin-right: 3.5rem;
     }
-    .skill img {
+    #skillbox .skill img {
         width: 3.3rem;
     }
 
@@ -1008,7 +1062,7 @@ input[type='submit']:hover, button:hover {
     #skillbox {
         padding: 1.3rem 5rem;
     }
-    .skill:not(:last-child) {
+    #skillbox .skill:not(:last-child) {
         margin-right: 3.3rem;
     }
 
@@ -1123,10 +1177,10 @@ input[type='submit']:hover, button:hover {
     #skillbox {
         padding: 1rem 4rem;
     }
-    .skill:not(:last-child) {
+    #skillbox .skill:not(:last-child) {
         margin-right: 3.3rem;
     }
-    .skill img {
+    #skillbox .skill img {
         width: 3rem;
     }
 
@@ -1253,7 +1307,7 @@ input[type='submit']:hover, button:hover {
     #skillbox {
         padding: 1rem 3.5rem;
     }
-    .skill:not(:last-child) {
+    #skillbox .skill:not(:last-child) {
         margin-right: 2.6rem;
     }
 
