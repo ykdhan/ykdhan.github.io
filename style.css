@@ -329,6 +329,7 @@ input[type='submit']:hover, button:hover {
 }
 #scram {
     font-size: 1.05rem;
+	font-weight: 600;
     color: #212529;
     font-family: 'Roboto Mono', monospace;
 }
