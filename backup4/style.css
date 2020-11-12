@@ -785,6 +785,7 @@ input[type='submit']:hover, button:hover {
     align-items: center;
     justify-content: center;
     font-family: 'NEXON Lv1 Gothic OTF Bold';
+	cursor: pointer;
 }
 #section-5 .button:hover {
     background: #212529;
