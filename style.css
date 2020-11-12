@@ -1027,7 +1027,7 @@ input[type='submit']:hover, button:hover {
     }
 
     #section-4-content {
-        padding-left: 4rem;
+        margin-left: 4rem;
     }
     #timeline {
         width: 161rem;
