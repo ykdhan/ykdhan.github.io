@@ -685,7 +685,7 @@ input[type='submit']:hover, button:hover {
 
 
 
-#section-4 {
+#section-4-content {
     margin: 0 auto;
     text-align: left;
     overflow-x: scroll;
@@ -696,14 +696,14 @@ input[type='submit']:hover, button:hover {
     scrollbar-width: none;  /* Firefox */
     vertical-align: middle;
 }
-#section-4::-webkit-scrollbar {
+#section-4-content::-webkit-scrollbar {
    display: none;
 }
-#section-4 * {
+#section-4-content * {
     white-space: initial;
 }
 #section-4-content {
-    padding-left: 25vw;
+    margin-left: 25vw;
 }
 #timeline {
     width: 201rem;
