@@ -328,11 +328,9 @@ input[type='submit']:hover, button:hover {
     animation-duration: 0.7s;
 }
 #scram {
-    font-weight: 100;
     font-size: 1.05rem;
     color: #212529;
     font-family: 'Roboto Mono', monospace;
-    border-radius: 0.5rem;
 }
 .dum {
     color: #adb5bd;
@@ -685,7 +683,7 @@ input[type='submit']:hover, button:hover {
 
 
 
-#section-4 {
+#section-4-content {
     margin: 0 auto;
     text-align: left;
     overflow-x: scroll;
@@ -696,14 +694,14 @@ input[type='submit']:hover, button:hover {
     scrollbar-width: none;  /* Firefox */
     vertical-align: middle;
 }
-#section-4::-webkit-scrollbar {
+#section-4-content::-webkit-scrollbar {
    display: none;
 }
-#section-4 * {
+#section-4-content * {
     white-space: initial;
 }
 #section-4-content {
-    padding-left: 25vw;
+    margin-left: 25vw;
 }
 #timeline {
     width: 201rem;
@@ -785,10 +783,14 @@ input[type='submit']:hover, button:hover {
     align-items: center;
     justify-content: center;
     font-family: 'NEXON Lv1 Gothic OTF Bold';
+	cursor: pointer;
 }
 #section-5 .button:hover {
     background: #212529;
     color: #fff;
+}
+#section-5 .button p {
+	cursor: pointer;
 }
 
 
