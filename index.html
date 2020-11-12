@@ -292,10 +292,12 @@
 
 <script type="text/javascript">
 $('#section-1').height($(window).height());
+$('#sidebar').height($(window).height());
 window.scrollTo(0, 0);
 
 window.onresize = function(e) {
 	$('#section-1').height($(window).height());
+	$('#sidebar').height($(window).height());
 }
 
 $(document).ready(function() {
@@ -396,8 +398,8 @@ class TextScramble {
 
 const phrases = [
 	'echo "Hello World";',
-	'const profile = [\'bday\': 951008];',
-	'while(not dead): develop([\'frontend\',\'backend\'])',
+	'profile = { \'bday\': 951008 }',
+	'ps axu | grep mental > result.txt',
 	'SELECT money FROM bank;',
 	'.my-color { background: black; }',
 ];
