@@ -23,7 +23,7 @@
 	<link rel="apple-touch-icon" sizes="114x114" href="src/portfolio-114.png" />
     <link rel="apple-touch-icon" sizes="144x144" href="src/porfolio-144.png" />
 
-	<link rel="stylesheet" type="text/css" href="style.css?ver=4.37">
+	<link rel="stylesheet" type="text/css" href="style.css?ver=4.38">
     <link rel="stylesheet" type="text/css" href="animate.css?ver=1.4">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.css" rel="stylesheet">
@@ -300,10 +300,9 @@ window.onresize = function(e) {
 
 $(document).ready(function() {
 	if (window.navigator.platform.includes('Win')) {
-		console.log('Win');
 		$('#section-4-content').mousewheel(function(e, delta) {
 			console.log('scroll');
-			$('#section-4-content').scrollLeft -= delta * 50;
+			this.scrollLeft += delta * 50;
 			e.preventDefault();
 		});
 	}
