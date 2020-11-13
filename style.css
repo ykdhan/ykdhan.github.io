@@ -485,6 +485,7 @@ input[type='submit']:hover, button:hover {
     transition: all ease-out 0.2s;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+	-webkit-overflow-scrolling: touch;
 }
 #section-4-content::-webkit-scrollbar {
    display: none;
