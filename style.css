@@ -485,6 +485,7 @@ input[type='submit']:hover, button:hover {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 	-webkit-overflow-scrolling: touch;
+	line-height: 100vh;
 }
 #section-4-content::-webkit-scrollbar {
    display: none;
@@ -522,7 +523,7 @@ input[type='submit']:hover, button:hover {
 }
 .exp {
     display: inline-block;
-    width: 50rem;
+    width: 45rem;
     box-sizing: border-box;
     text-align: left;
     vertical-align: top;
@@ -537,6 +538,9 @@ input[type='submit']:hover, button:hover {
     font-family: 'NEXON Lv1 Gothic OTF Bold';
     color: #212529;
     margin-bottom: 0.5rem;
+	padding: 0.8rem 1.2rem;
+	background: #f8f9fa;
+    border-radius: 0.2rem;
 }
 .exp .content .date {
     font-size: 0.9rem;
