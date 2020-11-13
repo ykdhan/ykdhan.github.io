@@ -11,6 +11,9 @@
     font-style: normal;
 }
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+
 
 .animated {
   animation-duration: 1s;
@@ -338,6 +341,7 @@ input[type='submit']:hover, button:hover {
 	font-weight: 400;
     color: #212529;
     font-family: 'Roboto Mono', monospace;
+	font-family: 'Source Code Pro', monospace;
 }
 .dum {
     color: #adb5bd;
