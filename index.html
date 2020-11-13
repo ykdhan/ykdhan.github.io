@@ -301,9 +301,9 @@ window.onresize = function(e) {
 $(document).ready(function() {
 	if (window.navigator.platform.includes('Win')) {
 		console.log('Win');
-		$('html,body,#section-4-content').mousewheel(function(e, delta) {
+		$('#section-4-content').mousewheel(function(e, delta) {
 			console.log('scroll');
-			this.scrollLeft -= (delta * 50);
+			this.scrollLeft -= delta * 50;
 			e.preventDefault();
 		});
 	}
