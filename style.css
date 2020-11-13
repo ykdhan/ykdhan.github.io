@@ -470,6 +470,8 @@ input[type='submit']:hover, button:hover {
 
 #section-4 {
     margin: 0 auto;
+}
+#section-4-content {
     text-align: left;
     overflow-x: scroll;
     overflow-y: hidden;
@@ -478,16 +480,17 @@ input[type='submit']:hover, button:hover {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
     vertical-align: middle;
+	padding: 0;
+	padding-left: 25vw;
+	margin: 0;
 }
-#section-4::-webkit-scrollbar {
+#section-4-content::-webkit-scrollbar {
    display: none;
 }
-#section-4 * {
+#section-4-content * {
     white-space: initial;
 }
-#section-4-content {
-    margin-left: 25vw;
-}
+
 #timeline {
     width: 201rem;
     height: 0.4rem;
@@ -813,7 +816,7 @@ input[type='submit']:hover, button:hover {
     }
 
     #section-4-content {
-        margin-left: 4rem;
+        padding-left: 4rem;
     }
     #timeline {
         width: 161rem;
