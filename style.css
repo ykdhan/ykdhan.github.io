@@ -474,17 +474,17 @@ input[type='submit']:hover, button:hover {
 #section-4-content {
 	width: 100%;
 	max-width: 100%;
+	vertical-align: middle;
+	padding: 0;
+	padding-left: 25vw;
+	margin: 0;
     text-align: left;
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
-    transition: all ease-out 0.2s, transform 0s;
+    transition: all ease-out 0.2s;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
-    vertical-align: middle;
-	padding: 0;
-	padding-left: 25vw;
-	margin: 0;
 }
 #section-4-content::-webkit-scrollbar {
    display: none;
