@@ -302,7 +302,7 @@ $(document).ready(function() {
 	if (window.navigator.platform.includes('Win')) {
 		$('#section-4-content').mousewheel(function(e, delta) {
 			console.log('scroll');
-			this.scrollLeft += delta * 50;
+			this.scrollLeft -= delta * 50;
 			e.preventDefault();
 		});
 	}
