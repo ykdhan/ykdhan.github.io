@@ -10,8 +10,7 @@
     font-weight: normal;
     font-style: normal;
 }
-@import 'https://fonts.googleapis.com/css?family=Roboto+Mono:400';
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 .animated {
   animation-duration: 1s;
