@@ -516,7 +516,7 @@ input[type='submit']:hover, button:hover {
     margin-right: 0;
 }
 #exps {
-    margin: 3rem auto;
+    margin: 0 auto;
     width: max-content;
     box-sizing: border-box;
     vertical-align: top;
@@ -535,12 +535,13 @@ input[type='submit']:hover, button:hover {
     line-height: 1.5;
 }
 .exp .content .title {
-    font-family: 'NEXON Lv1 Gothic OTF Bold';
+	font-family: 'NEXON Lv1 Gothic OTF Bold';
     color: #212529;
-    margin-bottom: 0.5rem;
-	padding: 0.8rem 1.2rem;
-	background: #f8f9fa;
+    margin-bottom: 1rem;
+    padding: 0.7rem 1rem;
+    background: #f8f9fa;
     border-radius: 0.2rem;
+    width: fit-content;
 }
 .exp .content .date {
     font-size: 0.9rem;
