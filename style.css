@@ -829,47 +829,34 @@ input[type='submit']:hover, button:hover {
     #section-4-content {
         padding-left: 4rem;
     }
-    #timeline {
-        width: 161rem;
-        height: 0.4rem;
-        border-bottom: 0.15rem solid #212529;
-        overflow-y: visible;
-        vertical-align: top;
-    }
-    #timeline .period {
-        width: 0.75rem;
-        height: 0.75rem;
-        margin-right: 39.2rem;
-    }
     #exps {
         margin: 2.4rem auto;
     }
     .exp {
         width: 40rem;
     }
-    .exp .content .title {
-        margin-bottom: 0.5rem;
-    }
-    .exp .content .date {
-        font-size: 0.85rem;
-    }
-    .exp .content .info {
-        max-width: 35rem;
-        padding: 2rem 0;
-        padding-bottom: 1rem;
-        font-size: 0.85rem;
-    }
-    .exp img {
-        max-height: 14rem;
-        margin-top: 1rem;
-    }
+	.exp .content .title {
+		margin-bottom: 1rem;
+		padding: 0.6rem 0.9rem;
+	}
+	.exp .content .date {
+		font-size: 0.85rem;
+	}
+	.exp .content .info {
+		max-width: 35rem;
+		padding: 2rem 0;
+		padding-bottom: 1rem;
+		font-size: 0.85rem;
+	}
+	.exp img {
+		max-height: 14rem;
+		margin-top: 1rem;
+	}
 
     #section-5 .button {
         display: flex;
         margin: 1.2rem 0.3rem;
     }
-
-
 
     #footer {
         margin-top: -3rem;
