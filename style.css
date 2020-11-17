@@ -288,6 +288,61 @@ input[type='submit']:hover, button:hover {
     }
 }
 
+#sidebar-mobile {
+    width: 100%;
+    background: #fff;
+    border-bottom: 0.1rem solid #dee2e6;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    padding: 0.8rem 1.1rem;
+    animation-delay: 0.2s;
+}
+#sidebar-mobile #logo-mobile {
+    display: inline-block;
+    font-family: 'NEXON Lv1 Gothic OTF Bold';
+    font-size: 1rem;
+    line-height: 1.3;
+    color: #212529;
+    width: fit-content;
+    text-align: left;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-top: 0.5rem;
+}
+#sidebar-mobile #logo-mobile:hover {
+    color: #868e96;
+    margin-left: 0.3em;
+}
+#sidebar-mobile #github {
+    float: right;
+    display: inline-block;
+    vertical-align: middle;
+}
+#sidebar-mobile #github a {
+    width: auto;
+    height: auto;
+}
+#sidebar-mobile #github p {
+    width: fit-content;
+    cursor: pointer;
+    transition: all ease-out 0.2s;
+}
+#sidebar-mobile svg {
+    width: 1.7rem;
+    margin-top: 0.2rem;
+}
+#sidebar-mobile #github p:hover {
+    margin-right: 0.3em;
+}
+#sidebar-mobile #github p:hover .cls-1,
+#sidebar-mobile #github p:hover .cls-2 {
+    fill: #868e96;
+}
+
+
+
 
 
 .text {
@@ -386,7 +441,7 @@ input[type='submit']:hover, button:hover {
 #profile .name {
     font-size: 1rem;
     padding: 1rem 0;
-    border-bottom: 0.1rem solid #ddd;
+    border-bottom: 0.1rem solid #dee2e6;
 }
 #profile .title {
     font-family: 'NEXON Lv1 Gothic OTF Bold';
@@ -501,27 +556,6 @@ input[type='submit']:hover, button:hover {
     white-space: initial;
 }
 
-#timeline {
-    width: 201rem;
-    height: 0.4rem;
-    border-bottom: 0.15rem solid #212529;
-    overflow-y: visible;
-    vertical-align: top;
-}
-#timeline .period {
-    display: inline-block;
-    position: relative;
-    vertical-align: top;
-    width: 0.75rem;
-    height: 0.75rem;
-    background: #fff;
-    border-radius: 0.2rem;
-    border: 0.15rem solid #212529;
-    margin-right: 49.2rem;
-}
-#timeline .period:last-of-type {
-    margin-right: 0;
-}
 #exps {
     margin: 0 auto;
     width: max-content;
@@ -739,6 +773,8 @@ input[type='submit']:hover, button:hover {
 /* Mobile */
 @media all and (max-width: 450px) and (min-width: 50px) {
 
+    .mobile { display: block; }
+
     body {
     	font-size: 0.9rem;
         line-height: 1.6;
@@ -756,36 +792,32 @@ input[type='submit']:hover, button:hover {
     }
 
     #sidebar {
-        width: 8rem;
-        padding: 1.4rem;
+        width: 4rem;
+        padding: 0;
     }
     #sidebar #logo {
-        font-size: 1rem;
-        line-height: 1.3;
+        display: none;
     }
     #sidebar #nav {
-        margin-top: 1.4rem;
+        margin-top: 8rem;
     }
     #sidebar .nav-button {
         width: 0.9rem;
         height: 0.9rem;
-        margin-bottom: 0.55rem;
+        margin-bottom: 0.6rem;
+        border-radius: 0 0.2rem 0.2rem 0;
     }
     #sidebar .nav-button.now,
     #sidebar .nav-button:hover {
         width: 1.7rem;
     }
     #sidebar #contact {
-        margin: 1.4rem;
-    }
-    #sidebar svg {
-        width: 1.7rem;
+        display: none;
     }
 
     #scram {
         font-size: 0.9rem;
     }
-
 
     #info {
         margin: 2.2rem auto;
@@ -795,7 +827,7 @@ input[type='submit']:hover, button:hover {
         width: 7rem;
         height: 7rem;
         margin: 0 auto;
-        margin-bottom: 0.7rem;
+        margin-bottom: 0;
     }
     #profile  {
         float: unset;
@@ -804,14 +836,17 @@ input[type='submit']:hover, button:hover {
         width: 100%;
         padding: 0 3.5rem;
     }
-    #profile div {
-        padding-bottom: 0.4rem;
-        font-size: 0.85rem;
-    }
-    #profile div:first-of-type {
+    #profile .name {
         font-size: 0.95rem;
+        padding: 0.7rem 0;
         text-align: center;
     }
+    #profile .line {
+        font-size: 0.85rem;
+        padding-top: 0.7rem;
+    }
+
+
     #tags {
         display: block;
         margin-top: 0;
