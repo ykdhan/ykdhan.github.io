@@ -610,7 +610,6 @@ input[type='submit']:hover, button:hover {
     position: fixed;
     bottom: 6vh;
     width: 15rem;
-    height: fit-content;
     right: 0;
     margin: 2rem;
     top: 0;
