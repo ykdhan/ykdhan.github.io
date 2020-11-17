@@ -311,11 +311,10 @@ input[type='submit']:hover, button:hover {
 
 .page {
     box-sizing: border-box;
+    width: auto;
     height: 100vh;
 }
-.page:not(:first-of-type) {
 
-}
 
 .flex .content {
     margin: 0 auto;
@@ -357,7 +356,7 @@ input[type='submit']:hover, button:hover {
 
 
 #section-2 {
-	
+
 }
 #info {
     display: block;
@@ -434,9 +433,11 @@ input[type='submit']:hover, button:hover {
 }
 .keyword .title {
     font-family: 'NEXON Lv1 Gothic OTF Bold';
-    font-size: 1.1rem;
     color: #212529;
     margin-bottom: 1.5rem;
+    padding: 0.7rem 1rem;
+    background: #f8f9fa;
+    border-radius: 0.2rem;
 }
 .keyword:hover .title {
     transform: translateY(-0.5rem);
@@ -541,7 +542,7 @@ input[type='submit']:hover, button:hover {
 .exp .content .title {
 	font-family: 'NEXON Lv1 Gothic OTF Bold';
     color: #212529;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     padding: 0.7rem 1rem;
     background: #f8f9fa;
     border-radius: 0.2rem;
@@ -816,8 +817,8 @@ input[type='submit']:hover, button:hover {
         padding: 0.7rem;
     }
     .keyword .title {
-        font-size: 0.95rem;
         margin-bottom: 1.3rem;
+        padding: 0.6rem 0.9rem;
     }
     .keyword .skill {
         margin: 1.5rem;
@@ -833,10 +834,10 @@ input[type='submit']:hover, button:hover {
         margin: 2.4rem auto;
     }
     .exp {
-        width: 40rem;
+        width: 37rem;
     }
 	.exp .content .title {
-		margin-bottom: 1rem;
+		margin-bottom: 1.5rem;
 		padding: 0.6rem 0.9rem;
 	}
 	.exp .content .date {
@@ -844,7 +845,7 @@ input[type='submit']:hover, button:hover {
 	}
 	.exp .content .info {
 		max-width: 35rem;
-		padding: 2rem 0;
+		padding: 1.2rem 0;
 		padding-bottom: 1rem;
 		font-size: 0.85rem;
 	}
