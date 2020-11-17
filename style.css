@@ -908,6 +908,7 @@ input[type='submit']:hover, button:hover {
     #section-5 .button {
         display: flex;
         margin: 1.2rem 0.3rem;
+        height: 6.5rem;
     }
 
     #footer {
@@ -928,7 +929,8 @@ input[type='submit']:hover, button:hover {
         width: 1.2rem;
         height: 2.2rem;
         border: 0.15rem solid #adb5bd;
-    }.mouse-wheel{
+    }
+    .mouse-wheel{
         height: 0.3rem;
         width: 0.17rem;
         margin: 0.1rem auto;
