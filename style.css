@@ -778,6 +778,7 @@ input[type='submit']:hover, button:hover {
     body {
     	font-size: 0.9rem;
         line-height: 1.6;
+        -webkit-text-size-adjust: 100%;
     }
 
     .text {
@@ -922,7 +923,9 @@ input[type='submit']:hover, button:hover {
         top: unset;
         bottom: 0;
         font-size: 0.85rem;
-        padding: 0.8rem 1.5rem;
+    }
+    #copied p {
+        margin: 0.8rem;
     }
 
     .mouse-icon{
