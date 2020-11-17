@@ -882,11 +882,8 @@ input[type='submit']:hover, button:hover {
     #section-4-content {
         padding-left: 4rem;
     }
-    #exps {
-        margin: 2.4rem auto;
-    }
     .exp {
-        width: 37rem;
+        width: 35.5rem;
     }
 	.exp .content .title {
 		margin-bottom: 1.5rem;
@@ -896,7 +893,7 @@ input[type='submit']:hover, button:hover {
 		font-size: 0.85rem !important;
 	}
 	.exp .content .info {
-		max-width: 35rem;
+		max-width: 33.5rem;
 		padding: 1.2rem 0;
 		padding-bottom: 1rem;
 		font-size: 0.85rem !important;
