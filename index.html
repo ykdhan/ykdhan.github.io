@@ -18,21 +18,21 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-title" content="YKDHAN" />
 
-	<link rel="shortcut icon" href="src/portfolio-70.ico" type="image/x-icon">
-	<link rel="apple-touch-icon" href="src/portfolio-70.png"/>
-	<link rel="apple-touch-icon" sizes="114x114" href="src/portfolio-114.png" />
-    <link rel="apple-touch-icon" sizes="144x144" href="src/porfolio-144.png" />
+	<link rel="shortcut icon" href="src/favicon-64.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="src/favicon-64.png"/>
+	<link rel="apple-touch-icon" sizes="72x72" href="src/favicon-72.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="src/favicon-114.png" />
+	<link rel="apple-touch-icon" sizes="120x120" href="src/favicon-120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="src/favicon-144.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="src/favicon-152.png" />
 
-	<link rel="stylesheet" type="text/css" href="style.css?ver=4.44">
+	<link rel="stylesheet" type="text/css" href="style.css?ver=4.5">
     <link rel="stylesheet" type="text/css" href="animate.css?ver=1.4">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
-
-
-	<!--<script src="src/modernizr.js"></script>-->
 
 	<title>YKDHAN</title>
 </head>
@@ -41,8 +41,7 @@
 
 <div id="sidebar">
 	<div id="logo" class="animated fadeIn">
-		<!--<a href="/">ykdhan<br>com</a>-->
-		ykdhan<br>com
+		<a href="/">ykdhan<br>com</a>
 	</div>
 	<div id="nav">
 		<div class="nav-button animated" onclick="nav(1)"></div>
@@ -116,7 +115,7 @@
 			<div id="info" class="width--max">
 				<div id="photo" class="animated fadeIn"></div>
 				<div id="profile">
-					<div class="title">한영광</div>
+					<div class="name title">한영광</div>
 					<div class="line">
 						<p class="title">Taylor University (14.8 ~ 18.5)</p>
 						<p>컴퓨터디지털미디어학</p>
@@ -283,23 +282,51 @@
 
 
 <div id="footer"><p>2020 &copy; All rights reserved.</p></div>
-<div id="copied" class="animated">알림</div>
+<div id="copied" class="animated"><p>알림</p></div>
 
-
-<script src="src/velocity.min.js"></script>
-<script src="src/velocity.ui.min.js"></script>
-<script src="src/main.js"></script>
 
 
 <script type="text/javascript">
-$('#section-1').height($(window).height());
-window.scrollTo(0, 0);
+var space = $(window).height() * 0.2;
+var navs = document.getElementsByClassName("nav-button");
 
-window.onresize = function(e) {
-	$('#section-1').height($(window).height());
+window.onresize = function(e) { $('#section-1').height($(window).height()); }
+window.onscroll = function() { whenScroll() };
+
+function whenScroll() {
+	if (window.pageYOffset < document.getElementById("section-2").offsetTop - space) {
+		for (var i = 0; i < navs.length; i++) {
+			if (i != 0) { navs[i].classList.remove("now"); }
+		}
+		navs[0].classList.add("now");
+	} else if (window.pageYOffset < document.getElementById("section-3").offsetTop - space) {
+		for (var i = 0; i < navs.length; i++) {
+			if (i != 1) { navs[i].classList.remove("now"); }
+		}
+		navs[1].classList.add("now");
+	} else if (window.pageYOffset < document.getElementById("section-4").offsetTop - space) {
+		for (var i = 0; i < navs.length; i++) {
+			if (i != 2) { navs[i].classList.remove("now"); }
+		}
+		navs[2].classList.add("now");
+	} else if (window.pageYOffset < document.getElementById("section-5").offsetTop - space) {
+		for (var i = 0; i < navs.length; i++) {
+			if (i != 3) { navs[i].classList.remove("now"); }
+		}
+		navs[3].classList.add("now");
+	} else if (window.pageYOffset < document.getElementById("footer").offsetTop - space) {
+		for (var i = 0; i < navs.length; i++) {
+			if (i != 4) { navs[i].classList.remove("now"); }
+		}
+		navs[4].classList.add("now");
+	}
 }
 
+
 $(document).ready(function() {
+	window.scrollTo(0, 0);
+	$('#section-1').height($(window).height());
+	whenScroll();
 	if (window.navigator.platform.includes('Win')) {
 		$('#section-4-content').mousewheel(function(e, delta) {
 			console.log('scroll');
@@ -316,10 +343,10 @@ function copyThis(id) {
 	document.execCommand("copy");
 	switch (id) {
 		case 'myPhone':
-			copied.innerHTML = '전화번호 클립보드에 복사';
+			copied.innerHTML = '<p>전화번호 클립보드에 복사</p>';
 			break;
 		case 'myEmail':
-			copied.innerHTML = '이메일 클립보드에 복사';
+			copied.innerHTML = '<p>이메일 클립보드에 복사</p>';
 			break;
 		default:
 			break;
@@ -395,11 +422,11 @@ class TextScramble {
 
 
 const phrases = [
-	'echo "Hello, I\'m YKDHAN.";',
-	'profile = { \'b_day\': 951008 }',
-	'ps aux | grep mental > result.txt',
-	'SELECT money FROM bank;',
+	'echo "Hello, visitor";',
 	'.my-color { background: black; }',
+	'me[\'profile\'][\'birthday\'] = 951008',
+	'SELECT money FROM bank;',
+	'ps aux | grep mental > result.txt',
 ];
 const el = document.querySelector('#scram');
 const fx = new TextScramble(el);
@@ -417,11 +444,9 @@ setTimeout(next, 3200);
 
 
 function nav(value) {
-	// if not this
 	$('html, body').animate({
 		scrollTop: document.getElementById('section-'+value).offsetTop
 	}, 600);
-    // end if
 }
 
 </script>
