@@ -330,8 +330,8 @@ input[type='submit']:hover, button:hover {
     transition: all ease-out 0.2s;
 }
 #sidebar-mobile svg {
-    width: 1.7rem;
-    margin-top: 0.2rem;
+    width: 1.5rem;
+    margin-top: 0.3rem;
 }
 #sidebar-mobile #github p:hover {
     margin-right: 0.3em;
