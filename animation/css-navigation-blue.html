@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-title" content="Web Animation" />
+	<link rel="shortcut icon" href="/icon/animation.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/icon/animation.png"/>
+	<link rel="apple-touch-icon" sizes="114x114" href="/icon/animation.svg" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/icon/animation.svg" />
+	<link rel="stylesheet" type="text/css" href="/style.css">
+    <link rel="stylesheet" type="text/css" href="/animate.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js"></script>
+
+	<title>CSS Navigation (BLUE)</title>
+
+    <style>
+
+
+        /*
+            red:    d35400
+            orange: f39c12
+            green:  27ae60
+            blue:   2980b9
+            purple: 9b59b6
+        */
+
+        *, *:before, *:after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        body {
+            background-color: #2980b9;
+        }
+
+        .pencil {
+            position: fixed;
+            bottom: -10rem; /*  */
+            width: 3.2rem; /*  */
+            margin: 0; /*  */
+            cursor: pointer;
+            transition: all 0.3s ease-out, left 0.6s ease-out;
+        }
+        #pencil-red:hover,
+        #pencil-orange:hover,
+        #pencil-green:hover,
+        #pencil-blue:hover,
+        #pencil-purple:hover
+        {
+            bottom: -7rem; /*  */
+        }
+
+        #pencil-red { left: 3.5rem; } /* 40px */
+        #pencil-orange { left: 8rem; } /* 130px */
+        #pencil-green { left: 12.5rem; } /* 220px */
+        #pencil-blue { left: 17rem; } /* 310px */
+        #pencil-purple { left: 21.5rem; } /* 400px */
+
+
+		#box {
+			height: 20.5rem; /*  */
+			background-color: #fff;
+			border: 0;
+			border-radius: 2.5rem; /*  */
+			position: fixed;
+			left: 2rem; /* 20px */
+			width: 24.5rem; /* 480px */
+			bottom: -10rem; /*  */
+			text-align: center;
+			z-index: -1;
+			transition: width 0.6s ease-out;
+		}
+		#box-under {
+			height: 20.5rem; /*  */
+			background-color: #dadada;
+			border: 0;
+			border-radius: 2.5rem; /*  */
+			position: fixed;
+			left: 1.75rem; /* 20px */
+			width: 25rem; /* 480px */
+			bottom: -10rem; /*  */
+			text-align: center;
+			z-index: -2;
+			transition: width 0.6s ease-out;
+		}
+
+        .head {
+            border-left: 1.6rem solid transparent; /* 30px */
+            border-right: 1.6rem solid transparent; /* 30px */
+            border-bottom: 3.2rem solid #fff0c9; /* 60px */
+        }
+            .lead {
+                float: left;
+                margin-left: -0.8rem; /* -17px */
+                margin-top: 2rem; /* 35px */
+                width: 0;
+                height: 0;
+                border-left: 0.8rem solid transparent; /* 17px */
+                border-right: 0.8rem solid transparent; /* 17px */
+            }
+            .lead.red {
+                border-bottom: 1.6rem solid #d35400; /* 35px */
+            }
+            .lead.orange {
+                border-bottom: 1.6rem solid #f39c12; /* 35px */
+            }
+            .lead.green {
+                border-bottom: 1.6rem solid #27ae60; /* 35px */
+            }
+            .lead.blue {
+                border-bottom: 1.6rem solid #2980b9; /* 35px */
+            }
+            .lead.purple {
+                border-bottom: 1.6rem solid #9b59b6; /* 35px */
+            }
+            .holder {
+                background: #fff0c9;
+                height: 2rem; /* 35px */
+            }
+
+
+        .body {
+            background: #fff0c9;
+            height: 15rem; /* 400px */
+			width: max-content;
+        }
+            .body .l {
+                display: inline-block;
+                background: #f4bb29;
+                height: 15rem; /* 400px */
+                width: 0.8rem; /* 15px */
+                transform: skewY(30deg);
+                float: left;
+                margin-top: 0.25rem; /* 6px */
+            }
+            .body .c {
+                display: inline-block;
+                background: #edac06;
+                height: 15rem; /* 400px */
+                width: 1.6rem; /* 30px */
+                float: left;
+                margin-top: 0.5rem; /* 11px */
+            }
+            .body .r {
+                display: inline-block;
+                background: #ffd363;
+                height: 15rem; /* 400px */
+                width: 0.8rem; /* 15px */
+                transform: skewY(-30deg);
+                float: left;
+                margin-top: 0.25rem; /* 6px */
+            }
+
+
+        .drawing {
+			border-radius: 100rem;
+            background-color: #000;
+            position: fixed;
+			height: 0.2rem; /* 4px */
+            left: calc(50% - 19.6rem); /* 150px */
+            width: 0;
+            bottom: calc(50% - 5.41rem); /* 350px */
+            z-index: -3;
+            transition: all 0.6s ease-out;
+        }
+
+
+        @media all and (min-width: 900px) {
+
+        }
+
+        @media all and (max-width: 899px) and (min-width: 50px) {
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+
+    <div id="pencil-red" class="pencil" onclick="draw('red')">
+        <div class="head">
+            <div class="lead red"></div>
+            <div class="holder"></div>
+        </div>
+        <div class="body">
+            <div class="l"></div>
+            <div class="c"></div>
+            <div class="r"></div>
+        </div>
+    </div>
+
+    <div id="pencil-orange" class="pencil" onclick="draw('orange')">
+        <div class="head">
+            <div class="lead orange"></div>
+            <div class="holder"></div>
+        </div>
+        <div class="body">
+            <div class="l"></div>
+            <div class="c"></div>
+            <div class="r"></div>
+        </div>
+    </div>
+
+    <div id="pencil-green" class="pencil" onclick="draw('green')">
+        <div class="head">
+            <div class="lead green"></div>
+            <div class="holder"></div>
+        </div>
+        <div class="body">
+            <div class="l"></div>
+            <div class="c"></div>
+            <div class="r"></div>
+        </div>
+    </div>
+
+    <div id="pencil-blue" class="pencil" onclick="draw('blue')">
+        <div class="head">
+            <div class="lead blue"></div>
+            <div class="holder"></div>
+        </div>
+        <div class="body">
+            <div class="l"></div>
+            <div class="c"></div>
+            <div class="r"></div>
+        </div>
+    </div>
+
+    <div id="pencil-purple" class="pencil" onclick="draw('purple')">
+        <div class="head">
+            <div class="lead purple"></div>
+            <div class="holder"></div>
+        </div>
+        <div class="body">
+            <div class="l"></div>
+            <div class="c"></div>
+            <div class="r"></div>
+        </div>
+    </div>
+
+    <!--<div id="drawing"></div>-->
+
+    <div id="box">
+    </div>
+	<div id="box-under">
+    </div>
+
+
+<script>
+
+var allow = true;
+
+function draw(color) {
+
+    if (allow) {
+        allow = false;
+
+        var pencil = document.getElementById('pencil-'+color);
+		var drawing = document.createElement('div');
+		drawing.setAttribute('class', 'drawing');
+		document.body.appendChild(drawing);
+
+        switch(color) {
+            case 'red':
+                drawing.style.backgroundColor = '#d35400';
+                break;
+            case 'orange':
+                drawing.style.backgroundColor = '#f39c12';
+                break;
+            case 'green':
+                drawing.style.backgroundColor = '#27ae60';
+                break;
+            case 'blue':
+                drawing.style.backgroundColor = '#2980b9';
+                break;
+            case 'purple':
+                drawing.style.backgroundColor = '#9b59b6';
+                break;
+            default:
+                break;
+        }
+
+		// Pick up pencil
+        pencil.style.bottom = 'calc(50% - 10.2rem)';
+
+		// Rotate pencil and go left
+        setTimeout(function(){
+			pencil.style.left = 'calc(50% - 14.8rem)';
+            pencil.style.webkitTransform = 'rotate(-130deg)';
+            pencil.style.mozTransform    = 'rotate(-130deg)';
+            pencil.style.msTransform     = 'rotate(-130deg)';
+            pencil.style.oTransform      = 'rotate(-130deg)';
+            pencil.style.transform       = 'rotate(-130deg)';
+        }, 300);
+
+		// Draw
+        setTimeout(function(){
+            pencil.style.left = 'calc(50% + 5.2rem)';
+            drawing.style.width = '20rem';
+        }, 1200);
+
+		// Rotate pencil back
+        setTimeout(function(){
+            pencil.style.webkitTransform = 'rotate(0deg)';
+            pencil.style.mozTransform    = 'rotate(0deg)';
+            pencil.style.msTransform     = 'rotate(0deg)';
+            pencil.style.oTransform      = 'rotate(0deg)';
+            pencil.style.transform       = 'rotate(0deg)';
+        }, 2300);
+
+		// Return position x
+        setTimeout(function(){
+            switch(color) {
+                case 'red':
+                    pencil.style.left = '3.5rem';
+                    break;
+                case 'orange':
+                    pencil.style.left = '8rem';
+                    break;
+                case 'green':
+                    pencil.style.left = '12.5rem';
+                    break;
+                case 'blue':
+                    pencil.style.left = '17rem';
+                    break;
+                case 'purple':
+                    pencil.style.left = '21.5rem';
+                    break;
+                default:
+                    break;
+            }
+        }, 2500);
+
+		// Return position y
+        setTimeout(function(){
+            pencil.style.bottom = '-10rem';
+        }, 3200);
+
+		// Fill page
+		setTimeout(function(){
+			drawing.style.transformOrigin = 'center';
+			drawing.style.transform = 'scaleX(70) scaleY(600)';
+		}, 3800);
+
+		// Allow next animation
+        setTimeout(function(){
+			allow = true;
+        }, 5000);
+
+    }
+}
+
+</script>
+
+
+</body>
+</html>
