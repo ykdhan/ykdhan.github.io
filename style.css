@@ -308,7 +308,7 @@ input[type='submit']:hover, button:hover {
     z-index: 1000;
     top: 0;
     left: 0;
-    padding: 0.65rem 1rem;
+    padding: 0.6rem 1rem;
     animation-delay: 0.2s;
 }
 #sidebar-mobile #logo-mobile {
@@ -362,10 +362,10 @@ input[type='submit']:hover, button:hover {
     fill: #fff;
 }
 
-@keyframes fadeInRightNav {
+@keyframes fadeInMobileNav {
     from {
         opacity: 0;
-        transform: translate3d(-300%, 0, 0);
+        transform: translate3d(300%, 0, 0);
     }
     to {
         opacity: 1;
@@ -382,16 +382,15 @@ input[type='submit']:hover, button:hover {
     margin: 0;
     margin-top: 3.9rem;
     left: 0;
+    animation-name: fadeInMobileNav;
     z-index: 1001;
+    animation-delay: 0.3s;
 }
 #nav-mobile .nav-button-mobile {
     display: flex;
     flex: 1;
-    height: 0.3rem;
+    height: 0.2rem;
     border-radius: 0.2rem;
-    cursor: pointer;
-    animation-name: fadeInRightNav;
-    transform-origin: left;
     margin-right: 0.3rem;
 }
 #nav-mobile .nav-button-mobile:first-of-type {
@@ -399,27 +398,22 @@ input[type='submit']:hover, button:hover {
 }
 #nav-mobile .nav-button-mobile.now,
 #nav-mobile .nav-button-mobile:hover {
-    flex: 12;
+    flex: 13;
 }
 #nav-mobile .nav-button-mobile:nth-of-type(1) {
     background: #F03F3E;
-    animation-delay: 1s;
 }
 #nav-mobile .nav-button-mobile:nth-of-type(2) {
     background: #F59F00;
-    animation-delay: 0.9s;
 }
 #nav-mobile .nav-button-mobile:nth-of-type(3) {
     background: #74B816;
-    animation-delay: 0.8s;
 }
 #nav-mobile .nav-button-mobile:nth-of-type(4) {
     background: #1E7ED6;
-    animation-delay: 0.7s;
 }
 #nav-mobile .nav-button-mobile:nth-of-type(5) {
     background: #AE3FC8;
-    animation-delay: 0.6s;
 }
 
 
