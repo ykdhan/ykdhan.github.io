@@ -614,6 +614,7 @@ input[type='submit']:hover, button:hover {
 #section-4 {
     margin: 0 auto;
 }
+/*
 #section-4-content {
 	width: 100%;
 	max-width: 100%;
@@ -625,8 +626,8 @@ input[type='submit']:hover, button:hover {
     overflow-y: hidden;
     white-space: nowrap;
     transition: all ease-out 0.2s;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 	-webkit-overflow-scrolling: touch;
 	line-height: 100vh;
 }
@@ -643,6 +644,31 @@ input[type='submit']:hover, button:hover {
     box-sizing: border-box;
     vertical-align: top;
 }
+*/
+
+#exps {
+	width: 100%;
+    max-width: 100%;
+    vertical-align: middle;
+    padding: 0 22vw;
+    margin: 0;
+    text-align: left;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    transition: all ease-out 0.2s;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;	
+}
+#exps::-webkit-scrollbar {
+   display: none;
+}
+#exps * {
+    white-space: initial;
+}
+
+
 .exp {
     display: inline-block;
     width: 38rem;
@@ -983,10 +1009,16 @@ input[type='submit']:hover, button:hover {
         width: 2.5rem;
     }
 
+	/*
     #section-4-content {
         padding-left: 4rem;
         padding-right: 3rem;
     }
+	*/
+	#exps {
+		padding: 0 4rem;
+		padding-right: 3rem;
+	}
     .exp {
         width: 32rem;
     }
