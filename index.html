@@ -257,7 +257,7 @@
 </div>
 
 
-<div id="section-4" class="page">
+<!--<div id="section-4" class="page">
 	<div id="section-4-content" class="content animated">
 		<div id="exps">
 			<div class="exp animated">
@@ -299,6 +299,55 @@
 		</div>
 	</div>
 </div>
+-->
+	
+
+			
+<div id="section-4" class="page flexbox">
+	<div class="flex flex--1 flex--center">
+		<div class="content animated">
+			<div id="exps">
+				<div class="exp animated">
+					<div class="content">
+						<div class="title">LG U+ 보안관제시스템</div>
+						<div class="date">(주)시큐어플레어 PHP 개발자 (20.7 ~ 현재)</div>
+						<div class="info">오픈소스 웹 어플리케이션 (Zabbix) 개발<br>리눅스 서버 구축 및 HA 구성, 데이터 이관
+						</div>
+						<div class="preview"><img alt="" src="src/preview-secureflare.png"></div>
+					</div>
+				</div>
+				<div class="exp animated">
+					<div class="content">
+						<div class="title">Do! Grant County</div>
+						<div class="date">프리랜서 (18.1 ~ 18.4)</div>
+						<div class="info">미국 인디애나주 Grant County 이벤트 관리 웹사이트 제작<br>UI/UX 디자인 및 프론트/백엔드 개발
+						</div>
+						<div class="preview"><img alt="" src="src/preview-dograntcounty.png"></div>
+					</div>
+				</div>
+				<div class="exp animated">
+					<div class="content">
+						<div class="title">FiveTwo</div>
+						<div class="date">창업 아이디어 경진대회 우승 (17.11)</div>
+						<div class="info">Taylor University 및 주변지역 일자리 공고 웹사이트 제작<br>UI/UX 디자인 및 프론트/백엔드 개발
+						</div>
+						<div class="preview"><img alt="" src="src/preview-fivetwo.png"></div>
+					</div>
+				</div>
+				<div class="exp animated">
+					<div class="content">
+						<div class="title">Adopt a Verse</div>
+						<div class="date">Wycliffe Bible Translators 웹디자인 인턴 (17.6 ~ 17.8)</div>
+						<div class="info">미국 Wycliffe 성경번역단체 기부 웹사이트 제작<br>UI/UX 디자인 및 프론트/백엔드 개발
+						</div>
+						<div class="preview"><img alt="" src="src/preview-adoptaverse.png"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+			
 
 
 <div id="section-5" class="page flexbox">
@@ -369,6 +418,11 @@ $(document).ready(function() {
 	whenScroll();
 	if (window.navigator.platform.includes('Win')) {
 		$('#section-4-content').mousewheel(function(e, delta) {
+			console.log('scroll');
+			this.scrollLeft -= delta * 50;
+			e.preventDefault();
+		});
+		$('#exps').mousewheel(function(e, delta) {
 			console.log('scroll');
 			this.scrollLeft -= delta * 50;
 			e.preventDefault();
