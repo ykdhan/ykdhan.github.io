@@ -562,12 +562,12 @@ input[type='submit']:hover, button:hover {
 }
 .keyword {
     display: inline-block;
-    margin: 0.5rem;
+    margin: 0 0.5rem;
     text-transform: uppercase;
     text-align: center;
     vertical-align: top;
     width: 12rem;
-    padding: 2rem 1rem;
+    padding: 0 1rem;
     border: 0.1rem solid transparent;
 }
 .keyword .title {
@@ -991,9 +991,9 @@ input[type='submit']:hover, button:hover {
     }
 
     .keyword {
-        margin: 0.4rem 0;
+        margin: 0;
         width: 8rem;
-        padding: 0.2rem;
+        padding: 0 0.2rem;
     }
     .keyword .title {
         margin-bottom: 1.2rem;
