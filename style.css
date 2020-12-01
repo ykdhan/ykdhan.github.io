@@ -1014,7 +1014,6 @@ input[type='submit']:hover, button:hover {
 	*/
 	#exps {
 		padding: 0 4rem;
-		padding-right: 3rem;
 	}
     .exp {
         width: 32rem;
