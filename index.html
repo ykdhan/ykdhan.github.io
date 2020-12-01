@@ -378,12 +378,15 @@ var m_navs = document.getElementsByClassName("nav-button-mobile");
 window.onscroll = function() { whenScroll() };
 
 function whenScroll() {
+	
 	if (window.pageYOffset < document.getElementById("section-2").offsetTop - space) {
 		for (var i = 0; i < navs.length; i++) {
 			if (i != 0) { navs[i].classList.remove("now"); m_navs[i].classList.remove("now"); }
 		}
-		navs[0].classList.add("now");
-		m_navs[0].classList.add("now");
+		if (window.pageYOffset > 0) {
+			navs[0].classList.add("now");
+			m_navs[0].classList.add("now");
+		}
 	} else if (window.pageYOffset < document.getElementById("section-3").offsetTop - space) {
 		for (var i = 0; i < navs.length; i++) {
 			if (i != 1) { navs[i].classList.remove("now"); m_navs[i].classList.remove("now"); }
