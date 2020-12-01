@@ -676,9 +676,6 @@ input[type='submit']:hover, button:hover {
     text-align: left;
     vertical-align: top;
 }
-.exp:last-of-type {
-    margin-right: calc(22vw - 10rem);
-}
 .exp .content {
     display: inline-block;
     vertical-align: middle;
