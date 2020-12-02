@@ -392,8 +392,8 @@ input[type='submit']:hover, button:hover {
     display: flex;
     flex: 1;
     height: 0.2rem;
-    /*border-radius: 0.2rem;
-    margin-right: 0.3rem;*/
+    /*border-radius: 0.2rem;*/
+    margin-right: 0.2rem;
 }
 #nav-mobile .nav-button-mobile:first-of-type {
     /*margin-left: 0.3rem;*/
