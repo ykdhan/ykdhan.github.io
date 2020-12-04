@@ -31,7 +31,7 @@
 	<link rel="apple-touch-icon" sizes="144x144" href="src/fav-144.png" />
 	<link rel="apple-touch-icon" sizes="152x152" href="src/fav-152.png" />
 
-	<link rel="stylesheet" type="text/css" href="style.css?ver=5.20">
+	<link rel="stylesheet" type="text/css" href="style.css?ver=5.21">
     <link rel="stylesheet" type="text/css" href="animate.css?ver=1.5">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.css" rel="stylesheet">
@@ -366,9 +366,6 @@
 
 
 <div id="footer"><p>2020 &copy; All rights reserved.</p></div>
-<div id="copied" class="animated"><p>알림</p></div>
-
-
 
 <script type="text/javascript">
 var space = $(window).height() * 0.2;
@@ -449,20 +446,22 @@ function copyThis(id) {
 	copyText.select();
 	copyText.setSelectionRange(0, 99999);
 	document.execCommand("copy");
+	
+	var notif = document.createElement('div');
+    notif.className = 'notification animated fadeInUp';
 	switch (id) {
 		case 'myPhone':
-			copied.innerHTML = '<p>전화번호 클립보드에 복사</p>';
+			notif.innerHTML = '<p>전화번호 클립보드에 복사</p>';
 			break;
 		case 'myEmail':
-			copied.innerHTML = '<p>이메일 클립보드에 복사</p>';
+			notif.innerHTML = '<p>이메일 클립보드에 복사</p>';
 			break;
 		default:
 			break;
 	}
-	copied.classList.add("fadeInUp");
-	setTimeout(function() {copied.classList.remove("fadeInUp");copied.classList.add("fadeOutDown"); setTimeout(function() {copied.classList.remove("fadeOutDown");}, 600); }, 1500);
+    document.body.appendChild(notif);
+	setTimeout(function() {notif.classList.remove("fadeInUp");notif.classList.add("fadeOutDown"); setTimeout(function() {notif.classList.remove("fadeOutDown");}, 600); }, 1500);
 }
-
 
 
 function showMouse() {
