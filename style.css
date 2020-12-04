@@ -757,7 +757,7 @@ input[type='submit']:hover, button:hover {
     margin: 0 auto;
 }
 
-#copied {
+.notification {
     position: fixed;
     display: block;
     box-sizing: border-box;
@@ -777,11 +777,11 @@ input[type='submit']:hover, button:hover {
     text-align: center;
     vertical-align: middle;
 }
-#copied p {
+.notification p {
     vertical-align: middle;
     margin: 1rem 2rem;
 }
-#copied.animated {
+.notification.animated {
     animation-duration: 0.5s;
 }
 
@@ -1052,7 +1052,7 @@ input[type='submit']:hover, button:hover {
         margin-top: -3rem;
         font-size: 0.85rem;
     }
-    #copied {
+    .notification {
         width: calc(100% - 4rem);
         margin: 2rem;
         right: unset;
@@ -1060,7 +1060,7 @@ input[type='submit']:hover, button:hover {
         bottom: 0;
         font-size: 0.85rem;
     }
-    #copied p {
+    .notification p {
         margin: 0.8rem;
     }
 
