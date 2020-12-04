@@ -31,13 +31,17 @@
 	<link rel="apple-touch-icon" sizes="144x144" href="src/fav-144.png" />
 	<link rel="apple-touch-icon" sizes="152x152" href="src/fav-152.png" />
 
-	<link rel="stylesheet" type="text/css" href="style.css?ver=5.23">
+	<link rel="stylesheet" type="text/css" href="style.css?ver=5.24">
     <link rel="stylesheet" type="text/css" href="animate.css?ver=1.5">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="tilt.js"></script>
 
 	<title>{ yk }</title>
 </head>
@@ -132,6 +136,7 @@
 
 <div id="section-1" class="page flexbox">
 	<div class="flex flex--1 bg--white">
+		<div data-tilt></div>
 		<div id="scramble" class="animated">
 		  <div id="scram">>_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
 		</div>
@@ -154,12 +159,12 @@
 <div id="section-2" class="page flexbox">
 	<div class="flex flex--1 flex--center">
 		<div class="content animated">
-			<div class="text big width--max">
+			<div class="text big width--max" data-aos="show-up">
 				풀스텍을 꿈꾸는 반응형 개발자
 			</div>
 			<div id="info" class="width--max">
-				<div id="photo" class="animated fadeIn"></div>
-				<div id="profile">
+				<div id="photo" class="animated fadeIn" data-aos="show-right"></div>
+				<div id="profile" data-aos="show-left">
 					<div class="name title">한영광</div>
 					<div class="line">
 						<p class="title">Taylor University (14.8 ~ 18.5)</p>
@@ -174,7 +179,7 @@
 					</div>
 				</div>
 			</div>
-			<div id="tags" class="width--max">
+			<div id="tags" class="width--max" data-aos="show-up">
 				<div class="tag">그래픽디자인</div>
 				<div class="tag">노래</div>
 				<div class="tag">음악</div>
@@ -192,123 +197,72 @@
 <div id="section-3" class="page flexbox">
 	<div class="flex flex--1 flex--center">
 		<div class="content animated">
+			<div class="text big width--max" data-aos="show-up">
+				꾸준히 쌓아가는 기술 스텍
+			</div>
+			<div id="skills" class="animated">
+				<div class="skill" data-aos="flip-left">
+					<img alt="HTML" src="src/html-icon.png">
+				</div>
+				<div class="skill" data-aos="flip-left" data-aos-delay="100">
+					<img alt="CSS" src="src/css-icon.png">
+				</div>
+				<div class="skill" data-aos="flip-left" data-aos-delay="200">
+					<img alt="JavaScript" src="src/js-icon.png">
+				</div>
+				<div class="skill" data-aos="flip-left" data-aos-delay="300">
+					<img alt="jQuery" src="src/jquery-icon.png">
+				</div>
+				<div class="skill" data-aos="flip-left" data-aos-delay="400">
+					<img alt="Python" src="src/python-icon.png">
+				</div>
+				<div class="skill" data-aos="flip-left" data-aos-delay="500">
+					<img alt="PHP" src="src/php-icon.png">
+				</div>
+				<div class="skill" data-aos="flip-left" data-aos-delay="600">
+					<img alt="Flask" src="src/flask-icon.png">
+				</div>
+				<div class="skill" data-aos="flip-left" data-aos-delay="700">
+					<img alt="Sketch" src="src/sketch-icon.png">
+				</div>
+				<div class="skill" data-aos="flip-left" data-aos-delay="800">
+					<img alt="Adobe Illustrator" src="src/illustrator-icon.png">
+				</div>
+				<div class="skill" data-aos="flip-left" data-aos-delay="900">
+					<img alt="Adobe Photoshop" src="src/photoshop-icon.png">
+				</div>
+				<div class="skill" data-aos="flip-left" data-aos-delay="1000">
+					<img alt="Linux" src="src/linux-icon.png">
+				</div>
+				<div class="skill" data-aos="flip-left" data-aos-delay="1100">
+					<img alt="MySQL" src="src/mysql-icon.png">
+				</div>
+				<div class="skill" data-aos="flip-left" data-aos-delay="1200">
+					<img alt="PostgreSQL" src="src/postgresql-icon.png">
+				</div>
 
-			<div id="keywords" class="animated">
-				<div class="keyword animated">
-					<div class="title">프론트엔드</div>
-					<div class="skill">
-						<img alt="HTML" src="src/html-icon.png">
-					</div>
-					<div class="skill">
-						<img alt="CSS" src="src/css-icon.png">
-					</div>
-					<div class="skill">
-						<img alt="JavaScript" src="src/js-icon.png">
-					</div>
-					<div class="skill">
-						<img alt="jQuery" src="src/jquery-icon.png">
-					</div>
-					<div class="skill learning">
-						<img alt="ReactJS" src="src/react-icon.png">
-					</div>
+				<div class="skill learning" data-aos="flip-left" data-aos-delay="1300">
+					<img alt="ReactJS" src="src/react-icon.png">
 				</div>
-				<div class="keyword animated">
-					<div class="title">백엔드</div>
-					<div class="skill">
-						<img alt="Python" src="src/python-icon.png" class="animating">
-					</div>
-					<div class="skill">
-						<img alt="PHP" src="src/php-icon.png">
-					</div>
-					<div class="skill">
-						<img alt="Flask" src="src/flask-icon.png">
-					</div>
-					<div class="skill learning">
-						<img alt="NodeJS" src="src/nodejs-icon.png">
-					</div>
-				</div>
-				<div class="keyword animated">
-					<div class="title">UI/UX</div>
-					<div class="skill">
-						<img alt="Sketch" src="src/sketch-icon.png">
-					</div>
-					<div class="skill">
-						<img alt="Adobe Illustrator" src="src/illustrator-icon.png">
-					</div>
-					<div class="skill">
-						<img alt="Adobe Photoshop" src="src/photoshop-icon.png">
-					</div>
-				</div>
-				<div class="keyword animated">
-					<div class="title">기타</div>
-					<div class="skill">
-						<img alt="Linux" src="src/linux-icon.png">
-					</div>
-					<div class="skill">
-						<img alt="MySQL" src="src/mysql-icon.png">
-					</div>
-					<div class="skill">
-						<img alt="PostgreSQL" src="src/postgresql-icon.png">
-					</div>
+				<div class="skill learning" data-aos="flip-left" data-aos-delay="1400">
+					<img alt="NodeJS" src="src/nodejs-icon.png">
 				</div>
 			</div>
 
 		</div>
 	</div>
 </div>
-
-
-<!--<div id="section-4" class="page">
-	<div id="section-4-content" class="content animated">
-		<div id="exps">
-			<div class="exp animated">
-				<div class="content">
-					<div class="title">LG U+ 보안관제시스템</div>
-					<div class="date">(주)시큐어플레어 PHP 개발자 (20.7 ~ 현재)</div>
-					<div class="info">오픈소스 웹 어플리케이션 (Zabbix) 개발<br>리눅스 서버 구축 및 HA 구성, 데이터 이관
-					</div>
-					<div class="preview"><img alt="" src="src/preview-secureflare.png"></div>
-				</div>
-			</div>
-			<div class="exp animated">
-				<div class="content">
-					<div class="title">Do! Grant County</div>
-					<div class="date">프리랜서 (18.1 ~ 18.4)</div>
-					<div class="info">미국 인디애나주 Grant County 이벤트 관리 웹사이트 제작<br>UI/UX 디자인 및 프론트/백엔드 개발
-					</div>
-					<div class="preview"><img alt="" src="src/preview-dograntcounty.png"></div>
-				</div>
-			</div>
-			<div class="exp animated">
-				<div class="content">
-					<div class="title">FiveTwo</div>
-					<div class="date">창업 아이디어 경진대회 우승 (17.11)</div>
-					<div class="info">Taylor University 및 주변지역 일자리 공고 웹사이트 제작<br>UI/UX 디자인 및 프론트/백엔드 개발
-					</div>
-					<div class="preview"><img alt="" src="src/preview-fivetwo.png"></div>
-				</div>
-			</div>
-			<div class="exp animated">
-				<div class="content">
-					<div class="title">Adopt a Verse</div>
-					<div class="date">Wycliffe Bible Translators 웹디자인 인턴 (17.6 ~ 17.8)</div>
-					<div class="info">미국 Wycliffe 성경번역단체 기부 웹사이트 제작<br>UI/UX 디자인 및 프론트/백엔드 개발
-					</div>
-					<div class="preview"><img alt="" src="src/preview-adoptaverse.png"></div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
--->
 	
 
 			
 <div id="section-4" class="page flexbox">
 	<div class="flex flex--1 flex--center">
 		<div class="content animated">
+			<div class="text big width--max" data-aos="show-up">
+				뜻 깊은 경험
+			</div>
 			<div id="exps">
-				<div class="exp animated">
+				<div class="exp animated" data-aos="show-left">
 					<div class="content">
 						<div class="title">LG U+ 보안관제시스템</div>
 						<div class="date">(주)시큐어플레어 PHP 개발자 (20.7 ~ 현재)</div>
@@ -317,7 +271,7 @@
 						<div class="preview"><img alt="" src="src/preview-secureflare.png"></div>
 					</div>
 				</div>
-				<div class="exp animated">
+				<div class="exp animated" data-aos="show-left" data-aos-delay="200">
 					<div class="content">
 						<div class="title">Do! Grant County</div>
 						<div class="date">프리랜서 (18.1 ~ 18.4)</div>
@@ -326,7 +280,7 @@
 						<div class="preview"><img alt="" src="src/preview-dograntcounty.png"></div>
 					</div>
 				</div>
-				<div class="exp animated">
+				<div class="exp animated" data-aos="show-left" data-aos-delay="400">
 					<div class="content">
 						<div class="title">FiveTwo</div>
 						<div class="date">창업 아이디어 경진대회 우승 (17.11)</div>
@@ -335,7 +289,7 @@
 						<div class="preview"><img alt="" src="src/preview-fivetwo.png"></div>
 					</div>
 				</div>
-				<div class="exp animated">
+				<div class="exp animated" data-aos="show-left" data-aos-delay="600">
 					<div class="content">
 						<div class="title">Adopt a Verse</div>
 						<div class="date">Wycliffe Bible Translators 웹디자인 인턴 (17.6 ~ 17.8)</div>
@@ -354,10 +308,13 @@
 <div id="section-5" class="page flexbox">
 	<div class="flex flex--1 flex--center">
 		<div class="content animated">
-			<div class="button" onclick="copyThis('myPhone')">
+			<div class="text big width--max" data-aos="show-up">
+				만남과 기회
+			</div>
+			<div class="button" onclick="copyThis('myPhone')" data-aos="show-right">
 				+82 010-6525-3538<input id="myPhone" type="text" value="01065253538">
 			</div>
-			<div class="button" onclick="copyThis('myEmail')">
+			<div class="button" onclick="copyThis('myEmail')" data-aos="show-left">
 				ykdhan@naver.com<input id="myEmail" type="text" value="ykdhan@naver.com">
 			</div>
 		</div>
@@ -368,6 +325,13 @@
 <div id="footer"><p>2020 &copy; All rights reserved.</p></div>
 
 <script type="text/javascript">
+
+AOS.init({ duration: 700, easing: 'ease-out' });
+$('.js-tilt').tilt({
+    scale: 1.2
+})
+
+
 var space = $(window).height() * 0.2;
 var navs = document.getElementsByClassName("nav-button");
 var m_navs = document.getElementsByClassName("nav-button-mobile");

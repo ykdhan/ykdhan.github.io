@@ -167,11 +167,14 @@ input[type='submit']:hover, button:hover {
 
 
 
-
-.cd-section {
-  height: 100vh;
+h1 {
+    font-size: 2.5rem;
+    font-family: 'NEXON Lv1 Gothic OTF Bold';
+    color: #212529;
+    margin: 0;
+    margin-bottom: 5rem;
+    text-align: left;
 }
-
 
 #sidebar {
     display: block;
@@ -196,7 +199,7 @@ input[type='submit']:hover, button:hover {
     text-align: left;
 }
 #sidebar #yk {
-    width: 5rem;
+    width: 4.5rem;
     transition: all ease-out 0.2s !important;
     transform-origin: center;
     cursor: pointer;
@@ -269,7 +272,7 @@ input[type='submit']:hover, button:hover {
 }
 #sidebar .nav-button.now,
 #sidebar .nav-button:hover {
-    width: 1.8rem;
+    width: 2.85rem;
 }
 #sidebar .nav-button:nth-of-type(1) {
     background: #F03F3E;
@@ -431,9 +434,9 @@ input[type='submit']:hover, button:hover {
     word-break: keep-all;
 }
 .text.big {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
     color: #343a40;
     font-family: 'NEXON Lv1 Gothic OTF Bold';
 }
@@ -499,7 +502,7 @@ input[type='submit']:hover, button:hover {
 }
 #info {
     display: block;
-    margin: 6rem auto;
+    margin: 0;
 }
 #photo {
     display: inline-block;
@@ -560,15 +563,18 @@ input[type='submit']:hover, button:hover {
 #section-3 {
 }
 
-#keywords {
-
+#skills {
+    max-width: 44rem;
+    text-align: center;
 }
 .keyword {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     margin: 0 0.5rem;
     text-transform: uppercase;
     text-align: center;
-    vertical-align: top;
+    vertical-align: middle;
     width: 12rem;
     padding: 0 1rem;
     border: 0.1rem solid transparent;
@@ -584,32 +590,31 @@ input[type='submit']:hover, button:hover {
 .keyword:hover .title {
     transform: translateY(-0.5rem);
 }
-.keyword .skill {
-    display: block;
-    margin: 3rem;
+#skills .skill {
+    display: inline-flex;
+    width: 7rem;
+    height: 7rem;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    margin: 0;
+    border-radius: 0.2rem;
 }
-.keyword .skill img {
+#skills .skill:hover {
+    background: #f8f9fa;
+}
+#skills .skill img {
     width: 3rem;
     height: auto;
     margin: 0 auto;
     vertical-align: middle;
     transform-origin: center;
 }
-.keyword .skill:hover img {
-    transform: scale(1.1);
+#skills .skill:hover img {
+    transform: scale(1.2);
 }
-.keyword .skill.learning {
+#skills .skill.learning {
     opacity: 0.35;
-}
-
-.keyword:nth-of-type(2) {
-    animation-delay: 0.2s;
-}
-.keyword:nth-of-type(3) {
-    animation-delay: 0.4s;
-}
-.keyword:nth-of-type(4) {
-    animation-delay: 0.6s;
 }
 
 
@@ -818,6 +823,51 @@ input[type='submit']:hover, button:hover {
 
 
 
+
+
+[data-aos="show-down"] {
+    transform: translateY(-10rem);
+    opacity: 0;
+}
+
+[data-aos="show-down"].aos-animate {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+[data-aos="show-up"] {
+    transform: translateY(10rem);
+    opacity: 0;
+}
+
+[data-aos="show-up"].aos-animate {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+[data-aos="show-left"] {
+    transform: translateX(10rem);
+    opacity: 0;
+}
+
+[data-aos="show-left"].aos-animate {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+[data-aos="show-right"] {
+    transform: translateX(-10rem);
+    opacity: 0;
+}
+
+[data-aos="show-right"].aos-animate {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+
+
 .hide-mobile {
     display: none;
     height: 100vh;
@@ -836,6 +886,11 @@ input[type='submit']:hover, button:hover {
     text-align: center;
     margin: 30vh auto;
 }
+
+
+
+
+
 
 
 
@@ -869,8 +924,8 @@ input[type='submit']:hover, button:hover {
         margin-bottom: 1.5rem;
     }
     .text.big {
-        font-size: 1rem;
-        margin-bottom: 2rem;
+        font-size: 1.2rem;
+        margin-bottom: 3rem;
         line-height: 1.4;
     }
 
