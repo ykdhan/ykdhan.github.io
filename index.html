@@ -460,7 +460,7 @@ function copyThis(id) {
 			break;
 	}
     document.body.appendChild(notif);
-	setTimeout(function() {notif.classList.remove("fadeInUp");notif.classList.add("fadeOutDown"); setTimeout(function() {notif.classList.remove("fadeOutDown");}, 600); }, 1500);
+	setTimeout(function() {notif.classList.remove("fadeInUp");notif.classList.add("fadeOutDown"); setTimeout(function() {document.body.removeChild(notif);}, 600); }, 1500);
 }
 
 
