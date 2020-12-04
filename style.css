@@ -617,38 +617,6 @@ input[type='submit']:hover, button:hover {
 #section-4 {
     margin: 0 auto;
 }
-/*
-#section-4-content {
-	width: 100%;
-	max-width: 100%;
-	vertical-align: middle;
-	padding: 0 22vw;
-	margin: 0;
-    text-align: left;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-    transition: all ease-out 0.2s;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-	-webkit-overflow-scrolling: touch;
-	line-height: 100vh;
-}
-#section-4-content::-webkit-scrollbar {
-   display: none;
-}
-#section-4-content * {
-    white-space: initial;
-}
-
-#exps {
-    margin: 0 auto;
-    width: max-content;
-    box-sizing: border-box;
-    vertical-align: top;
-}
-*/
-
 #exps {
 	width: 100%;
     max-width: 100%;
@@ -670,8 +638,6 @@ input[type='submit']:hover, button:hover {
 #exps * {
     white-space: initial;
 }
-
-
 .exp {
     display: inline-block;
     width: 38rem;
@@ -931,7 +897,7 @@ input[type='submit']:hover, button:hover {
         display: block;
         text-align: left;
         width: 100%;
-        padding: 0 2.5rem;
+        padding: 0 3rem;
     }
     #profile .name {
         font-size: 0.95rem;
@@ -946,7 +912,7 @@ input[type='submit']:hover, button:hover {
     #tags {
         display: block;
         margin-top: -0.5rem;
-        padding: 1rem 2.5rem;
+        padding: 1rem 3rem;
         font-size: 0.8rem;
         overflow-x: scroll;
         overflow-y: hidden;
@@ -975,7 +941,7 @@ input[type='submit']:hover, button:hover {
     	width: 100%;
     	max-width: 100%;
     	vertical-align: middle;
-    	padding: 0 2.5rem;
+    	padding: 0 3rem;
     	margin: 0;
         text-align: left;
         overflow-x: scroll;
@@ -1009,17 +975,11 @@ input[type='submit']:hover, button:hover {
         width: 2.5rem;
     }
 
-	/*
-    #section-4-content {
-        padding-left: 4rem;
-        padding-right: 3rem;
-    }
-	*/
 	#exps {
-		padding: 0 2.5rem;
+		padding: 0 3rem;
 	}
     .exp {
-        width: 32rem;
+        width: 30rem;
     }
 	.exp .content .title {
 		margin-bottom: 2rem;
@@ -1029,7 +989,7 @@ input[type='submit']:hover, button:hover {
 		font-size: 0.85rem !important;
 	}
 	.exp .content .info {
-		max-width: 30rem;
+		max-width: 28.5rem;
 		padding: 1.2rem 0;
 		padding-bottom: 1rem;
 		font-size: 0.85rem !important;
