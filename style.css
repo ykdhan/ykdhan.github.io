@@ -1048,6 +1048,12 @@ h1 {
         margin-bottom: 2.5rem;
         line-height: 1.4;
     }
+    .text .point {
+        width: 0.6rem;
+        height: 0.6rem;
+        left: calc(50% - 0.3rem);
+        top: -2rem;
+    }    
 
     #sidebar {
         display: none;
