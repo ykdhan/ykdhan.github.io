@@ -31,7 +31,7 @@
 	<link rel="apple-touch-icon" sizes="144x144" href="src/fav-144.png" />
 	<link rel="apple-touch-icon" sizes="152x152" href="src/fav-152.png" />
 
-	<link rel="stylesheet" type="text/css" href="style.css?ver=5.33">
+	<link rel="stylesheet" type="text/css" href="style.css?ver=5.34">
     <link rel="stylesheet" type="text/css" href="animate.css?ver=1.5">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.css" rel="stylesheet">
@@ -47,9 +47,9 @@
 </head>
 <body>
 
-
 <div id="sidebar">
-	<div id="logo" class="animated fadeIn">
+	<div id="logo" class="animated fadeIn" onclick="goTop()">
+		<!--
 		<svg version="1.1" onclick="goTop()" id="yk" class="logo-yk" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
 			y="0px" viewBox="0 0 150 150" style="enable-background:new 0 0 150 150;" xml:space="preserve">
 			<g>
@@ -58,6 +58,7 @@
 				<polygon id="short" class="st0 side" points="103.8,114.4 103.8,118 49.8,64 53.4,64 	"/>
 			</g>
 			</svg>
+		-->{ yk }
 	</div>
 	<div id="nav">
 		<div class="nav-button animated" onclick="nav(1)"></div>
@@ -93,6 +94,7 @@
 <div id="sidebar-mobile" class="mobile">
 	<div id="logo-mobile" class="animated fadeIn">
 		<a href="/">
+			<!--
 			<svg version="1.1" id="yk" class="logo-yk" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
 			y="0px" viewBox="0 0 150 150" style="enable-background:new 0 0 150 150;" xml:space="preserve">
 			<g>
@@ -101,11 +103,13 @@
 				<polygon id="short" class="st0 side" points="103.8,114.4 103.8,118 49.8,64 53.4,64 	"/>
 			</g>
 			</svg>
+			-->
+			{ yk }
 		</a>
 	</div>
 	<div id="github" class="animated fadeIn">
 		<a href="https://github.com/ykdhan" target="_blank"><p>
-			<svg viewBox="0 0 119.98 117.82" xmlns="http://www.w3.org/2000/svg">
+			<svg id="logo-github-mobile" viewBox="0 0 119.98 117.82" xmlns="http://www.w3.org/2000/svg">
 			<defs>
 			<style>.cls-1,.cls-2{fill:#212529;}.cls-1{fill-rule:evenodd;}</style>
 			</defs>
@@ -395,9 +399,29 @@ window.onscroll = function() { whenScroll() };
 
 function whenScroll() {
 	
+	if (window.pageYOffset > space) {
+		$('html').css({ background: '#fff' });
+		$('#sidebar-mobile').css({ background: 'rgba(255,255,255,0.95)' });
+		$('#nav-mobile').css({ background: '#fff' });
+		$('#stairs').css({ color: '#212529' });
+		$('#logo-github *').css({ fill: '#212529' });
+		$('#logo-github-mobile *').css({ fill: '#212529' });
+		$('#logo').css({ color: '#212529' });
+		$('#logo-mobile').css({ color: '#212529' });
+	} else {
+		$('html').css({ background: '#212529' });
+		$('#sidebar-mobile').css({ background: '#212529' });
+		$('#nav-mobile').css({ background: '#212529' });
+		$('#stairs').css({ color: '#fff' });
+		$('#logo-github *').css({ fill: '#fff' });
+		$('#logo-github-mobile *').css({ fill: '#fff' });
+		$('#logo').css({ color: '#fff' });
+		$('#logo-mobile').css({ color: '#fff' });
+	}
+
 	if (window.pageYOffset < document.getElementById("section-2").offsetTop - space) {
 		for (var i = 0; i < navs.length; i++) {
-			if (i != 0) { navs[i].classList.remove("now"); m_navs[i].classList.remove("now"); }
+			navs[i].classList.remove("now"); m_navs[i].classList.remove("now");
 		}
 		if (window.pageYOffset > 0) {
 			navs[0].classList.add("now");
