@@ -391,7 +391,7 @@ h1 {
     width: 100%;
     padding: 0;
     margin: 0;
-    margin-top: 3.9rem;
+    margin-top: 3.85rem;
     background: #fff;
     left: 0;
     animation-name: fadeInMobileNav;
@@ -542,7 +542,8 @@ h1 {
     vertical-align: top;
     white-space: nowrap;
 }
-#stairs:hover p {
+#stairs:hover p,
+#stairs:active p {
     -webkit-transform: translate3d(0, -4.2rem, 0);
     transform: translate3d(0, -4.2rem, 0);
 }
@@ -1018,7 +1019,7 @@ h1 {
         letter-spacing: -2px;
     }
     #stairs .stair {
-        height: 2.7rem;
+        height: 2.8rem;
     }
     #stairs .stair:nth-child(1) {
         left: 1.2rem;
@@ -1042,12 +1043,13 @@ h1 {
         left: 8.4rem;
     }
     #stairs .stair p {
-        height: 2.7rem;
+        height: 2.8rem;
         padding: 0 1rem;
     }
-    #stairs:hover p {
-        -webkit-transform: translate3d(0, -2.7rem, 0);
-        transform: translate3d(0, -2.7rem, 0);
+    #stairs:hover p,
+    #stairs:active p {
+        -webkit-transform: translate3d(0, -2.8rem, 0);
+        transform: translate3d(0, -2.8rem, 0);
     }
 
     .text {
