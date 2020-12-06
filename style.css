@@ -1118,14 +1118,25 @@ h1 {
     }
 
     #skills .skill {
-        width: 4.8rem;
-        height: 4.8rem;
+        width: 4.9rem;
+        height: 4.9rem;
     }
     #skills .skill img {
-        width: 2.2rem;
+        width: 2.3rem;
     }
     #skills .skill.hor img {
-        width: 2.42rem;
+        width: 2.53rem;
+    }
+    #skills .skill:hover img {
+        transform: scale(0.7);
+        margin-top: -1.4rem;
+    }
+    .skill span {
+        font-size: 0.8rem;
+        margin-top: 1rem;
+    }
+    #skills .skill:hover span {
+        margin-top: 2.3rem;
     }
 
 	#exps {
