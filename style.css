@@ -525,7 +525,7 @@ h1 {
 }
 #stairs .stair p {
     height: 4.2rem;
-    line-height: 1rem;
+    line-height: 1;
     padding: 0 1rem;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
@@ -1030,7 +1030,6 @@ h1 {
     }
     #stairs .stair p {
         height: 2.7rem;
-        line-height: 1rem;
         padding: 0 1rem;
     }
     #stairs:hover p {
