@@ -970,6 +970,11 @@ h1 {
 
 
 
+@media screen and (min-color-index:0) and (-webkit-min-device-pixel-ratio:0) { 
+    #skills .skill:hover span {
+        margin-top: 1.8rem;
+    }
+}
 
 
 
@@ -1140,8 +1145,10 @@ h1 {
         font-size: 0.8rem;
         margin-top: 1rem;
     }
-    #skills .skill:hover span {
-        margin-top: 2.3rem;
+    @media screen and (min-color-index:0) and (-webkit-min-device-pixel-ratio:0) { 
+        #skills .skill:hover span {
+            margin-top: 1.3rem;
+        }
     }
 
 	#exps {
