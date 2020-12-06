@@ -31,7 +31,7 @@
 	<link rel="apple-touch-icon" sizes="144x144" href="src/fav-144.png" />
 	<link rel="apple-touch-icon" sizes="152x152" href="src/fav-152.png" />
 
-	<link rel="stylesheet" type="text/css" href="style.css?ver=5.27">
+	<link rel="stylesheet" type="text/css" href="style.css?ver=5.28">
     <link rel="stylesheet" type="text/css" href="animate.css?ver=1.5">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.css" rel="stylesheet">
@@ -135,22 +135,32 @@
 
 
 <div id="section-1" class="page flexbox">
-	<div class="flex flex--1 bg--white">
-		<div data-tilt></div>
-		<div id="scramble" class="animated">
-		  <div id="scram">>_&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+	<div class="flex flex--1 flex--center">
+		<div id="stairs-div" data-aos="show-down">
+			<ul id="stairs">
+				<li class="stair">
+				<p>&nbsp;</p>
+				<p>프론트엔드</p>
+				</li>
+				<li class="stair">
+				<p>프론트엔드</p>
+				<p>백엔드</p>
+				</li>
+				<li class="stair">
+				<p>백엔드</p>
+				<p>UI/UX</p>
+				</li>
+				<li class="stair">
+				<p>UI/UX</p>
+				<p>Interactive</p>
+				</li>
+				<li class="stair">
+				<p>Interactive</p>
+				<p>&nbsp;</p>
+				</li>
+			</ul>
 		</div>
 	</div>
-
-
-	<svg version="1.1" id="" class="logo-yk" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-		y="0px" viewBox="0 0 150 150" style="enable-background:new 0 0 150 150;" xml:space="preserve">
-	<g>
-	<polygon id="mid" class="st0" points="79,120.6 76.5,118 76.5,8.6 79,6 	"/>
-	<polygon id="long" class="st0 side" points="26.4,143.2 22.8,143.2 103.8,62.2 103.8,65.8 	"/>
-	<polygon id="short" class="st0 side" points="103.8,114.4 103.8,118 49.8,64 53.4,64 	"/>
-	</g>
-	</svg>
 
 	<div id="mouse" class="animated"><div class="mouse-icon"><span class="mouse-wheel"></span></div></div>
 </div>
@@ -161,6 +171,7 @@
 		<div class="content animated">
 			<div class="text big width--max" data-aos="show-up">
 				풀스텍을 꿈꾸는 반응형 개발자
+				<div class="point" style="background: #F59F00;"></div>
 			</div>
 			<div id="info" class="width--max">
 				<div id="photo" class="animated fadeIn" data-aos="show-right"></div>
@@ -200,71 +211,85 @@
 		<div class="content animated">
 			<div class="text big width--max" data-aos="show-up">
 				꾸준히 쌓아가는 기술 스텍
+				<div class="point" style="background: #74B816;"></div>
 			</div>
 			<div id="skills" class="animated">
 				<div class="appear" data-aos="appear">
 					<div class="skill" >
 						<img alt="HTML" src="src/html-icon.png">
+						<span>HTML</span>
 					</div>
 				</div>
 				<div class="appear" data-aos="appear" data-aos-delay="50">
 					<div class="skill" >
 						<img alt="CSS" src="src/css-icon.png">
+						<span>CSS</span>
 					</div>
 				</div>
 				<div class="appear" data-aos="appear" data-aos-delay="100">
 					<div class="skill">
 						<img alt="JavaScript" src="src/js-icon.png">
+						<span>JavaScript</span>
 					</div>
 				</div>
 				<div class="appear" data-aos="appear" data-aos-delay="150">
 					<div class="skill">
 						<img alt="jQuery" src="src/jquery-icon.png">
+						<span>jQuery</span>
 					</div>
 				</div>
 				<div class="appear" data-aos="appear" data-aos-delay="200">
 					<div class="skill">
 						<img alt="Python" src="src/python-icon.png">
+						<span>Python</span>
 					</div>
 				</div>
 				<div class="appear" data-aos="appear" data-aos-delay="250">
-					<div class="skill">
+					<div class="skill hor">
 						<img alt="PHP" src="src/php-icon.png">
+						<span>PHP</span>
 					</div>
 				</div>
 				<div class="appear" data-aos="appear" data-aos-delay="300">
 					<div class="skill">
 						<img alt="Flask" src="src/flask-icon.png">
-					</div>
-				</div>
-				<div class="appear" data-aos="appear" data-aos-delay="350">
-					<div class="skill">
-						<img alt="Sketch" src="src/sketch-icon.png">
-					</div>
-				</div>
-				<div class="appear" data-aos="appear" data-aos-delay="400">
-					<div class="skill">
-						<img alt="Adobe Illustrator" src="src/illustrator-icon.png">
-					</div>
-				</div>
-				<div class="appear" data-aos="appear" data-aos-delay="450">
-					<div class="skill">
-						<img alt="Adobe Photoshop" src="src/photoshop-icon.png">
+						<span>Flask</span>
 					</div>
 				</div>
 				<div class="appear" data-aos="appear" data-aos-delay="500">
 					<div class="skill">
 						<img alt="Linux" src="src/linux-icon.png">
+						<span>Linux</span>
 					</div>
 				</div>
 				<div class="appear" data-aos="appear" data-aos-delay="550">
-					<div class="skill">
+					<div class="skill hor">
 						<img alt="MySQL" src="src/mysql-icon.png">
+						<span>MySQL</span>
 					</div>
 				</div>
 				<div class="appear" data-aos="appear" data-aos-delay="600">
 					<div class="skill">
 						<img alt="PostgreSQL" src="src/postgresql-icon.png">
+						<span>PostgreSQL</span>
+					</div>
+				</div>
+				<div class="appear" data-aos="appear" data-aos-delay="350">
+					<div class="skill">
+						<img alt="Sketch" src="src/sketch-icon.png">
+						<span>Sketch</span>
+					</div>
+				</div>
+				<div class="appear" data-aos="appear" data-aos-delay="400">
+					<div class="skill">
+						<img alt="Adobe Illustrator" src="src/illustrator-icon.png">
+						<span>Illustrator</span>
+					</div>
+				</div>
+				<div class="appear" data-aos="appear" data-aos-delay="450">
+					<div class="skill">
+						<img alt="Adobe Photoshop" src="src/photoshop-icon.png">
+						<span>Photoshop</span>
 					</div>
 				</div>
 				<!--
@@ -288,6 +313,7 @@
 		<div class="content animated">
 			<div class="text big width--max" data-aos="show-up">
 				뜻 깊은 경험
+				<div class="point" style="background: #1E7ED6;"></div>
 			</div>
 			<div id="exps">
 				<div class="exp animated" data-aos="show-left">
@@ -337,34 +363,34 @@
 	<div class="flex flex--1 flex--center">
 		<div class="content animated">
 			<div class="text big width--max" data-aos="show-up">
-				만남과 기회
+				새로운 기회
+				<div class="point" style="background: #AE3FC8;"></div>
 			</div>
-			<div class="button" onclick="copyThis('myPhone')" data-aos="show-right">
-				+82 010-6525-3538<input id="myPhone" type="text" value="01065253538">
+			<div class="appear" data-aos="show-right">
+				<div class="button" onclick="copyThis('myPhone')">
+					+82 010-6525-3538<input id="myPhone" type="text" value="01065253538">
+				</div>
 			</div>
-			<div class="button" onclick="copyThis('myEmail')" data-aos="show-left">
-				ykdhan@naver.com<input id="myEmail" type="text" value="ykdhan@naver.com">
+			<div class="appear" data-aos="show-left">
+				<div class="button" onclick="copyThis('myEmail')">
+					ykdhan@naver.com<input id="myEmail" type="text" value="ykdhan@naver.com">
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
 
 
-<div id="footer"><p>2020 &copy; All rights reserved.</p></div>
+<div id="copyright">2020 &copy; All rights reserved.</div>
 
 <script type="text/javascript">
 
 AOS.init({ duration: 700, easing: 'ease-out' });
-$('.js-tilt').tilt({
-    scale: 1.2
-})
-
 
 var space = $(window).height() * 0.2;
 var navs = document.getElementsByClassName("nav-button");
 var m_navs = document.getElementsByClassName("nav-button-mobile");
 
-//window.onresize = function(e) { $('#section-1').height($(window).height()); }
 window.onscroll = function() { whenScroll() };
 
 function whenScroll() {
@@ -395,7 +421,7 @@ function whenScroll() {
 		}
 		navs[3].classList.add("now");
 		m_navs[3].classList.add("now");
-	} else if (window.pageYOffset < document.getElementById("footer").offsetTop - space) {
+	} else {
 		for (var i = 0; i < navs.length; i++) {
 			if (i != 4) { navs[i].classList.remove("now"); m_navs[i].classList.remove("now"); }
 		}
@@ -407,14 +433,8 @@ function whenScroll() {
 
 $(document).ready(function() {
 	window.scrollTo(0, 0);
-	//$('#section-1').height($(window).height());
 	whenScroll();
 	if (window.navigator.platform.includes('Win')) {
-		$('#section-4-content').mousewheel(function(e, delta) {
-			console.log('scroll');
-			this.scrollLeft -= delta * 50;
-			e.preventDefault();
-		});
 		$('#exps').mousewheel(function(e, delta) {
 			console.log('scroll');
 			this.scrollLeft -= delta * 50;
@@ -455,92 +475,12 @@ function copyThis(id) {
 	setTimeout(function() {notif.classList.remove("fadeInUp");notif.classList.add("fadeOutDown"); setTimeout(function() {document.body.removeChild(notif);}, 600); }, 1500);
 }
 
-
 function showMouse() {
 	var mouse = document.getElementById('mouse');
 	mouse.classList.add("fadeInDown");
 	setTimeout(function() {mouse.classList.remove("fadeInDown");mouse.classList.add("fadeOutDown"); setTimeout(function() {mouse.classList.remove("fadeOutDown");}, 2000); }, 4500);
 }
-setTimeout(function() {showMouse();}, 8000);
-
-
-
-class TextScramble {
-  constructor(el) {
-    this.el = el;
-    this.chars = '!<>-_\\/[]{}—=+*^?#________';
-    this.update = this.update.bind(this);
-  }
-  setText(newText) {
-    const oldText = this.el.innerText;
-    const length = Math.max(oldText.length, newText.length);
-    const promise = new Promise(resolve => this.resolve = resolve);
-    this.queue = [];
-    for (let i = 0; i < length; i++) {
-      const from = oldText[i] || '';
-      const to = newText[i] || '';
-      const start = Math.floor(Math.random() * 40);
-      const end = start + Math.floor(Math.random() * 40);
-      this.queue.push({ from, to, start, end });
-    }
-    cancelAnimationFrame(this.frameRequest);
-    this.frame = 0;
-    this.update();
-    return promise;
-  }
-  update() {
-    let output = '';
-    let complete = 0;
-    for (let i = 0, n = this.queue.length; i < n; i++) {
-      let { from, to, start, end, char } = this.queue[i];
-      if (this.frame >= end) {
-        complete++;
-        output += to;
-      } else if (this.frame >= start) {
-        if (!char || Math.random() < 0.28) {
-          char = this.randomChar();
-          this.queue[i].char = char;
-        }
-        output += `<span class="dum">${char}</span>`;
-      } else {
-        output += from;
-      }
-    }
-    this.el.innerHTML = output;
-    if (complete === this.queue.length) {
-      this.resolve();
-    } else {
-      this.frameRequest = requestAnimationFrame(this.update);
-      this.frame++;
-    }
-  }
-  randomChar() {
-    return this.chars[Math.floor(Math.random() * this.chars.length)];
-  }}
-
-
-
-const phrases = [
-	'echo "Hello, visitor";',
-	'.my-color { background: black; }',
-	'me[\'profile\'][\'birthday\'] = 951008',
-	'SELECT money FROM bank;',
-	'ps aux | grep mental > result.txt',
-];
-const el = document.querySelector('#scram');
-const fx = new TextScramble(el);
-
-let counter = 0;
-const next = () => {
-  fx.setText(phrases[counter]).then(() => {
-    setTimeout(next, 2500);
-  });
-  counter = (counter + 1) % phrases.length;
-};
-
-setTimeout(next, 3200);
-
-
+setTimeout(function() {showMouse();}, 2000);
 
 function nav(value) {
 	$('html, body').animate({

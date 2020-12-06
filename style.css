@@ -385,7 +385,7 @@ h1 {
     width: 100%;
     padding: 0;
     margin: 0;
-    margin-top: 3.9rem;
+    margin-top: 3.92rem;
     left: 0;
     animation-name: fadeInMobileNav;
     z-index: 1001;
@@ -398,8 +398,8 @@ h1 {
     /*border-radius: 0.2rem;*/
     margin-right: 0.2rem;
 }
-#nav-mobile .nav-button-mobile:first-of-type {
-    /*margin-left: 0.3rem;*/
+#nav-mobile .nav-button-mobile:last-of-type {
+    margin-right: 0;
 }
 #nav-mobile .nav-button-mobile.now,
 #nav-mobile .nav-button-mobile:hover {
@@ -443,6 +443,14 @@ h1 {
 .text.small {
     text-align: left;
 }
+.text .point {
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    border-radius: 50%;
+    left: calc(50% - 0.5rem);
+    top: -2rem;
+}
 
 
 .page {
@@ -463,34 +471,74 @@ h1 {
 #section-1 {
     margin: 0;
 }
-#scramble {
-    height: 100%;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    position: absolute;
-    animation-name: blinkIn;
-    animation-delay: 1.2s;
-    animation-duration: 0.7s;
+
+#stairs-div {
+    margin: 0 auto;
 }
-#scram {
-    font-size: 1.05rem;
+#stairs {
+    padding: 2rem;
+    margin-left: 30rem;
+    font-size: 3.5rem;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    -webkit-font-smoothing: antialiased;
+    -webkit-font-kerning: normal;
+    -webkit-text-size-adjust: 100%;
+    font-family: 'NEXON Lv1 Gothic OTF Bold';
     color: #212529;
-    font-family: 'Space Mono', monospace;
-    font-weight: 700;
 }
-.dum {
-    color: #adb5bd;
+#stairs .stair {
+    height: 4.2rem;
+    overflow: hidden;
+    position: relative;
 }
-@keyframes blinkIn {
-    from { opacity: 0; }
-    20% { opacity: 0.5; }
-    30% { opacity: 0; }
-    40% { opacity: 1; }
-    85% { opacity: 0; }
-    to { opacity: 1; }
+#stairs .stair:nth-child(odd) {
+    -webkit-transform: skew(60deg, -30deg) scaleY(0.66667);
+    transform: skew(60deg, -30deg) scaleY(0.66667);
 }
+#stairs .stair:nth-child(even) {
+    -webkit-transform: skew(0deg, -30deg) scaleY(1.33333);
+    transform: skew(0deg, -30deg) scaleY(1.33333);
+}
+#stairs .stair:nth-child(1) {
+    left: 2rem;
+}
+#stairs .stair:nth-child(2) {
+    left: 4rem;
+}
+#stairs .stair:nth-child(3) {
+    left: 6rem;
+}
+#stairs .stair:nth-child(4) {
+    left: 8rem;
+}
+#stairs .stair:nth-child(5) {
+    left: 10rem;
+}
+#stairs .stair:nth-child(6) {
+    left: 12rem;
+}
+#stairs .stair:nth-child(7) {
+    left: 14rem;
+}
+#stairs .stair p {
+    height: 4.2rem;
+    line-height: 1rem;
+    padding: 0 1rem;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    vertical-align: top;
+    white-space: nowrap;
+}
+#stairs:hover p {
+    -webkit-transform: translate3d(0, -4.2rem, 0);
+    transform: translate3d(0, -4.2rem, 0);
+}
+
 
 .logo-yk {
     fill:#212529;
@@ -616,14 +664,30 @@ h1 {
     margin: 0 auto;
     vertical-align: middle;
     transform-origin: center;
+    transition-duration: 0.4s;
+}
+#skills .skill.hor img {
+    width: 3.3rem;
 }
 #skills .skill:hover img {
-    transform: scale(1.15);
+    transform: scale(0.7);
+    margin-top: -1.3rem;
 }
-#skills .skill.learning {
-    opacity: 0.3;
+.skill span {
+    position: absolute;
+    opacity: 0;
+    text-align: center;
+    font-family: 'NEXON Lv1 Gothic OTF Bold';
+    color: #212529;
+    font-size: 0.9rem;
+    margin-top: 1rem;
 }
-
+#skills .skill:hover span {
+    opacity: 1;
+    margin-top: 3.3rem;
+    transition-duration: 0.4s;
+    transition-delay: 0.1s;
+}
 
 
 #section-4 {
@@ -703,8 +767,11 @@ h1 {
 #section-5 input {
     display: none;
 }
-#section-5 .button {
+#section-5 .appear {
     display: inline-flex;
+}
+#section-5 .button {
+    display: flex;
     width: 14rem;
     height: 14rem;
     border-radius: 0.2rem;
@@ -725,15 +792,13 @@ h1 {
 
 
 
-#footer {
-    width: 100%;
-    margin-top: -3rem;
-    text-align: center;
+#copyright {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
     font-size: 0.9rem;
-}
-#footer p {
-    display: inline-block;
-    margin: 0 auto;
+    color: #ced4da;
+    z-index: -5;
 }
 
 .notification {
@@ -932,6 +997,47 @@ h1 {
         -webkit-text-size-adjust: 100%;
     }
 
+    #stairs {
+        padding: 0;
+        margin-left: -10.5rem;
+        margin-top: -10.5rem;
+        font-size: 2rem;
+        letter-spacing: -2px;
+    }
+    #stairs .stair {
+        height: 2.7rem;
+    }
+    #stairs .stair:nth-child(1) {
+        left: 1.2rem;
+    }
+    #stairs .stair:nth-child(2) {
+        left: 2.4rem;
+    }
+    #stairs .stair:nth-child(3) {
+        left: 3.6rem;
+    }
+    #stairs .stair:nth-child(4) {
+        left: 4.8rem;
+    }
+    #stairs .stair:nth-child(5) {
+        left: 6rem;
+    }
+    #stairs .stair:nth-child(6) {
+        left: 7.2rem;
+    }
+    #stairs .stair:nth-child(7) {
+        left: 8.4rem;
+    }
+    #stairs .stair p {
+        height: 2.7rem;
+        line-height: 1rem;
+        padding: 0 1rem;
+    }
+    #stairs:hover p {
+        -webkit-transform: translate3d(0, -2.7rem, 0);
+        transform: translate3d(0, -2.7rem, 0);
+    }
+
     .text {
         line-height: 1.6;
         font-size: 0.9rem;
@@ -1018,6 +1124,9 @@ h1 {
     #skills .skill img {
         width: 2.2rem;
     }
+    #skills .skill.hor img {
+        width: 2.42rem;
+    }
 
 	#exps {
 		padding: 0 3rem;
@@ -1052,10 +1161,6 @@ h1 {
         height: 6.5rem;
     }
 
-    #footer {
-        margin-top: -3rem;
-        font-size: 0.85rem;
-    }
     .notification {
         width: calc(100% - 4rem);
         margin: 2rem;
@@ -1134,6 +1239,10 @@ h1 {
     [data-aos="show-right"] {
         transform: translateX(-3rem);
         opacity: 0;
+    }
+
+    #copyright {
+        display: none;
     }
 
 }
