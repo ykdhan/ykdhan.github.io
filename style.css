@@ -978,12 +978,28 @@ h1 {
 
 
 
-
+/*
 @media screen and (min-color-index:0) and (-webkit-min-device-pixel-ratio:0) { 
     #skills .skill:hover span {
         margin-top: 1.8rem;
     }
 }
+*/
+
+/* Safari 10.1+ */
+@media not all and (min-resolution:.001dpcm) { @media {
+    #skills .skill:hover span { 
+        margin-top: 1.8rem;
+    }
+	@media all and (max-width: 450px) and (min-width: 50px) {
+		#skills .skill:hover span {
+            margin-top: 1.3rem;
+        }
+	}
+}}
+
+
+
 
 
 
@@ -1154,11 +1170,6 @@ h1 {
     .skill span {
         font-size: 0.8rem;
         margin-top: 1rem;
-    }
-    @media screen and (min-color-index:0) and (-webkit-min-device-pixel-ratio:0) { 
-        #skills .skill:hover span {
-            margin-top: 1.3rem;
-        }
     }
 
 	#exps {
