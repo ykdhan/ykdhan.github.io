@@ -197,10 +197,10 @@ h1 {
     color: #212529;
     width: fit-content;
     text-align: left;
-    cursor: pointer;
 }
 #sidebar #yk {
-    width: 4.5rem;
+    width: 3.5rem;
+    margin: 1rem 0;
     transition: all ease-out 0.2s !important;
     transform-origin: center;
     cursor: pointer;
@@ -208,13 +208,13 @@ h1 {
 #sidebar #yk * {
     transition: all ease-out 0.2s !important;
     transform-origin: center;
+    cursor: pointer;
 }
-#sidebar #yk:hover {
-    transform: rotate(-45deg);
+#sidebar #yk:hover #y {
+    transform: translateX(-0.2rem);
 }
-#sidebar #yk:hover #mid {
-    transform: translateY(3.3rem);
-    fill: #fff;
+#sidebar #yk:hover #k {
+    transform: translateX(0.2rem);
 }
 #sidebar #contact {
     display: block;
@@ -355,8 +355,8 @@ h1 {
     fill: #868e96;
 }
 #sidebar-mobile #yk {
-    width: 2.2rem;
-    margin-top: 0.3rem;
+    width: 2.4rem;
+    margin-top: -0.3rem;
     transition: all ease-out 0.2s !important;
     transform-origin: center;
     cursor: pointer;
