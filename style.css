@@ -1167,9 +1167,12 @@ h1 {
         transform: scale(0.7);
         margin-top: -1.4rem;
     }
-    .skill span {
+    #skills .skill span {
         font-size: 0.8rem;
         margin-top: 1rem;
+    }
+    #skills .skill:hover span {
+        margin-top: 2.9rem;
     }
 
 	#exps {
