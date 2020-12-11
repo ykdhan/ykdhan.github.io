@@ -365,12 +365,11 @@ h1 {
     transition: all ease-out 0.2s !important;
     transform-origin: center;
 }
-#sidebar-mobile #yk:hover {
-    transform: rotate(-45deg);
+#sidebar-mobile #yk:hover #y {
+    transform: translateX(-0.15rem);
 }
-#sidebar-mobile #yk:hover #mid {
-    transform: translateY(1.8rem);
-    fill: #fff;
+#sidebar-mobile #yk:hover #k {
+    transform: translateX(0.15rem);
 }
 
 @keyframes fadeInMobileNav {
