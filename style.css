@@ -985,7 +985,11 @@ h1 {
 		margin-top: 1.8rem;
 	}
 } }
-
+@media not all and (min-resolution:.001dpcm) and (max-width: 450px) { @media {
+	#skills .skill:hover span { 
+		margin-top: 0.8rem;
+	}
+} }
 
 
 
@@ -1006,12 +1010,6 @@ h1 {
 /* Mobile */
 @media all and (max-width: 450px) and (min-width: 50px) {
 
-	/* Safari 10.1+ */
-	@media not all and (min-resolution:.001dpcm) { @media {
-		#skills .skill:hover span { 
-			margin-top: 1rem;
-		}
-	} }
     .mobile { display: block; }
     #nav-mobile { display: flex; }
 
