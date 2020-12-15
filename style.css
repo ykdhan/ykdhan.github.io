@@ -1077,32 +1077,6 @@ h1 {
 
 
 
-/*
-@media screen and (min-color-index:0) and (-webkit-min-device-pixel-ratio:0) { 
-    #skills .skill:hover span {
-        margin-top: 1.8rem;
-    }
-}
-*/
-
-/* Safari 10.1+ */
-@media not all and (min-resolution:.001dpcm) { @media {
-    #skills .skill:hover span { 
-        margin-top: 1.8rem;
-    }
-	@media all and (max-width: 450px) and (min-width: 50px) {
-		#skills .skill:hover span {
-            margin-top: 1.3rem;
-        }
-	}
-}
-@media all and (max-width: 450px) and (min-width: 50px) {
-    #skills .skill:hover span {
-        margin-top: 0.3rem;
-    }
-}
-}
-
 
 
 
@@ -1404,6 +1378,12 @@ h1 {
     #copyright {
         display: none;
     }
+	
+	@supports (-webkit-touch-callout: none) {
+		#skills .skill:hover span {
+			margin-top: 1rem;
+		}	
+	}
 
 }
 @media all and (max-width: 390px) and (min-width: 50px) {
