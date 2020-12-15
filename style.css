@@ -178,16 +178,107 @@ h1 {
 
 
 
-#sidebar {
-    display: block;
-    width: 15rem;
-	/*height: 100vh;*/
-    height: 100%;
-    position: fixed;
+#topbar {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+	position: fixed;
     z-index: 999;
     top: 0;
     left: 0;
-    padding: 2rem;
+    padding: 2rem 2.5rem;
+    padding-bottom: 1rem;
+    animation-delay: 0.2s;
+    background: rgba(255,255,255,0.95);
+    /*background: #fff;
+    -webkit-box-shadow: 0px 0px 20px 15px #fff;
+    -moz-box-shadow: 0px 0px 20px 15px #fff;
+    box-shadow: 0px 0px 20px 15px #fff;*/
+}
+#topbar #logo,
+#topbar #title {
+    flex: 1;
+}
+#topbar #title {
+    text-align: left;
+    flex: 10;
+}
+#topbar #yk {
+    width: 2.5rem;
+    margin: 0;
+    transition: all ease-out 0.2s !important;
+    transform-origin: center;
+    cursor: pointer;
+}
+#topbar #yk * {
+    transition: all ease-out 0.2s !important;
+    transform-origin: center;
+    cursor: pointer;
+}
+#topbar #yk:hover #y {
+    transform: translateX(0.4rem);
+}
+#topbar #yk:hover #k {
+    transform: translateX(-0.4rem);
+}
+#topbar .page-title {
+    position: absolute;
+    font-size: 1.2rem; /* 0.95rem */
+    line-height: 1.6;
+    word-break: keep-all;
+    color: #212529; /* #343a40 */
+    font-family: 'NEXON Lv1 Gothic OTF Bold';
+    animation-duration: 0.2s;
+    animation-name: fadeOutTitle;
+}
+#topbar .page-title.now {
+    animation-duration: 0.4s;
+    animation-name: fadeInUp;
+}
+#topbar #github {
+    float: right;
+    display: inline-block;
+    vertical-align: middle;
+}
+#topbar #github a {
+    width: auto;
+    height: auto;
+}
+#topbar #github p {
+    width: fit-content;
+    cursor: pointer;
+    transition: all ease-out 0.2s;
+}
+#topbar svg {
+    width: 1.7rem;
+    margin-top: 0.5rem;
+}
+#topbar #github p:hover {
+    margin-right: 0.3em;
+}
+#topbar #github p:hover .cls-1,
+#topbar #github p:hover .cls-2 {
+    fill: #868e96;
+}
+
+@keyframes fadeOutTitle {
+    from { }
+    to {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+}
+
+#sidebar {
+    display: block;
+    width: 10rem;
+	/*height: 100vh;*/
+    height: 100%;
+    position: fixed;
+    z-index: 998;
+    top: 0;
+    left: 0;
+    padding: 1rem;
     animation-delay: 0.2s;
 }
 #sidebar #logo {
@@ -199,7 +290,7 @@ h1 {
     text-align: left;
 }
 #sidebar #yk {
-    width: 3.5rem;
+    width: 3rem;
     margin: 1rem 0;
     transition: all ease-out 0.2s !important;
     transform-origin: center;
@@ -211,10 +302,10 @@ h1 {
     cursor: pointer;
 }
 #sidebar #yk:hover #y {
-    transform: translateX(-0.2rem);
+    transform: translateX(0.3rem);
 }
 #sidebar #yk:hover #k {
-    transform: translateX(0.2rem);
+    transform: translateX(0.3rem);
 }
 #sidebar #contact {
     display: block;
@@ -225,7 +316,7 @@ h1 {
     float: left;
     bottom: 0;
     left: 0;
-    margin: 2rem;
+    margin: 2rem 2.5rem;
 }
 #sidebar #contact .section {
     margin-bottom: 1rem;
@@ -259,39 +350,41 @@ h1 {
 }
 
 
-#sidebar #nav {
-    margin-top: 3rem;
+#nav {
+    margin-top: 4rem;
+    width: fit-content;
 }
-#sidebar .nav-button {
-    width: 0.95rem;
-    height: 0.95rem;
-    border-radius: 0.2rem;
+#nav .nav-button {
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
     margin-bottom: 0.6rem;
     cursor: pointer;
-    animation-name: fadeInUpNav;
-    transform-origin: left;
 }
-#sidebar .nav-button.now,
-#sidebar .nav-button:hover {
-    width: 2.85rem;
+#nav .nav-button:last-of-type {
+    margin-bottom: 0;
 }
-#sidebar .nav-button:nth-of-type(1) {
+#nav .nav-button.now,
+#nav .nav-button:hover {
+    transform: scale(1.3);
+}
+#nav .nav-button:nth-of-type(1) {
     background: #F03F3E;
     animation-delay: 0.8s;
 }
-#sidebar .nav-button:nth-of-type(2) {
+#nav .nav-button:nth-of-type(2) {
     background: #F59F00;
     animation-delay: 0.9s;
 }
-#sidebar .nav-button:nth-of-type(3) {
+#nav .nav-button:nth-of-type(3) {
     background: #74B816;
     animation-delay: 1s;
 }
-#sidebar .nav-button:nth-of-type(4) {
+#nav .nav-button:nth-of-type(4) {
     background: #1E7ED6;
     animation-delay: 1.1s;
 }
-#sidebar .nav-button:nth-of-type(5) {
+#nav .nav-button:nth-of-type(5) {
     background: #AE3FC8;
     animation-delay: 1.2s;
 }
@@ -308,6 +401,7 @@ h1 {
 }
 
 #sidebar-mobile {
+    display: none !important;
     width: 100%;
     background: rgba(255,255,255,0.95);
     position: fixed;
@@ -585,7 +679,12 @@ h1 {
 #profile .name {
     font-size: 1rem;
     padding: 1rem 0;
-    border-bottom: 0.1rem solid #dee2e6;
+}
+#profile .name.title span {
+    padding: 0.7rem 1rem;
+    background: #212529;
+    color: #fff;
+    border-radius: 0.2rem;
 }
 #profile .title {
     font-family: 'NEXON Lv1 Gothic OTF Bold';
@@ -781,7 +880,7 @@ h1 {
 #section-5 .button {
     display: flex;
     width: 14rem;
-    height: 14rem;
+    height: 7rem;
     border-radius: 0.2rem;
     background: #f8f9fa;
     margin: 0.3rem;
@@ -828,6 +927,7 @@ h1 {
     opacity: 0;
     text-align: center;
     vertical-align: middle;
+    z-index: 1111;
 }
 .notification p {
     vertical-align: middle;
@@ -995,7 +1095,13 @@ h1 {
             margin-top: 1.3rem;
         }
 	}
-}}
+}
+@media all and (max-width: 450px) and (min-width: 50px) {
+    #skills .skill:hover span {
+        margin-top: 0.3rem;
+    }
+}
+}
 
 
 
@@ -1018,8 +1124,7 @@ h1 {
 @media all and (max-width: 450px) and (min-width: 50px) {
 
     .mobile { display: block; }
-    #nav-mobile { display: flex; }
-
+    
     body {
     	font-size: 0.9rem;
         line-height: 1.6;
@@ -1113,6 +1218,12 @@ h1 {
         font-size: 0.95rem;
         padding: 0.7rem 0;
         text-align: center;
+        border-bottom: 0.1rem solid #dee2e6;
+    }
+    #profile .name.title span {
+        padding: 0;
+        background: #fff;
+        color: #212529;
     }
     #profile .line {
         font-size: 0.85rem;
@@ -1171,7 +1282,7 @@ h1 {
         margin-top: 1rem;
     }
     #skills .skill:hover span {
-        margin-top: 2.9rem;
+        margin-top: 2.8rem;
     }
 
 	#exps {
