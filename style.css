@@ -182,7 +182,7 @@ h1 {
 #topbar-m {
     display: flex;
     width: 100%;
-    height: fit-content;
+    height: auto;
 	position: fixed;
     z-index: 999;
     top: 0;
@@ -1011,8 +1011,8 @@ h1 {
 
     #stairs {
         padding: 0;
-        margin-left: -10.5rem;
-        margin-top: -10.5rem;
+        margin-left: -10.7rem;
+        margin-top: -7rem;
         font-size: 2rem;
         letter-spacing: -2px;
     }
