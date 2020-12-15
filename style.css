@@ -1286,6 +1286,12 @@ h1 {
     #copyright {
         display: none;
     }
+	
+	@supports (-webkit-touch-callout: none) {
+		#profile .name {
+        	font-size: 1.4rem;
+		}
+	}
 
 }
 @media all and (max-width: 390px) and (min-width: 50px) {
