@@ -1078,7 +1078,12 @@ h1 {
 
 
 
-
+/* Safari 10.1+ */
+@media not all and (min-resolution:.001dpcm) { @media {
+	#skills .skill:hover span { 
+		margin-top: 1.8rem;
+    }
+}}
 
 
 
