@@ -178,7 +178,8 @@ h1 {
 
 
 
-#topbar {
+#topbar,
+#topbar-m {
     display: flex;
     width: 100%;
     height: fit-content;
@@ -190,27 +191,27 @@ h1 {
     padding-bottom: 1rem;
     animation-delay: 0.2s;
     background: rgba(255,255,255,0.95);
-    /*background: #fff;
-    -webkit-box-shadow: 0px 0px 20px 15px #fff;
-    -moz-box-shadow: 0px 0px 20px 15px #fff;
-    box-shadow: 0px 0px 20px 15px #fff;*/
 }
 #topbar #logo,
-#topbar #title {
+#topbar #title,
+#topbar-m #logo-m,
+#topbar-m #title-m {
     flex: 1;
 }
 #topbar #title {
     text-align: left;
     flex: 10;
 }
-#topbar #yk {
+#topbar #yk,
+#topbar-m #yk-m {
     width: 2.5rem;
     margin: 0;
     transition: all ease-out 0.2s !important;
     transform-origin: center;
     cursor: pointer;
 }
-#topbar #yk * {
+#topbar #yk *,
+#topbar-m #yk-m * {
     transition: all ease-out 0.2s !important;
     transform-origin: center;
     cursor: pointer;
@@ -221,7 +222,8 @@ h1 {
 #topbar #yk:hover #k {
     transform: translateX(-0.4rem);
 }
-#topbar .page-title {
+#topbar .page-title,
+#topbar-m .page-title-m {
     position: absolute;
     font-size: 1.2rem; /* 0.95rem */
     line-height: 1.6;
@@ -231,34 +233,10 @@ h1 {
     animation-duration: 0.2s;
     animation-name: fadeOutTitle;
 }
-#topbar .page-title.now {
+#topbar .page-title.now,
+#topbar-m .page-title-m.now {
     animation-duration: 0.4s;
     animation-name: fadeInUp;
-}
-#topbar #github {
-    float: right;
-    display: inline-block;
-    vertical-align: middle;
-}
-#topbar #github a {
-    width: auto;
-    height: auto;
-}
-#topbar #github p {
-    width: fit-content;
-    cursor: pointer;
-    transition: all ease-out 0.2s;
-}
-#topbar svg {
-    width: 1.7rem;
-    margin-top: 0.5rem;
-}
-#topbar #github p:hover {
-    margin-right: 0.3em;
-}
-#topbar #github p:hover .cls-1,
-#topbar #github p:hover .cls-2 {
-    fill: #868e96;
 }
 
 @keyframes fadeOutTitle {
@@ -336,8 +314,9 @@ h1 {
     line-height: 1.4;
     transition: all ease-out 0.2s;
 }
-#sidebar svg {
+#sidebar #logo-github {
     width: 2rem;
+    transition: all ease-out 0.2s;
 }
 #sidebar #contact .last p:hover {
     margin-left: 0.3em;
@@ -347,46 +326,6 @@ h1 {
 }
 #sidebar #contact input {
     display: none;
-}
-
-
-#nav {
-    margin-top: 4rem;
-    width: fit-content;
-}
-#nav .nav-button {
-    width: 0.7rem;
-    height: 0.7rem;
-    border-radius: 50%;
-    margin-bottom: 0.6rem;
-    cursor: pointer;
-}
-#nav .nav-button:last-of-type {
-    margin-bottom: 0;
-}
-#nav .nav-button.now,
-#nav .nav-button:hover {
-    transform: scale(1.3);
-}
-#nav .nav-button:nth-of-type(1) {
-    background: #F03F3E;
-    animation-delay: 0.8s;
-}
-#nav .nav-button:nth-of-type(2) {
-    background: #F59F00;
-    animation-delay: 0.9s;
-}
-#nav .nav-button:nth-of-type(3) {
-    background: #74B816;
-    animation-delay: 1s;
-}
-#nav .nav-button:nth-of-type(4) {
-    background: #1E7ED6;
-    animation-delay: 1.1s;
-}
-#nav .nav-button:nth-of-type(5) {
-    background: #AE3FC8;
-    animation-delay: 1.2s;
 }
 
 @keyframes fadeInUpNav {
@@ -400,70 +339,54 @@ h1 {
     }
 }
 
-#sidebar-mobile {
-    display: none !important;
-    width: 100%;
-    background: rgba(255,255,255,0.95);
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    left: 0;
-    padding: 0.6rem 1rem;
-    animation-delay: 0.2s;
+#topbar-m {
+    display: none;
+    padding: 1.5rem 1rem;
+    padding-bottom: 0.7rem;
 }
-#sidebar-mobile #logo-mobile {
-    font-family: 'NEXON Lv1 Gothic OTF Bold';
-    font-size: 1rem;
-    margin-top: 0.9rem;
-    line-height: 1;
-    color: #212529;
-    display: inline-block;
-    width: fit-content;
+#topbar-m #yk-m {
+    width: 2.3rem;
+    margin-top: -0.3rem;
+}
+#topbar-m #yk-m:hover #y {
+    transform: translateX(-0.15rem);
+}
+#topbar-m #yk-m:hover #k {
+    transform: translateX(0.15rem);
+}
+#topbar-m #title-m {
     text-align: left;
-    cursor: pointer;
-    vertical-align: middle;
+    flex: 5;
 }
-#sidebar-mobile #github {
+#topbar-m .page-title-m {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+#topbar-m #github {
     float: right;
     display: inline-block;
     vertical-align: middle;
+    margin-top: -0.1rem;
 }
-#sidebar-mobile #github a {
+#topbar-m #github a {
     width: auto;
     height: auto;
 }
-#sidebar-mobile #github p {
+#topbar-m #github p {
     width: fit-content;
     cursor: pointer;
     transition: all ease-out 0.2s;
 }
-#sidebar-mobile svg {
+#topbar-m #logo-github-m {
     width: 1.7rem;
-    margin-top: 0.5rem;
+    transition: all ease-out 0.2s;
 }
-#sidebar-mobile #github p:hover {
+#topbar-m #github p:hover {
     margin-right: 0.3em;
 }
-#sidebar-mobile #github p:hover .cls-1,
-#sidebar-mobile #github p:hover .cls-2 {
+#topbar-m #github p:hover .cls-1,
+#topbar-m #github p:hover .cls-2 {
     fill: #868e96;
-}
-#sidebar-mobile #yk {
-    width: 2.4rem;
-    margin-top: -0.3rem;
-    transition: all ease-out 0.2s !important;
-    transform-origin: center;
-    cursor: pointer;
-}
-#sidebar-mobile #yk * {
-    transition: all ease-out 0.2s !important;
-    transform-origin: center;
-}
-#sidebar-mobile #yk:hover #y {
-    transform: translateX(-0.15rem);
-}
-#sidebar-mobile #yk:hover #k {
-    transform: translateX(0.15rem);
 }
 
 @keyframes fadeInMobileNav {
@@ -477,34 +400,6 @@ h1 {
     }
 }
 
-#nav-mobile {
-    display: none;
-    position: fixed;
-    margin-top: 0.3rem;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    margin-top: 3.85rem;
-    background: #fff;
-    left: 0;
-    animation-name: fadeInMobileNav;
-    z-index: 1001;
-    animation-delay: 0.3s;
-}
-#nav-mobile .nav-button-mobile {
-    display: flex;
-    flex: 1;
-    height: 0.2rem;
-    /*border-radius: 0.2rem;*/
-    margin-right: 0.2rem;
-}
-#nav-mobile .nav-button-mobile:last-of-type {
-    margin-right: 0;
-}
-#nav-mobile .nav-button-mobile.now,
-#nav-mobile .nav-button-mobile:hover {
-    flex: 13;
-}
 #nav-mobile .nav-button-mobile:nth-of-type(1) {
     background: #F03F3E;
 }
@@ -1103,6 +998,10 @@ h1 {
 @media all and (max-width: 450px) and (min-width: 50px) {
 
     .mobile { display: block; }
+
+    #topbar-m {
+        display: flex;
+    }
     
     body {
     	font-size: 0.9rem;
@@ -1168,7 +1067,7 @@ h1 {
         top: -2rem;
     }    
 
-    #sidebar {
+    #sidebar, #topbar {
         display: none;
     }
 
@@ -1386,7 +1285,7 @@ h1 {
 	
 	@supports (-webkit-touch-callout: none) {
 		#skills .skill:hover span {
-			margin-top: 1rem;
+			margin-top: 1.2rem;
 		}	
 	}
 
