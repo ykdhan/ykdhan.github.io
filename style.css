@@ -356,7 +356,7 @@ h1 {
 }
 #topbar-m #title-m {
     text-align: left;
-    flex: 5;
+    flex: 4;
 }
 #topbar-m .page-title-m {
     font-size: 0.95rem;
