@@ -343,6 +343,7 @@ h1 {
     display: none;
     padding: 1.5rem 1rem;
     padding-bottom: 0.7rem;
+    background: #212529;
 }
 #topbar-m #yk-m {
     width: 2.3rem;
