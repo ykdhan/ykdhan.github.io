@@ -347,7 +347,6 @@ h1 {
 }
 #topbar-m #yk-m {
     width: 2.3rem;
-    margin-top: -0.3rem;
 }
 #topbar-m #yk-m:hover #y {
     transform: translateX(-0.15rem);
