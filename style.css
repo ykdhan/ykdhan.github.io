@@ -535,6 +535,17 @@ h1 {
     -webkit-transform: translate3d(0, -4.2rem, 0);
     transform: translate3d(0, -4.2rem, 0);
 }
+@media(hover: hover) and (pointer: fine) {
+	#stairs:hover p,
+	#stairs:active p {
+		-webkit-transform: translate3d(0, -4.2rem, 0);
+		transform: translate3d(0, -4.2rem, 0);
+	}
+}
+
+
+
+
 
 
 .logo-yk {
@@ -1049,6 +1060,14 @@ h1 {
         -webkit-transform: translate3d(0, -2.8rem, 0);
         transform: translate3d(0, -2.8rem, 0);
     }
+	@media(hover: hover) and (pointer: fine) {
+		#stairs:hover p,
+		#stairs:active p {
+			-webkit-transform: translate3d(0, -2.8rem, 0);
+			transform: translate3d(0, -2.8rem, 0);
+		}
+	}
+
 
     .text {
         line-height: 1.6;
