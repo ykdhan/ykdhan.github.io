@@ -31,7 +31,7 @@
 	<link rel="apple-touch-icon" sizes="144x144" href="src/yk-144.png" />
 	<link rel="apple-touch-icon" sizes="152x152" href="src/yk-152.png" />
 
-	<link rel="stylesheet" type="text/css" href="style.css?ver=5.53">
+	<link rel="stylesheet" type="text/css" href="style.css?ver=5.55">
     <link rel="stylesheet" type="text/css" href="animate.css?ver=1.5">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.css" rel="stylesheet">
@@ -136,30 +136,7 @@
 
 <div id="section-1" class="page flexbox">
 	<div class="flex flex--1 flex--center">
-		<div id="stairs-div" data-aos="show-down">
-			<ul id="stairs">
-				<li class="stair">
-				<p>&nbsp;</p>
-				<p>프론트엔드</p>
-				</li>
-				<li class="stair">
-				<p>프론트엔드</p>
-				<p>백엔드</p>
-				</li>
-				<li class="stair">
-				<p>백엔드</p>
-				<p>UI/UX</p>
-				</li>
-				<li class="stair">
-				<p>UI/UX</p>
-				<p>Interactive</p>
-				</li>
-				<li class="stair">
-				<p>Interactive</p>
-				<p>&nbsp;</p>
-				</li>
-			</ul>
-		</div>
+		<canvas id="cvs"></canvas>
 	</div>
 
 	<div id="mouse" class="animated"><div class="mouse-icon"><span class="mouse-wheel"></span></div></div>
@@ -368,31 +345,34 @@ window.onscroll = function() { whenScroll() };
 function whenScroll() {
 	
 	if (window.pageYOffset > space * 0.8) {
-		$('html').css({ background: '#fff' });
-		$('#topbar').css({ background: 'rgba(255,255,255,0.95)' });
-		$('#topbar-m').css({ background: 'rgba(255,255,255,0.95)' });
-		$('#yk').css({ width: '2.5rem', margin: '0' });
-		$('#yk-m').css({ margin: '0' });
-		$('#stairs').css({ color: '#212529' });
-		$('#logo-github').css({ margin: '0' });
-		$('#logo-github *').css({ fill: '#212529' });
-		$('#logo-github-m').css({ margin: '0' });
-		$('#logo-github-m *').css({ fill: '#212529' });
-		$('#logo *').css({ fill: '#212529' });
-		$('#logo-m *').css({ fill: '#212529' });
+		
 	} else {
-		$('html').css({ background: '#212529' });
-		$('#topbar').css({ background: '#212529' });
-		$('#topbar-m').css({ background: '#212529' });
+		
+	}
+
+	if (window.pageYOffset < document.getElementById("section-2").offsetTop - space) {
+		$('#yk *').css({ fill: 'transparent' });
+		$('#yk-m *').css({ fill: 'transparent' });
 		$('#yk').css({ width: '3.5rem', margin: '1rem' });
 		$('#yk-m').css({ margin: '0.7rem' });
-		$('#stairs').css({ color: '#fff' });
+		$('#topbar').css({ background: 'transparent' });
+		$('#topbar-m').css({ background: 'transparent' });
 		$('#logo-github').css({ margin: '1rem' });
-		$('#logo-github *').css({ fill: '#fff' });
 		$('#logo-github-m').css({ margin: '0.7rem' });
-		$('#logo-github-m *').css({ fill: '#fff' });
-		$('#logo *').css({ fill: '#fff' });
-		$('#logo-m *').css({ fill: '#fff' });
+	} else {
+		$('#yk *').css({ fill: '#212529' });
+		$('#yk-m *').css({ fill: '#212529' });
+		$('#yk').css({ width: '2.5rem', margin: '0' });
+		$('#yk-m').css({ margin: '0' });
+		$('#topbar').css({ background: 'rgba(255,255,255,0.95)' });
+		$('#topbar-m').css({ background: 'rgba(255,255,255,0.95)' });
+		$('#logo-github').css({ margin: '0' });
+		$('#logo-github-m').css({ margin: '0' });
+	}
+
+	var grow = window.pageYOffset * 2.2;
+	if (window.screen.width < 450) {
+		grow = window.pageYOffset * 0.9;
 	}
 
 	if (window.pageYOffset < document.getElementById("section-2").offsetTop - space) {
@@ -400,6 +380,7 @@ function whenScroll() {
 			ptitles[i].classList.remove("now"); mtitles[i].classList.remove("now");
 		}
 		ptitles[0].classList.add("now"); mtitles[0].classList.add("now");
+		drawYK(padding + grow, size + window.pageYOffset);
 	} else if (window.pageYOffset < document.getElementById("section-3").offsetTop - space) {
 		for (var i = 0; i < ptitles.length; i++) {
 			if (i != 1) { ptitles[i].classList.remove("now"); mtitles[i].classList.remove("now"); }
@@ -472,9 +453,9 @@ function copyThis(id) {
 function showMouse() {
 	var mouse = document.getElementById('mouse');
 	mouse.classList.add("fadeInDown");
-	setTimeout(function() {mouse.classList.remove("fadeInDown");mouse.classList.add("fadeOutDown"); setTimeout(function() {mouse.classList.remove("fadeOutDown");}, 2000); }, 4500);
+	setTimeout(function() {mouse.classList.remove("fadeInDown");mouse.classList.add("fadeOutDown"); setTimeout(function() {mouse.classList.remove("fadeOutDown");}, 2000); }, 3200);
 }
-setTimeout(function() {showMouse();}, 2000);
+setTimeout(function() {showMouse();}, 1200);
 
 	
 function nav(value) {
@@ -489,6 +470,52 @@ function goTop() {
 		scrollTop: 0
 	}, 600);
 }
+
+
+var cvs = document.getElementById('cvs');
+var ctx = cvs.getContext("2d");
+cvs.style.width = window.innerWidth;
+cvs.style.height = window.innerHeight;
+cvs.width = window.innerWidth;
+cvs.height = window.innerHeight;
+var center = { x: cvs.width/2, y: cvs.height/2 };
+var size = window.innerWidth / 85;
+var padding = size / 4;
+if (window.screen.width < 450) {
+	size = window.innerWidth / 30;
+	padding = size / 4;
+}
+
+function drawYK(apart, size) {
+	ctx.clearRect(0, 0, cvs.width, cvs.height);
+	ctx.beginPath();
+	ctx.moveTo(center.x - apart, center.y);
+	ctx.lineTo(center.x - apart, center.y - (size * 2));
+	ctx.lineTo(center.x - apart - (size * 3), center.y - (size * 2));
+	ctx.lineTo(center.x - apart - size, center.y);
+	ctx.lineTo(center.x - apart - size, center.y + (size * 2));
+	ctx.lineTo(center.x - apart, center.y + (size * 2));
+	ctx.lineTo(center.x - apart, center.y);
+	ctx.strokeStyle = '#212529';
+	ctx.stroke();
+	ctx.fillStyle = '#212529';
+	ctx.fill();
+	ctx.beginPath();
+	ctx.moveTo(center.x + apart, center.y);
+	ctx.lineTo(center.x + apart, center.y - (size * 2));
+	ctx.lineTo(center.x + apart + (size * 3), center.y - (size * 2));
+	ctx.lineTo(center.x + apart + size, center.y);
+	ctx.lineTo(center.x + apart + (size * 3), center.y + (size * 2));
+	ctx.lineTo(center.x + apart, center.y + (size * 2));
+	ctx.lineTo(center.x + apart, center.y);
+	ctx.strokeStyle = '#212529';
+	ctx.stroke();
+	ctx.fillStyle = '#212529';
+	ctx.fill();
+}
+
+drawYK(padding, size);
+
 
 </script>
 

@@ -44,7 +44,6 @@
 }
 
 html {
-    background: #212529;
     padding: 0;
     margin: 0;
     height: 100%;
@@ -343,7 +342,6 @@ h1 {
     display: none;
     padding: 1.5rem 1rem;
     padding-bottom: 0.7rem;
-    background: #212529;
 }
 #topbar-m #yk-m {
     width: 2.3rem;
@@ -416,6 +414,19 @@ h1 {
     background: #AE3FC8;
 }
 
+
+
+
+
+#cvs {
+    z-index: -100;
+    top: 0;
+    left: 0;
+    position: fixed;
+}
+#cvs * {
+    fill: #212529;
+}
 
 
 
@@ -640,6 +651,7 @@ h1 {
 .keyword:hover .title {
     transform: translateY(-0.5rem);
 }
+
 #skills .appear {
     display: inline-block;
     margin: 0;
@@ -835,7 +847,7 @@ h1 {
 
 #mouse{
     margin: 0;
-    position: absolute;
+    position: fixed;
     width: 100%;
     bottom: 15%;
     right: 0;
