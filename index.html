@@ -31,7 +31,7 @@
 	<link rel="apple-touch-icon" sizes="144x144" href="src/yk-144.png" />
 	<link rel="apple-touch-icon" sizes="152x152" href="src/yk-152.png" />
 
-	<link rel="stylesheet" type="text/css" href="style.css?ver=5.55">
+	<link rel="stylesheet" type="text/css" href="style.css?ver=5.56">
     <link rel="stylesheet" type="text/css" href="animate.css?ver=1.5">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.css" rel="stylesheet">
@@ -344,11 +344,7 @@ window.onscroll = function() { whenScroll() };
 
 function whenScroll() {
 	
-	if (window.pageYOffset > space * 0.8) {
-		
-	} else {
-		
-	}
+	//if (window.pageYOffset > space * 0.8) {
 
 	if (window.pageYOffset < document.getElementById("section-2").offsetTop - space) {
 		$('#yk *').css({ fill: 'transparent' });
@@ -370,9 +366,9 @@ function whenScroll() {
 		$('#logo-github-m').css({ margin: '0' });
 	}
 
-	var grow = window.pageYOffset * 2.2;
+	var grow = Math.abs(window.pageYOffset) * 2.2;
 	if (window.screen.width < 450) {
-		grow = window.pageYOffset * 0.9;
+		grow = Math.abs(window.pageYOffset) * 0.9;
 	}
 
 	if (window.pageYOffset < document.getElementById("section-2").offsetTop - space) {
@@ -474,15 +470,15 @@ function goTop() {
 
 var cvs = document.getElementById('cvs');
 var ctx = cvs.getContext("2d");
-cvs.style.width = window.innerWidth;
-cvs.style.height = window.innerHeight;
-cvs.width = window.innerWidth;
-cvs.height = window.innerHeight;
+cvs.style.width = Math.abs(window.innerWidth);
+cvs.style.height = Math.abs(window.innerHeight);
+cvs.width = Math.abs(window.innerWidth);
+cvs.height = Math.abs(window.innerHeight);
 var center = { x: cvs.width/2, y: cvs.height/2 };
-var size = window.innerWidth / 85;
+var size = Math.abs(window.innerWidth) / 85;
 var padding = size / 4;
 if (window.screen.width < 450) {
-	size = window.innerWidth / 30;
+	size = Math.abs(window.innerWidth) / 30;
 	padding = size / 4;
 }
 
@@ -515,7 +511,6 @@ function drawYK(apart, size) {
 }
 
 drawYK(padding, size);
-
 
 </script>
 
