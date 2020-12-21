@@ -481,51 +481,114 @@ h1 {
     margin: 0;
 }
 #titles {
-	width: 100%;
-    max-width: 100%;
+    display: inline-block;
+	width: fit-content;
+    max-width: 40rem;
     vertical-align: middle;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     text-align: center;
 }
 #titles .title {
     display: inline-block;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: #212529;
     font-family: 'NEXON Lv1 Gothic OTF Bold';
-    margin: 1rem;
+    margin: 0.3rem;
+    padding: 1rem;
 }
 #titles:hover .title:hover,
 #titles:active .title:active {
-    transform: scale(1.2);
+    transform: scale(1.2) !important;
     color: #212529;
 }
 #titles:hover .title,
 #titles:active .title {
-    transform: scale(0.8);
+    transform: scale(0.9) !important;
     color: #ced4da;
 }
 
 #titles:hover .title:hover:nth-of-type(1),
-#titles:active .title:active:nth-of-type(1) {
+#titles:active .title:active:nth-of-type(1),
+#titles:hover .title:hover:nth-of-type(7),
+#titles:active .title:active:nth-of-type(7),
+#titles:hover .title:hover:nth-of-type(13),
+#titles:active .title:active:nth-of-type(13) {
     color: #F03F3E;
 }
 #titles:hover .title:hover:nth-of-type(2),
-#titles:active .title:active:nth-of-type(2) {
+#titles:active .title:active:nth-of-type(2),
+#titles:hover .title:hover:nth-of-type(8),
+#titles:active .title:active:nth-of-type(8),
+#titles:hover .title:hover:nth-of-type(14),
+#titles:active .title:active:nth-of-type(14) {
     color: #F59F00;
 }
 #titles:hover .title:hover:nth-of-type(3),
-#titles:active .title:active:nth-of-type(3) {
+#titles:active .title:active:nth-of-type(3),
+#titles:hover .title:hover:nth-of-type(9),
+#titles:active .title:active:nth-of-type(9),
+#titles:hover .title:hover:nth-of-type(15),
+#titles:active .title:active:nth-of-type(15) {
     color: #74B816;
 }
 #titles:hover .title:hover:nth-of-type(4),
-#titles:active .title:active:nth-of-type(4) {
+#titles:active .title:active:nth-of-type(4),
+#titles:hover .title:hover:nth-of-type(10),
+#titles:active .title:active:nth-of-type(10),
+#titles:hover .title:hover:nth-of-type(16),
+#titles:active .title:active:nth-of-type(16) {
     color: #1E7ED6;
 }
 #titles:hover .title:hover:nth-of-type(5),
-#titles:active .title:active:nth-of-type(5) {
+#titles:active .title:active:nth-of-type(5),
+#titles:hover .title:hover:nth-of-type(11),
+#titles:active .title:active:nth-of-type(11),
+#titles:hover .title:hover:nth-of-type(17),
+#titles:active .title:active:nth-of-type(17) {
     color: #AE3FC8;
 }
+#titles:hover .title:hover:nth-of-type(6),
+#titles:active .title:active:nth-of-type(6),
+#titles:hover .title:hover:nth-of-type(12),
+#titles:active .title:active:nth-of-type(12),
+#titles:hover .title:hover:nth-of-type(18),
+#titles:active .title:active:nth-of-type(18) {
+    color: #212529;
+}
+
+#titles .title:nth-of-type(1),
+#titles .title:nth-of-type(7),
+#titles .title:nth-of-type(13) {
+    animation-delay: 0.3s;
+}
+#titles .title:nth-of-type(2),
+#titles .title:nth-of-type(8),
+#titles .title:nth-of-type(14) {
+    animation-delay: 0.5s;
+}
+#titles .title:nth-of-type(3),
+#titles .title:nth-of-type(9),
+#titles .title:nth-of-type(15) {
+    animation-delay: 0.7s;
+}
+#titles .title:nth-of-type(4),
+#titles .title:nth-of-type(10),
+#titles .title:nth-of-type(16) {
+    animation-delay: 0.9s;
+}
+#titles .title:nth-of-type(5),
+#titles .title:nth-of-type(11),
+#titles .title:nth-of-type(17) {
+    animation-delay: 1.1s;
+}
+#titles .title:nth-of-type(6),
+#titles .title:nth-of-type(12),
+#titles .title:nth-of-type(18) {
+    animation-delay: 1.3s;
+}
+
+
 
 
 #stairs-div {
@@ -618,13 +681,14 @@ h1 {
 
 }
 #info {
-    display: block;
-    margin: 0;
+    display: inline-block;
+    margin: 0 auto;
+    width: 40rem;
 }
 #photo {
     display: inline-block;
-    width: 10rem;
-    height: 10rem;
+    width: 12rem;
+    height: 12rem;
     margin: 0;
     background: url("src/formal.jpg");
     background-position: center -1.3rem;
@@ -1083,13 +1147,14 @@ h1 {
     }
 
     #titles {
-        padding: 0 2rem;
+        padding: 0 1.5rem;
     }
     #titles .title {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         color: #212529;
         font-family: 'NEXON Lv1 Gothic OTF Bold';
-        margin: 0.7rem;
+        margin: 0.3rem;
+        padding: 0.5rem;
     }
 
     #stairs {
@@ -1167,7 +1232,8 @@ h1 {
     }
 
     #info {
-        margin: 2.2rem auto;
+        width: 100%;
+        margin: 2rem auto;
     }
     #photo {
         display: block;
@@ -1181,7 +1247,7 @@ h1 {
         display: block;
         text-align: left;
         width: 100%;
-        padding: 0 3rem;
+        padding: 0;
     }
     #profile .name {
         font-size: 0.95rem;
