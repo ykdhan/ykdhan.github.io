@@ -31,7 +31,7 @@
 	<link rel="apple-touch-icon" sizes="144x144" href="src/yk-144.png" />
 	<link rel="apple-touch-icon" sizes="152x152" href="src/yk-152.png" />
 
-	<link rel="stylesheet" type="text/css" href="style.css?ver=6.01">
+	<link rel="stylesheet" type="text/css" href="style.css?ver=6.02">
     <link rel="stylesheet" type="text/css" href="animate.css?ver=1.6">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.css" rel="stylesheet">
@@ -136,7 +136,7 @@
 
 <div id="section-1" class="page flexbox">
 	<div class="flex flex--1 flex--center">
-		<canvas id="cvs"></canvas>
+		<canvas id="cvs" width="2560" height="1440"></canvas>
 	</div>
 
 	<div id="mouse" class="animated"><div class="mouse-icon"><span class="mouse-wheel"></span></div></div>
@@ -366,10 +366,7 @@ function whenScroll() {
 		$('#logo-github-m').css({ margin: '0' });
 	}
 
-	var grow = Math.abs(window.pageYOffset) * 2.2;
-	if (window.screen.width < 450) {
-		grow = Math.abs(window.pageYOffset) * 0.9;
-	}
+	var grow = Math.abs(window.pageYOffset) * growing;
 
 	if (window.pageYOffset < document.getElementById("section-2").offsetTop - space) {
 		for (var i = 0; i < ptitles.length; i++) {
@@ -472,14 +469,17 @@ var cvs = document.getElementById('cvs');
 var ctx = cvs.getContext("2d");
 cvs.style.width = Math.abs(window.innerWidth);
 cvs.style.height = Math.abs(window.innerHeight);
-cvs.width = Math.abs(window.innerWidth);
-cvs.height = Math.abs(window.innerHeight);
 var center = { x: cvs.width/2, y: cvs.height/2 };
-var size = Math.abs(window.innerWidth) / 85;
+var size = Math.abs(window.innerWidth) / 60;
 var padding = size / 4;
-if (window.screen.width < 450) {
-	size = Math.abs(window.innerWidth) / 30;
+var growing = 2.6;
+if (window.screen.width < window.screen.height) {
+	cvs.width = 750;
+	cvs.height = 1624;
+	center = { x: cvs.width/2, y: cvs.height/2 };
+	size = Math.abs(window.innerWidth) / 15;
 	padding = size / 4;
+	growing = 1.5;
 }
 
 function drawYK(apart, size) {
