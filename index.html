@@ -31,7 +31,7 @@
 	<link rel="apple-touch-icon" sizes="144x144" href="src/yk-144.png" />
 	<link rel="apple-touch-icon" sizes="152x152" href="src/yk-152.png" />
 
-	<link rel="stylesheet" type="text/css" href="style.css?ver=6.03">
+	<link rel="stylesheet" type="text/css" href="style.css?ver=6.04">
     <link rel="stylesheet" type="text/css" href="animate.css?ver=1.6">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.css" rel="stylesheet">
@@ -136,7 +136,13 @@
 
 <div id="section-1" class="page flexbox">
 	<div class="flex flex--1 flex--center">
-		<canvas id="cvs"></canvas>
+		<!--<canvas id="cvs"></canvas>-->
+		<div id="titles">
+			<div class="title">#프론트엔드</div>
+			<div class="title">#백엔드</div>
+			<div class="title">#UI</div>
+			<div class="title">#UX</div>
+		</div>
 	</div>
 
 	<div id="mouse" class="animated"><div class="mouse-icon"><span class="mouse-wheel"></span></div></div>
@@ -165,8 +171,6 @@
 			</div>
 			<div id="tags" class="width--max" data-aos="show-up">
 				<div class="tag">미니멀리스트</div>
-				<div class="tag">UI</div>
-				<div class="tag">UX</div>
 				<div class="tag">노래</div>
 				<div class="tag">음악</div>
 				<div class="tag">맥북프로</div>
@@ -344,20 +348,14 @@ window.onscroll = function() { whenScroll() };
 
 function whenScroll() {
 	
-	//if (window.pageYOffset > space * 0.8) {
-
-	if (window.pageYOffset < document.getElementById("section-2").offsetTop - space) {
-		$('#yk *').css({ fill: 'transparent' });
-		$('#yk-m *').css({ fill: 'transparent' });
+	if (window.pageYOffset < space * 0.8) {
 		$('#yk').css({ width: '3.5rem', margin: '1rem' });
-		$('#yk-m').css({ margin: '0.7rem' });
+		$('#yk-m').css({ margin: '0.8rem' });
 		$('#topbar').css({ background: 'transparent' });
 		$('#topbar-m').css({ background: 'transparent' });
 		$('#logo-github').css({ margin: '1rem' });
 		$('#logo-github-m').css({ margin: '0.7rem' });
 	} else {
-		$('#yk *').css({ fill: '#212529' });
-		$('#yk-m *').css({ fill: '#212529' });
 		$('#yk').css({ width: '2.5rem', margin: '0' });
 		$('#yk-m').css({ margin: '0' });
 		$('#topbar').css({ background: 'rgba(255,255,255,0.95)' });
@@ -366,14 +364,14 @@ function whenScroll() {
 		$('#logo-github-m').css({ margin: '0' });
 	}
 
-	var grow = Math.abs(window.pageYOffset) * growing;
+	//var grow = Math.abs(window.pageYOffset) * growing;
 
 	if (window.pageYOffset < document.getElementById("section-2").offsetTop - space) {
 		for (var i = 0; i < ptitles.length; i++) {
 			ptitles[i].classList.remove("now"); mtitles[i].classList.remove("now");
 		}
 		ptitles[0].classList.add("now"); mtitles[0].classList.add("now");
-		drawYK(padding + grow, size + window.pageYOffset);
+		//drawYK(padding + grow, size + window.pageYOffset);
 	} else if (window.pageYOffset < document.getElementById("section-3").offsetTop - space) {
 		for (var i = 0; i < ptitles.length; i++) {
 			if (i != 1) { ptitles[i].classList.remove("now"); mtitles[i].classList.remove("now"); }
@@ -465,6 +463,10 @@ function goTop() {
 }
 
 
+
+
+/*
+
 var cvs = document.getElementById('cvs');
 var ctx = cvs.getContext("2d");
 cvs.width = Math.abs(window.innerWidth) * 1.7;
@@ -510,6 +512,8 @@ function drawYK(apart, size) {
 }
 
 drawYK(padding, size);
+
+*/
 
 </script>
 

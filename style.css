@@ -480,6 +480,53 @@ h1 {
 #section-1 {
     margin: 0;
 }
+#titles {
+	width: 100%;
+    max-width: 100%;
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+#titles .title {
+    display: inline-block;
+    font-size: 1.8rem;
+    color: #212529;
+    font-family: 'NEXON Lv1 Gothic OTF Bold';
+    margin: 1rem;
+}
+#titles:hover .title:hover,
+#titles:active .title:active {
+    transform: scale(1.2);
+    color: #212529;
+}
+#titles:hover .title,
+#titles:active .title {
+    transform: scale(0.8);
+    color: #ced4da;
+}
+
+#titles:hover .title:hover:nth-of-type(1),
+#titles:active .title:active:nth-of-type(1) {
+    color: #F03F3E;
+}
+#titles:hover .title:hover:nth-of-type(2),
+#titles:active .title:active:nth-of-type(2) {
+    color: #F59F00;
+}
+#titles:hover .title:hover:nth-of-type(3),
+#titles:active .title:active:nth-of-type(3) {
+    color: #74B816;
+}
+#titles:hover .title:hover:nth-of-type(4),
+#titles:active .title:active:nth-of-type(4) {
+    color: #1E7ED6;
+}
+#titles:hover .title:hover:nth-of-type(5),
+#titles:active .title:active:nth-of-type(5) {
+    color: #AE3FC8;
+}
+
 
 #stairs-div {
     margin: 0 auto;
@@ -1033,6 +1080,16 @@ h1 {
     	font-size: 0.9rem;
         line-height: 1.6;
         -webkit-text-size-adjust: 100%;
+    }
+
+    #titles {
+        padding: 0 2rem;
+    }
+    #titles .title {
+        font-size: 1.4rem;
+        color: #212529;
+        font-family: 'NEXON Lv1 Gothic OTF Bold';
+        margin: 0.7rem;
     }
 
     #stairs {
