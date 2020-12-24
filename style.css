@@ -341,10 +341,10 @@ h1 {
 #topbar-m {
     display: none;
     padding: 1.5rem 1rem;
-    padding-bottom: 0.7rem;
+    padding-bottom: 0.5rem;
 }
 #topbar-m #yk-m {
-    width: 2.3rem;
+    width: 2.1rem;
 }
 #topbar-m #yk-m:hover #y {
     transform: translateX(-0.15rem);
@@ -359,6 +359,7 @@ h1 {
 #topbar-m .page-title-m {
     font-size: 0.95rem;
     line-height: 1.6;
+    margin-top: -0.1rem;
 }
 #topbar-m #github {
     float: right;
@@ -376,7 +377,7 @@ h1 {
     transition: all ease-out 0.2s;
 }
 #topbar-m #logo-github-m {
-    width: 1.7rem;
+    width: 1.55rem;
     transition: all ease-out 0.2s;
 }
 #topbar-m #github p:hover {
@@ -479,6 +480,11 @@ h1 {
 
 #section-1 {
     margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -10;
 }
 #titles {
     display: inline-block;
@@ -496,6 +502,7 @@ h1 {
     font-family: 'NEXON Lv1 Gothic OTF Bold';
     margin: 0.3rem;
     padding: 1rem;
+    animation-duration: 1.5s;
 }
 #titles:hover .title:hover,
 #titles:active .title:active {
@@ -678,7 +685,7 @@ h1 {
 
 
 #section-2 {
-
+    margin-top: 100vh;
 }
 #info {
     display: inline-block;
@@ -826,6 +833,19 @@ h1 {
     margin-top: 3.3rem;
     transition-duration: 0.4s;
     transition-delay: 0.1s;
+}
+#skills .level {
+    opacity: 0;
+    width: 0;
+    position: absolute;
+    text-align: left;
+    margin-top: -0.3rem;
+    height: 0.3rem;
+    background: #212529;
+}
+#skills .skill:hover + .level {
+    opacity: 1;
+    width: 70%;
 }
 
 

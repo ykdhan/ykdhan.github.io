@@ -31,7 +31,7 @@
 	<link rel="apple-touch-icon" sizes="144x144" href="src/yk-144.png" />
 	<link rel="apple-touch-icon" sizes="152x152" href="src/yk-152.png" />
 
-	<link rel="stylesheet" type="text/css" href="style.css?ver=6.06">
+	<link rel="stylesheet" type="text/css" href="style.css?ver=6.07">
     <link rel="stylesheet" type="text/css" href="animate.css?ver=1.6">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.css" rel="stylesheet">
@@ -204,6 +204,8 @@
 					<div class="skill">
 						<img alt="HTML" src="src/html-icon.png"><span>HTML</span>
 					</div>
+					<div class="level">
+					</div>
 				</div>
 				<div class="appear" data-aos="appear" data-aos-delay="50">
 					<div class="skill">
@@ -362,18 +364,22 @@ function whenScroll() {
 	
 	if (window.pageYOffset < space * 0.8) {
 		$('#yk').css({ width: '3.5rem', margin: '1rem' });
-		$('#yk-m').css({ margin: '0.8rem' });
+		$('#yk-m').css({ width: '2.3rem', margin: '0.8rem' });
 		$('#topbar').css({ background: 'transparent' });
 		$('#topbar-m').css({ background: 'transparent' });
 		$('#logo-github').css({ margin: '1rem' });
-		$('#logo-github-m').css({ margin: '0.7rem' });
+		$('#logo-github-m').css({ width: '1.7rem', margin: '0.7rem' });
 	} else {
+		if (window.pageYOffset < document.getElementById("section-2").offsetTop) {
+			var y = document.getElementById("section-2").offsetTop - space - space * 0.8;
+			$('#section-1').css({ opacity: 1 - 1 / y * (window.pageYOffset - space * 0.8) });
+		}
 		$('#yk').css({ width: '2.5rem', margin: '0' });
-		$('#yk-m').css({ margin: '0' });
+		$('#yk-m').css({ width: '2.1rem', margin: '0' });
 		$('#topbar').css({ background: 'rgba(255,255,255,0.95)' });
 		$('#topbar-m').css({ background: 'rgba(255,255,255,0.95)' });
 		$('#logo-github').css({ margin: '0' });
-		$('#logo-github-m').css({ margin: '0' });
+		$('#logo-github-m').css({ width: '1.55rem', margin: '0' });
 	}
 
 	//var grow = Math.abs(window.pageYOffset) * growing;
@@ -456,9 +462,9 @@ function copyThis(id) {
 function showMouse() {
 	var mouse = document.getElementById('mouse');
 	mouse.classList.add("fadeInDown");
-	setTimeout(function() {mouse.classList.remove("fadeInDown");mouse.classList.add("fadeOutDown"); setTimeout(function() {mouse.classList.remove("fadeOutDown");}, 2000); }, 3200);
+	setTimeout(function() {mouse.classList.remove("fadeInDown");mouse.classList.add("fadeOutDown"); setTimeout(function() {mouse.classList.remove("fadeOutDown");}, 2000); }, 3500);
 }
-setTimeout(function() {showMouse();}, 1200);
+setTimeout(function() {showMouse();}, 1500);
 
 	
 function nav(value) {
