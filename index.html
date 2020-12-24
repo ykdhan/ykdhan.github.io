@@ -31,7 +31,7 @@
 	<link rel="apple-touch-icon" sizes="144x144" href="src/yk-144.png" />
 	<link rel="apple-touch-icon" sizes="152x152" href="src/yk-152.png" />
 
-	<link rel="stylesheet" type="text/css" href="style.css?ver=6.08">
+	<link rel="stylesheet" type="text/css" href="style.css?ver=6.09">
     <link rel="stylesheet" type="text/css" href="animate.css?ver=1.6">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.css" rel="stylesheet">
@@ -353,7 +353,7 @@
 
 AOS.init({ duration: 700, easing: 'ease-out' });
 
-var space = $(window).height() * 0.25;
+var space = $(window).height() * 0.3;
 var navs = document.getElementsByClassName("nav-button");
 var ptitles = document.getElementsByClassName("page-title");
 var mtitles = document.getElementsByClassName("page-title-m");
@@ -367,8 +367,13 @@ $('#section-5').css({ height: $(window).height() });
 window.onscroll = function() { whenScroll() };
 
 function whenScroll() {
+
+	var m = 0.75;
+	if (window.screen.width < window.screen.height) {
+		var m = 1;
+	}
 	
-	if (window.pageYOffset < space * 0.8) {
+	if (window.pageYOffset < space * m) {
 		$('#yk').css({ width: '3.5rem', margin: '1rem' });
 		$('#yk-m').css({ width: '2.3rem', margin: '0.8rem' });
 		$('#topbar').css({ background: 'transparent' });
@@ -377,8 +382,8 @@ function whenScroll() {
 		$('#logo-github-m').css({ width: '1.7rem', margin: '0.7rem' });
 	} else {
 		if (window.pageYOffset < document.getElementById("section-2").offsetTop) {
-			var y = document.getElementById("section-2").offsetTop - space - space * 0.8;
-			$('#section-1').css({ opacity: 1 - 1 / y * (window.pageYOffset - space * 0.8) });
+			var y = document.getElementById("section-2").offsetTop - space - space * m;
+			$('#section-1').css({ opacity: 1 - 1 / y * (window.pageYOffset - space * m) });
 		}
 		$('#yk').css({ width: '2.5rem', margin: '0' });
 		$('#yk-m').css({ width: '2.1rem', margin: '0' });
