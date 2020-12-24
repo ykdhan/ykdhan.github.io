@@ -31,7 +31,7 @@
 	<link rel="apple-touch-icon" sizes="144x144" href="src/yk-144.png" />
 	<link rel="apple-touch-icon" sizes="152x152" href="src/yk-152.png" />
 
-	<link rel="stylesheet" type="text/css" href="style.css?ver=6.09">
+	<link rel="stylesheet" type="text/css" href="style.css?ver=6.12">
     <link rel="stylesheet" type="text/css" href="animate.css?ver=1.6">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.css" rel="stylesheet">
@@ -137,21 +137,21 @@
 <div id="section-1" class="page flexbox">
 	<div class="flex flex--1 flex--center">
 		<!--<canvas id="cvs"></canvas>-->
-		<div id="titles">
-			<div class="title animated fadeIn">#프론트엔드</div>
-			<div class="title animated fadeIn">#노래</div>
-			<div class="title animated fadeIn">#아이폰십이프로</div>
-			<div class="title animated fadeIn">#삼겹살</div>
-			<div class="title animated fadeIn">#영어</div>
-			<div class="title animated fadeIn">#백엔드</div>
-			<div class="title animated fadeIn">#미국</div>
-			<div class="title animated fadeIn">#UI</div>
-			<div class="title animated fadeIn">#음악</div>
-			<div class="title animated fadeIn">#맥북프로십육</div>
-			<div class="title animated fadeIn">#UX</div>
-			<div class="title animated fadeIn">#미니멀리스트</div>
-			<div class="title animated fadeIn">#치킨</div>
-			<div class="title animated fadeIn">#홈트</div>
+		<div id="hashtags">
+			<div class="hashtag animated fadeIn">#프론트엔드</div>
+			<div class="hashtag animated fadeIn">#노래</div>
+			<div class="hashtag animated fadeIn">#아이폰십이프로</div>
+			<div class="hashtag animated fadeIn">#삼겹살</div>
+			<div class="hashtag animated fadeIn">#영어</div>
+			<div class="hashtag animated fadeIn">#백엔드</div>
+			<div class="hashtag animated fadeIn">#미국</div>
+			<div class="hashtag animated fadeIn">#UI</div>
+			<div class="hashtag animated fadeIn">#음악</div>
+			<div class="hashtag animated fadeIn">#맥북프로십육</div>
+			<div class="hashtag animated fadeIn">#UX</div>
+			<div class="hashtag animated fadeIn">#미니멀리스트</div>
+			<div class="hashtag animated fadeIn">#치킨</div>
+			<div class="hashtag animated fadeIn">#홈트</div>
 		</div>
 	</div>
 
@@ -204,8 +204,7 @@
 					<div class="skill">
 						<img alt="HTML" src="src/html-icon.png"><span>HTML</span>
 					</div>
-					<div class="level">
-					</div>
+					<!--<div class="level"></div>-->
 				</div>
 				<div class="appear" data-aos="appear" data-aos-delay="50">
 					<div class="skill">
@@ -358,20 +357,20 @@ var navs = document.getElementsByClassName("nav-button");
 var ptitles = document.getElementsByClassName("page-title");
 var mtitles = document.getElementsByClassName("page-title-m");
 
-$('#section-1').css({ height: $(window).height() });
-$('#section-2').css({ height: $(window).height() });
-$('#section-3').css({ height: $(window).height() });
-$('#section-4').css({ height: $(window).height() });
-$('#section-5').css({ height: $(window).height() });
+if (window.pageYOffset > document.getElementById("section-2").offsetTop) {
+	$('#section-1').css({ opacity: '0' });
+}
+
+for (var i = 1; i < 6; i++) {
+	$('#section-'+i).css({ height: $(window).height() });
+}
 
 window.onscroll = function() { whenScroll() };
 
 function whenScroll() {
 
 	var m = 0.75;
-	if (window.screen.width < window.screen.height) {
-		var m = 1;
-	}
+	if (window.screen.width < window.screen.height) { var m = 1; }
 	
 	if (window.pageYOffset < space * m) {
 		$('#yk').css({ width: '3.5rem', margin: '1rem' });
@@ -467,17 +466,18 @@ function copyThis(id) {
 			break;
 	}
     document.body.appendChild(notif);
-	setTimeout(function() {notif.classList.remove("fadeInUp");notif.classList.add("fadeOutDown"); setTimeout(function() {document.body.removeChild(notif);}, 600); }, 1500);
+	setTimeout(function() { notif.classList.remove("fadeInUp"); notif.classList.add("fadeOutDown"); setTimeout(function() { document.body.removeChild(notif); }, 600); }, 1500);
 }
+
 
 function showMouse() {
 	var mouse = document.getElementById('mouse');
 	mouse.classList.add("fadeInDown");
-	setTimeout(function() {mouse.classList.remove("fadeInDown");mouse.classList.add("fadeOutDown"); setTimeout(function() {mouse.classList.remove("fadeOutDown");}, 2000); }, 3500);
+	setTimeout(function() { mouse.classList.remove("fadeInDown"); mouse.classList.add("fadeOutDown"); setTimeout(function() { mouse.classList.remove("fadeOutDown"); }, 2000); }, 4000);
 }
-setTimeout(function() {showMouse();}, 1500);
+setTimeout(function() { showMouse(); }, 4500);
 
-	
+
 function nav(value) {
 	$('html, body').animate({
 		scrollTop: document.getElementById('section-'+value).offsetTop
@@ -492,6 +492,24 @@ function goTop() {
 }
 
 
+function hashtag() {
+	for (var i = 0; i < $('.hashtag').length; i++) {
+		$('.hashtag')[i].classList.remove("hover");
+	}
+	if (done.length >= $('.hashtag').length/3) {
+		$('#hashtags')[0].classList.remove("hover");
+		return;
+	}
+	var r = Math.floor((Math.random() * $('.hashtag').length) );
+	while (done.includes(r)) {
+		r = Math.floor((Math.random() * $('.hashtag').length) );
+	}
+	done.push(r);
+	$('.hashtag')[r].classList.add("hover");
+	setTimeout(function() { hashtag(); }, 700);
+}
+var done = [];
+setTimeout(function() { $('#hashtags')[0].classList.add("hover"); hashtag(); }, 2300);
 
 
 /*
