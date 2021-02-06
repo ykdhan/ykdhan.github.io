@@ -31,7 +31,7 @@
 	<link rel="apple-touch-icon" sizes="144x144" href="src/yk-144.png" />
 	<link rel="apple-touch-icon" sizes="152x152" href="src/yk-152.png" />
 
-	<link rel="stylesheet" type="text/css" href="style.css?ver=7.02">
+	<link rel="stylesheet" type="text/css" href="style.css?ver=7.03">
     <link rel="stylesheet" type="text/css" href="animate.css?ver=1.7">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.css" rel="stylesheet">
@@ -54,11 +54,11 @@
 	  <div class='front'>
 
 		<div id="hashtags" class="animated">
-			<div class="appr" data-aos="show-left"><div class="hashtag animated"># 프론트엔드</div></div>
-			<div class="appr" data-aos="show-left" data-aos-delay="100"><div class="hashtag animated"># 백엔드</div></div>
-			<div class="appr" data-aos="show-left" data-aos-delay="200"><div class="hashtag animated"># UI</div></div>
-			<div class="appr" data-aos="show-left" data-aos-delay="300"><div class="hashtag animated"># UX</div></div>
-			<div class="appr" data-aos="show-left" data-aos-delay="300"><div class="hashtag animated"># 리눅스마스터</div></div>
+			<div class="appr animated fadeIn"><div class="hashtag"># 프론트엔드</div></div>
+			<div class="appr animated fadeIn"><div class="hashtag"># 백엔드</div></div>
+			<div class="appr animated fadeIn"><div class="hashtag"># UI</div></div>
+			<div class="appr animated fadeIn"><div class="hashtag"># UX</div></div>
+			<div class="appr animated fadeIn"><div class="hashtag"># 리눅스마스터</div></div>
 		</div>
 		<div id="info">
 			<div id="photo" class="animated"></div>
@@ -230,11 +230,9 @@
   
 	</div>
   
-	<div class='r_wrap'>
+	<div class='flip-button'>
 	  <div class='b_round'></div>
-	  <div class='s_round'>
-		<div class='s_arrow'></div>
-	  </div>
+	  <div class='s_round'></div>
 	</div>
   
   </div>
@@ -253,21 +251,12 @@ $(document).ready(function() {
 
 var s_round = '.s_round';
 
-$(s_round).hover(function() {
-  $('.b_round').toggleClass('b_round_hover');
-  return false;
-});
-
 $(s_round).click(function() {
   $('.card').toggleClass('flipped');
-  $(this).addClass('s_round_click');
-  $('.s_arrow').toggleClass('s_arrow_rotate');
-  $('.b_round').toggleClass('b_round_back_hover');
   return false;
 });
 
 $(s_round).on('transitionend', function() {
-  $(this).removeClass('s_round_click');
   $(this).addClass('s_round_back');
   return false;
 });

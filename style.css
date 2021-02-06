@@ -241,10 +241,10 @@ input[type='submit']:hover, button:hover {
     transform: rotateY(-180deg);
 }
 
-.r_wrap {
+.flip-button {
     position: absolute;
-    top: -2rem;
-    right: calc(50% - 1.5rem);
+    top: 29.3rem;
+    right: calc(50% - 9.3rem);
 }
 
 .b_round,
@@ -252,11 +252,16 @@ input[type='submit']:hover, button:hover {
   position: absolute;
   right: 0px;
   bottom: 0px;
-  width: 2.6rem;
-  height: 2.6rem;
+  width: 1.6rem;
+  height: 1.6rem;
   border-radius: 50%;
   background-color: #adb5bd;
-  transition: all 0.2s linear;
+  transition: all 0.2s ease-out;
+  animation-name: clickMe;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  opacity: 0.6;
 }
 
 .b_round {
@@ -265,37 +270,27 @@ input[type='submit']:hover, button:hover {
 }
 
 .b_round_hover {
-  transform: scale(1.37);
+  transform: scale(1.4);
   opacity: 0.4;
-}
-
-.b_round_back_hover {
-  background-color: #adb5bd;
-}
-
-.s_round_click {
-  transform: scale(1.7);
 }
 
 .s_round_back {
   background-color: #adb5bd;
 }
 
-.s_arrow {
-    margin-top: -0.3rem;
-    margin-left: -0.25rem;
-    width: 2.6rem;
-    height: 2.6rem;
-    background-image: url('https://img-fotki.yandex.ru/get/194549/29644339.5/0_d6c60_1d7815f0_orig');
-    background-color: transparent;
-    transition: all 0.35s linear;
+@keyframes clickMe {
+    0% { opacity: 0.6;}
+    50% {
+        opacity: 0.2;
+        transform: scale(1.4);
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
-.s_arrow_rotate {
-    transform: rotate(-180deg);
-    margin-top: 0.3rem;
-    margin-left: 0.25rem;
-}
+
+
 
 #logo {
     display: inline-flex;
@@ -753,25 +748,25 @@ input[type='submit']:hover, button:hover {
     
 }
 
-#hashtags .hashtag:nth-of-type(2) {
+#hashtags .appr:nth-of-type(2) {
     animation-delay: 0.2s;
 }
-#hashtags .hashtag:nth-of-type(3) {
+#hashtags .appr:nth-of-type(3) {
     animation-delay: 0.4s;
 }
-#hashtags .hashtag:nth-of-type(4) {
+#hashtags .appr:nth-of-type(4) {
     animation-delay: 0.6s;
 }
-#hashtags .hashtag:nth-of-type(5) {
+#hashtags .appr:nth-of-type(5) {
     animation-delay: 0.8s;
 }
-#hashtags .hashtag:nth-of-type(6) {
+#hashtags .appr:nth-of-type(6) {
     animation-delay: 1.0s;
 }
-#hashtags .hashtag:nth-of-type(7) {
+#hashtags .appr:nth-of-type(7) {
     animation-delay: 1.2s;
 }
-#hashtags .hashtag:nth-of-type(8) {
+#hashtags .appr:nth-of-type(8) {
     animation-delay: 1.4s;
 }
 
@@ -1230,12 +1225,10 @@ input[type='submit']:hover, button:hover {
 
     .mobile { display: block; }
     
-   
 
 }
 
 @media all and (max-width: 480px) and (min-width: 50px) {
-
 
 
 }
