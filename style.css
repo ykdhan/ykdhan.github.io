@@ -166,9 +166,6 @@ input[type='submit']:hover, button:hover {
     z-index: 99;
 }
 
-
-
-
 .container,
 .flip-box,
 .front,
@@ -246,7 +243,7 @@ input[type='submit']:hover, button:hover {
 
 .r_wrap {
     position: absolute;
-    top: -3rem;
+    top: -2rem;
     right: calc(50% - 1.5rem);
 }
 
@@ -255,8 +252,8 @@ input[type='submit']:hover, button:hover {
   position: absolute;
   right: 0px;
   bottom: 0px;
-  width: 3rem;
-  height: 3rem;
+  width: 2.6rem;
+  height: 2.6rem;
   border-radius: 50%;
   background-color: #adb5bd;
   transition: all 0.2s linear;
@@ -285,10 +282,10 @@ input[type='submit']:hover, button:hover {
 }
 
 .s_arrow {
-    margin-top: -0.1rem;
-    margin-left: -0.05rem;
-    width: 3rem;
-    height: 3rem;
+    margin-top: -0.3rem;
+    margin-left: -0.25rem;
+    width: 2.6rem;
+    height: 2.6rem;
     background-image: url('https://img-fotki.yandex.ru/get/194549/29644339.5/0_d6c60_1d7815f0_orig');
     background-color: transparent;
     transition: all 0.35s linear;
@@ -296,8 +293,8 @@ input[type='submit']:hover, button:hover {
 
 .s_arrow_rotate {
     transform: rotate(-180deg);
-    margin-top: 0.15rem;
-    margin-left: 0.05rem;
+    margin-top: 0.3rem;
+    margin-left: 0.25rem;
 }
 
 #logo {
@@ -1222,7 +1219,9 @@ input[type='submit']:hover, button:hover {
 
 /* Safari 10.1+ */
 @media not all and (min-resolution:.001dpcm) { @media {
-
+    #copyright {
+        margin-top: 12.5rem;
+    }
 }}
 
 
