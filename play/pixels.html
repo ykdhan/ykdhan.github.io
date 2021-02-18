@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+    <title>PLAY - 픽셀 이미지</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <style>
+        canvas {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            display: block;
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+        }
+        input {
+            margin: 1rem auto;
+        }
+        span {
+            font-size: 1.2rem;
+        }
+        img {
+            display: none;
+            width: 100%;
+            height: auto;
+        }
+
+        #controller {
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 0.5rem;
+            z-index: 99;
+        }
+
+        #loading {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            padding: 2.5rem;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 0.5rem;
+            opacity: 0;
+            z-index: -99;
+            transition: all 0.7s ease-out;
+        }
+        #loading.show {
+            opacity: 1;
+            z-index: 99;
+        }
+
+        #img-canvas {
+            display: none;
+        }
+
+        .btn {
+            border-radius: 0.5rem;
+            background: #212121;
+            color: #fff;
+            text-align: center;
+            max-width: 10rem;
+            padding: 0.7rem 1.2rem;
+            /*margin-bottom: 1rem;*/
+            -webkit-appearance: none;
+            -moz-appearance:    none;
+            appearance:         none;
+        }
+        .btn:hover, .btn:active {
+            background: #454545;
+        }
+        #controller input {
+            display: none;
+        }
+
+        #mouse_x, #mouse_y {
+            display: none;
+        }
+
+        html,
+        html *,
+        body,
+        body * {
+            cursor: none;
+        }
+
+        .cursor-dot,
+        .cursor-dot-outline {
+            pointer-events: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border-radius: 50%;
+            opacity: 0;
+            transform: translate(-50%, -50%);
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+            z-index: 999;
+        }
+
+        .cursor-dot {
+            width: 0.8rem;
+            height: 0.8rem;
+            background-color: #fff;
+        }
+
+        .cursor-dot-outline {
+            width: 1.3rem;
+            height: 1.3rem;
+            background-color: rgba(110, 120, 130, 0.7);
+        }
+    </style>
+
+</head>
+<body onload="">
+
+    <canvas id="canvas"></canvas>
+    <canvas id="img-canvas"></canvas>
+
+    <div id="controller">
+        <div>
+            <div class="btn" onclick="document.getElementById('input_img').click()">이미지 업로드</div>
+            <input type="file" id="input_img" class="" accept="img/*" required>
+        </div>
+        <div><span id="mouse_x">X &nbsp;0</span></div>
+        <div><span id="mouse_y">Y &nbsp;0</span></div>
+    </div>
+
+    <div id="loading">
+        <div><span>로딩중</span></div>
+    </div>
+
+    <img id="image" src="icon-upload.jpg">
+
+    <div class="cursor-dot-outline"></div>
+    <div class="cursor-dot"></div>
+
+<script>
+
+let cvs = document.getElementById("canvas"),
+    ctx = cvs.getContext("2d"),
+    img = document.getElementById('image'),
+    img_cvs = document.getElementById("img-canvas"),
+    img_ctx = cvs.getContext("2d"),
+    loading = document.getElementById('loading');
+
+cvs.width = img_cvs.width = window.innerWidth;
+cvs.height = img_cvs.height = window.innerHeight;
+ctx.globalCompositeOperation = 'multiply';
+
+let radius = 8,         // 픽셀 크기
+    space = 2,          // 픽셀 사이 간격
+    mouse_offset = 17,  // 마우스 터치 여백
+    col = img_cvs.width,
+    row = img_cvs.height;
+
+let mouse = { x: 0, y: 0 },
+    init_img_size = { x: 0, y: 0 },
+    init_img_diff = { x: 0, y: 0 };
+
+if (img_cvs.width > img_cvs.height) { 
+    init_img_size.x = init_img_size.y = img_cvs.height;
+    init_img_diff.x = img_cvs.width - img_cvs.height;
+} else {
+    init_img_size.x = init_img_size.y = img_cvs.width;
+    init_img_diff.y = img_cvs.height - img_cvs.width;
+}
+
+img_ctx.drawImage(img, (init_img_diff.x != 0) ? Math.floor(init_img_diff.x / 2) : 0, (init_img_diff.y) ? Math.floor(init_img_diff.y / 2) : 0, init_img_size.x, init_img_size.y);
+
+
+console.log('IMG Size: ' + init_img_size.x + ' x ' + init_img_size.y);
+console.log('Canvas Size: ' + cvs.width + ' x ' + cvs.height);
+
+
+function drawCircle(c) {
+    ctx.beginPath();
+    ctx.arc(c.x, c.y, c.radius, 0, 2 * Math.PI);
+    ctx.fillStyle = c.color;
+    ctx.fill();
+}
+function drawSquare(c) {
+    ctx.beginPath();
+    ctx.fillStyle = c.color;
+    ctx.rect(c.x, c.y, c.radius*2, c.radius*2);;
+    ctx.fill();
+}
+
+
+class Circle {
+    constructor(x, y, dx, dy, color) {
+        this.x = x;
+        this.y = y;
+        this.dx = (Math.random() < 0.5) ? Math.floor(Math.random() * 9 + 1) * -1 : Math.floor(Math.random() * 9 + 1);
+        this.dy = (Math.random() < 0.5) ? Math.floor(Math.random() * 9 + 1) * -1 : Math.floor(Math.random() * 9 + 1);
+        this.org_x = this.x;
+        this.org_y = this.y;
+        this.radius = radius;
+        this.color = color; //randomColor();
+        this.returning = false;
+        this.stopped = true;
+    }
+
+    startMove() {
+        if (this.stopped) {
+            this.stopped = false;
+            let moving = setInterval(() => this.move(), 10);
+            let goback = () => this.returnPos();
+            setTimeout(function() { clearInterval( moving ); goback(); }, 1100);
+        }
+    }
+
+    returnPos() {
+        (this.org_x - this.x != 0) ? this.dx *= -1 : this.dx = 0;
+        (this.org_y - this.y != 0) ? this.dy *= -1 : this.dy = 0;
+        this.returning = setInterval(() => this.move(), 10);
+    }
+    
+    move() {
+        this.x += this.dx;
+        this.y += this.dy;
+        if (this.returning && this.x == this.org_x) { 
+            clearInterval( this.returning );
+            this.returning = false;
+            this.stopped = true;
+        }
+    }
+
+    changeSize(r) {
+        this.radius = r;
+    }
+
+    changeDirX() {
+        this.dx *= -1;
+    }
+
+    changeDirY() {
+        this.dy *= -1;
+    }
+}
+
+function init() {
+    
+    let circles = [],
+        start_x = Math.floor((cvs.width / 2) - (col / radius) - (col / 2 * space)),
+        end_x   = Math.floor((cvs.width / 2) + (col / radius) + (col / 2 * space)),
+        start_y = Math.floor((cvs.height / 2) - (row / radius) - (row / 2 * space)),
+        end_y   = Math.floor((cvs.height / 2) + (row / radius) + (row / 2 * space));
+
+    console.log(start_x, end_x, start_y, end_y)
+
+    for (let x = start_x; x <= end_x; x += radius * 2 + space) {
+        for (let y = start_y; y <= end_y; y += radius * 2 + space) {
+            let pixelData = img_ctx.getImageData(x, y, 1, 1).data;
+            let [r, g, b, a] = pixelData;
+            let color = `rgba(${r}, ${g}, ${b}, ${a})`;
+            //console.log(color);
+            if (a != '0' && color != 'rgba(255, 255, 255, 255)') {
+                let c = new Circle(x, y, 0, 0, color);
+                circles. push(c);
+            }
+        }
+    }
+    img_ctx.clearRect(0, 0, img_cvs.width, img_cvs.height);
+    console.log('Pixels: ' + circles.length);
+    return circles;
+}
+
+let circles = init();
+let loop = setInterval(() => update(), 10);
+let pressed = false;
+
+function update() {
+    //console.log('.');
+    ctx.clearRect(0, 0, cvs.width, cvs.height);
+    for (let i = 0; i < circles.length; i++) {
+        let c = circles[i];
+        if (pressed && mouse.x - mouse_offset < c.x && c.x < mouse.x + mouse_offset && mouse.y - mouse_offset < c.y && c.y < mouse.y + mouse_offset) {
+            c.startMove();
+        }
+        drawCircle(c);
+        //drawSquare(c);
+    }
+}
+
+window.onresize = function(event) {
+    loading.classList.add('show');
+
+    cvs.width = img_cvs.width = window.innerWidth;
+    cvs.height = img_cvs.height = window.innerHeight;
+    col = img_cvs.width;
+    row = img_cvs.height;
+
+    console.log('Canvas Size: ' + cvs.width + ' x ' + cvs.height);
+
+    init_img_size = { x: 0, y: 0 };
+    init_img_diff = { x: 0, y: 0 };
+
+    if (img_cvs.width > img_cvs.height) { 
+        init_img_size.x = init_img_size.y = img_cvs.height;
+        init_img_diff.x = img_cvs.width - img_cvs.height;
+    } else {
+        init_img_size.x = init_img_size.y = img_cvs.width;
+        init_img_diff.y = img_cvs.height - img_cvs.width;
+    }
+    img_ctx.drawImage(img, (init_img_diff.x != 0) ? init_img_diff.x / 2 : 0, (init_img_diff.y) ? init_img_diff.y / 2 : 0, init_img_size.x, init_img_size.y);
+
+    circles = init();
+
+    loading.classList.remove('show');
+};
+
+function mouseOver(event) {
+    mouse.x = event.pageX;
+    mouse.y = event.pageY;
+    document.getElementById('mouse_x').innerHTML = 'X &nbsp;' + mouse.x;
+    document.getElementById('mouse_y').innerHTML = 'Y &nbsp;' + mouse.y;
+}
+
+$('#canvas').mouseover(function(){
+	$('#canvas').mousemove(function(event){
+		mouseOver(event);
+	});
+});
+
+function randomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function randomColor() {
+    let letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * letters.length)];
+    }
+    return color;
+}
+
+function loadImage(e) {
+    loading.classList.add('show');
+    let file_img = e.target.files[0];
+    let reader = new FileReader();
+    reader.readAsDataURL(file_img);
+    reader.onload = function(e) {
+        console.log(e);
+        img.src = e.target.result;
+        setTimeout(function() {
+            img_ctx.clearRect(0, 0, img_cvs.width, img_cvs.height);
+            img_ctx.drawImage(img, (init_img_diff.x != 0) ? init_img_diff.x / 2 : 0, (init_img_diff.y) ? init_img_diff.y / 2 : 0, init_img_size.x, init_img_size.y);
+            circles = [];
+            circles = init();
+            loading.classList.remove('show');
+        }, 500);
+    };
+}
+
+$('#input_img').on('change',loadImage);
+
+let cursor = {
+    delay: 1,
+    _x: 0,
+    _y: 0,
+    endX: (window.innerWidth / 2),
+    endY: (window.innerHeight / 2),
+    cursorVisible: true,
+    cursorEnlarged: false,
+    $dot: document.querySelector('.cursor-dot'),
+    $outline: document.querySelector('.cursor-dot-outline'),
+    
+    init: function() {
+        // Set up element sizes
+        this.dotSize = this.$dot.offsetWidth;
+        this.outlineSize = this.$outline.offsetWidth;
+        
+        this.setupEventListeners();
+        this.animateDotOutline();
+    },
+    setupEventListeners: function() {
+        let self = this;
+        
+        // Click events
+        document.addEventListener('mousedown', function() {
+            self.cursorEnlarged = true;
+            self.toggleCursorSize();
+            pressed = true;                                         // 필요
+        });
+        document.addEventListener('mouseup', function() {
+            self.cursorEnlarged = false;
+            self.toggleCursorSize();
+            pressed = false;                                        // 필요
+        });
+  
+        document.addEventListener('mousemove', function(e) {
+            // Show the cursor
+            self.cursorVisible = true;
+            self.toggleCursorVisibility();
+
+            // Position the dot
+            self.endX = e.pageX;
+            self.endY = e.pageY;
+            self.$dot.style.top = self.endY + 'px';
+            self.$dot.style.left = self.endX + 'px';
+        });
+    },
+    
+    animateDotOutline: function() {
+        let self = this;
+        
+        self._x += (self.endX - self._x) / self.delay;
+        self._y += (self.endY - self._y) / self.delay;
+        self.$outline.style.top = self._y + 'px';
+        self.$outline.style.left = self._x + 'px';
+        
+        requestAnimationFrame(this.animateDotOutline.bind(self));
+    },
+    
+    toggleCursorSize: function() {
+        let self = this;
+        
+        if (self.cursorEnlarged) {
+            self.$dot.style.transform = 'translate(-50%, -50%) scale(0.75)';
+            self.$outline.style.transform = 'translate(-50%, -50%) scale(1.5)';
+        } else {
+            self.$dot.style.transform = 'translate(-50%, -50%) scale(1)';
+            self.$outline.style.transform = 'translate(-50%, -50%) scale(1)';
+        }
+    },
+    
+    toggleCursorVisibility: function() {
+        let self = this;
+        
+        if (self.cursorVisible) {
+            self.$dot.style.opacity = 1;
+            self.$outline.style.opacity = 1;
+        } else {
+            self.$dot.style.opacity = 0;
+            self.$outline.style.opacity = 0;
+        }
+    }
+}
+
+cursor.init();
+
+</script>
+
+</body>
+</html>
