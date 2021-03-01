@@ -21,7 +21,7 @@
 	<meta property="og:site_name" content="yk" />
 	<meta property="og:title" content="{ yk }" />
 	<meta property="og:image" content="src/yk-big.png" />
-	<meta property="og:description" content="개발자 한영광의 포트폴리오" />
+	<meta property="og:description" content="" />
 
 	<link rel="shortcut icon" href="src/yk-64.ico" type="image/x-icon">
 	<link rel="apple-touch-icon" href="src/yk-64.png"/>
@@ -31,7 +31,7 @@
 	<link rel="apple-touch-icon" sizes="144x144" href="src/yk-144.png" />
 	<link rel="apple-touch-icon" sizes="152x152" href="src/yk-152.png" />
 
-	<link rel="stylesheet" type="text/css" href="style.css?ver=7.03">
+	<link rel="stylesheet" type="text/css" href="style.css?ver=7.01">
     <link rel="stylesheet" type="text/css" href="animate.css?ver=1.7">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.css" rel="stylesheet">
@@ -50,7 +50,7 @@
 	<canvas id="cvs"></canvas>
 
 	<div id="main">
-		const yk = Developer({ type: 'proactive' })
+		const yk = new Developer()
 	</div>
 
 	<div id="github">
@@ -132,12 +132,12 @@ let cvs = document.getElementById("cvs"),
 
 cvs.width = window.innerWidth;
 cvs.height = window.innerHeight;
-ctx.globalCompositeOperation = 'multiply';
+ctx.globalCompositeOperation = '';
 
-let num_circle = 90,
+let num_circle = 100,
 	radius = { min: 2, max: 4 },
-    speed = 0.1,
-    line_distance = 70,
+    speed = 0.05,
+    line_distance = 100,
 	mouse = { x: 0, y: 0 };
 
 if (window.innerWidth < 800) {
