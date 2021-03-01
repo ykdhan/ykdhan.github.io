@@ -47,263 +47,353 @@
 </head>
 <body ontouchstart="">
 
-<div class='container animated fadeIn'>
+	<canvas id="cvs"></canvas>
 
-	<div class='card'>
-  
-	  <div class='front'>
+	<div id="main">
+		const yk = Developer({ type: 'proactive' })
+	</div>
 
-		<div id="hashtags" class="animated">
-			<div class="appr animated fadeIn"><div class="hashtag"># 프론트엔드</div></div>
-			<div class="appr animated fadeIn"><div class="hashtag"># 백엔드</div></div>
-			<div class="appr animated fadeIn"><div class="hashtag"># UI</div></div>
-			<div class="appr animated fadeIn"><div class="hashtag"># UX</div></div>
-			<div class="appr animated fadeIn"><div class="hashtag"># 리눅스마스터</div></div>
-		</div>
-		<div id="info">
-			<div id="photo" class="animated"></div>
-			<div id="profile" class="animated">
-				<div id="name">한영광</div>
-				<div id="name-eng">HAN, YOUNGKWANG</div>
-				<div id="icons">
-					<p class="icon" onclick="copyThis('myEmail')">
-						<svg version="1.1"
-							id="icons" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"
-							xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 82.2 61"
-							style="enable-background:new 0 0 82.2 61;" xml:space="preserve">
-						<style type="text/css">
-							.st0{stroke:#000000;stroke-miterlimit:10;}
-						</style>
-						<g id="mail" transform="translate(0,-952.36218)">
-							<path class="st0" d="M15,959.5c-3.9,0-7.1,3.2-7.1,7.1v33.2c0,3.9,3.2,7.1,7.1,7.1h52.1c3.9,0,7.1-3.2,7.1-7.1v-33.2
-								c0-3.9-3.2-7.1-7.1-7.1H15z M15.4,964.2h51.3l-24,22.2c-1.1,1-2.1,1-3.3,0C39.4,986.4,15.4,964.2,15.4,964.2z M12.7,968.1
-								l23.5,21.8c2.7,2.5,7,2.5,9.7,0l23.6-21.8v31.6c0,1.4-1,2.4-2.4,2.4H15c-1.4,0-2.4-1-2.4-2.4C12.7,999.7,12.7,968.1,12.7,968.1z"/>
-						</g>
-						</svg>
-						<input id="myEmail" type="text" value="ykdhan@naver.com">
-					</p>
-					<p class="icon">
-						<a href="http://fave.kr" target="_blank">
-						<svg version="1.1"
-							id="icons" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"
-							xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 82.2 61"
-							style="enable-background:new 0 0 82.2 61;" xml:space="preserve">
-						<path id="work" d="M62.7,12h-9.3c0-5.2-4-9.3-9.3-9.3H38c-5.2,0-9.3,4-9.3,9.3h-9.3c-5.2,0-9.3,4-9.3,9.3V49c0,5.2,4,9.3,9.3,9.3
-							h43.2c5.2,0,9.3-4,9.3-9.3V21.3C72,16,68,12,62.7,12z M38,8.9h6.2c1.9,0,3.1,1.2,3.1,3.1H34.9C34.9,10.1,36.1,8.9,38,8.9z
-								M19.5,18.2h43.2c1.9,0,3.1,1.2,3.1,3.1c0,3.4-2.8,6.2-6.2,6.2h-37c-3.4,0-6.2-2.8-6.2-6.2C16.4,19.4,17.6,18.2,19.5,18.2z
-								M62.7,52.1H19.5c-1.9,0-3.1-1.2-3.1-3.1V31.8c1.9,1.2,4,1.9,6.2,1.9h37.1c2.2,0,4.3-0.6,6.2-1.9V49C65.8,50.9,64.6,52.1,62.7,52.1z
-							"/>
-						</svg>
-						</a>
-					</p>
-					<p class="icon">
-						<a href="https://taylor.edu" target="_blank">
-						<svg version="1.1"
-							id="icons" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"
-							xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 82.2 61"
-							style="enable-background:new 0 0 82.2 61;" xml:space="preserve">
-						<style type="text/css">
-							.st0{stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;}
-						</style>
-						<g id="school" transform="translate(0,-952.36218)">
-							<path class="st0" d="M40.8,959.1c-0.1,0-0.2,0.1-0.4,0.1L5.2,971.6c-1.1,0.4-1.7,1.6-1.3,2.6c0.2,0.6,0.7,1.1,1.3,1.3l13.1,4.6V998
-								c0,1.8,1.1,3.2,2.4,4.2s3,1.8,5.1,2.5c4,1.3,9.4,2.1,15.3,2.1s11.3-0.8,15.3-2.1c2-0.7,3.7-1.4,5.1-2.5c1.3-1,2.4-2.5,2.4-4.2
-								v-17.8l10.4-3.7V987c0,1.1,0.9,2.1,2,2.1s2.1-0.9,2.1-2c0,0,0,0,0-0.1v-13.5c0-0.9-0.6-1.7-1.4-2l-35.2-12.4
-								C41.4,959,41.1,959,40.8,959.1z M41.1,963.3l29,10.2l-29,10.3l-29-10.2L41.1,963.3z M22.4,981.6l18,6.3c0.4,0.2,0.9,0.2,1.4,0
-								l18-6.3V998c0,0.1-0.1,0.4-0.8,1c-0.8,0.6-2.1,1.2-3.8,1.8c-3.5,1.1-8.5,1.9-14,1.9s-10.6-0.8-14-1.9c-1.7-0.6-3.1-1.2-3.8-1.8
-								c-0.8-0.6-0.8-0.9-0.8-1v-16.4H22.4z"/>
-						</g>
-						</svg>
-						</a>
-					</p>
-					<p class="icon">
-						<a href="https://github.com/ykdhan" target="_blank">
-							<svg id="logo-github" viewBox="0 0 119.98 117.82" xmlns="http://www.w3.org/2000/svg">
-							<defs>
-							<style>.cls-1,.cls-2{fill:#212529;}.cls-1{fill-rule:evenodd;}</style>
-							</defs>
-							<path class="cls-1" d="M60.39,0A60.39,60.39,0,0,0,41.3,117.69c6.91.63,3.23-7.23,4-14.14-24.25,3.89-18.56-12.69-27.05-16-5.48-3.75.41-3.68.41-3.68,13.69,2.79,8.86,18,26.83,11.25.55-3.91,2.11-6.57,3.84-8.08C29,87.89,11.53,61.85,28.08,41c-.63-1.52-2.7-7.66.58-16,0,0,5.07-1.62,16.61,6.19a57.7,57.7,0,0,1,30.25,0C87,23.43,92.11,25.05,92.11,25.05c3.28,8.32,1.22,14.46.59,16,16.48,21.1-.8,46.7-21.36,46,9,5.61-1.22,32.93,8.17,30.66C143.06,97.63,128-.81,60.39,0Z"/>
-							<path class="cls-2" d="M22.87,86.71c-.3.72-1.92,0-1.57-.72s1.94,0,1.57.72Z"/>
-							<path class="cls-2" d="M25.32,89.44c-.67.64-2.12-.92-1.41-1.54s2.13.92,1.41,1.54Z"/>
-							<path class="cls-2" d="M27.7,92.91c-.85.62-2.24-1.38-1.34-2s2.24,1.38,1.34,2Z"/>
-							<path class="cls-2" d="M31,96.27c-.77.88-2.7-.94-1.89-1.77s2.73,1,1.89,1.77Z"/>
-							<path class="cls-2" d="M35.46,98.23c-.32,1.11-2.85.36-2.5-.76s2.86-.36,2.5.76Z"/>
-							<path class="cls-2" d="M40.4,98.59c.06,1.17-2.61,1.2-2.59,0s2.61-1.21,2.59,0Z"/>
-							</svg>
-						</a>
-					</p>
-				</div>
-			</div>
-		</div>
-		<div id="skills" class="animated">
-			<div class="appear">
-				<div class="skill" id="skill-html">
-					<img alt="HTML" src="src/html-icon.png">
-				</div>
-			</div>
-			<div class="appear">
-				<div class="skill">
-					<img alt="CSS" src="src/css-icon.png">
-				</div>
-			</div>
-			<div class="appear">
-				<div class="skill">
-					<img alt="JavaScript" src="src/js-icon.png">
-				</div>
-			</div>
-			<br>
-			<div class="appear">
-				<div class="skill">
-					<img alt="jQuery" src="src/jquery-icon.png">
-				</div>
-			</div>
-			<div class="appear">
-				<div class="skill">
-					<img alt="Python" src="src/python-icon.png">
-				</div>
-			</div>
-			<div class="appear">
-				<div class="skill hor">
-					<img alt="PHP" src="src/php-icon.png">
-				</div>
-			</div>
-			<div class="appear">
-				<div class="skill">
-					<img alt="Flask" src="src/flask-icon.png">
-				</div>
-			</div>
-			<div class="appear">
-				<div class="skill">
-					<img alt="Linux" src="src/linux-icon.png">
-				</div>
-			</div>
-			<div class="appear">
-				<div class="skill hor">
-					<img alt="MySQL" src="src/mysql-icon.png">
-				</div>
-			</div>
-			<div class="appear">
-				<div class="skill">
-					<img alt="PostgreSQL" src="src/postgresql-icon.png">
-				</div>
-			</div>
-			<div class="appear">
-				<div class="skill">
-					<img alt="Sketch" src="src/sketch-icon.png">
-				</div>
-			</div>
-			<div class="appear">
-				<div class="skill">
-					<img alt="Adobe Illustrator" src="src/illustrator-icon.png">
-				</div>
-			</div>
-			<div class="appear">
-				<div class="skill">
-					<img alt="Adobe Photoshop" src="src/photoshop-icon.png">
-				</div>
-			</div>
-			<!--
-			<div class="skill learning" data-aos="appear" data-aos-delay="1300">
-				<img alt="ReactJS" src="src/react-icon.png">
-			</div>
-			<div class="skill learning" data-aos="appear" data-aos-delay="1400">
-				<img alt="NodeJS" src="src/nodejs-icon.png">
-			</div>
-			-->
-		</div>
-
-
-	  </div>
-  
-	  <div class='back'>
-		<div id="logo">
-			<svg version="1.1" id="yk" onclick="goTop()" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-					y="0px" viewBox="0 0 92.6 57.3" style="enable-background:new 0 0 92.6 57.3;" xml:space="preserve">
-			<style type="text/css">.st0{fill:#212529;}</style>
-			<polygon id="k" class="st0" points="63.9,28.6 91.7,0.8 63.9,0.8 50,0.8 50,56.5 63.9,56.5 91.7,56.5 63.9,28.7 "/>
-			<polygon id="y" class="st0" points="28.7,0.8 0.9,0.8 28.7,28.6 28.7,56.5 42.6,56.5 42.6,0.8 "/>
+	<div id="github">
+		<a href="https://github.com/ykdhan" target="_blank">
+			<svg viewBox="0 0 119.98 117.82" xmlns="http://www.w3.org/2000/svg">
+			<defs>
+			<style>.cls-1,.cls-2{fill:#212529;}.cls-1{fill-rule:evenodd;}</style>
+			</defs>
+			<path class="cls-1" d="M60.39,0A60.39,60.39,0,0,0,41.3,117.69c6.91.63,3.23-7.23,4-14.14-24.25,3.89-18.56-12.69-27.05-16-5.48-3.75.41-3.68.41-3.68,13.69,2.79,8.86,18,26.83,11.25.55-3.91,2.11-6.57,3.84-8.08C29,87.89,11.53,61.85,28.08,41c-.63-1.52-2.7-7.66.58-16,0,0,5.07-1.62,16.61,6.19a57.7,57.7,0,0,1,30.25,0C87,23.43,92.11,25.05,92.11,25.05c3.28,8.32,1.22,14.46.59,16,16.48,21.1-.8,46.7-21.36,46,9,5.61-1.22,32.93,8.17,30.66C143.06,97.63,128-.81,60.39,0Z"/>
+			<path class="cls-2" d="M22.87,86.71c-.3.72-1.92,0-1.57-.72s1.94,0,1.57.72Z"/>
+			<path class="cls-2" d="M25.32,89.44c-.67.64-2.12-.92-1.41-1.54s2.13.92,1.41,1.54Z"/>
+			<path class="cls-2" d="M27.7,92.91c-.85.62-2.24-1.38-1.34-2s2.24,1.38,1.34,2Z"/>
+			<path class="cls-2" d="M31,96.27c-.77.88-2.7-.94-1.89-1.77s2.73,1,1.89,1.77Z"/>
+			<path class="cls-2" d="M35.46,98.23c-.32,1.11-2.85.36-2.5-.76s2.86-.36,2.5.76Z"/>
+			<path class="cls-2" d="M40.4,98.59c.06,1.17-2.61,1.2-2.59,0s2.61-1.21,2.59,0Z"/>
 			</svg>
+		</a>
+	</div>
+
+	<div id="skills">
+		<div class="skill">
+			<img alt="HTML" src="src/html-icon.png">
 		</div>
-		<div id="copyright">2021 &copy; All rights reserved.</div>
-
-	  </div>
-  
+		<div class="skill">
+			<img alt="CSS" src="src/css-icon.png">
+		</div>
+		<div class="skill">
+			<img alt="JavaScript" src="src/js-icon.png">
+		</div>
+		<div class="skill">
+			<img alt="jQuery" src="src/jquery-icon.png">
+		</div>
+		<div class="skill">
+			<img alt="Python" src="src/python-icon.png">
+		</div>
+		<div class="skill hor">
+			<img alt="PHP" src="src/php-icon.png">
+		</div>
+		<div class="skill">
+			<img alt="Flask" src="src/flask-icon.png">
+		</div>
+		<div class="skill">
+			<img alt="Linux" src="src/linux-icon.png">
+		</div>
+		<div class="skill hor">
+			<img alt="MySQL" src="src/mysql-icon.png">
+		</div>
+		<div class="skill">
+			<img alt="PostgreSQL" src="src/postgresql-icon.png">
+		</div>
+		<div class="skill">
+			<img alt="Sketch" src="src/sketch-icon.png">
+		</div>
+		<div class="skill">
+			<img alt="Adobe Illustrator" src="src/illustrator-icon.png">
+		</div>
+		<div class="skill">
+			<img alt="Adobe Photoshop" src="src/photoshop-icon.png">
+		</div>
+		<!--
+		<div class="skill learning" data-aos="appear" data-aos-delay="1300">
+			<img alt="ReactJS" src="src/react-icon.png">
+		</div>
+		<div class="skill learning" data-aos="appear" data-aos-delay="1400">
+			<img alt="NodeJS" src="src/nodejs-icon.png">
+		</div>
+		-->
 	</div>
-  
-	<div class='flip-button'>
-	  <div class='b_round'></div>
-	  <div class='s_round'></div>
-	</div>
-  
-  </div>
 
+	<div class="cursor-dot-outline"></div>
+	<div class="cursor-dot"></div>
 
 
 
 <script type="text/javascript">
 
-AOS.init({ duration: 700, easing: 'ease-out' });
+let cvs = document.getElementById("cvs"),
+    ctx = cvs.getContext("2d");
 
-var space = $(window).height() * 0.2;
+cvs.width = window.innerWidth;
+cvs.height = window.innerHeight;
+ctx.globalCompositeOperation = 'multiply';
 
+let num_circle = 90,
+	radius = { min: 2, max: 4 },
+    speed = 0.1,
+    line_distance = 70,
+	mouse = { x: 0, y: 0 };
 
-$(document).ready(function() {
-
-var s_round = '.s_round';
-
-$(s_round).click(function() {
-  $('.card').toggleClass('flipped');
-  return false;
-});
-
-$(s_round).on('transitionend', function() {
-  $(this).addClass('s_round_back');
-  return false;
-});
-});
-
-/*
-for (var i = 1; i < 6; i++) {
-	$('#section-'+i).css({ height: $(window).height() });
-}
-*/
-
-window.onscroll = function() { whenScroll() };
-
-function whenScroll() {
-
+if (window.innerWidth < 800) {
+	num_circle = 50
+	radius = { min: 1.5, max: 3 }
+	line_distance = 60
 }
 
+function drawCircle(c) {
+    ctx.beginPath();
+    ctx.arc(c.x, c.y, c.radius, 0, 2 * Math.PI);
+    ctx.fillStyle = c.color;
+    ctx.fill();
+}
+
+function drawLine(l) {
+    ctx.beginPath();
+    ctx.moveTo(l.from.x, l.from.y);
+    ctx.lineTo(l.to.x, l.to.y);
+    ctx.strokeStyle = l.color;
+    ctx.stroke();
+}
+
+class Circle {
+    constructor(x, y, dx, dy) {
+        this.x = x
+        this.y = y
+        this.dx = dx
+        this.dy = dy
+        this.radius = Math.floor(Math.random() * radius.max + radius.min)
+		let c = randomInt(220,240)
+        this.color = '#eee'
+    }
+    
+    move() {
+        this.x += this.dx;
+        this.y += this.dy;
+    }
+
+    changeSize(r) {
+        this.radius = r;
+    }
+
+    changeDirX() {
+        this.dx *= -1;
+    }
+
+    changeDirY() {
+        this.dy *= -1;
+    }
+}
+
+function init(num) {
+    let circles = [];
+
+    for (let i = 0; i < num; i++) {
+        circles.push(createCircle());
+    }
+
+    return circles;
+}
+
+let circles = init(num_circle);
+let loop = setInterval(() => update(), 10);
+
+function update() {
+    ctx.clearRect(0, 0, cvs.width, cvs.height);
+
+    for (let i = 0; i < circles.length; i++) {
+        let c = circles[i];
+
+        if (c.x + c.dx > cvs.width - c.radius || c.x + c.dx < c.radius) {
+            c.changeDirX();
+        }
+        if (c.y + c.dy > cvs.height - c.radius || c.y + c.dy < c.radius) {
+            c.changeDirY();
+        }
+
+        c.move();
+
+        for (let j = 0; j < circles.length; j++) {
+            let c2 = circles[j];
+            if (i != j && Math.abs(c.x - c2.x) < line_distance && Math.abs(c.y - c2.y) < line_distance) {
+                let l = {
+                    from: { x: c.x, y: c.y },
+                    to: { x: c2.x, y: c2.y },
+                    color: '#eee',
+                }
+                drawLine(l);
+            }
+        }
+
+        drawCircle(c);
+    }
+}
+
+function createCircle() {
+    let x = randomInt(30, cvs.width - 30),
+        y = randomInt(30, cvs.height - 30),
+        dx = Math.floor(Math.random() * speed + 1),
+        dy = Math.floor(Math.random() * speed + 1);
+    
+    dx = Math.random() < 0.5 ? dx * -1 : dx;
+    dy = Math.random() < 0.5 ? dy * -1 : dy;
+    
+    return new Circle(x, y, dx, dy);
+}
+
+function createCircleOne(event) {
+	mouse.x = event.pageX;
+	mouse.y = event.pageY;
+
+	let x = mouse.x,
+		y = mouse.y,
+		dx = Math.floor(Math.random() * speed + 1),
+		dy = Math.floor(Math.random() * speed + 1);
+		
+	dx = Math.random() < 0.5 ? dx * -1 : dx;
+	dy = Math.random() < 0.5 ? dy * -1 : dy;
+		
+	circles.push(new Circle(x, y, dx, dy));
+
+	num_circle++;
+}
+//cvs.addEventListener("click", createCircleOne, false);
+
+function randomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function randomColor() {
+    let letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * letters.length)];
+    }
+    return color;
+}
+
+window.onresize = function(event) {
+    cvs.width = window.innerWidth;
+    cvs.height = window.innerHeight;
+
+	num_circle = 90,
+	radius = { min: 2, max: 4 }
+    line_distance = 70
+
+	if (window.innerWidth < 800) {
+		num_circle = 50
+		radius = { min: 1.5, max: 3 }
+		line_distance = 60
+	}
+
+    circles = init(num_circle);
+};
+
+let cursor = {
+    delay: 1,
+    _x: 0,
+    _y: 0,
+    endX: (window.innerWidth / 2),
+    endY: (window.innerHeight / 2),
+    cursorVisible: true,
+    cursorEnlarged: false,
+    $dot: document.querySelector('.cursor-dot'),
+    $outline: document.querySelector('.cursor-dot-outline'),
+    
+    init: function() {
+        // Set up element sizes
+        this.dotSize = this.$dot.offsetWidth;
+        this.outlineSize = this.$outline.offsetWidth;
+        
+        this.setupEventListeners();
+        this.animateDotOutline();
+    },
+    setupEventListeners: function() {
+        var self = this;
+        
+        // Click events
+        document.addEventListener('mousedown', function() {
+            self.cursorEnlarged = true;
+            self.toggleCursorSize();
+        });
+        document.addEventListener('mouseup', function() {
+            self.cursorEnlarged = false;
+            self.toggleCursorSize();
+        });
+  
+        document.addEventListener('mousemove', function(e) {
+            // Show the cursor
+            self.cursorVisible = true;
+            self.toggleCursorVisibility();
+
+            // Position the dot
+            self.endX = e.pageX;
+            self.endY = e.pageY;
+            self.$dot.style.top = self.endY + 'px';
+            self.$dot.style.left = self.endX + 'px';
+
+            mouse.x = e.pageX;
+            mouse.y = e.pageY;
+        });
+    },
+    
+    animateDotOutline: function() {
+        var self = this;
+        
+        self._x += (self.endX - self._x) / self.delay;
+        self._y += (self.endY - self._y) / self.delay;
+        self.$outline.style.top = self._y + 'px';
+        self.$outline.style.left = self._x + 'px';
+        
+        requestAnimationFrame(this.animateDotOutline.bind(self));
+    },
+    
+    toggleCursorSize: function() {
+        var self = this;
+        
+        if (self.cursorEnlarged) {
+            self.$dot.style.transform = 'translate(-50%, -50%) scale(0.75)';
+            self.$outline.style.transform = 'translate(-50%, -50%) scale(1.5)';
+        } else {
+            self.$dot.style.transform = 'translate(-50%, -50%) scale(1)';
+            self.$outline.style.transform = 'translate(-50%, -50%) scale(1)';
+        }
+    },
+    
+    toggleCursorVisibility: function() {
+        var self = this;
+        
+        if (self.cursorVisible) {
+            self.$dot.style.opacity = 1;
+            self.$outline.style.opacity = 1;
+        } else {
+            self.$dot.style.opacity = 0;
+            self.$outline.style.opacity = 0;
+        }
+    }
+}
+
+cursor.init();
+
+
+
+
+window.onscroll = () => {
+
+};
 
 $(document).ready(function() {
 	if (window.navigator.platform.includes('Win')) {
 
 	}
 });
-
-	
-function copyThis(id) {
-	var copyText = document.getElementById(id);
-	copyText.select();
-	copyText.setSelectionRange(0, 99999);
-	document.execCommand("copy");
-	
-	var notif = document.createElement('div');
-    notif.className = 'notification animated fadeInDown';
-	switch (id) {
-		case 'myPhone':
-			notif.innerHTML = '<p>전화번호 클립보드에 복사</p>';
-			break;
-		case 'myEmail':
-			notif.innerHTML = '<p>이메일 클립보드에 복사</p>';
-			break;
-		default:
-			break;
-	}
-    document.body.appendChild(notif);
-	setTimeout(function() { notif.classList.remove("fadeInDown"); notif.classList.add("fadeOutUp"); setTimeout(function() { document.body.removeChild(notif); }, 600); }, 1500);
-}
-
 
 </script>
 
