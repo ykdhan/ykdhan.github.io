@@ -1,0 +1,87 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body
+{
+    overflow: hidden;
+}
+
+.webgl
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+
+#guide {
+    position: fixed;
+    z-index: 99;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #222;
+    bottom: 3rem;
+    left: 2.5rem;
+}
+#guide div {
+    padding: 1rem;
+    margin-top: 0.4rem;
+    opacity: 1;
+    transition: all 0.7s ease-out;
+}
+#guide div.hide {
+    opacity: 0;
+    transform: translateX(-5rem);
+}
+#guide span {
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 0.5rem;
+    padding: 0.6rem;
+    margin-right: 1rem;
+    opacity: 1;
+}
+#guide-jump {
+    margin-bottom: 1.5rem;
+}
+#guide-jump span {
+    background: #564086;
+    color: #fff;
+}
+
+#finish {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    background: #564086;
+    color: #fff;
+    border-radius: 0.5rem;
+    padding: 3rem 6rem;
+    font-size: 2rem;
+    font-weight: 700;
+    opacity: 0.95;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-5rem);
+}
+#finish div {
+    padding: 1rem;
+    margin-top: 2rem;
+    opacity: 1;
+    font-size: 1rem;
+    transition: all 0.7s ease-out;
+}
+#finish span {
+    background: #fff;
+    border-radius: 0.5rem;
+    padding: 0.6rem;
+    margin-right: 1rem;
+    opacity: 1;
+    color: #222;
+}
+
+/*# sourceMappingURL=physics-game.css.map*/
