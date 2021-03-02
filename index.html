@@ -134,15 +134,15 @@ cvs.width = window.innerWidth;
 cvs.height = window.innerHeight;
 ctx.globalCompositeOperation = '';
 
-let num_circle = 100,
-	radius = { min: 2, max: 4 },
-    speed = 0.05,
-    line_distance = 100,
+let num_circle = 150,
+	radius = { min: 1, max: 2 },
+    speed = 0.3,
+    line_distance = 90,
 	mouse = { x: 0, y: 0 };
 
 if (window.innerWidth < 800) {
-	num_circle = 50
-	radius = { min: 1.5, max: 3 }
+	num_circle = 70
+	radius = { min: 1, max: 2 }
 	line_distance = 60
 }
 
@@ -169,7 +169,7 @@ class Circle {
         this.dy = dy
         this.radius = Math.floor(Math.random() * radius.max + radius.min)
 		let c = randomInt(220,240)
-        this.color = '#eee'
+        this.color = 'rgba(255,255,255,0)'
     }
     
     move() {
@@ -224,7 +224,7 @@ function update() {
                 let l = {
                     from: { x: c.x, y: c.y },
                     to: { x: c2.x, y: c2.y },
-                    color: '#eee',
+                    color: '#f1f0f1',
                 }
                 drawLine(l);
             }
@@ -237,8 +237,8 @@ function update() {
 function createCircle() {
     let x = randomInt(30, cvs.width - 30),
         y = randomInt(30, cvs.height - 30),
-        dx = Math.floor(Math.random() * speed + 1),
-        dy = Math.floor(Math.random() * speed + 1);
+        dx = Math.random() * speed + 0.5,
+        dy = Math.random() * speed + 0.5;
     
     dx = Math.random() < 0.5 ? dx * -1 : dx;
     dy = Math.random() < 0.5 ? dy * -1 : dy;
@@ -252,8 +252,8 @@ function createCircleOne(event) {
 
 	let x = mouse.x,
 		y = mouse.y,
-		dx = Math.floor(Math.random() * speed + 1),
-		dy = Math.floor(Math.random() * speed + 1);
+		dx = Math.random() * speed + 0.5,
+		dy = Math.random() * speed + 0.5;
 		
 	dx = Math.random() < 0.5 ? dx * -1 : dx;
 	dy = Math.random() < 0.5 ? dy * -1 : dy;
@@ -283,13 +283,13 @@ window.onresize = function(event) {
     cvs.width = window.innerWidth;
     cvs.height = window.innerHeight;
 
-	num_circle = 90,
-	radius = { min: 2, max: 4 }
-    line_distance = 70
+	num_circle = 150,
+	radius = { min: 1, max: 2 }
+    line_distance = 90
 
 	if (window.innerWidth < 800) {
-		num_circle = 50
-		radius = { min: 1.5, max: 3 }
+		num_circle = 70
+		radius = { min: 1, max: 2 }
 		line_distance = 60
 	}
 
