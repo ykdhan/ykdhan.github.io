@@ -1,6 +1,6 @@
 const prop = {
     number: window.innerWidth < 767 ? 50 : 80,
-    size: window.innerWidth < 767 ? 3 : 5,
+    size: 5,
     speed: 0.2,
     color: 255,
     line: window.innerWidth < 767 ? 35 : 50,
@@ -75,6 +75,7 @@ const chain = (p5) => {
 
                     p5.push()
                     p5.stroke(prop.color);
+                    p5.strokeWeight(window.innerWidth < 767 ? 0.5 : 1)
                     p5.line(l.from.x, l.from.y, l.to.x, l.to.y);
                     p5.pop()
                 }
