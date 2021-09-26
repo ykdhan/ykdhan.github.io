@@ -78,7 +78,7 @@ main {
     border-radius: 50%;
     overflow: hidden;
     background: #151515;
-    transition: transform 1s;
+    transition: transform 1s, width 0.5s, height 0.5s;
 }
 
 main canvas {
@@ -97,6 +97,7 @@ main canvas {
     color: #151515;
     font-size: 18px;
     font-family: 'NEXON Lv1 Gothic OTF Bold';
+    transition: transform 0.5s;
 }
 
 .github {
@@ -104,6 +105,7 @@ main canvas {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: transform 0.5s;
 }
 .github svg {
     width: 32px;

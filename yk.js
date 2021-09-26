@@ -54,10 +54,10 @@ const chain = (p5) => {
         p5.clear()
         
         blocks.forEach((block, index) => {
-            if (block.x + block.dx > prop.w || block.x + block.dx < 0) {
+            if (block.x + block.dx > prop.w * 1.2 || block.x + block.dx < 0) {
                 block.changeDirX();
             }
-            if (block.y + block.dy > prop.h || block.y + block.dy < 0) {
+            if (block.y + block.dy > prop.h * 1.2 || block.y + block.dy < 0) {
                 block.changeDirY();
             }
 
@@ -87,6 +87,20 @@ const chain = (p5) => {
             p5.pop()
         })
 	}
+
+    p5.windowResized = () => {
+        console.log('resize')
+        prop.number = window.innerWidth < 767 ? 55 : 80
+        prop.speed = window.innerWidth < 767 ? 0.1 : 0.2
+        prop.line = window.innerWidth < 767 ? 40 : 50
+        prop.w = window.innerWidth < 767 ? 250 : 440
+        prop.h = window.innerWidth < 767 ? 250 : 440
+
+        p5.resizeCanvas(prop.w * 1.2, prop.h * 1.2)
+        $('main').css({ width: prop.w, height: prop.h })
+        $('.title').css('transform', 'translate(-50%, calc(-50% - ' + prop.h / 1.5 + 'px))')
+        $('.github').css('transform', 'translate(-50%, calc(-50% + ' + prop.h / 1.5 + 'px))')
+    }
 }
 
 new p5(chain)
