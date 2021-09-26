@@ -19,22 +19,6 @@
   animation-fill-mode: both;
 }
 
-@keyframes zoomIn {
-  from {
-    opacity: 0;
-    transform: scale3d(.3, .3, .3);
-  }
-
-  50% {
-    opacity: 1;
-  }
-}
-
-.zoomIn:focus {
-  animation-name: zoomIn;
-}
-
-
 *, *::before, *::after {
     transition: all ease-out 0.2s;
     cursor: default;
@@ -80,42 +64,6 @@ p {
 	line-height: 1.7;
     word-break: keep-all;
 }
-input, select, button, textarea, pre {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	font-size: 0.95rem;
-    font-family: 'NEXON Lv1 Gothic OTF';
-    font-style: normal;
-    font-weight: 400;
-    outline: none;
-    cursor: text;
-}
-input[type='submit'], button {
-    font-size: 1.1rem;
-    border: 1px solid #2d2d2d;
-    border-radius: 0.3rem;
-    color: #2d2d2d;
-    background: #fff;
-    padding: 0.85rem;
-    cursor: pointer;
-    transition: all 0.2s ease-out;
-}
-input[type='submit']:hover, button:hover {
-    background: #2d2d2d;
-    color: #fff;
-}
-
-
-
-.center__screen {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-
 
 
 html, body {
@@ -123,152 +71,42 @@ html, body {
     background: #fff;
 }
 
-#main {
+main {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    overflow: hidden;
+    background: #151515;
+}
+
+main canvas {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title {
     position: fixed;
     top: 50%;
     left: 50%;
     width: fit-content;
     transform: translate(-50%, -50%);
-    padding: 0.7rem 1.1rem;
-    border: none;
-    border-radius: 0.3rem;
-    background: #222;
-    color: #eee;
-    font-size: 0.9rem;
-    font-family: 'Courier New', monospace;
-    user-select: none;
+    color: #151515;
+    font-size: 18px;
+    font-family: 'NEXON Lv1 Gothic OTF Bold';
 }
 
-#github {
+.github {
     position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-bottom: 5%;
-}
-#github svg {
-    width: 1.7rem;
-}
-
-
-#skills {
-    display: none;
-}
-#skills .skill {
-    display: inline-block;
-}
-#skills .skill img {
-    width: 2rem;
-}
-#skills .skill.hor img {
-    width: 2.5rem;
-}
-#logo {
-    display: inline-flex;
-    margin: 0 auto;
-}
-#yk {
-    width: 2.7rem;
-    margin: 0;
-    transition: all ease-out 0.2s !important;
-    transform-origin: center;
-    cursor: pointer;
-}
-#yk * {
-    transition: all ease-out 0.2s !important;
-    transform-origin: center;
-    cursor: pointer;
-}
-#yk:hover #y {
-    transform: translateX(0.4rem);
-}
-#yk:hover #k {
-    transform: translateX(-0.4rem);
-}
-
-#copyright {
-    width: 100%;
-    position: absolute;
-    margin: 0 auto;
-    margin-top: 25rem;
-    font-size: 0.8rem;
-    text-align: center;
-    color: #adb5bd;
-}
-
-
-
-
-
-
-
-.box {
-    box-shadow: rgba(47, 47, 56, 0.08) 0px 0.2rem 0.4rem, rgba(47, 47, 56, 0.03) 0px 0.4rem 1.5rem;
-    border-radius: 0.3rem;
-    background: #fff;
-    padding: 2rem;
-    margin: 0 1.5rem;
-    margin-bottom: 2rem;
-}
-.scroll-hor {
-    vertical-align: middle;
-    text-align: left;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-    transition: all ease-out 0.2s;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
-}
-.scroll-hor::-webkit-scrollbar {
-    display: none;
-}
-/*
-.scroll-hor * {
-    white-space: initial;
-}
-*/
-
-#cvs {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    position: fixed; 
-    /* touch-action: none; */
-}
-
-html,
-html *,
-body,
-body * {
-    cursor: none;
-}
-
-.cursor-dot,
-.cursor-dot-outline {
-    pointer-events: none;
-    position: absolute;
     top: 50%;
     left: 50%;
-    border-radius: 50%;
-    opacity: 0;
     transform: translate(-50%, -50%);
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-    z-index: 999;
 }
-
-.cursor-dot {
-    width: 0.6rem;
-    height: 0.6rem;
-    background-color: #555566;
-}
-
-.cursor-dot-outline {
-    width: 1.3rem;
-    height: 1.3rem;
-    background-color: rgba(85, 85, 102, 0.5);
+.github svg {
+    width: 32px;
 }
 
 
@@ -301,98 +139,20 @@ body * {
 }
 
 
-#mouse{
-    margin: 0;
-    position: fixed;
-    width: 100%;
-    bottom: 15%;
-    right: 0;
-    opacity: 0;
-}.mouse-icon{
-    margin: 0 auto;
-    width: 1.5rem;
-    height: 2.7rem;
-    border: 0.19rem solid #adb5bd;
-    border-radius: 100rem;
-    position: relative;
-    text-align: center;
-}.mouse-wheel{
-    height: 0.35rem;
-    margin: 0.1rem auto;
-    display: block;
-    width: 0.19rem;
-    background-color: #adb5bd;
-    border-radius: 100rem;
-    -webkit-animation: 1.6s ease infinite wheel-up-down;
-    -moz-animation: 1.6s ease infinite wheel-up-down;
-    animation: 1.6s ease infinite wheel-up-down;
-}
-@-webkit-keyframes wheel-up-down {
-    0% {
-        margin-top: 0.1rem;
-        opacity: 0;
-    }
-    30% {
-        opacity: 1;
-    }
-    100% {
-        margin-top: 0.9rem;
-        opacity: 0;
-    }
-}@-moz-keyframes wheel-up-down {
-	0% {
-	    margin-top: 0.1rem;
-	    opacity: 0;
-	}
-	30% {
-	    opacity: 1;
-	}
-	100% {
-	    margin-top: 0.9rem;
-	    opacity: 0;
-	}
-}@keyframes wheel-up-down {
-	0% {
-	    margin-top: 0.1rem;
-	    opacity: 0;
-	}
-	30% {
-	    opacity: 1;
-	}
-	100% {
-	    margin-top: 0.9rem;
-	    opacity: 0;
-	}
-}
-
-
-
-
 /* Safari 10.1+ */
 @media not all and (min-resolution:.001dpcm) { @media {
 
     
 }}
 
-
 /* Mobile */
-@media all and (max-width: 840px) and (min-width: 50px) {
+@media all and (max-width: 768px) and (min-width: 50px) {
 
-    #main {
-        padding: 0.5rem 0.9rem;
-        font-size: 0.8rem;
+    .title {
+        font-size: 14px;
     }
-
-    #github {
-        margin-bottom: 1.5rem;
+    .github svg {
+        width: 24px;
     }
-    #github svg {
-        width: 1.5rem;
-    }
-
-}
-
-@media all and (max-width: 480px) and (min-width: 50px) {
-
 
 }

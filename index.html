@@ -16,10 +16,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-title" content="{ yk }">
+	<meta name="apple-mobile-web-app-title" content="yk">
 
 	<meta property="og:site_name" content="yk" />
-	<meta property="og:title" content="{ yk }" />
+	<meta property="og:title" content="yk" />
 	<meta property="og:image" content="src/yk-big.png" />
 	<meta property="og:description" content="" />
 
@@ -31,371 +31,29 @@
 	<link rel="apple-touch-icon" sizes="144x144" href="src/yk-144.png" />
 	<link rel="apple-touch-icon" sizes="152x152" href="src/yk-152.png" />
 
-	<link rel="stylesheet" type="text/css" href="style.css?ver=7.01">
-    <link rel="stylesheet" type="text/css" href="animate.css?ver=1.7">
+	<link rel="stylesheet" type="text/css" href="style.css?ver=1.01">
+    <link rel="stylesheet" type="text/css" href="animate.css?ver=1.01">
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-	<script src="tilt.js"></script>
-
-	<title>{ yk }</title>
+	<title>yk</title>
 </head>
-<body ontouchstart="">
+<body>
 
-	<canvas id="cvs"></canvas>
+	<div class="title">웹 개발자 & 가상화폐 트레이더</div>
 
-	<div id="main">
-		const yk = new Developer()
-	</div>
-
-	<div id="github">
+	<div class="github">
 		<a href="https://github.com/ykdhan" target="_blank">
-			<svg viewBox="0 0 119.98 117.82" xmlns="http://www.w3.org/2000/svg">
-			<defs>
-			<style>.cls-1,.cls-2{fill:#212529;}.cls-1{fill-rule:evenodd;}</style>
-			</defs>
-			<path class="cls-1" d="M60.39,0A60.39,60.39,0,0,0,41.3,117.69c6.91.63,3.23-7.23,4-14.14-24.25,3.89-18.56-12.69-27.05-16-5.48-3.75.41-3.68.41-3.68,13.69,2.79,8.86,18,26.83,11.25.55-3.91,2.11-6.57,3.84-8.08C29,87.89,11.53,61.85,28.08,41c-.63-1.52-2.7-7.66.58-16,0,0,5.07-1.62,16.61,6.19a57.7,57.7,0,0,1,30.25,0C87,23.43,92.11,25.05,92.11,25.05c3.28,8.32,1.22,14.46.59,16,16.48,21.1-.8,46.7-21.36,46,9,5.61-1.22,32.93,8.17,30.66C143.06,97.63,128-.81,60.39,0Z"/>
-			<path class="cls-2" d="M22.87,86.71c-.3.72-1.92,0-1.57-.72s1.94,0,1.57.72Z"/>
-			<path class="cls-2" d="M25.32,89.44c-.67.64-2.12-.92-1.41-1.54s2.13.92,1.41,1.54Z"/>
-			<path class="cls-2" d="M27.7,92.91c-.85.62-2.24-1.38-1.34-2s2.24,1.38,1.34,2Z"/>
-			<path class="cls-2" d="M31,96.27c-.77.88-2.7-.94-1.89-1.77s2.73,1,1.89,1.77Z"/>
-			<path class="cls-2" d="M35.46,98.23c-.32,1.11-2.85.36-2.5-.76s2.86-.36,2.5.76Z"/>
-			<path class="cls-2" d="M40.4,98.59c.06,1.17-2.61,1.2-2.59,0s2.61-1.21,2.59,0Z"/>
-			</svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 119.98 117.82">
+                <defs/>
+                <path d="M60.39 0A60.39 60.39 0 0 0 41.3 117.69c6.91.63 3.23-7.23 4-14.14-24.25 3.89-18.56-12.69-27.05-16-5.48-3.75.41-3.68.41-3.68 13.69 2.79 8.86 18 26.83 11.25.55-3.91 2.11-6.57 3.84-8.08C29 87.89 11.53 61.85 28.08 41c-.63-1.52-2.7-7.66.58-16 0 0 5.07-1.62 16.61 6.19a57.7 57.7 0 0 1 30.25 0c11.48-7.76 16.59-6.14 16.59-6.14 3.28 8.32 1.22 14.46.59 16 16.48 21.1-.8 46.7-21.36 46 9 5.61-1.22 32.93 8.17 30.66C143.06 97.63 128-.81 60.39 0Z" style="fill-rule:evenodd;fill:#212529"/>
+                <path d="M22.87 86.71c-.3.72-1.92 0-1.57-.72s1.94 0 1.57.72ZM25.32 89.44c-.67.64-2.12-.92-1.41-1.54s2.13.92 1.41 1.54ZM27.7 92.91c-.85.62-2.24-1.38-1.34-2s2.24 1.38 1.34 2ZM31 96.27c-.77.88-2.7-.94-1.89-1.77s2.73 1 1.89 1.77ZM35.46 98.23c-.32 1.11-2.85.36-2.5-.76s2.86-.36 2.5.76ZM40.4 98.59c.06 1.17-2.61 1.2-2.59 0s2.61-1.21 2.59 0Z" class="cls-2"/>
+            </svg>
 		</a>
 	</div>
 
-	<div id="skills">
-		<div class="skill">
-			<img alt="HTML" src="src/html-icon.png">
-		</div>
-		<div class="skill">
-			<img alt="CSS" src="src/css-icon.png">
-		</div>
-		<div class="skill">
-			<img alt="JavaScript" src="src/js-icon.png">
-		</div>
-		<div class="skill">
-			<img alt="jQuery" src="src/jquery-icon.png">
-		</div>
-		<div class="skill">
-			<img alt="Python" src="src/python-icon.png">
-		</div>
-		<div class="skill hor">
-			<img alt="PHP" src="src/php-icon.png">
-		</div>
-		<div class="skill">
-			<img alt="Flask" src="src/flask-icon.png">
-		</div>
-		<div class="skill">
-			<img alt="Linux" src="src/linux-icon.png">
-		</div>
-		<div class="skill hor">
-			<img alt="MySQL" src="src/mysql-icon.png">
-		</div>
-		<div class="skill">
-			<img alt="PostgreSQL" src="src/postgresql-icon.png">
-		</div>
-		<div class="skill">
-			<img alt="Sketch" src="src/sketch-icon.png">
-		</div>
-		<div class="skill">
-			<img alt="Adobe Illustrator" src="src/illustrator-icon.png">
-		</div>
-		<div class="skill">
-			<img alt="Adobe Photoshop" src="src/photoshop-icon.png">
-		</div>
-		<!--
-		<div class="skill learning" data-aos="appear" data-aos-delay="1300">
-			<img alt="ReactJS" src="src/react-icon.png">
-		</div>
-		<div class="skill learning" data-aos="appear" data-aos-delay="1400">
-			<img alt="NodeJS" src="src/nodejs-icon.png">
-		</div>
-		-->
-	</div>
-
-	<div class="cursor-dot-outline"></div>
-	<div class="cursor-dot"></div>
-
-
-
-<script type="text/javascript">
-
-let cvs = document.getElementById("cvs"),
-    ctx = cvs.getContext("2d");
-
-cvs.width = window.innerWidth;
-cvs.height = window.innerHeight;
-ctx.globalCompositeOperation = '';
-
-let num_circle = 100,
-	radius = { min: 2, max: 4 },
-    speed = 0.05,
-    line_distance = 100,
-	mouse = { x: 0, y: 0 };
-
-if (window.innerWidth < 800) {
-	num_circle = 50
-	radius = { min: 1.5, max: 3 }
-	line_distance = 60
-}
-
-function drawCircle(c) {
-    ctx.beginPath();
-    ctx.arc(c.x, c.y, c.radius, 0, 2 * Math.PI);
-    ctx.fillStyle = c.color;
-    ctx.fill();
-}
-
-function drawLine(l) {
-    ctx.beginPath();
-    ctx.moveTo(l.from.x, l.from.y);
-    ctx.lineTo(l.to.x, l.to.y);
-    ctx.strokeStyle = l.color;
-    ctx.stroke();
-}
-
-class Circle {
-    constructor(x, y, dx, dy) {
-        this.x = x
-        this.y = y
-        this.dx = dx
-        this.dy = dy
-        this.radius = Math.floor(Math.random() * radius.max + radius.min)
-		let c = randomInt(220,240)
-        this.color = '#eee'
-    }
-    
-    move() {
-        this.x += this.dx;
-        this.y += this.dy;
-    }
-
-    changeSize(r) {
-        this.radius = r;
-    }
-
-    changeDirX() {
-        this.dx *= -1;
-    }
-
-    changeDirY() {
-        this.dy *= -1;
-    }
-}
-
-function init(num) {
-    let circles = [];
-
-    for (let i = 0; i < num; i++) {
-        circles.push(createCircle());
-    }
-
-    return circles;
-}
-
-let circles = init(num_circle);
-let loop = setInterval(() => update(), 10);
-
-function update() {
-    ctx.clearRect(0, 0, cvs.width, cvs.height);
-
-    for (let i = 0; i < circles.length; i++) {
-        let c = circles[i];
-
-        if (c.x + c.dx > cvs.width - c.radius || c.x + c.dx < c.radius) {
-            c.changeDirX();
-        }
-        if (c.y + c.dy > cvs.height - c.radius || c.y + c.dy < c.radius) {
-            c.changeDirY();
-        }
-
-        c.move();
-
-        for (let j = 0; j < circles.length; j++) {
-            let c2 = circles[j];
-            if (i != j && Math.abs(c.x - c2.x) < line_distance && Math.abs(c.y - c2.y) < line_distance) {
-                let l = {
-                    from: { x: c.x, y: c.y },
-                    to: { x: c2.x, y: c2.y },
-                    color: '#eee',
-                }
-                drawLine(l);
-            }
-        }
-
-        drawCircle(c);
-    }
-}
-
-function createCircle() {
-    let x = randomInt(30, cvs.width - 30),
-        y = randomInt(30, cvs.height - 30),
-        dx = Math.floor(Math.random() * speed + 1),
-        dy = Math.floor(Math.random() * speed + 1);
-    
-    dx = Math.random() < 0.5 ? dx * -1 : dx;
-    dy = Math.random() < 0.5 ? dy * -1 : dy;
-    
-    return new Circle(x, y, dx, dy);
-}
-
-function createCircleOne(event) {
-	mouse.x = event.pageX;
-	mouse.y = event.pageY;
-
-	let x = mouse.x,
-		y = mouse.y,
-		dx = Math.floor(Math.random() * speed + 1),
-		dy = Math.floor(Math.random() * speed + 1);
-		
-	dx = Math.random() < 0.5 ? dx * -1 : dx;
-	dy = Math.random() < 0.5 ? dy * -1 : dy;
-		
-	circles.push(new Circle(x, y, dx, dy));
-
-	num_circle++;
-}
-//cvs.addEventListener("click", createCircleOne, false);
-
-function randomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-function randomColor() {
-    let letters = '0123456789ABCDEF';
-    let color = '#';
-    for (let i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * letters.length)];
-    }
-    return color;
-}
-
-window.onresize = function(event) {
-    cvs.width = window.innerWidth;
-    cvs.height = window.innerHeight;
-
-	num_circle = 90,
-	radius = { min: 2, max: 4 }
-    line_distance = 70
-
-	if (window.innerWidth < 800) {
-		num_circle = 50
-		radius = { min: 1.5, max: 3 }
-		line_distance = 60
-	}
-
-    circles = init(num_circle);
-};
-
-let cursor = {
-    delay: 1,
-    _x: 0,
-    _y: 0,
-    endX: (window.innerWidth / 2),
-    endY: (window.innerHeight / 2),
-    cursorVisible: true,
-    cursorEnlarged: false,
-    $dot: document.querySelector('.cursor-dot'),
-    $outline: document.querySelector('.cursor-dot-outline'),
-    
-    init: function() {
-        // Set up element sizes
-        this.dotSize = this.$dot.offsetWidth;
-        this.outlineSize = this.$outline.offsetWidth;
-        
-        this.setupEventListeners();
-        this.animateDotOutline();
-    },
-    setupEventListeners: function() {
-        var self = this;
-        
-        // Click events
-        document.addEventListener('mousedown', function() {
-            self.cursorEnlarged = true;
-            self.toggleCursorSize();
-        });
-        document.addEventListener('mouseup', function() {
-            self.cursorEnlarged = false;
-            self.toggleCursorSize();
-        });
-  
-        document.addEventListener('mousemove', function(e) {
-            // Show the cursor
-            self.cursorVisible = true;
-            self.toggleCursorVisibility();
-
-            // Position the dot
-            self.endX = e.pageX;
-            self.endY = e.pageY;
-            self.$dot.style.top = self.endY + 'px';
-            self.$dot.style.left = self.endX + 'px';
-
-            mouse.x = e.pageX;
-            mouse.y = e.pageY;
-        });
-    },
-    
-    animateDotOutline: function() {
-        var self = this;
-        
-        self._x += (self.endX - self._x) / self.delay;
-        self._y += (self.endY - self._y) / self.delay;
-        self.$outline.style.top = self._y + 'px';
-        self.$outline.style.left = self._x + 'px';
-        
-        requestAnimationFrame(this.animateDotOutline.bind(self));
-    },
-    
-    toggleCursorSize: function() {
-        var self = this;
-        
-        if (self.cursorEnlarged) {
-            self.$dot.style.transform = 'translate(-50%, -50%) scale(0.75)';
-            self.$outline.style.transform = 'translate(-50%, -50%) scale(1.5)';
-        } else {
-            self.$dot.style.transform = 'translate(-50%, -50%) scale(1)';
-            self.$outline.style.transform = 'translate(-50%, -50%) scale(1)';
-        }
-    },
-    
-    toggleCursorVisibility: function() {
-        var self = this;
-        
-        if (self.cursorVisible) {
-            self.$dot.style.opacity = 1;
-            self.$outline.style.opacity = 1;
-        } else {
-            self.$dot.style.opacity = 0;
-            self.$outline.style.opacity = 0;
-        }
-    }
-}
-
-cursor.init();
-
-
-
-
-window.onscroll = () => {
-
-};
-
-$(document).ready(function() {
-	if (window.navigator.platform.includes('Win')) {
-
-	}
-});
-
-</script>
+    <script src="yk.js"></script>
 
 </body>
 </html>
