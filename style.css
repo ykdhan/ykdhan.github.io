@@ -14,19 +14,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
 
 
-.animated {
-  animation-duration: 1s;
-  animation-fill-mode: both;
-}
-
-*, *::before, *::after {
-    transition: all ease-out 0.2s;
-    cursor: default;
-}
-* {
-    box-sizing: border-box;
-}
-
 html {
     padding: 0;
     margin: 0;
@@ -71,14 +58,27 @@ html, body {
     background: #fff;
 }
 
+body {
+    transition: opacity 1s;
+    opacity: 0;
+}
+
+html.chain body {
+    opacity: 1;
+}
+html.chain main {
+    transform: translate(-50%, -50%) scale(1);
+}
+
 main {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(0.7);
     border-radius: 50%;
     overflow: hidden;
     background: #151515;
+    transition: transform 1s;
 }
 
 main canvas {
@@ -108,6 +108,12 @@ main canvas {
 .github svg {
     width: 32px;
 }
+
+
+
+
+
+
 
 
 

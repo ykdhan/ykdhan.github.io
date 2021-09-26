@@ -1,15 +1,14 @@
 const prop = {
-    number: window.innerWidth < 767 ? 50 : 80,
+    number: window.innerWidth < 767 ? 55 : 80,
     size: 5,
-    speed: 0.2,
+    speed: window.innerWidth < 767 ? 0.1 : 0.2,
     color: 255,
-    line: window.innerWidth < 767 ? 35 : 50,
+    line: window.innerWidth < 767 ? 40 : 50,
     w: window.innerWidth < 767 ? 250 : 440,
     h: window.innerWidth < 767 ? 250 : 440,
 }
 
 const chain = (p5) => {
-
     class Block {
         constructor(x, y, dx, dy) {
             this.x = Math.floor(Math.random() * prop.w)
@@ -39,10 +38,10 @@ const chain = (p5) => {
 
 	p5.setup = () => {
         p5.createCanvas(prop.w * 1.2, prop.h * 1.2)
-        document.querySelector('main').style.width = prop.w + 'px'
-        document.querySelector('main').style.height = prop.h + 'px'
-        document.querySelector('.title').style.transform = 'translate(-50%, calc(-50% - ' + prop.h / 1.5 + 'px))'
-        document.querySelector('.github').style.transform = 'translate(-50%, calc(-50% + ' + prop.h / 1.5 + 'px))'
+        $('main').css({ width: prop.w, height: prop.h })
+        $('.title').css('transform', 'translate(-50%, calc(-50% - ' + prop.h / 1.5 + 'px))')
+        $('.github').css('transform', 'translate(-50%, calc(-50% + ' + prop.h / 1.5 + 'px))')
+        !$('html').hasClass('chain') && $('html').addClass('chain')
         p5.noStroke()
         p5.rectMode(p5.CENTER)
 
