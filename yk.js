@@ -41,7 +41,6 @@ const chain = (p5) => {
         $('main').css({ width: prop.w, height: prop.h })
         $('.title').css('transform', 'translate(-50%, calc(-50% - ' + prop.h / 1.5 + 'px))')
         $('.github').css('transform', 'translate(-50%, calc(-50% + ' + prop.h / 1.5 + 'px))')
-        !$('html').hasClass('chain') && $('html').addClass('chain')
         p5.noStroke()
         p5.rectMode(p5.CENTER)
 
@@ -51,6 +50,7 @@ const chain = (p5) => {
 	}
 
 	p5.draw = () => {
+        !$('html').hasClass('chain') && $('main canvas').length && $('html').addClass('chain')
         p5.clear()
         
         blocks.forEach((block, index) => {
