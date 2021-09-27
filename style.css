@@ -85,6 +85,11 @@ main canvas {
     transform: translate(-50%, -50%);
 }
 
+.cvs {
+    width: 440px;
+    height: 440px;
+}
+
 .title {
     position: fixed;
     top: 50%;
@@ -158,6 +163,10 @@ main canvas {
     }
     .github svg {
         width: 24px;
+    }
+    .cvs {
+        width: 250px;
+        height: 250px;
     }
 
 }
