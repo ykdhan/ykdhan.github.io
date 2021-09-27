@@ -66,19 +66,16 @@ body {
 html.chain body {
     opacity: 1;
 }
-html.chain main {
-    transform: translate(-50%, -50%) scale(1);
-}
 
 main {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(0.7);
+    transform: translate(-50%, -50%);
     border-radius: 50%;
     overflow: hidden;
     background: #151515;
-    transition: transform 1s, width 0.5s, height 0.5s;
+    transition: width 0.3s, height 0.3s;
 }
 
 main canvas {
@@ -97,7 +94,7 @@ main canvas {
     color: #151515;
     font-size: 18px;
     font-family: 'NEXON Lv1 Gothic OTF Bold';
-    transition: transform 0.5s;
+    transition: transform 0.3s;
 }
 
 .github {
@@ -105,7 +102,7 @@ main canvas {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: transform 0.5s;
+    transition: transform 0.3s;
 }
 .github svg {
     width: 32px;
