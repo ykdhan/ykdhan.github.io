@@ -88,11 +88,6 @@ main canvas {
     mix-blend-mode: difference;
 }
 
-.cvs {
-    width: 440px;
-    height: 440px;
-}
-
 .title {
     position: fixed;
     top: 50%;
@@ -117,11 +112,6 @@ main canvas {
 .github svg {
     width: 38px;
 }
-
-
-
-
-
 
 
 
@@ -156,14 +146,16 @@ main canvas {
 /* Safari 10.1+ */
 @media not all and (min-resolution:.001dpcm) { @media {
 
-    
 }}
 
 /* Mobile */
 @media all and (max-width: 768px) and (min-width: 50px) {
-
     .title {
         font-size: 17px;
+        transform: translate(-50%, calc(-50% - 24px));
+    }
+    .github {
+        transform: translate(-50%, calc(-50% + 24px));
     }
     .github svg {
         width: 30px;
@@ -172,5 +164,4 @@ main canvas {
         width: 250px;
         height: 250px;
     }
-
 }
