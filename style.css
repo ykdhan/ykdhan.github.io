@@ -59,12 +59,12 @@ html, body {
 }
 
 body {
-    transition: opacity 1s;
-    opacity: 0;
+    /* transition: opacity 1s; */
+    /* opacity: 0; */
 }
 
 html.chain body {
-    opacity: 1;
+    /* opacity: 1; */
 }
 
 main {
@@ -72,8 +72,10 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 50%;
+    /* border-radius: 50%; */
     overflow: hidden;
+    width: 110vw;
+    height: 110vh;
     background: #151515;
     transition: width 0.3s, height 0.3s;
 }
@@ -83,6 +85,7 @@ main canvas {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
 }
 
 .cvs {
@@ -95,24 +98,25 @@ main canvas {
     top: 50%;
     left: 50%;
     width: fit-content;
-    transform: translate(-50%, -50%);
-    color: #151515;
-    font-size: 18px;
+    transform: translate(-50%, calc(-50% - 30px));
+    color: #fff;
+    font-size: 20px;
     font-family: 'NEXON Lv1 Gothic OTF Bold';
-    transition: transform 0.3s;
+    z-index: 10;
+    mix-blend-mode: difference;
 }
 
 .github {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    transition: transform 0.3s;
+    transform: translate(-50%, calc(-50% + 30px));
+    z-index: 10;
+    mix-blend-mode: difference;
 }
 .github svg {
-    width: 32px;
+    width: 38px;
 }
-
 
 
 
@@ -159,10 +163,10 @@ main canvas {
 @media all and (max-width: 768px) and (min-width: 50px) {
 
     .title {
-        font-size: 14px;
+        font-size: 17px;
     }
     .github svg {
-        width: 24px;
+        width: 30px;
     }
     .cvs {
         width: 250px;
