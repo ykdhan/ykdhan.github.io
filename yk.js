@@ -1,10 +1,10 @@
 window.onload = () => {
     const prop = {
-        number: window.innerWidth < 767 ? 90 : 150,
+        number: window.innerWidth < 767 ? 80 : 150,
         size: window.innerWidth < 767 ? 5 : 7,
         speed: window.innerWidth < 767 ? 0.1 : 0.2,
         color: 255,
-        line: window.innerWidth < 767 ? 50 : 70,
+        line: window.innerWidth < 767 ? 55 : 80,
         w: window.innerWidth,
         h: window.innerHeight,
     }
