@@ -3,7 +3,7 @@ window.onload = () => {
         number: window.innerWidth < 767 ? 80 : 150,
         size: window.innerWidth < 767 ? 5 : 7,
         speed: window.innerWidth < 767 ? 0.1 : 0.2,
-        color: 255,
+        color: 50,
         line: window.innerWidth < 767 ? 55 : 80,
         w: window.innerWidth,
         h: window.innerHeight,
@@ -35,7 +35,7 @@ window.onload = () => {
             }
         }
 
-        const blocks = new Array(prop.number)
+        var blocks = new Array(prop.number)
 
         p5.setup = () => {
             p5.createCanvas(prop.w * 1.2, prop.h * 1.2)
@@ -94,6 +94,12 @@ window.onload = () => {
             prop.h = window.innerHeight
 
             p5.resizeCanvas(prop.w * 1.2, prop.h * 1.2)
+
+            blocks = new Array(prop.number)
+            
+            for (let i = 0; i < blocks.length; i ++) {
+                blocks[i] = new Block()
+            }
         }
     }
 

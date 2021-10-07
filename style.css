@@ -10,9 +10,6 @@
     font-weight: normal;
     font-style: normal;
 }
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
-
 
 html {
     padding: 0;
@@ -58,26 +55,17 @@ html, body {
     background: #fff;
 }
 
-body {
-    /* transition: opacity 1s; */
-    /* opacity: 0; */
-}
-
-html.chain body {
-    /* opacity: 1; */
-}
-
 main {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* border-radius: 50%; */
     overflow: hidden;
     width: 110vw;
     height: 110vh;
     background: #151515;
-    transition: width 0.3s, height 0.3s;
+    /* border-radius: 50%; */
+    /* transition: width 0.3s, height 0.3s; */
 }
 
 main canvas {
@@ -85,32 +73,38 @@ main canvas {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    mix-blend-mode: difference;
+    /* mix-blend-mode: difference; */
 }
 
-.title {
+.title, .subtitle {
     position: fixed;
     top: 50%;
     left: 50%;
     width: fit-content;
-    transform: translate(-50%, calc(-50% - 30px));
+    transform: translate(-50%, calc(-50% - 24px));
     color: #fff;
-    font-size: 20px;
+    font-size: 24px;
     font-family: 'NEXON Lv1 Gothic OTF Bold';
     z-index: 10;
-    mix-blend-mode: difference;
+    letter-spacing: 8px;
+}
+
+.subtitle {
+    transform: translate(-50%, calc(-50% + 24px));
+    font-size: 16px;
+    letter-spacing: unset;
+    font-family: 'NEXON Lv1 Gothic OTF';
 }
 
 .github {
     position: fixed;
-    top: 50%;
+    bottom: 15%;
     left: 50%;
-    transform: translate(-50%, calc(-50% + 30px));
+    transform: translate(-50%, -50%);
     z-index: 10;
-    mix-blend-mode: difference;
 }
 .github svg {
-    width: 38px;
+    width: 32px;
 }
 
 
@@ -151,17 +145,18 @@ main canvas {
 /* Mobile */
 @media all and (max-width: 768px) and (min-width: 50px) {
     .title {
-        font-size: 17px;
-        transform: translate(-50%, calc(-50% - 24px));
+        font-size: 20px;
+        letter-spacing: 5px;
+        transform: translate(-50%, calc(-50% - 20px));
+    }
+    .subtitle {
+        font-size: 14px;
+        transform: translate(-50%, calc(-50% + 20px));
     }
     .github {
-        transform: translate(-50%, calc(-50% + 24px));
+        bottom: 12%;
     }
     .github svg {
-        width: 30px;
-    }
-    .cvs {
-        width: 250px;
-        height: 250px;
+        width: 28px;
     }
 }
