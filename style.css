@@ -94,6 +94,33 @@ main canvas {
     width: 32px;
 }
 
+.projects {
+    position: fixed;
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+}
+.projects .project {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    position: relative;
+    overflow: hidden;
+}
+.projects .project-link { display: block; z-index: 1; color: #fff; mix-blend-mode: difference; padding: 14px 18px; }
+.projects .project::before {
+    content: ''; position: absolute; left: 0; top: 0; transform: translateY(100%); background: #fff;
+    width: 100%; height: 100%; transition: transform 0.2s ease-out;
+}
+.projects .project:not(:last-of-type) { margin-right: 10px; }
+.projects .project:hover::before {
+    transform: translateX(0); 
+}
+
 
 /* Safari 10.1+ */
 @media not all and (min-resolution:.001dpcm) { @media {
@@ -117,4 +144,16 @@ main canvas {
     .github svg {
         width: 28px;
     }
+
+    .projects {
+        bottom: 12%;
+        width: 94%;
+    }
+    .projects .project {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 12px;
+    }
+    .projects .project:not(:last-of-type) { margin-right: 0; }
+    .projects .project-link { padding: 8px 10px; }
 }

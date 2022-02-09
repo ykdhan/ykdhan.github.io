@@ -68,9 +68,13 @@ window.onload = () => {
                             from: { x: block.x, y: block.y },
                             to: { x: block2.x, y: block2.y },
                         }
+                        let opacity = (Math.abs(block.x - block2.x) + Math.abs(block.y - block2.y)) / 2
+                        opacity = opacity / prop.line
+                        // console.log(opacity)
+                        // opacity = 1
 
                         p5.push()
-                        p5.stroke(prop.color);
+                        p5.stroke(`rgba(${prop.color},${prop.color},${prop.color},${opacity})`);
                         p5.strokeWeight(window.innerWidth < 767 ? 0.5 : 1)
                         p5.line(l.from.x, l.from.y, l.to.x, l.to.y);
                         p5.pop()
