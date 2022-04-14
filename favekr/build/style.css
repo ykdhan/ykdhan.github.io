@@ -483,6 +483,20 @@ a {
   font-style: italic;
   font-display: swap;
 }
+@font-face {
+  font-family: "D2Coding";
+  src: url("/resources/fonts/D2Coding.woff2") format("woff2"), url("/resources/fonts/D2Coding.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "D2Coding";
+  src: url("/resources/fonts/D2CodingBd.woff2") format("woff2"), url("/resources/fonts/D2CodingBd.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
 /*
 *	768~ : pc
 *	320~767 : mobile
@@ -905,9 +919,13 @@ header nav a {
   justify-content: flex-end;
   height: 100%;
 }
-.page-section.page-work .works-list {
+.page-section.page-work .works-wrapper {
+  position: relative;
   width: 40%;
   height: 100vh;
+}
+.page-section.page-work .works-list {
+  height: 100%;
   overflow: visible;
 }
 .page-section.page-work .works-list .swiper {
@@ -936,6 +954,14 @@ header nav a {
   width: 400px;
   height: 100%;
   display: block;
+}
+.page-section.page-work .works-info {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-50%);
 }
 
 .page-section.page-contact .sticky-contact {
@@ -1249,6 +1275,13 @@ a {
   scroll-snap-align: center center;
 }
 
+.swiper-creative .swiper-slide {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+  transition-property: transform, opacity, height;
+}
+
 :root {
   --swiper-navigation-size:44px;
 }
@@ -1303,13 +1336,6 @@ a {
 
 .swiper-button-lock {
   display: none;
-}
-
-.swiper-creative .swiper-slide {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  overflow: hidden;
-  transition-property: transform, opacity, height;
 }
 
 .swiper-fade.swiper-free-mode .swiper-slide {
