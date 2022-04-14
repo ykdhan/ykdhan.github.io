@@ -1,0 +1,25 @@
+{
+  "name": "ykdhan",
+  "version": "1.0.0",
+  "description": "ykdhan.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ykdhan",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.5",
+    "graceful-fs": "4.2.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify-html": "^1.0.6",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.38.0"
+  },
+  "dependencies": {
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0"
+  }
+}
