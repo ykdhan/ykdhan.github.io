@@ -1,9 +1,14 @@
-*, *::before, *::after {
-    transition: all ease-out 0.2s;
-    cursor: default;
+@font-face {
+    font-family: 'NEXON Lv1 Gothic OTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
-* {
-    box-sizing: border-box;
+@font-face {
+    font-family: 'NEXON Lv1 Gothic OTF Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 html {
@@ -24,10 +29,6 @@ body {
     width: 100%;
     height: 100%;
 }
-a {
-	text-decoration: none;
-	color: inherit;
-}
 a:hover{
 	text-decoration:none;
 	color: inherit;
@@ -35,41 +36,91 @@ a:hover{
 a, a * {
     cursor: pointer;
     transition: none;
+    text-decoration: none;
+	color: inherit;
 }
 
-#cvs {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    position: fixed; 
-    touch-action: none;
+html, body {
+    overflow: hidden;
+    background: #fff;
 }
 
-.cursor-dot,
-.cursor-dot-outline {
-    pointer-events: none;
-    position: absolute;
+main {
+    position: fixed;
     top: 50%;
     left: 50%;
-    border-radius: 50%;
-    opacity: 0;
     transform: translate(-50%, -50%);
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-    z-index: 999;
+    overflow: hidden;
+    width: 110vw;
+    height: 110vh;
+    background: #151515;
 }
 
-.cursor-dot {
-    width: 0.6rem;
-    height: 0.6rem;
-    background-color: #555566;
+main canvas {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.cursor-dot-outline {
-    width: 1.3rem;
-    height: 1.3rem;
-    background-color: rgba(85, 85, 102, 0.5);
+.title, .subtitle {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: fit-content;
+    transform: translate(-50%, calc(-50% - 24px));
+    color: #fff;
+    font-size: 24px;
+    font-family: 'NEXON Lv1 Gothic OTF Bold';
+    z-index: 10;
+    letter-spacing: 8px;
 }
+
+.subtitle {
+    transform: translate(-50%, calc(-50% + 24px));
+    font-size: 16px;
+    letter-spacing: unset;
+    font-family: 'NEXON Lv1 Gothic OTF';
+}
+
+.github {
+    position: fixed;
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+.github svg {
+    width: 32px;
+}
+
+.projects {
+    position: fixed;
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+}
+.projects .project {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    position: relative;
+    overflow: hidden;
+}
+.projects .project-link { display: block; z-index: 1; color: #fff; mix-blend-mode: difference; padding: 14px 18px; }
+.projects .project::before {
+    content: ''; position: absolute; left: 0; top: 0; transform: translateY(100%); background: #fff;
+    width: 100%; height: 100%; transition: transform 0.2s ease-out;
+}
+.projects .project:not(:last-of-type) { margin-right: 10px; }
+.projects .project:hover::before {
+    transform: translateX(0); 
+}
+
 
 /* Safari 10.1+ */
 @media not all and (min-resolution:.001dpcm) { @media {
@@ -77,10 +128,32 @@ a, a * {
 }}
 
 /* Mobile */
-@media all and (max-width: 840px) and (min-width: 50px) {
+@media all and (max-width: 768px) and (min-width: 50px) {
+    .title {
+        font-size: 20px;
+        letter-spacing: 5px;
+        transform: translate(-50%, calc(-50% - 20px));
+    }
+    .subtitle {
+        font-size: 14px;
+        transform: translate(-50%, calc(-50% + 20px));
+    }
+    .github {
+        bottom: 12%;
+    }
+    .github svg {
+        width: 28px;
+    }
 
-}
-
-@media all and (max-width: 480px) and (min-width: 50px) {
-
+    .projects {
+        bottom: 12%;
+        width: 94%;
+    }
+    .projects .project {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 12px;
+    }
+    .projects .project:not(:last-of-type) { margin-right: 0; }
+    .projects .project-link { padding: 8px 10px; }
 }
