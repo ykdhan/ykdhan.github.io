@@ -3,7 +3,8 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
     sourcemaps = require('gulp-sourcemaps'),
-    scss = require('gulp-sass')(require('node-sass'));
+    scss = require('gulp-sass')(require('node-sass')),
+    browserSync = require('browser-sync').create();
 
 var src  = 'src',
     dist = 'docs';
@@ -20,12 +21,14 @@ gulp.task('js:combine', function () {
         .pipe(concat('yk.js'))
         .pipe(uglify())
         .pipe(rename('yk.min.js'))
-        .pipe(gulp.dest(dist+'/js'));
+        .pipe(gulp.dest(dist+'/js'))
+        .pipe(browserSync.stream());
 });
 
 gulp.task('html:copy', function () {
     return gulp.src(paths.html)
-        .pipe(gulp.dest(dist));
+        .pipe(gulp.dest(dist))
+        .pipe(browserSync.stream());
 });
 
 var scssOptions = {
@@ -43,7 +46,8 @@ gulp.task('scss:compile', function () {
         .pipe(scss(scssOptions).on('error', scss.logError))
         .pipe(sourcemaps.write())
         .pipe(rename('yk.min.css'))
-        .pipe(gulp.dest(dist + '/css'));
+        .pipe(gulp.dest(dist + '/css'))
+        .pipe(browserSync.stream());
 });
  
 gulp.task('watch', function () {
@@ -51,4 +55,12 @@ gulp.task('watch', function () {
     gulp.watch(paths.scss, gulp.series('scss:compile'));
 });
 
-gulp.task('default', gulp.series('html:copy', 'js:combine', 'scss:compile', 'watch'));
+gulp.task('server', function() {
+    browserSync.init({
+        server: {
+            baseDir: dist
+        }
+    });
+});
+
+gulp.task('default', gulp.series('html:copy', 'js:combine', 'scss:compile', gulp.parallel('watch', 'server')));
