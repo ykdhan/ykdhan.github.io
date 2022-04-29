@@ -42,6 +42,7 @@ gulp.task('scss:compile', function () {
         .pipe(sourcemaps.init())
         .pipe(scss(scssOptions).on('error', scss.logError))
         .pipe(sourcemaps.write())
+        .pipe(rename('yk.css'))
         .pipe(gulp.dest(dist + '/css'));
 });
  
