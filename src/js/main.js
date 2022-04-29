@@ -4,13 +4,13 @@ window.YK = {
 
     load: function() {
         const prop = {
-            number: window.innerWidth < 767 ? 80 : 150,
-            size: window.innerWidth < 767 ? 5 : 7,
-            speed: window.innerWidth < 767 ? 0.1 : 0.2,
+            number: YK.width < 767 ? 80 : 150,
+            size: YK.width < 767 ? 5 : 7,
+            speed: YK.width < 767 ? 0.1 : 0.2,
             color: 50,
-            line: window.innerWidth < 767 ? 55 : 80,
-            w: window.innerWidth,
-            h: window.innerHeight,
+            line: YK.width < 767 ? 55 : 80,
+            w: YK.width,
+            h: YK.width,
         }
     
         const chain = (p5) => {
@@ -79,7 +79,7 @@ window.YK = {
     
                             p5.push()
                             p5.stroke(`rgba(${prop.color},${prop.color},${prop.color},${opacity})`);
-                            p5.strokeWeight(window.innerWidth < 767 ? 0.5 : 1)
+                            p5.strokeWeight(YK.width < 767 ? 0.5 : 1)
                             p5.line(l.from.x, l.from.y, l.to.x, l.to.y);
                             p5.pop()
                         }
@@ -94,12 +94,12 @@ window.YK = {
             }
     
             p5.windowResized = () => {
-                prop.number = window.innerWidth < 767 ? 90 : 150
-                prop.size = window.innerWidth < 767 ? 5 : 7
-                prop.speed = window.innerWidth < 767 ? 0.1 : 0.2
-                prop.line = window.innerWidth < 767 ? 50 : 70
-                prop.w = window.innerWidth
-                prop.h = window.innerHeight
+                prop.number = YK.width < 767 ? 90 : 150
+                prop.size = YK.width < 767 ? 5 : 7
+                prop.speed = YK.width < 767 ? 0.1 : 0.2
+                prop.line = YK.width < 767 ? 50 : 70
+                prop.w = YK.width
+                prop.h = YK.height
     
                 p5.resizeCanvas(prop.w * 1.2, prop.h * 1.2)
     
