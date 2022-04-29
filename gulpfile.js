@@ -29,7 +29,7 @@ gulp.task('html:copy', function () {
 });
 
 var scssOptions = {
-    outputStyle : "expanded", // nested, expanded, compact, compressed
+    outputStyle : "compressed", // nested, expanded, compact, compressed
     indentType : "tab",
     indentWidth : 1,
     precision: 6,
@@ -42,7 +42,7 @@ gulp.task('scss:compile', function () {
         .pipe(sourcemaps.init())
         .pipe(scss(scssOptions).on('error', scss.logError))
         .pipe(sourcemaps.write())
-        .pipe(rename('yk.css'))
+        .pipe(rename('yk.min.css'))
         .pipe(gulp.dest(dist + '/css'));
 });
  
