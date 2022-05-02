@@ -13,7 +13,7 @@ var paths = {
     js : src + '/js/**/*.js',
     scss : src + '/scss/**/*.scss',
     assets: src + '/assets/**/*.*',
-    html : src + '/**/*.html'
+    html : src + '/*.html'
 };
 
 gulp.task('js:combine', function () {
@@ -53,6 +53,7 @@ gulp.task('scss:compile', function () {
 gulp.task('watch', function () {
     gulp.watch(paths.js, gulp.series('js:combine'));
     gulp.watch(paths.scss, gulp.series('scss:compile'));
+    gulp.watch(paths.html, gulp.series('html:copy'));
 });
 
 gulp.task('server', function() {

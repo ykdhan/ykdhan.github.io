@@ -1,0 +1,15 @@
+@mixin pc {
+    @media all and (min-width: 1024px) {
+        @content;
+    }
+}
+@mixin ta {
+    @media all and (min-width: 768px) {
+        @content;
+    }
+}
+@mixin mo {
+    @media all and (max-width: 767px) {
+        @content;
+    }
+}

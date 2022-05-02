@@ -9,15 +9,13 @@ window.YK = {
             speed: YK.width < 767 ? 0.1 : 0.2,
             color: 50,
             line: YK.width < 767 ? 55 : 80,
-            w: YK.width,
-            h: YK.width,
         }
     
         const chain = (p5) => {
             class Block {
                 constructor() {
-                    this.x = Math.floor(Math.random() * prop.w)
-                    this.y = Math.floor(Math.random() * prop.h)
+                    this.x = Math.floor(Math.random() * YK.width)
+                    this.y = Math.floor(Math.random() * YK.height)
                     this.dx = (prop.speed + Math.random()) * (Math.random() < 0.5 ? -1 : 1)
                     this.dy = (prop.speed + Math.random()) * (Math.random() < 0.5 ? -1 : 1)
                     this.size = prop.size
@@ -42,7 +40,7 @@ window.YK = {
             var blocks = new Array(prop.number)
     
             p5.setup = () => {
-                p5.createCanvas(prop.w * 1.2, prop.h * 1.2)
+                p5.createCanvas(YK.width * 1.2, YK.height * 1.2)
                 p5.noStroke()
                 p5.rectMode(p5.CENTER)
     
@@ -55,10 +53,10 @@ window.YK = {
                 p5.clear()
                 
                 blocks.forEach((block, index) => {
-                    if (block.x + block.dx > prop.w * 1.2 || block.x + block.dx < 0) {
+                    if (block.x + block.dx > YK.width * 1.2 || block.x + block.dx < 0) {
                         block.changeDirX();
                     }
-                    if (block.y + block.dy > prop.h * 1.2 || block.y + block.dy < 0) {
+                    if (block.y + block.dy > YK.height * 1.2 || block.y + block.dy < 0) {
                         block.changeDirY();
                     }
     
@@ -98,10 +96,8 @@ window.YK = {
                 prop.size = YK.width < 767 ? 5 : 7
                 prop.speed = YK.width < 767 ? 0.1 : 0.2
                 prop.line = YK.width < 767 ? 50 : 70
-                prop.w = YK.width
-                prop.h = YK.height
     
-                p5.resizeCanvas(prop.w * 1.2, prop.h * 1.2)
+                p5.resizeCanvas(YK.width * 1.2, YK.height * 1.2)
     
                 blocks = new Array(prop.number)
                 
@@ -116,8 +112,8 @@ window.YK = {
     },
 
     resize: function() {
-        YK.width = $(window).width();
-        YK.height = $(window).height();
+        YK.width = $(window).width()
+        YK.height = $(window).height()
     }
 };
 
