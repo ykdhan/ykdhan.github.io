@@ -40,7 +40,7 @@ window.YK = {
             var blocks = new Array(prop.number)
     
             p5.setup = () => {
-                p5.createCanvas(YK.width * 1.2, YK.height * 1.2)
+                p5.createCanvas(YK.width * 1.2, YK.height * 1.2).parent('p5')
                 p5.noStroke()
                 p5.rectMode(p5.CENTER)
     
@@ -114,17 +114,26 @@ window.YK = {
     resize: function() {
         YK.width = $(window).width()
         YK.height = $(window).height()
+
+        $('.yk-height').css({ height: YK.height })
     }
 };
 
 
 $(window)
     .on('load', function() {
-        YK.load();
+        YK.load()
+        YK.resize()
+
+        $('.btn_project').on('click', () => {
+            $('.page').animate({
+                scrollTop: $('.section-project').height()
+            }, 300)
+        })
     })
     .on('resize', function() {
-        YK.resize();
+        YK.resize()
     })
     .on('scroll', function() {
-        YK.scroll();
+        YK.scroll()
     });
