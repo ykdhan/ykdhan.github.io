@@ -67,10 +67,12 @@ body {
 .section-project {
     .section-title {
         position: absolute; top: 0; left: 0; transform: translateY(-100%);
-        color: #fff; padding: 20px 32px;
+        color: #fff; padding: 20px 28px;
+        @include mo { padding: 16px 18px; }
     }
     .project {
-        display: block; position: relative; overflow: hidden;
+        display: block; position: relative; overflow: hidden; width: 25%;
+        @include mo { width: 50%; }
     
         &::before {
             content: ''; display: block; position: absolute; left: 0; top: 0; transform: translateY(101%); background: #fff;
@@ -81,18 +83,26 @@ body {
         }
         
         &-list {
-            display: flex; flex-direction: row; text-align: center;
+            display: flex; flex-direction: row;
             @include mo {
                 bottom: 12%; width: 94%;
             }
         }
-        &-link { 
-            display: block; height: 100%; z-index: 1;
-            color: #fff; mix-blend-mode: difference; 
-            padding: 28px 32px;
+
+        .link { 
+            display: block; text-align: left;
+            color: #fff; mix-blend-mode: difference;
+            padding: 28px;
             @include mo {
-                padding: 16px 14px;
+                padding: 16px 18px;
             }
         }
+        .name {
+            color: #fff; margin-bottom: 8px;
+        }
+        .tag {
+            font-size: 12px; color: #aaa;
+        }
+        
     }
 }
