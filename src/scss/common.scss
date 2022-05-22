@@ -27,7 +27,7 @@ main { background-color: $color-bg; }
 
 .section-intro {
     color: $color-main; padding-bottom: 12vw; margin-top: 12vw;
-    @include mobile { padding-bottom: 9vw; margin-top: 9vw; }
+    @include mobile { padding-bottom: 20vw; margin-top: 20vw; }
 
     .title {
         font-size: 21px; font-weight: 700; letter-spacing: 10px;
@@ -58,7 +58,7 @@ main { background-color: $color-bg; }
 
 .section-step {
     padding-bottom: 80px;
-    @include mobile { margin-top: 20px; padding-bottom: 40px; }
+    // @include mobile { margin-top: 20px; padding-bottom: 40px; }
 
     .step {
         display: flex; position: relative; box-sizing: border-box;
@@ -72,14 +72,6 @@ main { background-color: $color-bg; }
         .timeline {
             display: block; font-size: 12px; color: $color-main; margin-bottom: 5px;
         }
-        .link { 
-            display: block; text-align: left;
-            color: #fff; mix-blend-mode: difference;
-            padding: 28px;
-            @include mobile {
-                padding: 16px 18px;
-            }
-        }
         .name {
             color: #fff; margin-bottom: 8px;
         }
@@ -92,7 +84,7 @@ main { background-color: $color-bg; }
 
 .section-project {
     padding-bottom: 80px;
-    @include mobile { margin-top: 20px; padding-bottom: 40px; }
+    // @include mobile { margin-top: 20px; padding-bottom: 40px; }
 
     .section-title {
         padding-top: 4px;
@@ -101,6 +93,11 @@ main { background-color: $color-bg; }
 
     .project {
         display: block; position: relative; overflow: hidden;
+        &:not(:last-of-type) {
+            margin-bottom: 24px;
+            @include mobile { margin-bottom: 18px; }
+        }
+
         
         &-list {
             display: flex; flex-direction: column;
@@ -111,8 +108,7 @@ main { background-color: $color-bg; }
 
         .link { 
             display: inline-block; text-align: left;
-            color: #fff; margin-bottom: 24px;
-            @include mobile { margin-bottom: 18px; }
+            color: #fff; 
 
             &:hover, &:focus {
                 .name::before { transform: translateX(0); transition: transform 0.4s ease-out; }
@@ -142,7 +138,7 @@ main { background-color: $color-bg; }
 
 .section-tech {
     margin-bottom: 12vw;
-    @include mobile { margin-top: 9vw; }
+    @include mobile { margin-bottom: 20vw; }
 
     .tech {
         display: inline-block; position: relative; overflow: hidden;
