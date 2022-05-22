@@ -1,14 +1,14 @@
-@mixin pc {
+@mixin desktop {
     @media all and (min-width: 1024px) {
         @content;
     }
 }
-@mixin ta {
-    @media all and (min-width: 768px) {
+@mixin tablet {
+    @media all and (min-width: 768px) and (max-width: 1023px) {
         @content;
     }
 }
-@mixin mo {
+@mixin mobile {
     @media all and (max-width: 767px) {
         @content;
     }

@@ -3,10 +3,19 @@ window.YK = {
     height: $(window).height(),
 
     load: function() {
+        gsap.to('.loading', {
+            opacity: 0,
+            duration: 0.5,
+            delay: 0.5,
+            onComplete: () => {
+                $('.loading').addClass('off')
+            }
+        })
+
         const prop = {
-            number: YK.width < 767 ? 80 : 150,
-            size: YK.width < 767 ? 5 : 7,
-            speed: YK.width < 767 ? 0.1 : 0.2,
+            number: YK.width < 767 ? 90 : 160,
+            size: YK.width < 767 ? 4 : 5,
+            speed: YK.width < 767 ? 0.08 : 0.2,
             color: 50,
             line: YK.width < 767 ? 55 : 80,
         }
@@ -108,7 +117,6 @@ window.YK = {
         }
     
         new p5(chain)
-
     },
 
     resize: function() {
