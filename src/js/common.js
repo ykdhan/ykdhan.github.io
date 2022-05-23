@@ -1,3 +1,9 @@
+let darkmode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+// if (darkmode) $('html').addClass('dark')
+// window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+//     YK.darkMode()
+// })
+
 window.YK = {
     width: $(window).width(),
     height: $(window).height(),
@@ -16,7 +22,7 @@ window.YK = {
             number: YK.width < 767 ? 90 : 160,
             size: YK.width < 767 ? 4 : 5,
             speed: YK.width < 767 ? 0.08 : 0.2,
-            color: 50,
+            color: (darkmode) ? 50 : 220,
             line: YK.width < 767 ? 55 : 80,
         }
     
@@ -60,6 +66,8 @@ window.YK = {
     
             p5.draw = () => {
                 p5.clear()
+
+                prop.color = (darkmode) ? 50 : 220
                 
                 blocks.forEach((block, index) => {
                     if (block.x + block.dx > YK.width * 1.2 || block.x + block.dx < 0) {
@@ -80,7 +88,7 @@ window.YK = {
                                 to: { x: block2.x, y: block2.y },
                             }
                             let opacity = (Math.abs(block.x - block2.x) + Math.abs(block.y - block2.y)) / 2
-                            opacity = opacity / prop.line
+                            opacity = 1 - (opacity / prop.line)
                             // console.log(opacity)
                             // opacity = 1
     
@@ -124,6 +132,12 @@ window.YK = {
         YK.height = $(window).height()
 
         $('.yk-height').css({ height: YK.height })
+    },
+
+    darkMode: function() {
+        darkmode = !darkmode
+        if (darkmode) $('html').addClass('dark')
+        else $('html').removeClass('dark')
     }
 };
 
