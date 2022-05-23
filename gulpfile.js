@@ -49,6 +49,12 @@ gulp.task('html', function () {
         .pipe(sync.stream());
 });
 
+gulp.task('assets', function () {
+    return gulp.src(srcPath.assets)
+        .pipe(gulp.dest(buildPath.assets))
+        .pipe(sync.stream());
+});
+
 var scssOptions = {
     outputStyle : "compressed", // nested, expanded, compact, compressed
     indentType : "tab",
@@ -72,6 +78,7 @@ gulp.task('watch', function () {
     gulp.watch(srcPath.script, gulp.series('js'));
     gulp.watch(srcPath.style, gulp.series('scss'));
     gulp.watch(srcPath.html, gulp.series('html'));
+    gulp.watch(srcPath.assets, gulp.series('assets'));
 });
 
 gulp.task('server', function() {
@@ -82,4 +89,4 @@ gulp.task('server', function() {
     });
 });
 
-gulp.task('default', gulp.series('html', 'js', 'scss', gulp.parallel('watch', 'server')));
+gulp.task('default', gulp.series('html', 'assets', 'js', 'scss', gulp.parallel('watch', 'server')));

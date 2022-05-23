@@ -19,12 +19,17 @@ window.YK = {
         })
 
         const prop = {
-            number: YK.width < 767 ? 90 : 160,
-            size: YK.width < 767 ? 4 : 5,
-            speed: YK.width < 767 ? 0.08 : 0.2,
             color: (darkmode) ? 50 : 220,
-            line: YK.width < 767 ? 55 : 80,
         }
+
+        const initProp = () => {
+            prop.number = Math.round(YK.width / 10)
+            prop.size = YK.width < 767 ? 4 : 5
+            prop.speed = YK.width < 767 ? 0.08 : 0.2
+            prop.line = YK.width < 767 ? Math.round(YK.width / 3) : Math.round(YK.width / 14)
+        }
+
+        initProp()
     
         const chain = (p5) => {
             class Block {
@@ -80,39 +85,27 @@ window.YK = {
                     block.move()
     
                     blocks.forEach((block2, index2) => {
-                        if (index != index2 && 
-                            Math.abs(block.x - block2.x) < prop.line && 
-                            Math.abs(block.y - block2.y) < prop.line) {
-                            const l = {
-                                from: { x: block.x, y: block.y },
-                                to: { x: block2.x, y: block2.y },
-                            }
-                            let opacity = (Math.abs(block.x - block2.x) + Math.abs(block.y - block2.y)) / 2
-                            opacity = 1 - (opacity / prop.line)
-                            // console.log(opacity)
-                            // opacity = 1
-    
+                        const dist = p5.dist(block.x, block.y, block2.x, block2.y)
+
+                        if (index != index2 && dist < prop.line) {
+                            const opacity = 1 - (dist / prop.line)
                             p5.push()
-                            p5.stroke(`rgba(${prop.color},${prop.color},${prop.color},${opacity})`);
+                            p5.stroke(`rgba(${prop.color},${prop.color},${prop.color},${opacity})`)
                             p5.strokeWeight(YK.width < 767 ? 0.5 : 1)
-                            p5.line(l.from.x, l.from.y, l.to.x, l.to.y);
+                            p5.line(block.x, block.y, block2.x, block2.y)
                             p5.pop()
                         }
                     })
                         
                     p5.push()
                     p5.fill(prop.color)
-                    // p5.rotate(Math.PI * block.rotate + p5.frameCount)
                     p5.rect(block.x, block.y, block.size, block.size)
                     p5.pop()
                 })
             }
     
             p5.windowResized = () => {
-                prop.number = YK.width < 767 ? 90 : 150
-                prop.size = YK.width < 767 ? 5 : 7
-                prop.speed = YK.width < 767 ? 0.1 : 0.2
-                prop.line = YK.width < 767 ? 50 : 70
+                initProp()
     
                 p5.resizeCanvas(YK.width * 1.2, YK.height * 1.2)
     
@@ -146,12 +139,6 @@ $(window)
     .on('load', function() {
         YK.load()
         YK.resize()
-
-        $('.btn_project').on('click', () => {
-            $('.page').animate({
-                scrollTop: $('.section-project').height()
-            }, 300)
-        })
     })
     .on('resize', function() {
         YK.resize()
