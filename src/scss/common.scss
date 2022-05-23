@@ -65,7 +65,7 @@ main { background-color: var(--color-bg); }
         margin-right: 30px; padding-right: 20px; margin-bottom: 30px;
         &:first-child { margin-bottom: 0; }
         &:last-child { 
-            font-size: 16px; 
+            font-size: 110%;
             .name { font-weight: 700; }
         }
     
