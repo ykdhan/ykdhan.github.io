@@ -53,7 +53,7 @@ gulp.task('watch', function () {
 
 gulp.task('uglify', function () {
   return gulp.src(paths.js)
-    .pipe(concat('main.js'))
+    .pipe(concat('yk.min.js'))
 		.pipe(uglify())
 		.pipe(gulp.dest(paths.build))
     .pipe(sync.reload({stream:true}));
