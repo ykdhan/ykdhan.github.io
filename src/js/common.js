@@ -26,7 +26,7 @@ window.YK = {
         })
 
         ykP5.load()
-        ykThree.load()
+        // ykThree.load()
     },
 
     resize: function() {
