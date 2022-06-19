@@ -124,6 +124,8 @@ main { background-color: var(--color-bg); }
 
     .project {
         display: block; position: relative; overflow: hidden;
+        @include mobile { margin-left: -4px; }
+
         &:not(:last-of-type) {
             margin-bottom: 24px;
             @include mobile { margin-bottom: 18px; }
@@ -166,21 +168,35 @@ main { background-color: var(--color-bg); }
 
 
 .section-tech {
-    padding-bottom: 80px;
+    // padding-bottom: 80px;
+    margin-bottom: 12vw;
+    @include mobile { margin-bottom: 20vw; }
 
     .tech {
-        display: inline-block; position: relative; overflow: hidden;
-        margin-right: 10px;
+        display: inline-block; position: relative;
+        margin-right: 10px; margin-bottom: 10px;
 
         &.strong {
             font-weight: 700; font-size: 110%;
+        }
+        &.new {
+            &::before {
+                content: 'NEW'; position: absolute; top: 0; left: 0; 
+                font-size: 12px; line-height: 1.5; color: var(--color-sub);
+                transform: translateY(-100%);
+                @include mobile { font-size: 8px; }
+            }
         }
         span { 
             display: inline-block;
             color: var(--color-main);
         }
-    }
 
+        &-list {
+            padding-right: 20px;
+            @include mobile { padding-right: 10px; }
+        }
+    }
 }
 
 

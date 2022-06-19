@@ -482,14 +482,14 @@ main {
 }
 
 .section-tech {
-  padding-bottom: 80px;
+  margin-bottom: 12vw;
 }
 
 .section-tech .tech {
   display: inline-block;
   position: relative;
-  overflow: hidden;
   margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .section-tech .tech.strong {
@@ -497,9 +497,24 @@ main {
   font-size: 110%;
 }
 
+.section-tech .tech.new::before {
+  content: "NEW";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-sub);
+  transform: translateY(-100%);
+}
+
 .section-tech .tech span {
   display: inline-block;
   color: var(--color-main);
+}
+
+.section-tech .tech-list {
+  padding-right: 20px;
 }
 
 .section-play {
@@ -594,6 +609,10 @@ main {
     padding-top: 0;
   }
 
+  .section-project .project {
+    margin-left: -4px;
+  }
+
   .section-project .project:not(:last-of-type) {
     margin-bottom: 18px;
   }
@@ -601,6 +620,18 @@ main {
   .section-project .project-list {
     bottom: 12%;
     width: 94%;
+  }
+
+  .section-tech {
+    margin-bottom: 20vw;
+  }
+
+  .section-tech .tech.new::before {
+    font-size: 8px;
+  }
+
+  .section-tech .tech-list {
+    padding-right: 10px;
   }
 
   .section-play {

@@ -28,10 +28,10 @@ class Block {
 export const ykP5 = {
     prop: function() {
         this.color = (YK.darkmode) ? 50 : 220
-        this.number = Math.round(YK.width / 10)
-        this.size = YK.width < 767 ? 4 : 5
-        this.speed = YK.width < 767 ? 0.08 : 0.2
-        this.line = YK.width < 767 ? Math.round(YK.width / 3) : Math.round(YK.width / 14)
+        this.number = Math.round(YK.width / 9)
+        this.size = YK.width < 768 ? 4 : 5
+        this.speed = YK.width < 768 ? 0.08 : 0.2
+        this.line = YK.width < 768 ? Math.round(YK.width / 3) : Math.round(YK.width / 8)
     },
 
     load: function() {
@@ -73,14 +73,15 @@ export const ykP5 = {
                             const opacity = 1 - (dist / _this.line)
                             p5.push()
                             p5.stroke(`rgba(${_this.color},${_this.color},${_this.color},${opacity})`)
-                            p5.strokeWeight(YK.width < 767 ? 0.5 : 1)
+                            p5.strokeWeight(YK.width < 768 ? 0.5 : 1)
                             p5.line(block.x, block.y, block2.x, block2.y)
                             p5.pop()
                         }
                     })
                         
                     p5.push()
-                    p5.fill(_this.color)
+                    const color = p5.color(_this.color, 0)
+                    p5.fill(color)
                     p5.rect(block.x, block.y, block.size, block.size)
                     p5.pop()
                 })
