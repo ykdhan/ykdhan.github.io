@@ -23,3 +23,43 @@
         @content;
     }
 }
+
+@mixin type-main {
+    font-size: 16px;
+    font-weight: 700;
+}
+@mixin type-big {
+    font-size: 24px;
+    font-weight: 700;
+}
+@mixin type-normal {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+@mixin type-black {
+    color: var(--color-black);
+}
+@mixin type-white {
+    color: var(--color-white);
+}
+@mixin type-gray {
+    color: var(--color-gray);
+}
+
+@mixin bg-black {
+    background-color: var(--color-black);
+}
+@mixin bg-white {
+    background-color: var(--color-white);
+}
+
+@mixin absolute-center {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+}
+@mixin center-x {
+    position: relative; left: 50%; transform: translateX(-50%);
+}
+@mixin center-y {
+    position: relative; top: 50%; transform: translateY(-50%);
+}

@@ -1,6 +1,6 @@
 @import './reset';
-@import './fonts';
 @import './mixins';
+@import './fonts';
 @import './variables';
 @import './layout';
 
@@ -8,10 +8,11 @@ html, body {
     padding: 0; margin: 0; overflow: hidden; width: 100%; height: 100%;
 }
 body {
-    font-family: 'NEXON Lv1 Gothic OTF'; font-size: 14px; font-weight: 400; line-height: 1.4;
-    @include mobile { font-size: 12px; line-height: 1.3; }
+    font-family: 'NEXON Lv1 Gothic OTF'; font-size: 15px; font-weight: 400; line-height: 1.4;
+    color: var(--color-white);
+    @include mobile { font-size: 13px; line-height: 1.3; }
 }
-main { background-color: var(--color-bg); }
+main { background-color: var(--color-black); }
 
 #p5 {
     position: fixed;
@@ -25,209 +26,85 @@ main { background-color: var(--color-bg); }
     }
 }
 
-.section-intro {
-    color: var(--color-main); padding-bottom: 12vw; margin-top: 12vw;
-    @include mobile { padding-bottom: 20vw; margin-top: 20vw; }
+.package {
+    position: fixed; top: 0; left: 0; width: 100vw; height: var(--vh);
+    display: flex; align-items: center; justify-content: center;
+    pointer-events: none; z-index: 10;
+
+    &-title {
+        display: flex; width: 100px; height: 100px;
+        align-items: center; justify-content: center; z-index: 1;
+        @include bg-white;
+        @include mobile { width: 80px; height: 80px; }
+
+        span {
+            font-size: 13px; color: var(--color-black);
+            @include mobile { font-size: 12px; }
+        }
+    }
+    &-bg {
+        position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+        @include bg-white;
+
+        &.hide { opacity: 0; }
+    }
+    &-guide {
+        position: absolute; top: 80%;
+        font-size: 14px; color: var(--color-black); opacity: 0.5;
+        @include mobile { font-size: 12px; }
+    }
+}
+
+.block {
+    --margin: 15px;
+    position: relative; display: inline-block; vertical-align: middle;
+    margin-bottom: var(--margin); margin-right: var(--margin); cursor: default;
+    @include mobile { --margin: 10px; }
+
+    &-list {
+        font-size: 0; margin-right: calc(-1 * var(--margin));
+    }
+    &-inner {
+        display: flex; flex-direction: column; justify-content: center; align-items: center;
+        text-align: center; word-break: keep-all; box-sizing: border-box;
+        width: 150px; height: 150px; padding: 10px;
+        border: 1px solid var(--color-white);
+        @include mobile { width: 120px; height: 120px; padding: 5px; }
+
+        &.back {
+            position: absolute; top: 0; left: 0;
+            opacity: 0; visibility: hidden;
+            transition: opacity 0.4s ease-out, visibility 0.4s ease-out;
+            background-color: var(--color-white);
+        }
+    }
+
+    &.active {
+        .block-inner.back { opacity: 1; visibility: visible; }           
+    }
 
     .title {
-        font-size: 21px; font-weight: 700; letter-spacing: 10px;
-        margin-bottom: 24px;
-        @include mobile {
-            font-size: 20px; letter-spacing: 6px; margin-bottom: 18px;
-            max-width: 300px;
-        }
-    }
-    .subtitle {
-        font-size: 16px;
+        font-size: 15px; color: var(--color-white);
         @include mobile { font-size: 14px; }
     }
-    .link-github {
-        display: inline-block; margin-left: 10px; vertical-align: middle;
-        svg {
-            width: 20px;
-            @include mobile { width: 16px; }
-
-            .color { fill: var(--color-main); transition: fill 0.4s ease-out; }
-        }
-
-        &:hover {
-            svg .color { fill: var(--color-sub); }
-        }
+    .sub {
+        font-size: 12px; margin-top: 8px;
+    }
+    .desc {
+        font-size: 13px; color: var(--color-black);
+        @include mobile { font-size: 12px; }
+    }
+    .tag {
+        font-size: 10px; color: var(--color-black);
+        margin-right: 5px; margin-bottom: 5px;
     }
 }
 
+// background: -webkit-linear-gradient(104deg, var(--color-gray) 20%, var(--color-white) 70%);
+// background-clip: text; -webkit-text-fill-color: transparent; -webkit-box-decoration-break: clone;
+.github {
+    width: 30px;
+    @include mobile { width: 24px; }
 
-.section-info {
-    padding-bottom: 80px;
-
-    .info {
-        display: flex; position: relative; box-sizing: border-box;
-        margin-right: 30px; padding-right: 20px; margin-bottom: 30px;
-        &:last-child { margin-bottom: 0; }
-    
-        &-list {
-            display: flex; flex-direction: column; 
-        }
-        &-inner {}
-        .timeline {
-            display: inline-block; font-size: 12px; color: var(--color-sub); margin-left: 8px;
-            vertical-align: middle;
-        }
-        .name {
-            color: var(--color-main); margin-bottom: 8px;
-        }
-        .tag {
-            font-size: 12px; color: var(--color-sub);
-        }
-        
-    }
-}
-
-.section-step {
-    padding-bottom: 80px;
-    // @include mobile { margin-top: 20px; padding-bottom: 40px; }
-
-    .step {
-        display: flex; position: relative; box-sizing: border-box;
-        margin-right: 30px; padding-right: 20px; margin-bottom: 30px;
-        &:first-child { margin-bottom: 0; }
-        &:last-child { 
-            font-size: 110%;
-            .name { font-weight: 700; }
-        }
-    
-        &-list {
-            display: flex; flex-direction: column-reverse; 
-        }
-        &-inner {}
-        .timeline {
-            display: block; font-size: 12px; color: var(--color-main); margin-bottom: 5px;
-        }
-        .name {
-            color: var(--color-main); margin-bottom: 8px;
-        }
-        .tag {
-            font-size: 12px; color: var(--color-sub);
-        }
-        
-    }
-}
-
-.section-project {
-    padding-bottom: 80px;
-    // @include mobile { margin-top: 20px; padding-bottom: 40px; }
-
-    .section-title {
-        padding-top: 4px;
-        @include mobile { padding-top: 0; }
-    }
-
-    .project {
-        display: block; position: relative; overflow: hidden;
-        @include mobile { margin-left: -4px; }
-
-        &:not(:last-of-type) {
-            margin-bottom: 24px;
-            @include mobile { margin-bottom: 18px; }
-        }
-        
-        &-list {
-            display: flex; flex-direction: column;
-            @include mobile {
-                bottom: 12%; width: 94%;
-            }
-        }
-        .link { 
-            display: inline-block; text-align: left;
-            color: var(--color-main); 
-
-            &:hover, &:focus {
-                .name::before { transform: translateX(0); transition: transform 0.4s ease-out; }
-            }
-        }
-        .name {
-            position: relative; display: inline-block; overflow: hidden;
-            padding: 4px; margin-bottom: 4px; 
-            span { color: var(--color-main); }
-            &::before {
-                content: ''; display: block; position: absolute; left: 0; top: 0; transform: translateX(-101%); background: var(--color-main);
-                width: 100%; height: 100%; transition: transform 0.2s ease-out;
-                mix-blend-mode: difference; 
-            }
-        }
-        .tags {
-            color: var(--color-sub); padding-left: 4px;
-            span { 
-                white-space: nowrap; margin-bottom: 2px; 
-                font-size: 12px; line-height: 1.5;
-                &:not(:last-of-type) { margin-right: 4px; }
-            }
-        }
-    }
-}
-
-
-.section-tech {
-    // padding-bottom: 80px;
-    margin-bottom: 12vw;
-    @include mobile { margin-bottom: 20vw; }
-
-    .tech {
-        display: inline-block; position: relative;
-        margin-right: 10px; margin-bottom: 10px;
-
-        &.strong {
-            font-weight: 700; font-size: 110%;
-        }
-        &.new {
-            &::before {
-                content: 'NEW'; position: absolute; top: 0; left: 0; 
-                font-size: 12px; line-height: 1.5; color: var(--color-sub);
-                transform: translateY(-100%);
-                @include mobile { font-size: 8px; }
-            }
-        }
-        span { 
-            display: inline-block;
-            color: var(--color-main);
-        }
-
-        &-list {
-            padding-right: 20px;
-            @include mobile { padding-right: 10px; }
-        }
-    }
-}
-
-
-.section-play {
-    margin-bottom: 12vw;
-    @include mobile { margin-bottom: 20vw; }
-
-    .section-title {
-        padding-top: 4px;
-        @include mobile { padding-top: 0; }
-    }
-
-    .play {
-        display: block; position: relative;
-        width: 45%; height: 360px;
-        margin-bottom: 5%; margin-right: 5%;
-        cursor: grab;
-        &.on {
-            z-index: 1;
-        }
-        
-        &-list {
-            display: flex; flex-direction: row; flex-wrap: wrap;
-        }
-        &-inner {
-            border: 1px solid var(--color-sub); border-radius: 20px;
-            width: 100%; height: 100%; overflow: hidden; color: var(--color-sub);
-            display: flex; align-items: center; justify-content: center;
-        }
-        &-canvas {
-            width: 100%; height: 100%;
-        }
-    }
+    .color { fill: var(--color-white); transition: fill 0.4s ease-out; }
 }
