@@ -52,6 +52,10 @@ main { background-color: var(--color-black); }
         position: absolute; top: 80%;
         font-size: 14px; color: var(--color-black); opacity: 0.5;
         @include mobile { font-size: 12px; }
+
+        span {
+            animation: blink 2.4s infinite;
+        }
     }
 }
 
@@ -113,4 +117,11 @@ main { background-color: var(--color-black); }
     @include mobile { width: 24px; }
 
     .color { fill: var(--color-white); transition: fill 0.4s ease-out; }
+}
+
+@keyframes blink {
+    0% { opacity: 0; }
+    40% { opacity: 1; }
+    60% { opacity: 1; }
+    100% { opacity: 0; }
 }

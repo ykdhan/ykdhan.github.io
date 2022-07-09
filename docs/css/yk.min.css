@@ -391,6 +391,11 @@ main {
   opacity: 0.5;
 }
 
+.package-guide span {
+  -webkit-animation: blink 2.4s infinite;
+  animation: blink 2.4s infinite;
+}
+
 .block {
   --margin: 15px;
   position: relative;
@@ -472,6 +477,42 @@ main {
 .github .color {
   fill: var(--color-white);
   transition: fill 0.4s ease-out;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 @media all and (max-width: 767px) {
