@@ -10,7 +10,7 @@
         display: block; box-sizing: border-box;
         padding: 0 100px 100px 200px;
         @include mobile {
-            padding-bottom: 70px; padding-left: 100px; padding-right: 20px;
+            padding-bottom: 70px; padding-left: 95px; padding-right: 5px;
         }
     }
     &-section {
