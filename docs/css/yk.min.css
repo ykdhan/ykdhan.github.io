@@ -278,7 +278,6 @@ button {
 }
 
 .sticky-inner {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   height: var(--vh);
