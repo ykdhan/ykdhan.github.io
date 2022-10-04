@@ -227,7 +227,69 @@ button {
 :root {
   --color-black: #1f1f1f;
   --color-white: #fcfcfc;
-  --color-gray: #4f4f4f;
+  --color-gray400: #4f4f4f;
+  --color-gray700: #2f2f2f;
+  --padding: 14px;
+  --border-radius: 12px;
+  --max-width: 980px;
+}
+
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: rgba(var(--color-black), 0.6);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+.header .inner {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--padding);
+  padding-top: calc(var(--padding) * 3);
+  box-sizing: border-box;
+  max-width: var(--max-width);
+}
+
+.header .logo {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.header .nav {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header .nav .item {
+  display: inline-block;
+}
+
+.header .nav .item + .item {
+  margin-left: var(--padding);
+}
+
+.header .github {
+  display: inline-block;
+  vertical-align: middle;
+  width: 22px;
+  margin-left: var(--padding);
+  transition: opacity 0.3s ease-out;
+}
+
+.header .github .color {
+  fill: var(--color-white);
+  transition: fill 0.4s ease-out;
+}
+
+.header .github .svg {
+  width: 100%;
 }
 
 .page-wrap {
@@ -247,9 +309,12 @@ button {
 }
 
 .page-inner {
-  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--padding);
+  padding-top: 100px;
   box-sizing: border-box;
-  padding: 0 100px 100px 200px;
+  max-width: var(--max-width);
 }
 
 .page-section {
@@ -267,8 +332,12 @@ button {
 }
 
 .section-title {
-  font-weight: 700;
   margin-bottom: 20px;
+  background-color: var(--color-gray700);
+  padding: var(--padding) calc(var(--padding) * 2);
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: var(--border-radius);
 }
 
 .sticky-wrap {
@@ -422,6 +491,7 @@ main {
   height: 150px;
   padding: 10px;
   border: 1px solid var(--color-white);
+  border-radius: var(--border-radius);
 }
 
 .block-inner.back {
@@ -483,14 +553,13 @@ main {
   background-color: var(--color-black);
 }
 
-.github {
-  width: 30px;
-  pointer-events: none;
+.section-intro {
+  padding-top: 120px;
 }
 
-.github .color {
-  fill: var(--color-white);
-  transition: fill 0.4s ease-out;
+.section-intro .banner {
+  font-size: 24px;
+  font-weight: 700;
 }
 
 @-webkit-keyframes blink {
@@ -535,12 +604,6 @@ main {
     left: 0;
     top: -10px;
     transform: translateY(-100%);
-  }
-
-  .page-inner {
-    padding-bottom: 70px;
-    padding-left: 95px;
-    padding-right: 5px;
   }
 
   .page-section {
@@ -593,10 +656,6 @@ main {
 
   .block .desc.star {
     font-size: 14px;
-  }
-
-  .github {
-    width: 24px;
   }
 }
 

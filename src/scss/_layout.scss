@@ -1,3 +1,43 @@
+.header {
+    position: sticky; top: 0; left: 0; z-index: 1000;
+    width: 100%; 
+    background-color: rgba(var(--color-black), 0.6); backdrop-filter: blur(8px);
+
+    .inner {
+        display: flex; width: 100%; margin: 0 auto;
+        padding: var(--padding); padding-top: calc(var(--padding) * 3);
+        box-sizing: border-box;
+        @include max-width;
+    }
+
+    .logo {
+        @include type-main;
+    }
+
+    .nav {
+        flex: 1; display: flex; justify-content: flex-end;
+
+        .item {
+            display: inline-block;
+            + .item {
+                margin-left: var(--padding);
+            }
+        }
+    }
+
+    .github {
+        display: inline-block; vertical-align: middle; 
+        width: 22px; margin-left: var(--padding);
+        transition: opacity 0.3s ease-out;
+    
+        .color { fill: var(--color-white); transition: fill 0.4s ease-out; }
+
+        .svg {
+            width: 100%;
+        }
+    }
+}
+
 .page {
     &-wrap {
         position: fixed;
@@ -7,11 +47,10 @@
         &::-webkit-scrollbar { display: none; }
     }
     &-inner {
-        display: block; box-sizing: border-box;
-        padding: 0 100px 100px 200px;
-        @include mobile {
-            padding-bottom: 70px; padding-left: 95px; padding-right: 5px;
-        }
+        width: 100%; margin: 0 auto;
+        padding: 0 var(--padding); padding-top: 100px;
+        box-sizing: border-box;
+        @include max-width;
     }
     &-section {
         margin-bottom: 100px;
@@ -30,7 +69,11 @@
         }
     }
     &-title {
-        font-weight: 700; margin-bottom: 20px;
+        margin-bottom: 20px;
+        background-color: var(--color-gray700);
+        padding: var(--padding) calc(var(--padding) * 2);
+        @include type-main;
+        @include border-radius;
     }
 }
 

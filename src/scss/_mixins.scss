@@ -63,3 +63,10 @@
 @mixin center-y {
     position: relative; top: 50%; transform: translateY(-50%);
 }
+
+@mixin border-radius {
+    border-radius: var(--border-radius);
+}
+@mixin max-width {
+    max-width: var(--max-width);
+}

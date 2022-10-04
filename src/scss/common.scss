@@ -75,6 +75,7 @@ main { background-color: var(--color-black); }
         width: 150px; height: 150px; padding: 10px;
         border: 1px solid var(--color-white);
         @include mobile { width: 120px; height: 120px; padding: 5px; }
+        @include border-radius;
 
         &.back {
             position: absolute; top: 0; left: 0;
@@ -123,11 +124,13 @@ main { background-color: var(--color-black); }
 
 // background: -webkit-linear-gradient(104deg, var(--color-gray) 20%, var(--color-white) 70%);
 // background-clip: text; -webkit-text-fill-color: transparent; -webkit-box-decoration-break: clone;
-.github {
-    width: 30px; pointer-events: none;
-    @include mobile { width: 24px; }
 
-    .color { fill: var(--color-white); transition: fill 0.4s ease-out; }
+.section-intro {
+    padding-top: 120px;
+
+    .banner {
+        @include type-big;
+    }
 }
 
 @keyframes blink {
