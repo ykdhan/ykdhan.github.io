@@ -48,13 +48,12 @@
     }
     &-inner {
         width: 100%; margin: 0 auto;
-        padding: 0 var(--padding); padding-top: 100px;
+        padding: 100px var(--padding);
         box-sizing: border-box;
         @include max-width;
     }
     &-section {
-        margin-bottom: 100px;
-        @include mobile { margin-bottom: 60px; }
+        margin-bottom: var(--padding);
     }
 }
 
@@ -69,9 +68,9 @@
         }
     }
     &-title {
-        margin-bottom: 20px;
         background-color: var(--color-gray700);
         padding: var(--padding) calc(var(--padding) * 2);
+        margin-bottom: var(--padding);
         @include type-main;
         @include border-radius;
     }

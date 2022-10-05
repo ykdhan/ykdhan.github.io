@@ -61,19 +61,22 @@ main { background-color: var(--color-black); }
 }
 
 .block {
-    --margin: 15px;
-    position: relative; display: inline-block; vertical-align: middle;
-    margin-bottom: var(--margin); margin-right: var(--margin); cursor: default;
-    @include mobile { --margin: 10px; }
+    position: relative; vertical-align: middle;
+    flex: 1 25%;
+    box-sizing: border-box;
+    cursor: pointer;
+    @include mobile {
+        flex: 1 33%;
+    }
 
     &-list {
-        font-size: 0; margin-right: calc(-1 * var(--margin));
+        display: flex; flex-wrap: wrap; gap: var(--padding);
     }
     &-inner {
         display: flex; flex-direction: column; justify-content: center; align-items: center;
         text-align: center; word-break: keep-all; box-sizing: border-box;
-        width: 150px; height: 150px; padding: 10px;
-        border: 1px solid var(--color-white);
+        width: 100%; height: 150px; padding: 10px;
+        background-color: var(--color-gray700);
         @include mobile { width: 120px; height: 120px; padding: 5px; }
         @include border-radius;
 

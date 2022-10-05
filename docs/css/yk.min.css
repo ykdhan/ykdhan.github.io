@@ -311,14 +311,13 @@ button {
 .page-inner {
   width: 100%;
   margin: 0 auto;
-  padding: 0 var(--padding);
-  padding-top: 100px;
+  padding: 100px var(--padding);
   box-sizing: border-box;
   max-width: var(--max-width);
 }
 
 .page-section {
-  margin-bottom: 100px;
+  margin-bottom: var(--padding);
 }
 
 .section-wrap {
@@ -332,9 +331,9 @@ button {
 }
 
 .section-title {
-  margin-bottom: 20px;
   background-color: var(--color-gray700);
   padding: var(--padding) calc(var(--padding) * 2);
+  margin-bottom: var(--padding);
   font-size: 16px;
   font-weight: 700;
   border-radius: var(--border-radius);
@@ -466,18 +465,17 @@ main {
 }
 
 .block {
-  --margin: 15px;
   position: relative;
-  display: inline-block;
   vertical-align: middle;
-  margin-bottom: var(--margin);
-  margin-right: var(--margin);
-  cursor: default;
+  flex: 1 25%;
+  box-sizing: border-box;
+  cursor: pointer;
 }
 
 .block-list {
-  font-size: 0;
-  margin-right: calc(-1 * var(--margin));
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--padding);
 }
 
 .block-inner {
@@ -488,10 +486,10 @@ main {
   text-align: center;
   word-break: keep-all;
   box-sizing: border-box;
-  width: 150px;
+  width: 100%;
   height: 150px;
   padding: 10px;
-  border: 1px solid var(--color-white);
+  background-color: var(--color-gray700);
   border-radius: var(--border-radius);
 }
 
@@ -607,10 +605,6 @@ main {
     transform: translateY(-100%);
   }
 
-  .page-section {
-    margin-bottom: 60px;
-  }
-
   .section-wrap {
     margin: 0 8vw;
   }
@@ -638,7 +632,7 @@ main {
   }
 
   .block {
-    --margin: 10px;
+    flex: 1 33%;
   }
 
   .block-inner {
