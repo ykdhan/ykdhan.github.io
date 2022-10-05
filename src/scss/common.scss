@@ -61,23 +61,30 @@ main { background-color: var(--color-black); }
 }
 
 .block {
-    position: relative; vertical-align: middle;
-    flex: 1 25%;
-    box-sizing: border-box;
-    cursor: pointer;
+    position: relative; vertical-align: middle; box-sizing: border-box; cursor: pointer;
+    width: calc(33% - var(--padding) / 2);
     @include mobile {
-        flex: 1 33%;
+        width: calc(50% - var(--padding) / 2);
     }
 
     &-list {
         display: flex; flex-wrap: wrap; gap: var(--padding);
+
+        &.half {
+            .block {
+                width: calc(50% - var(--padding) / 2);
+                @include mobile {
+                    width: 100%;
+                }
+            }
+        }
     }
     &-inner {
         display: flex; flex-direction: column; justify-content: center; align-items: center;
         text-align: center; word-break: keep-all; box-sizing: border-box;
-        width: 100%; height: 150px; padding: 10px;
+        width: 100%; height: 100px; padding: 10px;
         background-color: var(--color-gray700);
-        @include mobile { width: 120px; height: 120px; padding: 5px; }
+        @include mobile { height: 120px; padding: 6px; }
         @include border-radius;
 
         &.back {
@@ -129,7 +136,7 @@ main { background-color: var(--color-black); }
 // background-clip: text; -webkit-text-fill-color: transparent; -webkit-box-decoration-break: clone;
 
 .section-intro {
-    padding-top: 120px;
+    padding: 60px 0;
 
     .banner {
         @include type-big;
