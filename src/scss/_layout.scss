@@ -1,99 +1,165 @@
 .header {
-    position: sticky; top: 0; left: 0; z-index: 1000;
-    width: 100%; 
-    background-color: rgba(var(--color-black), 0.6); backdrop-filter: blur(8px);
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	width: 100%;
+	background-color: var(--color-white);
+	border-bottom: 1px solid var(--gray2);
+	// background-color: rgba(var(--color-black), 0.6);
+	// backdrop-filter: blur(5px);
+	transform: translateY(-100%);
+	transition: transform 0.4s ease-out;
 
-    .inner {
-        display: flex; width: 100%; margin: 0 auto;
-        padding: var(--padding); padding-top: calc(var(--padding) * 3);
-        box-sizing: border-box;
-        @include max-width;
-    }
+	&.on {
+		transform: translateY(0);
+	}
 
-    .logo {
-        @include type-main;
-    }
+	.inner {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		margin: 0 auto;
+		padding: calc(var(--padding) * 1.5) var(--padding);
+		box-sizing: border-box;
+		@include content-width;
+	}
 
-    .nav {
-        flex: 1; display: flex; justify-content: flex-end;
+	.logo {
+		@include type-main;
+		color: var(--gray8);
+	}
 
-        .item {
-            display: inline-block;
-            + .item {
-                margin-left: var(--padding);
-            }
-        }
-    }
+	.nav {
+		flex: 1;
+		display: flex;
+		justify-content: flex-end;
 
-    .github {
-        display: inline-block; vertical-align: middle; 
-        width: 22px; margin-left: var(--padding);
-        transition: opacity 0.3s ease-out;
-    
-        .color { fill: var(--color-white); transition: fill 0.4s ease-out; }
+		.item {
+			display: inline-block;
+			+ .item {
+				margin-left: var(--padding);
+			}
+		}
+	}
 
-        .svg {
-            width: 100%;
-        }
-    }
+	.github {
+		display: inline-block;
+		vertical-align: middle;
+		width: 22px;
+		margin-left: var(--padding);
+
+		.color {
+			// fill: var(--color-white);
+			fill: var(--gray8);
+			transition: fill 0.4s ease-out;
+		}
+
+		.svg {
+			width: 100%;
+		}
+
+		&:hover,
+		&:focus {
+			.color {
+				fill: var(--gray6);
+			}
+		}
+	}
 }
 
 .page {
-    &-wrap {
-        position: fixed;
-        top: 0; left: 0; width: 100%; height: 100%;
-        overflow-y: scroll; z-index: 1;
-        -ms-overflow-style: none; scrollbar-width: none; 
-        &::-webkit-scrollbar { display: none; }
-    }
-    &-inner {
-        width: 100%; margin: 0 auto;
-        padding: 100px var(--padding);
-        box-sizing: border-box;
-        @include max-width;
-    }
-    &-section {
-        margin-bottom: var(--padding);
-    }
+	&-wrap {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		overflow-y: scroll;
+		z-index: 1;
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+	&-inner {
+		width: 100%;
+		margin: 0 auto;
+		padding: 150px 0;
+		box-sizing: border-box;
+		@include max-width;
+	}
+	&-section {
+		margin: 0 auto;
+		padding: var(--padding);
+		box-sizing: border-box;
+		@include content-width;
+
+		& + .page-section {
+			margin-top: 150px;
+		}
+	}
+	&-title {
+		margin-bottom: 14px;
+		color: var(--gray8);
+		@include type-main;
+	}
 }
 
 .section {
-    &-wrap {
-        position: relative; max-width: 1024px; margin: 0 auto;
-        @include mobile { margin: 0 8vw; }
-    }
-    &-inner {
-        &.inner-padding {
-            padding: 30px 45px;
-        }
-    }
-    &-title {
-        background-color: var(--color-gray700);
-        padding: var(--padding) calc(var(--padding) * 2);
-        margin-bottom: var(--padding);
-        @include type-main;
-        @include border-radius;
-    }
+	&-wrap {
+		position: relative;
+		margin: 0 auto;
+		@include content-width;
+		@include mobile {
+			margin: 0 8vw;
+		}
+	}
+	&-inner {
+		&.inner-padding {
+			padding: 30px 45px;
+		}
+	}
+	&-title {
+		background-color: var(--gray1);
+		padding: var(--padding) calc(var(--padding) * 2);
+		margin-bottom: var(--padding);
+		@include type-main;
+		@include border-radius;
+	}
 }
 
 .sticky {
-    &-wrap {
-        position: relative; width: 100%; height: calc(2 * var(--vh));
-    }
-    &-inner {
-        position: sticky; top: 0; height: var(--vh);
-    }
+	&-wrap {
+		position: relative;
+		width: 100%;
+		height: calc(2 * var(--vh));
+	}
+	&-inner {
+		position: sticky;
+		top: 0;
+		height: var(--vh);
+	}
 }
 
 .loading {
-    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-    z-index: 99;
-    &.off { display: none; }
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 99;
+	&.off {
+		display: none;
+	}
 
-    &-inner {
-        position: relative; width: 100%; height: 100%;
-        @include dark {
-            background-color: var(--color-bg); 
-        }
-    }
+	&-inner {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		@include dark {
+			background-color: var(--color-bg);
+		}
+	}
 }

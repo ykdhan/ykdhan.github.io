@@ -1,17 +1,17 @@
 @mixin desktop {
-    @media all and (min-width: 1024px) {
-        @content;
-    }
+	@media all and (min-width: 1024px) {
+		@content;
+	}
 }
 @mixin tablet {
-    @media all and (min-width: 768px) and (max-width: 1023px) {
-        @content;
-    }
+	@media all and (min-width: 768px) and (max-width: 1023px) {
+		@content;
+	}
 }
 @mixin mobile {
-    @media all and (max-width: 767px) {
-        @content;
-    }
+	@media all and (max-width: 767px) {
+		@content;
+	}
 }
 // @mixin dark {
 //     html.dark {
@@ -19,54 +19,67 @@
 //     }
 // }
 @mixin dark {
-    @media (prefers-color-scheme: dark) {
-        @content;
-    }
+	@media (prefers-color-scheme: dark) {
+		@content;
+	}
 }
 
 @mixin type-main {
-    font-size: 16px;
-    font-weight: 700;
+	font-size: 16px;
+	font-weight: 700;
+	color: var(--gray8);
 }
 @mixin type-big {
-    font-size: 24px;
-    font-weight: 700;
+	font-size: 18px;
+	font-weight: 700;
+	color: var(--gray8);
 }
 @mixin type-normal {
-    font-size: 13px;
-    font-weight: 400;
+	font-size: 13px;
+	font-weight: 400;
+	color: var(--gray6);
 }
 
 @mixin type-black {
-    color: var(--color-black);
+	color: var(--color-black);
 }
 @mixin type-white {
-    color: var(--color-white);
+	color: var(--color-white);
 }
 @mixin type-gray {
-    color: var(--color-gray);
+	color: var(--color-gray);
 }
 
 @mixin bg-black {
-    background-color: var(--color-black);
+	background-color: var(--color-black);
 }
 @mixin bg-white {
-    background-color: var(--color-white);
+	background-color: var(--color-white);
 }
 
 @mixin absolute-center {
-    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 @mixin center-x {
-    position: relative; left: 50%; transform: translateX(-50%);
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
 }
 @mixin center-y {
-    position: relative; top: 50%; transform: translateY(-50%);
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 @mixin border-radius {
-    border-radius: var(--border-radius);
+	border-radius: var(--border-radius);
 }
 @mixin max-width {
-    max-width: var(--max-width);
+	max-width: var(--max-width);
+}
+@mixin content-width {
+	max-width: var(--content-width);
 }

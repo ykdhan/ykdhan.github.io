@@ -1,47 +1,48 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-90860253-2"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', 'UA-90860253-2');
-	</script>
+	<head>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-90860253-2"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+			gtag('config', 'UA-90860253-2');
+		</script>
 
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-title" content="YK">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-title" content="YK" />
 
-	<meta property="og:site_name" content="Developer YK" />
-	<meta property="og:title" content="Developer YK" />
-	<!-- <meta property="og:image" content="src/yk-big.png" /> -->
-	<meta property="og:description" content="개발자 YK" />
+		<meta property="og:site_name" content="Developer YK" />
+		<meta property="og:title" content="Developer YK" />
+		<!-- <meta property="og:image" content="src/yk-big.png" /> -->
+		<meta property="og:description" content="개발자 YK" />
 
-	<link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
-	<link rel="apple-touch-icon" href="./assets/favicon-64.png"/>
-	<link rel="apple-touch-icon" sizes="72x72" href="./assets/favicon-72.png" />
-	<link rel="apple-touch-icon" sizes="114x114" href="./assets/favicon.png" />
-	<link rel="apple-touch-icon" sizes="120x120" href="./assets/favicon.png" />
-	<link rel="apple-touch-icon" sizes="144x144" href="./assets/favicon-144.png" />
-	<link rel="apple-touch-icon" sizes="152x152" href="./assets/favicon.png" />
+		<link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" href="./assets/favicon-64.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="./assets/favicon-72.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="./assets/favicon.png" />
+		<link rel="apple-touch-icon" sizes="120x120" href="./assets/favicon.png" />
+		<link rel="apple-touch-icon" sizes="144x144" href="./assets/favicon-144.png" />
+		<link rel="apple-touch-icon" sizes="152x152" href="./assets/favicon.png" />
 
-	<link rel="stylesheet" type="text/css" href="./css/yk.min.css">
-    <script src="./js/yk.min.js"></script>
-	<link rel='stylesheet' href='https://unpkg.com/emoji.css/dist/emoji.min.css'>
+		<link rel="stylesheet" type="text/css" href="./css/yk.min.css" />
+		<script src="./js/yk.min.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/emoji.css/dist/emoji.min.css" />
 
-	<title>Developer YK</title>
-</head>
-<body>
-
-	<div class="header">
-		<div class="inner">
-			<div class="logo">
-				<span>Developer YK</span>
-			</div>
-			<ul class="nav">
-				<!-- <li class="item">
+		<title>YK</title>
+	</head>
+	<body>
+		<header class="header">
+			<div class="inner">
+				<div class="logo">
+					<span>YK.</span>
+				</div>
+				<ul class="nav">
+					<!-- <li class="item">
 					<a href="#">profile</a>
 				</li>
 				<li class="item">
@@ -50,345 +51,265 @@
 				<li class="item">
 					<a href="#">profile</a>
 				</li> -->
-				<li class="item">
-					<a class="link github" href="https://github.com/ykdhan" target="_blank">
-						<svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 119.98 117.82">
-							<defs/>
-							<path class="color" d="M60.39 0A60.39 60.39 0 0 0 41.3 117.69c6.91.63 3.23-7.23 4-14.14-24.25 3.89-18.56-12.69-27.05-16-5.48-3.75.41-3.68.41-3.68 13.69 2.79 8.86 18 26.83 11.25.55-3.91 2.11-6.57 3.84-8.08C29 87.89 11.53 61.85 28.08 41c-.63-1.52-2.7-7.66.58-16 0 0 5.07-1.62 16.61 6.19a57.7 57.7 0 0 1 30.25 0c11.48-7.76 16.59-6.14 16.59-6.14 3.28 8.32 1.22 14.46.59 16 16.48 21.1-.8 46.7-21.36 46 9 5.61-1.22 32.93 8.17 30.66C143.06 97.63 128-.81 60.39 0Z" style="fill-rule:evenodd;"/>
-							<path d="M22.87 86.71c-.3.72-1.92 0-1.57-.72s1.94 0 1.57.72ZM25.32 89.44c-.67.64-2.12-.92-1.41-1.54s2.13.92 1.41 1.54ZM27.7 92.91c-.85.62-2.24-1.38-1.34-2s2.24 1.38 1.34 2ZM31 96.27c-.77.88-2.7-.94-1.89-1.77s2.73 1 1.89 1.77ZM35.46 98.23c-.32 1.11-2.85.36-2.5-.76s2.86-.36 2.5.76ZM40.4 98.59c.06 1.17-2.61 1.2-2.59 0s2.61-1.21 2.59 0Z" class="cls-2"/>
-						</svg>
-					</a>
-				</li>
-			</ul>
-		</div>
-	</div>
+					<li class="item">
+						<a class="link github" href="https://github.com/ykdhan" target="_blank">
+							<svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 119.98 117.82">
+								<defs />
+								<path
+									class="color"
+									d="M60.39 0A60.39 60.39 0 0 0 41.3 117.69c6.91.63 3.23-7.23 4-14.14-24.25 3.89-18.56-12.69-27.05-16-5.48-3.75.41-3.68.41-3.68 13.69 2.79 8.86 18 26.83 11.25.55-3.91 2.11-6.57 3.84-8.08C29 87.89 11.53 61.85 28.08 41c-.63-1.52-2.7-7.66.58-16 0 0 5.07-1.62 16.61 6.19a57.7 57.7 0 0 1 30.25 0c11.48-7.76 16.59-6.14 16.59-6.14 3.28 8.32 1.22 14.46.59 16 16.48 21.1-.8 46.7-21.36 46 9 5.61-1.22 32.93 8.17 30.66C143.06 97.63 128-.81 60.39 0Z"
+									style="fill-rule: evenodd"
+								/>
+								<path
+									d="M22.87 86.71c-.3.72-1.92 0-1.57-.72s1.94 0 1.57.72ZM25.32 89.44c-.67.64-2.12-.92-1.41-1.54s2.13.92 1.41 1.54ZM27.7 92.91c-.85.62-2.24-1.38-1.34-2s2.24 1.38 1.34 2ZM31 96.27c-.77.88-2.7-.94-1.89-1.77s2.73 1 1.89 1.77ZM35.46 98.23c-.32 1.11-2.85.36-2.5-.76s2.86-.36 2.5.76ZM40.4 98.59c.06 1.17-2.61 1.2-2.59 0s2.61-1.21 2.59 0Z"
+									class="cls-2"
+								/>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</header>
 
-	<main class="page-wrap">
-		<div class="page-inner">
+		<main class="page-wrap">
+			<div class="page-inner">
+				<section class="page-section">
+					<h2 class="page-title">YK.</h2>
+					<ul class="tag-list">
+						<li><button class="tag">프론트엔드</button></li>
+						<li><button class="tag">📱 Flutter</button></li>
+						<li><button class="tag">🌐 Vue</button></li>
+						<li><button class="tag">백엔드 조금</button></li>
+						<li><button class="tag">⭐ Web3</button></li>
+					</ul>
+				</section>
 
-			<section class="page-section section-intro">
-				<div class="section-inner">
-					<div class="banner">🌐 & 📱 DEVELOPER</div>
-				</div>
-			</section>
-
-			<section class="page-section">
-				<div class="section-title">👤</div>
-				<div class="block-list">
-					<div class="block">
-						<div class="block-inner front">
-							<span class="title">프론트엔드 개발자</span>
-							<span class="sub">2 m</span>
-						</div>
-						<div class="block-inner back">
-							<span class="desc">@플피</span>
-						</div>
-					</div>
-					<div class="block">
-						<div class="block-inner front">
-							<span class="title">프론트엔드 개발자</span>
-							<span class="sub">1 y 7 m</span>
-						</div>
-						<div class="block-inner back">
-							<span class="desc">@페이브</span>
-						</div>
-					</div>
-					<div class="block">
-						<div class="block-inner front">
-							<span class="title">PHP 개발자</span>
-							<span class="sub">7 m</span>
-						</div>
-						<div class="block-inner back">
-							<span class="desc">@시큐어플레어</span>
-						</div>
-					</div>
-					<div class="block">
-						<div class="block-inner front">
-							<span class="title">대한민국 육군 병장</span>
-							<span class="sub">1 y 9 m</span>
-						</div>
-						<div class="block-inner back">
-							<span class="desc">@56기동</span>
-						</div>
-					</div>
-					<div class="block">
-						<div class="block-inner front">
-							<span class="title">Computer Science</span>
-							<span class="sub">4 y</span>
-						</div>
-						<div class="block-inner back">
-							<span class="desc">@Taylor University</span>
-						</div>
-					</div>
-				</div>
-			</section>
-
-
-			<section class="page-section">
-				<div class="section-title">🎖️</div>
-				<div class="block-list">
-					<div class="block">
-						<div class="block-inner front">
-							<span class="title">정보처리기사</span>
-						</div>
-						<div class="block-inner back">
-							<span class="desc">2021</span>
-						</div>
-					</div>
-					<div class="block">
-						<div class="block-inner front">
-							<span class="title">리눅스마스터 2급</span>
-						</div>
-						<div class="block-inner back">
-							<span class="desc">2019</span>
-						</div>
-					</div>
-					<div class="block">
-						<div class="block-inner front">
-							<span class="title">생활스포츠지도사 2급</span>
-						</div>
-						<div class="block-inner back">
-							<span class="desc">2021</span>
-						</div>
-					</div>
-					<div class="block">
-						<div class="block-inner front">
-							<span class="title">TOEIC 945점</span>
-						</div>
-						<div class="block-inner back">
-							<span class="desc">2018</span>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="page-section">
-				<div class="section-title">💼</div>
-
-				<div class="block-list half">
-					<div class="block">
-						<div class="block-inner front">
+				<section class="page-section">
+					<h2 class="page-title">개발의 흔적들.</h2>
+					<div class="project">
+						<p class="intro">
 							<span class="title">OG</span>
-						</div>
-						<div class="block-inner back">
-							<a class="link" href="https://og.xyz/" target="_blank">링크</a>
-						</div>
+							<span class="desc">NFT 큐레이션 앱 - iOS, Android</span>
+							<a class="link" href="https://og.xyz/" target="_blank">🔗</a>
+						</p>
+						<ul class="preview-list">
+							<li><img class="vert" src="./assets/images/preview-og-1.png" alt="" /></li>
+							<li><img class="vert" src="./assets/images/preview-og-2.png" alt="" /></li>
+							<li><img class="vert" src="./assets/images/preview-og-3.png" alt="" /></li>
+							<li><img class="vert" src="./assets/images/preview-og-4.png" alt="" /></li>
+							<li><img class="vert" src="./assets/images/preview-og-5.png" alt="" /></li>
+							<li><img class="vert" src="./assets/images/preview-og-6.png" alt="" /></li>
+							<li><img class="vert" src="./assets/images/preview-og-7.png" alt="" /></li>
+							<li><img class="vert" src="./assets/images/preview-og-8.png" alt="" /></li>
+						</ul>
+						<ul class="tag-list">
+							<li><button class="tag">📱 Flutter</button></li>
+							<li><button class="tag">🔥 Firebase</button></li>
+						</ul>
 					</div>
-					<div class="block">
-						<div class="block-inner front">
+					<div class="project">
+						<p class="intro">
 							<span class="title">Galaxy Z Fold4</span>
-						</div>
-						<div class="block-inner back">
-							<a class="link" href="https://www.samsung.com/global/galaxy/galaxy-z-fold4/" target="_blank">링크</a>
-						</div>
+							<span class="desc">삼성전자 Galaxy Unpacked</span>
+							<a class="link" href="https://www.samsung.com/global/galaxy/galaxy-z-fold4/" target="_blank">🔗</a>
+						</p>
+						<ul class="preview-list">
+							<li>
+								<video class="hor" autoplay loop muted>
+									<source src="./assets/videos/preview-fold4-1.mp4" type="video/mp4" />
+								</video>
+							</li>
+							<li>
+								<video class="hor" autoplay loop muted>
+									<source src="./assets/videos/preview-fold4-2.mp4" type="video/mp4" />
+								</video>
+							</li>
+							<li><img class="hor" src="./assets/images/preview-fold4-1.png" alt="" /></li>
+							<li><img class="hor" src="./assets/images/preview-fold4-2.png" alt="" /></li>
+							<li><img class="hor" src="./assets/images/preview-fold4-3.png" alt="" /></li>
+							<li><img class="hor" src="./assets/images/preview-fold4-4.png" alt="" /></li>
+						</ul>
+						<ul class="tag-list">
+							<li><button class="tag">🌐 HTML</button></li>
+							<li><button class="tag">🌐 Sass</button></li>
+							<li><button class="tag">🌐 jQuery</button></li>
+						</ul>
 					</div>
-					<div class="block">
-						<div class="block-inner front">
-							<span class="title">Fave 웹사이트</span>
-						</div>
-						<div class="block-inner back">
-							<a class="link" href="https://fave.kr/" target="_blank">링크</a>
-						</div>
+					<div class="project">
+						<p class="intro">
+							<span class="title">Fave.kr</span>
+							<span class="desc">3D 웹사이트</span>
+							<a class="link" href="https://fave.kr/" target="_blank">🔗</a>
+						</p>
+						<ul class="preview-list">
+							<li>
+								<video class="hor" autoplay loop muted>
+									<source src="./assets/videos/preview-fave-1.mp4" type="video/mp4" />
+								</video>
+							</li>
+							<li>
+								<video class="hor" autoplay loop muted>
+									<source src="./assets/videos/preview-fave-2.mp4" type="video/mp4" />
+								</video>
+							</li>
+							<li><img class="hor" src="./assets/images/preview-fave-1.png" alt="" /></li>
+							<li><img class="hor" src="./assets/images/preview-fave-2.png" alt="" /></li>
+							<li><img class="hor" src="./assets/images/preview-fave-3.png" alt="" /></li>
+							<li><img class="hor" src="./assets/images/preview-fave-4.png" alt="" /></li>
+							<li><img class="hor" src="./assets/images/preview-fave-5.png" alt="" /></li>
+							<li><img class="hor" src="./assets/images/preview-fave-6.png" alt="" /></li>
+							<li><img class="hor" src="./assets/images/preview-fave-7.png" alt="" /></li>
+							<li>
+								<video class="hor" autoplay loop muted>
+									<source src="./assets/videos/preview-fave-3.mp4" type="video/mp4" />
+								</video>
+							</li>
+						</ul>
+						<ul class="tag-list">
+							<li><button class="tag">🌐 Svelte</button></li>
+							<li><button class="tag">🎲 Three.js</button></li>
+						</ul>
 					</div>
-					<div class="block">
-						<div class="block-inner front">
-							<span class="title">Galaxy Z Fold3 5G</span>
-						</div>
-						<div class="block-inner back">
-							<a class="link" href="https://www.samsung.com/global/galaxy/galaxy-z-fold3-5g/" target="_blank">링크</a>
-						</div>
-					</div>
-					<div class="block">
-						<div class="block-inner front">
+					<div class="project">
+						<p class="intro">
 							<span class="title">Galaxy S22 Ultra</span>
-						</div>
-						<div class="block-inner back">
-							<a class="link" href="https://www.samsung.com/global/galaxy/galaxy-s22-ultra/" target="_blank">링크</a>
-						</div>
+							<span class="desc">삼성전자 Galaxy Unpacked</span>
+							<a class="link" href="https://www.samsung.com/global/galaxy/galaxy-s22-ultra/" target="_blank">🔗</a>
+						</p>
+						<ul class="preview-list">
+							<li>
+								<video class="hor" autoplay loop muted>
+									<source src="./assets/videos/preview-s22-1.mp4" type="video/mp4" />
+								</video>
+							</li>
+							<li>
+								<video class="hor" autoplay loop muted>
+									<source src="./assets/videos/preview-s22-2.mp4" type="video/mp4" />
+								</video>
+							</li>
+							<li>
+								<video class="hor" autoplay loop muted>
+									<source src="./assets/videos/preview-s22-3.mp4" type="video/mp4" />
+								</video>
+							</li>
+							<li><img class="hor" src="./assets/images/preview-s22-1.png" alt="" /></li>
+							<li><img class="hor" src="./assets/images/preview-s22-2.png" alt="" /></li>
+							<li><img class="hor" src="./assets/images/preview-s22-3.png" alt="" /></li>
+							<li><img class="hor" src="./assets/images/preview-s22-4.png" alt="" /></li>
+						</ul>
+						<ul class="tag-list">
+							<li><button class="tag">🌐 HTML</button></li>
+							<li><button class="tag">🌐 Sass</button></li>
+							<li><button class="tag">🌐 jQuery</button></li>
+						</ul>
 					</div>
-					<div class="block">
-						<div class="block-inner front">
+					<div class="project">
+						<p class="intro">
+							<span class="title">Galaxy Z Fold3 5G</span>
+							<span class="desc">삼성전자 Galaxy Unpacked</span>
+							<a class="link" href="https://www.samsung.com/global/galaxy/galaxy-z-fold3-5g/" target="_blank">🔗</a>
+						</p>
+						<ul class="preview-list">
+							<li>
+								<video class="hor" autoplay loop muted>
+									<source src="./assets/videos/preview-fold3-1.mp4" type="video/mp4" />
+								</video>
+							</li>
+							<li>
+								<video class="hor" autoplay loop muted>
+									<source src="./assets/videos/preview-fold3-2.mp4" type="video/mp4" />
+								</video>
+							</li>
+							<li>
+								<video class="hor" autoplay loop muted>
+									<source src="./assets/videos/preview-fold3-3.mp4" type="video/mp4" />
+								</video>
+							</li>
+							<li><img class="hor" src="./assets/images/preview-fold3-1.png" alt="" /></li>
+							<li><img class="hor" src="./assets/images/preview-fold3-2.png" alt="" /></li>
+							<li><img class="hor" src="./assets/images/preview-fold3-3.png" alt="" /></li>
+						</ul>
+						<ul class="tag-list">
+							<li><button class="tag">🎲 Three.js</button></li>
+							<li><button class="tag">🌐 HTML</button></li>
+							<li><button class="tag">🌐 Sass</button></li>
+							<li><button class="tag">🌐 jQuery</button></li>
+						</ul>
+					</div>
+					<div class="project">
+						<p class="intro">
+							<span class="title">장수문화원</span>
+							<span class="desc">사이트 리뉴얼</span>
+							<a class="link" href="https://jangsuculture.or.kr/" target="_blank">🔗</a>
+						</p>
+						<ul class="preview-list">
+							<li><img class="hor" src="./assets/images/preview-jangsu-1.png" alt="" /></li>
+							<li><img class="hor" src="./assets/images/preview-jangsu-2.png" alt="" /></li>
+							<li><img class="hor" src="./assets/images/preview-jangsu-3.png" alt="" /></li>
+							<li><img class="hor" src="./assets/images/preview-jangsu-4.png" alt="" /></li>
+						</ul>
+						<ul class="tag-list">
+							<li><button class="tag">🌐 HTML</button></li>
+							<li><button class="tag">🌐 Sass</button></li>
+							<li><button class="tag">🌐 jQuery</button></li>
+						</ul>
+					</div>
+					<div class="project">
+						<p class="intro">
 							<span class="title">LG U+ 보안관제시스템</span>
-						</div>
-						<div class="block-inner back">
-							<span class="desc">보안 프로젝트</span>
-						</div>
+							<span class="desc">Zabbix - 오픈소스</span>
+							<a class="link" href="https://jangsuculture.or.kr/" target="_blank">🔗</a>
+						</p>
+						<ul class="preview-list">
+							<li><img class="hor height" src="./assets/images/preview-secureflare-1.png" alt="" /></li>
+							<li><img class="hor height" src="./assets/images/preview-secureflare-2.png" alt="" /></li>
+							<li><img class="hor height" src="./assets/images/preview-secureflare-3.png" alt="" /></li>
+						</ul>
+						<ul class="tag-list">
+							<li><button class="tag">🌐 PHP</button></li>
+							<li><button class="tag">📂 오픈소스</button></li>
+							<li><button class="tag">🐧 Linux</button></li>
+						</ul>
 					</div>
-				</div>
-			</section>
+				</section>
 
-			<section class="page-section">
-				<div class="section-title">🖥️</div>
-				<div class="block-list">
-					<div class="block">
-						<div class="block-inner front">
-							<span class="title">Vue.js</span>
-							<span class="sub round">NEW</span>
-						</div>
-						<div class="block-inner back">
-							<span class="desc star">****</span>
-						</div>
-					</div>
-					<div class="block">
-						<div class="block-inner front">
-							<span class="title">Flutter</span>
-							<span class="sub round">NEW</span>
-						</div>
-						<div class="block-inner back">
-							<span class="desc star">***</span>
-						</div>
-					</div>
-					<div class="block">
-						<div class="block-inner front">
-							<span class="title">React.js</span>
-						</div>
-						<div class="block-inner back">
-							<span class="desc star">***</span>
-						</div>
-					</div>
-					<div class="block">
-						<div class="block-inner front">
-							<span class="title">TypeScript</span>
-						</div>
-						<div class="block-inner back">
-							<span class="desc star">***</span>
-						</div>
-					</div>
-					<div class="block">
-						<div class="block-inner front">
-							<span class="title">Recoil</span>
-						</div>
-						<div class="block-inner back">
-							<span class="desc star">**</span>
-						</div>
-					</div>
-					<div class="block">
-						<div class="block-inner front">
-							<span class="title">Redux</span>
-						</div>
-						<div class="block-inner back">
-							<span class="desc star">*</span>
-						</div>
-					</div>
-					<div class="block">
-						<div class="block-inner front">
-							<span class="title">Storybook</span>
-						</div>
-						<div class="block-inner back">
-							<span class="desc star">***</span>
-						</div>
-					</div>
-					<div class="block">
-						<div class="block-inner front">
-							<span class="title">JavaScript</span>
-						</div>
-						<div class="block-inner back">
-							<span class="desc star">*****</span>
-						</div>
-					</div>
-					<div class="block">
-						<div class="block-inner front">
-							<span class="title">Three.js</span>
-						</div>
-						<div class="block-inner back">
-							<span class="desc star">***</span>
-						</div>
-					</div>
-					<div class="block">
-						<div class="block-inner front">
-							<span class="title">Svelte.js</span>
-						</div>
-						<div class="block-inner back">
-							<span class="desc star">**</span>
-						</div>
-					</div>
-					<div class="block">
-						<div class="block-inner front">
-							<span class="title">Sass</span>
-						</div>
-						<div class="block-inner back">
-							<span class="desc star">****</span>
-						</div>
-					</div>
-					<div class="block">
-						<div class="block-inner front">
-							<span class="title">HTML5</span>
-						</div>
-						<div class="block-inner back">
-							<span class="desc star">*****</span>
-						</div>
-					</div>
-					<div class="block">
-						<div class="block-inner front">
-							<span class="title">CSS3</span>
-						</div>
-						<div class="block-inner back">
-							<span class="desc star">*****</span>
-						</div>
-					</div>
-					<div class="block">
-						<div class="block-inner front">
-							<span class="title">Git</span>
-						</div>
-						<div class="block-inner back">
-							<span class="desc star">****</span>
-						</div>
-					</div>
-					<div class="block">
-						<div class="block-inner front">
-							<span class="title">Sketch</span>
-						</div>
-						<div class="block-inner back">
-							<span class="desc star">****</span>
-						</div>
-					</div>
-					<div class="block">
-						<div class="block-inner front">
-							<span class="title">Figma</span>
-						</div>
-						<div class="block-inner back">
-							<span class="desc star">***</span>
-						</div>
-					</div>
-					<div class="block">
-						<div class="block-inner front">
-							<span class="title">Python</span>
-						</div>
-						<div class="block-inner back">
-							<span class="desc star">****</span>
-						</div>
-					</div>
-					<div class="block">
-						<div class="block-inner front">
-							<span class="title">Flask</span>
-						</div>
-						<div class="block-inner back">
-							<span class="desc star">****</span>
-						</div>
-					</div>
-					<div class="block">
-						<div class="block-inner front">
-							<span class="title">Linux</span>
-						</div>
-						<div class="block-inner back">
-							<span class="desc star">***</span>
-						</div>
-					</div>
-					<div class="block">
-						<div class="block-inner front">
-							<span class="title">PHP</span>
-						</div>
-						<div class="block-inner back">
-							<span class="desc star">***</span>
-						</div>
-					</div>
-				</div>
-			</section>
+				<section class="page-section">
+					<h2 class="page-title">꾸준히. 열심히.</h2>
+					<ul class="tag-list">
+						<li><button class="tag">🎖️ 정보처리기사</button></li>
+						<li><button class="tag">🎖️ 리눅스마스터</button></li>
+						<li><button class="tag">🎖️ 생활스포츠지도사</button></li>
+						<li><button class="tag">🎖️ TOEIC</button></li>
+						<li><button class="tag">🏆 대학 창업 아이디어 경진대회</button></li>
+					</ul>
+				</section>
 
-		</div>
-	</main>
-	<!-- <div id="p5"></div> -->
-	<!-- <div id="cursor"></div> -->
-	
-</body>
+				<section class="page-section">
+					<h2 class="page-title">풀스택이 되는 그날까지.</h2>
+					<ul class="tag-list">
+						<li><button class="tag">💌 ykdhan@naver.com</button></li>
+					</ul>
+				</section>
+			</div>
+		</main>
+		<!-- <div id="p5"></div> -->
+		<!-- <div id="cursor"></div> -->
+	</body>
+
+	<script>
+		const wrapper = document.querySelector('.page-wrap');
+		const inner = document.querySelector('.page-inner');
+		const header = document.querySelector('header');
+
+		console.log(header);
+
+		wrapper.addEventListener('scroll', function (e) {
+			const y = inner.getBoundingClientRect().y;
+			if (y < -200) {
+				!header.classList.contains('on') && header.classList.add('on');
+			} else {
+				header.classList.contains('on') && header.classList.remove('on');
+			}
+		});
+	</script>
 </html>

@@ -156,38 +156,24 @@ button {
 }
 
 @font-face {
-  font-family: "GmarketSansBold";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "GmarketSansMedium";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "GmarketSansLight";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "NEXON Lv1 Gothic OTF";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff") format("woff");
+  font-family: "Line Seed";
+  src: url("../assets/fonts/LINESeedKR-Rg.eot");
+  src: local("@"), url("../assets/fonts/LINESeedKR-Rg.woff") format("woff"), url("../assets/fonts/LINESeedKR-Rg.woff2") format("woff2");
   font-weight: 400;
-  font-style: normal;
 }
 
 @font-face {
-  font-family: "NEXON Lv1 Gothic OTF";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff") format("woff");
+  font-family: "Line Seed";
+  src: url("../assets/fonts/LINESeedKR-Th.eot");
+  src: local("@"), url("../assets/fonts/LINESeedKR-Th.woff") format("woff"), url("../assets/fonts/LINESeedKR-Th.woff2") format("woff2");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Line Seed";
+  src: url("../assets/fonts/LINESeedKR-Bd.eot");
+  src: local("@"), url("../assets/fonts/LINESeedKR-Bd.woff") format("woff"), url("../assets/fonts/LINESeedKR-Bd.woff2") format("woff2");
   font-weight: 700;
-  font-style: normal;
 }
 
 .type-heading {
@@ -204,16 +190,19 @@ button {
 .type-main {
   font-size: 16px;
   font-weight: 700;
+  color: var(--gray8);
 }
 
 .type-normal {
   font-size: 13px;
   font-weight: 400;
+  color: var(--gray6);
 }
 
 .type-big {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 700;
+  color: var(--gray8);
 }
 
 .type-black {
@@ -229,9 +218,20 @@ button {
   --color-white: #fcfcfc;
   --color-gray400: #4f4f4f;
   --color-gray700: #2f2f2f;
-  --padding: 14px;
+  --gray0: #f8f9fa;
+  --gray1: #f1f3f5;
+  --gray2: #e9ecef;
+  --gray3: #dee2e6;
+  --gray4: #ced4da;
+  --gray5: #adb5bd;
+  --gray6: #868e96;
+  --gray7: #495057;
+  --gray8: #343a40;
+  --gray9: #212529;
+  --padding: 10px;
   --border-radius: 12px;
-  --max-width: 980px;
+  --max-width: 960px;
+  --content-width: 880px;
 }
 
 .header {
@@ -241,24 +241,31 @@ button {
   left: 0;
   z-index: 1000;
   width: 100%;
-  background-color: rgba(var(--color-black), 0.6);
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--gray2);
+  transform: translateY(-100%);
+  transition: transform 0.4s ease-out;
+}
+
+.header.on {
+  transform: translateY(0);
 }
 
 .header .inner {
   display: flex;
+  align-items: center;
   width: 100%;
   margin: 0 auto;
-  padding: var(--padding);
-  padding-top: calc(var(--padding) * 3);
+  padding: calc(var(--padding) * 1.5) var(--padding);
   box-sizing: border-box;
-  max-width: var(--max-width);
+  max-width: var(--content-width);
 }
 
 .header .logo {
   font-size: 16px;
   font-weight: 700;
+  color: var(--gray8);
+  color: var(--gray8);
 }
 
 .header .nav {
@@ -280,16 +287,20 @@ button {
   vertical-align: middle;
   width: 22px;
   margin-left: var(--padding);
-  transition: opacity 0.3s ease-out;
 }
 
 .header .github .color {
-  fill: var(--color-white);
+  fill: var(--gray8);
   transition: fill 0.4s ease-out;
 }
 
 .header .github .svg {
   width: 100%;
+}
+
+.header .github:hover .color,
+.header .github:focus .color {
+  fill: var(--gray6);
 }
 
 .page-wrap {
@@ -311,19 +322,34 @@ button {
 .page-inner {
   width: 100%;
   margin: 0 auto;
-  padding: 100px var(--padding);
+  padding: 150px 0;
   box-sizing: border-box;
   max-width: var(--max-width);
 }
 
 .page-section {
-  margin-bottom: var(--padding);
+  margin: 0 auto;
+  padding: var(--padding);
+  box-sizing: border-box;
+  max-width: var(--content-width);
+}
+
+.page-section + .page-section {
+  margin-top: 150px;
+}
+
+.page-title {
+  margin-bottom: 14px;
+  color: var(--gray8);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--gray8);
 }
 
 .section-wrap {
   position: relative;
-  max-width: 1024px;
   margin: 0 auto;
+  max-width: var(--content-width);
 }
 
 .section-inner.inner-padding {
@@ -331,11 +357,12 @@ button {
 }
 
 .section-title {
-  background-color: var(--color-gray700);
+  background-color: var(--gray1);
   padding: var(--padding) calc(var(--padding) * 2);
   margin-bottom: var(--padding);
   font-size: 16px;
   font-weight: 700;
+  color: var(--gray8);
   border-radius: var(--border-radius);
 }
 
@@ -381,15 +408,15 @@ body {
 }
 
 body {
-  font-family: "NEXON Lv1 Gothic OTF";
-  font-size: 15px;
+  font-family: "Line Seed";
+  font-size: 14px;
   font-weight: 400;
-  line-height: 1.3;
-  color: var(--color-white);
+  line-height: 1.2;
+  color: var(--gray6);
 }
 
 main {
-  background-color: var(--color-black);
+  background-color: var(--color-white);
 }
 
 #p5 {
@@ -493,7 +520,7 @@ main {
   width: 100%;
   height: 100px;
   padding: 10px;
-  background-color: var(--color-gray700);
+  background-color: var(--gray1);
   border-radius: var(--border-radius);
 }
 
@@ -504,7 +531,11 @@ main {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.4s ease-out, visibility 0.4s ease-out;
-  background-color: var(--color-white);
+  background-color: var(--gray6);
+}
+
+.block-inner.font-black .title {
+  color: var(--gray6);
 }
 
 .block.active .block-inner.back {
@@ -513,8 +544,8 @@ main {
 }
 
 .block .title {
-  font-size: 15px;
-  color: var(--color-white);
+  font-size: 16px;
+  color: var(--gray6);
 }
 
 .block .sub {
@@ -541,13 +572,6 @@ main {
   letter-spacing: 2px;
 }
 
-.block .tag {
-  font-size: 10px;
-  color: var(--color-black);
-  margin-right: 5px;
-  margin-bottom: 5px;
-}
-
 .block .link {
   font-size: 13px;
   color: var(--color-white);
@@ -556,13 +580,125 @@ main {
   background-color: var(--color-black);
 }
 
-.section-intro {
-  padding: 60px 0;
+.banner {
+  padding: 150px 0;
 }
 
-.section-intro .banner {
-  font-size: 24px;
+.banner .title {
+  display: block;
+  margin-bottom: var(--padding);
+  font-size: 18px;
   font-weight: 700;
+  color: var(--gray8);
+  color: var(--gray8);
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  padding: calc(var(--padding) * 2);
+  background-color: var(--gray1);
+  border-radius: 6px;
+}
+
+.project + .project {
+  margin-top: 30px;
+}
+
+.project .intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.project .title {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--gray8);
+}
+
+.project .desc {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--gray6);
+}
+
+.project .preview-list {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  overflow-x: auto;
+  margin-bottom: 24px;
+}
+
+.project .preview-list li + li {
+  margin-left: calc(var(--padding) * 2);
+}
+
+.project .preview-list video,
+.project .preview-list img {
+  display: block;
+  height: auto;
+  border: 1px solid var(--gray3);
+}
+
+.project .preview-list video.vert,
+.project .preview-list img.vert {
+  width: 240px;
+  border-radius: 12px;
+}
+
+.project .preview-list video.hor,
+.project .preview-list img.hor {
+  width: 560px;
+  border-radius: 6px;
+}
+
+.project .preview-list video.hor.height,
+.project .preview-list img.hor.height {
+  width: auto;
+  height: 350px;
+}
+
+.project .tag {
+  background-color: var(--color-white);
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--padding);
+  height: 32px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  background-color: var(--gray1);
+  color: var(--gray7);
+  border-radius: 6px;
+  transition: background-color 0.4s ease-out, color 0.4s ease-out;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--gray6);
+}
+
+.tag:hover,
+.tag:focus {
+  background-color: var(--gray3);
+  cursor: pointer;
+}
+
+.tag-list {
+  display: flex;
+}
+
+.tag-list li {
+  display: inline-flex;
+  margin-right: 6px;
 }
 
 @-webkit-keyframes blink {
@@ -611,10 +747,6 @@ main {
 
   .section-wrap {
     margin: 0 8vw;
-  }
-
-  body {
-    font-size: 13px;
   }
 
   #p5 {

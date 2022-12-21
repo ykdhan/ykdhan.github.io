@@ -1,56 +1,56 @@
 @font-face {
-    font-family: 'GmarketSansBold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'GmarketSansMedium';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'GmarketSansLight';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'Line Seed';
+	src: url('../assets/fonts/LINESeedKR-Rg.eot');
+	src: local('@'), url('../assets/fonts/LINESeedKR-Rg.woff') format('woff'), url('../assets/fonts/LINESeedKR-Rg.woff2') format('woff2');
+	font-weight: 400;
 }
 
 @font-face {
-    font-family: 'NEXON Lv1 Gothic OTF';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
+	font-family: 'Line Seed';
+	src: url('../assets/fonts/LINESeedKR-Th.eot');
+	src: local('@'), url('../assets/fonts/LINESeedKR-Th.woff') format('woff'), url('../assets/fonts/LINESeedKR-Th.woff2') format('woff2');
+	font-weight: 300;
 }
+
 @font-face {
-    font-family: 'NEXON Lv1 Gothic OTF';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
+	font-family: 'Line Seed';
+	src: url('../assets/fonts/LINESeedKR-Bd.eot');
+	src: local('@'), url('../assets/fonts/LINESeedKR-Bd.woff') format('woff'), url('../assets/fonts/LINESeedKR-Bd.woff2') format('woff2');
+	font-weight: 700;
 }
 
 .type {
-    &-heading {
-        position: absolute; left: -20px; top: 0; transform: translateX(-100%);
-        font-size: 14px; font-weight: 700; color: var(--color-black); opacity: 0.4;
-        @include mobile { font-size: 13px; left: 0; top: -10px; transform: translateY(-100%); }
-    }
+	&-heading {
+		position: absolute;
+		left: -20px;
+		top: 0;
+		transform: translateX(-100%);
+		font-size: 14px;
+		font-weight: 700;
+		color: var(--color-black);
+		opacity: 0.4;
+		@include mobile {
+			font-size: 13px;
+			left: 0;
+			top: -10px;
+			transform: translateY(-100%);
+		}
+	}
 
-    &-main {
-        @include type-main;
-    }
-    &-normal {
-        @include type-normal;
-    }
-    &-big {
-        @include type-big;
-    }
-    
-    &-black {
-        @include type-black;
-    }
-    &-white {
-        @include type-black;
-    }
+	&-main {
+		@include type-main;
+	}
+	&-normal {
+		@include type-normal;
+	}
+	&-big {
+		@include type-big;
+	}
+
+	&-black {
+		@include type-black;
+	}
+	&-white {
+		@include type-black;
+	}
 }
