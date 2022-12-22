@@ -16,10 +16,10 @@
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-title" content="YK" />
 
-		<meta property="og:site_name" content="Developer YK" />
-		<meta property="og:title" content="Developer YK" />
+		<meta property="og:site_name" content="YK" />
+		<meta property="og:title" content="YK" />
 		<!-- <meta property="og:image" content="src/yk-big.png" /> -->
-		<meta property="og:description" content="개발자 YK" />
+		<meta property="og:description" content="개발자" />
 
 		<link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
 		<link rel="apple-touch-icon" href="./assets/favicon-64.png" />
@@ -292,8 +292,6 @@
 				</section>
 			</div>
 		</main>
-		<!-- <div id="p5"></div> -->
-		<!-- <div id="cursor"></div> -->
 	</body>
 
 	<script>
@@ -301,11 +299,11 @@
 		const inner = document.querySelector('.page-inner');
 		const header = document.querySelector('header');
 
-		console.log(header);
+		console.log('YK.');
 
 		wrapper.addEventListener('scroll', function (e) {
 			const y = inner.getBoundingClientRect().y;
-			if (y < -200) {
+			if (y < (window.innerWidth > 767 ? -200 : -70)) {
 				!header.classList.contains('on') && header.classList.add('on');
 			} else {
 				header.classList.contains('on') && header.classList.remove('on');

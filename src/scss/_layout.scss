@@ -6,8 +6,6 @@
 	width: 100%;
 	background-color: var(--color-white);
 	border-bottom: 1px solid var(--gray2);
-	// background-color: rgba(var(--color-black), 0.6);
-	// backdrop-filter: blur(5px);
 	transform: translateY(-100%);
 	transition: transform 0.4s ease-out;
 
@@ -23,6 +21,10 @@
 		padding: calc(var(--padding) * 1.5) var(--padding);
 		box-sizing: border-box;
 		@include content-width;
+
+		@include mobile {
+			padding: calc(var(--padding) * 1.5) calc(var(--padding) * 2);
+		}
 	}
 
 	.logo {
@@ -89,6 +91,10 @@
 		padding: 150px 0;
 		box-sizing: border-box;
 		@include max-width;
+
+		@include mobile {
+			padding: 40px 0;
+		}
 	}
 	&-section {
 		margin: 0 auto;
@@ -96,8 +102,15 @@
 		box-sizing: border-box;
 		@include content-width;
 
+		@include mobile {
+			padding: calc(var(--padding) * 2);
+		}
+
 		& + .page-section {
 			margin-top: 150px;
+			@include mobile {
+				margin-top: 60px;
+			}
 		}
 	}
 	&-title {

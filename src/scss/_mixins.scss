@@ -28,16 +28,28 @@
 	font-size: 16px;
 	font-weight: 700;
 	color: var(--gray8);
+
+	@include mobile {
+		font-size: 14px;
+	}
 }
 @mixin type-big {
 	font-size: 18px;
 	font-weight: 700;
 	color: var(--gray8);
+
+	@include mobile {
+		font-size: 16px;
+	}
 }
 @mixin type-normal {
 	font-size: 13px;
 	font-weight: 400;
 	color: var(--gray6);
+
+	@include mobile {
+		font-size: 12px;
+	}
 }
 
 @mixin type-black {
