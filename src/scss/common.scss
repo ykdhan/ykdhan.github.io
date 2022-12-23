@@ -144,6 +144,10 @@ main {
 		justify-content: space-between;
 		width: 100%;
 		margin-bottom: 24px;
+
+		@include mobile {
+			margin-bottom: 18px;
+		}
 	}
 	.title {
 		display: block;
@@ -163,6 +167,10 @@ main {
 		overflow: hidden;
 		overflow-x: auto;
 		margin-bottom: 24px;
+
+		@include mobile {
+			margin-bottom: 18px;
+		}
 
 		li + li {
 			margin-left: calc(var(--padding) * 2);
