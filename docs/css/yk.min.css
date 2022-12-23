@@ -733,6 +733,10 @@ main {
     margin-top: 24px;
   }
 
+  .project .intro {
+    margin-bottom: 18px;
+  }
+
   .project .title {
     font-size: 14px;
   }
@@ -743,6 +747,10 @@ main {
 
   .project .desc {
     display: none;
+  }
+
+  .project .preview-list {
+    margin-bottom: 18px;
   }
 
   .project .preview-list video.vert,
