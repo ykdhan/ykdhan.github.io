@@ -235,7 +235,6 @@ button {
 }
 
 .header {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   left: 0;
@@ -373,7 +372,6 @@ button {
 }
 
 .sticky-inner {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   height: var(--vh);
