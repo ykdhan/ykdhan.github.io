@@ -115,14 +115,10 @@
 						</p>
 						<ul class="preview-list">
 							<li>
-								<video class="hor" autoplay loop muted playsinline>
-									<source src="./assets/videos/preview-fold4-1.mp4" type="video/mp4" />
-								</video>
+								<figure class="video" data-src="./assets/videos/preview-fold4-1.mp4"></figure>
 							</li>
 							<li>
-								<video class="hor" autoplay loop muted playsinline>
-									<source src="./assets/videos/preview-fold4-2.mp4" type="video/mp4" />
-								</video>
+								<figure class="video" data-src="./assets/videos/preview-fold4-2.mp4"></figure>
 							</li>
 							<li><img class="hor" src="./assets/images/preview-fold4-1.png" alt="" /></li>
 							<li><img class="hor" src="./assets/images/preview-fold4-2.png" alt="" /></li>
@@ -143,14 +139,10 @@
 						</p>
 						<ul class="preview-list">
 							<li>
-								<video class="hor" autoplay loop muted playsinline>
-									<source src="./assets/videos/preview-fave-1.mp4" type="video/mp4" />
-								</video>
+								<figure class="video" data-src="./assets/videos/preview-fave-1.mp4"></figure>
 							</li>
 							<li>
-								<video class="hor" autoplay loop muted playsinline>
-									<source src="./assets/videos/preview-fave-2.mp4" type="video/mp4" />
-								</video>
+								<figure class="video" data-src="./assets/videos/preview-fave-2.mp4"></figure>
 							</li>
 							<li><img class="hor" src="./assets/images/preview-fave-1.png" alt="" /></li>
 							<li><img class="hor" src="./assets/images/preview-fave-2.png" alt="" /></li>
@@ -160,9 +152,7 @@
 							<li><img class="hor" src="./assets/images/preview-fave-6.png" alt="" /></li>
 							<li><img class="hor" src="./assets/images/preview-fave-7.png" alt="" /></li>
 							<li>
-								<video class="hor" autoplay loop muted playsinline>
-									<source src="./assets/videos/preview-fave-3.mp4" type="video/mp4" />
-								</video>
+								<figure class="video" data-src="./assets/videos/preview-fave-3.mp4"></figure>
 							</li>
 						</ul>
 						<ul class="tag-list">
@@ -178,19 +168,13 @@
 						</p>
 						<ul class="preview-list">
 							<li>
-								<video class="hor" autoplay loop muted playsinline>
-									<source src="./assets/videos/preview-s22-1.mp4" type="video/mp4" />
-								</video>
+								<figure class="video" data-src="./assets/videos/preview-s22-1.mp4"></figure>
 							</li>
 							<li>
-								<video class="hor" autoplay loop muted playsinline>
-									<source src="./assets/videos/preview-s22-2.mp4" type="video/mp4" />
-								</video>
+								<figure class="video" data-src="./assets/videos/preview-s22-2.mp4"></figure>
 							</li>
 							<li>
-								<video class="hor" autoplay loop muted playsinline>
-									<source src="./assets/videos/preview-s22-3.mp4" type="video/mp4" />
-								</video>
+								<figure class="video" data-src="./assets/videos/preview-s22-3.mp4"></figure>
 							</li>
 							<li><img class="hor" src="./assets/images/preview-s22-1.png" alt="" /></li>
 							<li><img class="hor" src="./assets/images/preview-s22-2.png" alt="" /></li>
@@ -211,19 +195,13 @@
 						</p>
 						<ul class="preview-list">
 							<li>
-								<video class="hor" autoplay loop muted playsinline>
-									<source src="./assets/videos/preview-fold3-1.mp4" type="video/mp4" />
-								</video>
+								<figure class="video" data-src="./assets/videos/preview-fold3-1.mp4"></figure>
 							</li>
 							<li>
-								<video class="hor" autoplay loop muted playsinline>
-									<source src="./assets/videos/preview-fold3-2.mp4" type="video/mp4" />
-								</video>
+								<figure class="video" data-src="./assets/videos/preview-fold3-2.mp4"></figure>
 							</li>
 							<li>
-								<video class="hor" autoplay loop muted playsinline>
-									<source src="./assets/videos/preview-fold3-3.mp4" type="video/mp4" />
-								</video>
+								<figure class="video" data-src="./assets/videos/preview-fold3-3.mp4"></figure>
 							</li>
 							<li><img class="hor" src="./assets/images/preview-fold3-1.png" alt="" /></li>
 							<li><img class="hor" src="./assets/images/preview-fold3-2.png" alt="" /></li>
@@ -292,22 +270,119 @@
 				</section>
 			</div>
 		</main>
+
+		<div class="cover loading"></div>
 	</body>
 
 	<script>
+		console.log('YK.');
+
+		const cover = document.querySelector('.cover');
 		const wrapper = document.querySelector('.page-wrap');
 		const inner = document.querySelector('.page-inner');
 		const header = document.querySelector('header');
 
-		console.log('YK.');
+		const mobileW = 768;
 
-		wrapper.addEventListener('scroll', function (e) {
-			const y = inner.getBoundingClientRect().y;
-			if (y < (window.innerWidth > 767 ? -200 : -70)) {
-				!header.classList.contains('on') && header.classList.add('on');
-			} else {
-				header.classList.contains('on') && header.classList.remove('on');
+		const VIDEO = (el) => {
+			let timeout;
+			let isMobileSize;
+			let video;
+			let loaded = false;
+
+			const observer = new IntersectionObserver(
+				(entries, obs) => {
+					if (entries[0].isIntersecting) {
+						play();
+					} else {
+						pause();
+					}
+				},
+				{
+					root: null,
+					rootMargin: '0px',
+				}
+			);
+
+			const init = () => {
+				video = document.createElement('video');
+				video.classList.add('hor');
+				video.setAttribute('loop', true);
+				video.setAttribute('muted', true);
+				video.setAttribute('playsinline', true);
+
+				const source = document.createElement('source');
+				source.setAttribute('src', el.dataset.src);
+				source.setAttribute('type', 'video/mp4');
+
+				video.append(source);
+				el.append(video);
+
+				video.load();
+				video.addEventListener('canplay', () => {
+					loaded = true;
+					play();
+				});
+
+				observer.observe(el);
+			};
+
+			const resize = () => {
+				if (window.innerWidth > mobileW) {
+					if (isMobileSize) {
+						isMobileSize = false;
+						// console.log('pc');
+					}
+				} else {
+					if (!isMobileSize) {
+						isMobileSize = true;
+						// console.log('mobile');
+					}
+				}
+			};
+
+			const play = () => {
+				if (video && loaded) {
+					video.play();
+				}
+			};
+
+			const pause = () => {
+				if (video && loaded) {
+					video.pause();
+					video.currentTime = 0;
+				}
+			};
+
+			window.onresize = () => {
+				clearTimeout(timeout);
+				timeout = setTimeout(() => {
+					resize();
+				}, 100);
+			};
+			init();
+		};
+
+		window.onload = () => {
+			isMobileSize = window.innerWidth > mobileW;
+
+			for (const video of document.querySelectorAll('.video')) {
+				VIDEO(video);
 			}
-		});
+
+			wrapper.addEventListener('scroll', function (e) {
+				const y = inner.getBoundingClientRect().y;
+				if (y < (window.innerWidth > 767 ? -200 : -70)) {
+					!header.classList.contains('on') && header.classList.add('on');
+				} else {
+					header.classList.contains('on') && header.classList.remove('on');
+				}
+			});
+
+			cover.classList.remove('loading');
+			setTimeout(() => {
+				cover.classList.add('loaded');
+			}, 500);
+		};
 	</script>
 </html>
