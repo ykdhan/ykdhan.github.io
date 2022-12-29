@@ -32,6 +32,7 @@
 		<link rel="stylesheet" type="text/css" href="./css/yk.min.css" />
 		<script src="./js/yk.min.js"></script>
 		<link rel="stylesheet" href="https://unpkg.com/emoji.css/dist/emoji.min.css" />
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
 		<title>YK</title>
 	</head>
@@ -92,16 +93,21 @@
 							<span class="desc">NFT 큐레이션 앱 - iOS, Android</span>
 							<a class="link" href="https://og.xyz/" target="_blank">🔗</a>
 						</p>
-						<ul class="preview-list">
-							<li><img class="vert" src="./assets/images/preview-og-1.png" alt="" /></li>
-							<li><img class="vert" src="./assets/images/preview-og-2.png" alt="" /></li>
-							<li><img class="vert" src="./assets/images/preview-og-3.png" alt="" /></li>
-							<li><img class="vert" src="./assets/images/preview-og-4.png" alt="" /></li>
-							<li><img class="vert" src="./assets/images/preview-og-5.png" alt="" /></li>
-							<li><img class="vert" src="./assets/images/preview-og-6.png" alt="" /></li>
-							<li><img class="vert" src="./assets/images/preview-og-7.png" alt="" /></li>
-							<li><img class="vert" src="./assets/images/preview-og-8.png" alt="" /></li>
-						</ul>
+						<div class="swiper preview-list">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img class="vert" src="./assets/images/preview-og-1.png" alt="" /></div>
+								<div class="swiper-slide"><img class="vert" src="./assets/images/preview-og-2.png" alt="" /></div>
+								<div class="swiper-slide"><img class="vert" src="./assets/images/preview-og-3.png" alt="" /></div>
+								<div class="swiper-slide"><img class="vert" src="./assets/images/preview-og-4.png" alt="" /></div>
+								<div class="swiper-slide"><img class="vert" src="./assets/images/preview-og-5.png" alt="" /></div>
+								<div class="swiper-slide"><img class="vert" src="./assets/images/preview-og-6.png" alt="" /></div>
+								<div class="swiper-slide"><img class="vert" src="./assets/images/preview-og-7.png" alt="" /></div>
+								<div class="swiper-slide"><img class="vert" src="./assets/images/preview-og-8.png" alt="" /></div>
+							</div>
+							<!-- <div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+							<div class="swiper-scrollbar"></div> -->
+						</div>
 						<ul class="tag-list">
 							<li><button class="tag">📱 Flutter</button></li>
 							<li><button class="tag">🔥 Firebase</button></li>
@@ -113,18 +119,16 @@
 							<span class="desc">삼성전자 Galaxy Unpacked</span>
 							<a class="link" href="https://www.samsung.com/global/galaxy/galaxy-z-fold4/" target="_blank">🔗</a>
 						</p>
-						<ul class="preview-list">
-							<li>
-								<figure class="video" data-src="./assets/videos/preview-fold4-1.mp4"></figure>
-							</li>
-							<li>
-								<figure class="video" data-src="./assets/videos/preview-fold4-2.mp4"></figure>
-							</li>
-							<li><img class="hor" src="./assets/images/preview-fold4-1.png" alt="" /></li>
-							<li><img class="hor" src="./assets/images/preview-fold4-2.png" alt="" /></li>
-							<li><img class="hor" src="./assets/images/preview-fold4-3.png" alt="" /></li>
-							<li><img class="hor" src="./assets/images/preview-fold4-4.png" alt="" /></li>
-						</ul>
+						<div class="swiper preview-list">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><figure class="video" data-src="./assets/videos/preview-fold4-1.mp4"></figure></div>
+								<div class="swiper-slide"><figure class="video" data-src="./assets/videos/preview-fold4-2.mp4"></figure></div>
+								<div class="swiper-slide"><img class="hor" src="./assets/images/preview-fold4-1.png" alt="" /></div>
+								<div class="swiper-slide"><img class="hor" src="./assets/images/preview-fold4-2.png" alt="" /></div>
+								<div class="swiper-slide"><img class="hor" src="./assets/images/preview-fold4-3.png" alt="" /></div>
+								<div class="swiper-slide"><img class="hor" src="./assets/images/preview-fold4-4.png" alt="" /></div>
+							</div>
+						</div>
 						<ul class="tag-list">
 							<li><button class="tag">🌐 HTML</button></li>
 							<li><button class="tag">🌐 Sass</button></li>
@@ -384,5 +388,22 @@
 				cover.classList.add('loaded');
 			}, 500);
 		};
+	</script>
+	<script type="module">
+		import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js';
+
+		new Swiper('.swiper', {
+			direction: 'horizontal',
+			slidesPerView: 'auto',
+
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+
+			scrollbar: {
+				el: '.swiper-scrollbar',
+			},
+		});
 	</script>
 </html>
