@@ -47,7 +47,7 @@ const src = {
 	scripts: `/js/**/*.js`,
 	models: `/assets/models/**/*.*`,
 	fonts: `/assets/fonts/**/*.*`,
-	favicons: `/assets/favicons/**/*.ico`,
+	favicons: `/assets/favicons/**/*.{ico,png}`,
 };
 
 const paths = {
@@ -152,7 +152,7 @@ const videos = () => {
 };
 
 const favicons = () => {
-	const basePathImages = `${basePath.dest + paths.favicons}**/*.ico`;
+	const basePathImages = basePath.dest + src.favicons;
 	return gulp
 		.src([basePath.src + src.favicons])
 		.pipe($.newer({ dest: basePathImages }))

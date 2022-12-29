@@ -569,35 +569,22 @@ main {
 }
 
 .project .preview-list {
-  width: 100%;
-  margin-bottom: 24px;
-  display: flex;
-  flex-wrap: nowrap;
-  overflow: hidden;
-  overflow-x: auto;
-}
-
-.project .preview-list.swiper {
   display: block;
+  width: 100%;
+  padding: 0 calc(var(--padding) * 2);
+  margin-bottom: 24px;
+  box-sizing: border-box;
   overflow: hidden;
 }
 
 .project .preview-list .swiper-slide {
   width: auto;
   box-sizing: border-box;
-  padding: 0 var(--padding);
+  padding-left: var(--padding);
 }
 
 .project .preview-list .swiper-slide:first-child {
-  padding-left: calc(var(--padding) * 2);
-}
-
-.project .preview-list .swiper-slide:last-child {
-  padding-right: calc(var(--padding) * 2);
-}
-
-.project .preview-list li + li {
-  margin-left: calc(var(--padding) * 2);
+  padding-left: 0;
 }
 
 .project .preview-list .video {
@@ -801,14 +788,13 @@ main {
 
   .project .preview-list video,
   .project .preview-list img {
-    height: 230px;
+    height: 250px;
     border-radius: 10px;
   }
 
   .project .preview-list video.vert,
   .project .preview-list img.vert {
-    height: 360px;
-    border-radius: 10px;
+    height: 340px;
   }
 
   .tag {
