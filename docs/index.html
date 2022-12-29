@@ -13,13 +13,20 @@
 
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-title" content="YK" />
 
+		<meta name="description" content="개발자 YK" />
+		<meta name="keywords" content="yk, ykdhan, dev, developer, frontend, backend, web3, 개발, 개발자" />
+
 		<meta property="og:site_name" content="YK" />
 		<meta property="og:title" content="YK" />
-		<!-- <meta property="og:image" content="src/yk-big.png" /> -->
-		<meta property="og:description" content="개발자" />
+		<meta property="og:description" content="개발자 YK" />
+		<meta property="og:url" content="https://ykdhan.com" />
+		<meta property="og:image" content="./assets/images/yk-thumbnail.png" />
+		<meta property="og:image:url" content="./assets/images/yk-thumbnail.png" />
+		<meta property="twitter:image" content="./assets/images/yk-thumbnail.png" />
 
 		<!-- <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
 		<link rel="apple-touch-icon" href="./assets/favicon-64.png" />
@@ -31,6 +38,7 @@
 
 		<link rel="stylesheet" type="text/css" href="./css/yk.min.css" />
 		<script src="./js/yk.min.js"></script>
+
 		<link rel="stylesheet" href="https://unpkg.com/emoji.css/dist/emoji.min.css" />
 		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
@@ -40,18 +48,9 @@
 		<header class="header">
 			<div class="inner">
 				<div class="logo">
-					<span>YK.</span>
+					<span>👨🏻‍💻</span>
 				</div>
 				<ul class="nav">
-					<!-- <li class="item">
-					<a href="#">profile</a>
-				</li>
-				<li class="item">
-					<a href="#">profile</a>
-				</li>
-				<li class="item">
-					<a href="#">profile</a>
-				</li> -->
 					<li class="item">
 						<a class="link github" href="https://github.com/ykdhan" target="_blank">
 							<svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 119.98 117.82">
@@ -121,8 +120,16 @@
 						</p>
 						<div class="swiper preview-list">
 							<div class="swiper-wrapper">
-								<div class="swiper-slide"><figure class="video" data-src="./assets/videos/preview-fold4-1.mp4"></figure></div>
-								<div class="swiper-slide"><figure class="video" data-src="./assets/videos/preview-fold4-2.mp4"></figure></div>
+								<div class="swiper-slide">
+									<figure class="video">
+										<video muted loop playsinline><source src="./assets/videos/preview-fold4-1.mp4" type="video/mp4" /></video>
+									</figure>
+								</div>
+								<div class="swiper-slide">
+									<figure class="video">
+										<video muted loop playsinline><source src="./assets/videos/preview-fold4-2.mp4" type="video/mp4" /></video>
+									</figure>
+								</div>
 								<div class="swiper-slide"><img class="hor" src="./assets/images/preview-fold4-1.png" alt="" /></div>
 								<div class="swiper-slide"><img class="hor" src="./assets/images/preview-fold4-2.png" alt="" /></div>
 								<div class="swiper-slide"><img class="hor" src="./assets/images/preview-fold4-3.png" alt="" /></div>
@@ -141,24 +148,32 @@
 							<span class="desc">3D 웹사이트</span>
 							<a class="link" href="https://fave.kr/" target="_blank">🔗</a>
 						</p>
-						<ul class="preview-list">
-							<li>
-								<figure class="video" data-src="./assets/videos/preview-fave-1.mp4"></figure>
-							</li>
-							<li>
-								<figure class="video" data-src="./assets/videos/preview-fave-2.mp4"></figure>
-							</li>
-							<li><img class="hor" src="./assets/images/preview-fave-1.png" alt="" /></li>
-							<li><img class="hor" src="./assets/images/preview-fave-2.png" alt="" /></li>
-							<li><img class="hor" src="./assets/images/preview-fave-3.png" alt="" /></li>
-							<li><img class="hor" src="./assets/images/preview-fave-4.png" alt="" /></li>
-							<li><img class="hor" src="./assets/images/preview-fave-5.png" alt="" /></li>
-							<li><img class="hor" src="./assets/images/preview-fave-6.png" alt="" /></li>
-							<li><img class="hor" src="./assets/images/preview-fave-7.png" alt="" /></li>
-							<li>
-								<figure class="video" data-src="./assets/videos/preview-fave-3.mp4"></figure>
-							</li>
-						</ul>
+						<div class="swiper preview-list">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<figure class="video">
+										<video muted loop playsinline><source src="./assets/videos/preview-fave-1.mp4" type="video/mp4" /></video>
+									</figure>
+								</div>
+								<div class="swiper-slide">
+									<figure class="video">
+										<video muted loop playsinline><source src="./assets/videos/preview-fave-2.mp4" type="video/mp4" /></video>
+									</figure>
+								</div>
+								<div class="swiper-slide"><img class="hor" src="./assets/images/preview-fave-1.png" alt="" /></div>
+								<div class="swiper-slide"><img class="hor" src="./assets/images/preview-fave-2.png" alt="" /></div>
+								<div class="swiper-slide"><img class="hor" src="./assets/images/preview-fave-3.png" alt="" /></div>
+								<div class="swiper-slide"><img class="hor" src="./assets/images/preview-fave-4.png" alt="" /></div>
+								<div class="swiper-slide"><img class="hor" src="./assets/images/preview-fave-5.png" alt="" /></div>
+								<div class="swiper-slide"><img class="hor" src="./assets/images/preview-fave-6.png" alt="" /></div>
+								<div class="swiper-slide"><img class="hor" src="./assets/images/preview-fave-7.png" alt="" /></div>
+								<div class="swiper-slide">
+									<figure class="video">
+										<video muted loop playsinline><source src="./assets/videos/preview-fave-3.mp4" type="video/mp4" /></video>
+									</figure>
+								</div>
+							</div>
+						</div>
 						<ul class="tag-list">
 							<li><button class="tag">🌐 Svelte</button></li>
 							<li><button class="tag">🎲 Three.js</button></li>
@@ -170,21 +185,29 @@
 							<span class="desc">삼성전자 Galaxy Unpacked</span>
 							<a class="link" href="https://www.samsung.com/global/galaxy/galaxy-s22-ultra/" target="_blank">🔗</a>
 						</p>
-						<ul class="preview-list">
-							<li>
-								<figure class="video" data-src="./assets/videos/preview-s22-1.mp4"></figure>
-							</li>
-							<li>
-								<figure class="video" data-src="./assets/videos/preview-s22-2.mp4"></figure>
-							</li>
-							<li>
-								<figure class="video" data-src="./assets/videos/preview-s22-3.mp4"></figure>
-							</li>
-							<li><img class="hor" src="./assets/images/preview-s22-1.png" alt="" /></li>
-							<li><img class="hor" src="./assets/images/preview-s22-2.png" alt="" /></li>
-							<li><img class="hor" src="./assets/images/preview-s22-3.png" alt="" /></li>
-							<li><img class="hor" src="./assets/images/preview-s22-4.png" alt="" /></li>
-						</ul>
+						<div class="swiper preview-list">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<figure class="video">
+										<video muted loop playsinline><source src="./assets/videos/preview-s22-1.mp4" type="video/mp4" /></video>
+									</figure>
+								</div>
+								<div class="swiper-slide">
+									<figure class="video">
+										<video muted loop playsinline><source src="./assets/videos/preview-s22-2.mp4" type="video/mp4" /></video>
+									</figure>
+								</div>
+								<div class="swiper-slide">
+									<figure class="video">
+										<video muted loop playsinline><source src="./assets/videos/preview-s22-3.mp4" type="video/mp4" /></video>
+									</figure>
+								</div>
+								<div class="swiper-slide"><img class="hor" src="./assets/images/preview-s22-1.png" alt="" /></div>
+								<div class="swiper-slide"><img class="hor" src="./assets/images/preview-s22-2.png" alt="" /></div>
+								<div class="swiper-slide"><img class="hor" src="./assets/images/preview-s22-3.png" alt="" /></div>
+								<div class="swiper-slide"><img class="hor" src="./assets/images/preview-s22-4.png" alt="" /></div>
+							</div>
+						</div>
 						<ul class="tag-list">
 							<li><button class="tag">🌐 HTML</button></li>
 							<li><button class="tag">🌐 Sass</button></li>
@@ -197,20 +220,28 @@
 							<span class="desc">삼성전자 Galaxy Unpacked</span>
 							<a class="link" href="https://www.samsung.com/global/galaxy/galaxy-z-fold3-5g/" target="_blank">🔗</a>
 						</p>
-						<ul class="preview-list">
-							<li>
-								<figure class="video" data-src="./assets/videos/preview-fold3-1.mp4"></figure>
-							</li>
-							<li>
-								<figure class="video" data-src="./assets/videos/preview-fold3-2.mp4"></figure>
-							</li>
-							<li>
-								<figure class="video" data-src="./assets/videos/preview-fold3-3.mp4"></figure>
-							</li>
-							<li><img class="hor" src="./assets/images/preview-fold3-1.png" alt="" /></li>
-							<li><img class="hor" src="./assets/images/preview-fold3-2.png" alt="" /></li>
-							<li><img class="hor" src="./assets/images/preview-fold3-3.png" alt="" /></li>
-						</ul>
+						<div class="swiper preview-list">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<figure class="video">
+										<video muted loop playsinline><source src="./assets/videos/preview-fold3-1.mp4" type="video/mp4" /></video>
+									</figure>
+								</div>
+								<div class="swiper-slide">
+									<figure class="video">
+										<video muted loop playsinline><source src="./assets/videos/preview-fold3-2.mp4" type="video/mp4" /></video>
+									</figure>
+								</div>
+								<div class="swiper-slide">
+									<figure class="video">
+										<video muted loop playsinline><source src="./assets/videos/preview-fold3-3.mp4" type="video/mp4" /></video>
+									</figure>
+								</div>
+								<div class="swiper-slide"><img class="hor" src="./assets/images/preview-fold3-1.png" alt="" /></div>
+								<div class="swiper-slide"><img class="hor" src="./assets/images/preview-fold3-2.png" alt="" /></div>
+								<div class="swiper-slide"><img class="hor" src="./assets/images/preview-fold3-3.png" alt="" /></div>
+							</div>
+						</div>
 						<ul class="tag-list">
 							<li><button class="tag">🎲 Three.js</button></li>
 							<li><button class="tag">🌐 HTML</button></li>
@@ -224,12 +255,14 @@
 							<span class="desc">사이트 리뉴얼</span>
 							<a class="link" href="https://jangsuculture.or.kr/" target="_blank">🔗</a>
 						</p>
-						<ul class="preview-list">
-							<li><img class="hor" src="./assets/images/preview-jangsu-1.png" alt="" /></li>
-							<li><img class="hor" src="./assets/images/preview-jangsu-2.png" alt="" /></li>
-							<li><img class="hor" src="./assets/images/preview-jangsu-3.png" alt="" /></li>
-							<li><img class="hor" src="./assets/images/preview-jangsu-4.png" alt="" /></li>
-						</ul>
+						<div class="swiper preview-list">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img class="hor" src="./assets/images/preview-jangsu-1.png" alt="" /></div>
+								<div class="swiper-slide"><img class="hor" src="./assets/images/preview-jangsu-2.png" alt="" /></div>
+								<div class="swiper-slide"><img class="hor" src="./assets/images/preview-jangsu-3.png" alt="" /></div>
+								<div class="swiper-slide"><img class="hor" src="./assets/images/preview-jangsu-4.png" alt="" /></div>
+							</div>
+						</div>
 						<ul class="tag-list">
 							<li><button class="tag">🌐 HTML</button></li>
 							<li><button class="tag">🌐 Sass</button></li>
@@ -242,11 +275,13 @@
 							<span class="desc">Zabbix - 오픈소스</span>
 							<a class="link" href="https://jangsuculture.or.kr/" target="_blank">🔗</a>
 						</p>
-						<ul class="preview-list">
-							<li><img class="hor height" src="./assets/images/preview-secureflare-1.png" alt="" /></li>
-							<li><img class="hor height" src="./assets/images/preview-secureflare-2.png" alt="" /></li>
-							<li><img class="hor height" src="./assets/images/preview-secureflare-3.png" alt="" /></li>
-						</ul>
+						<div class="swiper preview-list">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img class="hor height" src="./assets/images/preview-secureflare-1.png" alt="" /></div>
+								<div class="swiper-slide"><img class="hor height" src="./assets/images/preview-secureflare-2.png" alt="" /></div>
+								<div class="swiper-slide"><img class="hor height" src="./assets/images/preview-secureflare-3.png" alt="" /></div>
+							</div>
+						</div>
 						<ul class="tag-list">
 							<li><button class="tag">🌐 PHP</button></li>
 							<li><button class="tag">📂 오픈소스</button></li>
@@ -269,13 +304,17 @@
 				<section class="page-section">
 					<h2 class="page-title">풀스택이 되는 그날까지.</h2>
 					<ul class="tag-list">
-						<li><button class="tag">💌 ykdhan@naver.com</button></li>
+						<li>
+							<button class="tag" onclick="onClickEmail()">💌 ykdhan@naver.com</button>
+						</li>
 					</ul>
 				</section>
 			</div>
 		</main>
 
-		<div class="cover loading"></div>
+		<div class="cover loading">
+			<span>👨🏻‍💻</span>
+		</div>
 	</body>
 
 	<script>
@@ -288,11 +327,16 @@
 
 		const mobileW = 768;
 
+		const onClickEmail = () => {
+			location.href = 'mailto:ykdhan@naver.com';
+		};
+
 		const VIDEO = (el) => {
 			let timeout;
 			let isMobileSize;
 			let video;
 			let loaded = false;
+			let inited = false;
 
 			const observer = new IntersectionObserver(
 				(entries, obs) => {
@@ -309,38 +353,25 @@
 			);
 
 			const init = () => {
-				video = document.createElement('video');
-				video.classList.add('hor');
-				video.setAttribute('loop', true);
-				video.setAttribute('muted', true);
-				video.setAttribute('playsinline', true);
-
-				const source = document.createElement('source');
-				source.setAttribute('src', el.dataset.src);
-				source.setAttribute('type', 'video/mp4');
-
-				video.append(source);
-				el.append(video);
-
+				video = el.querySelector('video');
 				video.load();
 				video.addEventListener('canplay', () => {
 					loaded = true;
-					play();
+					if (!inited) {
+						inited = true;
+						observer.observe(el);
+					}
 				});
-
-				observer.observe(el);
 			};
 
 			const resize = () => {
 				if (window.innerWidth > mobileW) {
 					if (isMobileSize) {
 						isMobileSize = false;
-						// console.log('pc');
 					}
 				} else {
 					if (!isMobileSize) {
 						isMobileSize = true;
-						// console.log('mobile');
 					}
 				}
 			};
@@ -358,21 +389,18 @@
 				}
 			};
 
-			window.onresize = () => {
+			window.addEventListener('resize', () => {
 				clearTimeout(timeout);
 				timeout = setTimeout(() => {
 					resize();
 				}, 100);
-			};
+			});
+
 			init();
 		};
 
-		window.onload = () => {
+		window.addEventListener('load', () => {
 			isMobileSize = window.innerWidth > mobileW;
-
-			for (const video of document.querySelectorAll('.video')) {
-				VIDEO(video);
-			}
 
 			wrapper.addEventListener('scroll', function (e) {
 				const y = inner.getBoundingClientRect().y;
@@ -383,27 +411,35 @@
 				}
 			});
 
-			cover.classList.remove('loading');
 			setTimeout(() => {
-				cover.classList.add('loaded');
-			}, 500);
-		};
+				for (const video of document.querySelectorAll('.video')) {
+					VIDEO(video);
+				}
+
+				cover.classList.remove('loading');
+				setTimeout(() => {
+					cover.classList.add('loaded');
+				}, 500);
+			}, 300);
+		});
 	</script>
 	<script type="module">
 		import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js';
 
-		new Swiper('.swiper', {
-			direction: 'horizontal',
-			slidesPerView: 'auto',
+		window.addEventListener('load', () => {
+			new Swiper('.swiper', {
+				direction: 'horizontal',
+				slidesPerView: 'auto',
 
-			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',
-			},
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
 
-			scrollbar: {
-				el: '.swiper-scrollbar',
-			},
+				scrollbar: {
+					el: '.swiper-scrollbar',
+				},
+			});
 		});
 	</script>
 </html>

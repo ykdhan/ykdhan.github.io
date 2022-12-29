@@ -235,6 +235,7 @@ button {
 }
 
 .header {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   left: 0;
@@ -261,10 +262,7 @@ button {
 }
 
 .header .logo {
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--gray8);
-  color: var(--gray8);
+  font-size: 20px;
 }
 
 .header .nav {
@@ -372,6 +370,7 @@ button {
 }
 
 .sticky-inner {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   height: var(--vh);
@@ -381,6 +380,9 @@ button {
   position: fixed;
   top: 0;
   left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   z-index: 9999;
@@ -395,6 +397,33 @@ button {
 
 .cover.loaded {
   display: none;
+}
+
+.cover span {
+  display: block;
+  font-size: 36px;
+  -webkit-animation: scaling 1s ease-in 0s infinite alternate;
+  animation: scaling 1s ease-in 0s infinite alternate;
+}
+
+@-webkit-keyframes scaling {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes scaling {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.2);
+  }
 }
 
 html,
@@ -550,7 +579,7 @@ main {
 
 .project .preview-list.swiper {
   display: block;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .project .preview-list .swiper-slide {
@@ -580,31 +609,23 @@ main {
 .project .preview-list video,
 .project .preview-list img {
   display: block;
-  height: auto;
+  width: auto;
+  height: 400px;
+  border-radius: 12px;
   border: 1px solid var(--gray3);
-  min-height: 1px;
 }
 
 .project .preview-list video.vert,
 .project .preview-list img.vert {
-  width: 240px;
-  border-radius: 12px;
-}
-
-.project .preview-list video.hor,
-.project .preview-list img.hor {
-  width: 560px;
-  border-radius: 6px;
-}
-
-.project .preview-list video.hor.height,
-.project .preview-list img.hor.height {
-  width: auto;
-  height: 350px;
+  height: 520px;
 }
 
 .project .tag {
   background-color: var(--color-white);
+}
+
+.project .tag-list {
+  padding: 0 calc(var(--padding) * 2);
 }
 
 .tag {
@@ -634,7 +655,6 @@ main {
 .tag-list {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 calc(var(--padding) * 2);
   box-sizing: border-box;
 }
 
@@ -709,10 +729,6 @@ main {
     padding: calc(var(--padding) * 1.5) calc(var(--padding) * 2);
   }
 
-  .header .logo {
-    font-size: 14px;
-  }
-
   .page-inner {
     padding: 40px 0;
   }
@@ -783,21 +799,16 @@ main {
     margin-bottom: 18px;
   }
 
-  .project .preview-list video.vert,
-  .project .preview-list img.vert {
-    width: 200px;
+  .project .preview-list video,
+  .project .preview-list img {
+    height: 230px;
     border-radius: 10px;
   }
 
-  .project .preview-list video.hor,
-  .project .preview-list img.hor {
-    width: 400px;
-  }
-
-  .project .preview-list video.hor.height,
-  .project .preview-list img.hor.height {
-    width: auto;
-    height: 280px;
+  .project .preview-list video.vert,
+  .project .preview-list img.vert {
+    height: 360px;
+    border-radius: 10px;
   }
 
   .tag {

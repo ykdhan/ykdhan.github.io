@@ -174,7 +174,7 @@ main {
 
 		&.swiper {
 			display: block;
-			overflow: auto;
+			overflow: hidden;
 		}
 
 		@include mobile {
@@ -206,41 +206,32 @@ main {
 		video,
 		img {
 			display: block;
-			height: auto;
+			width: auto;
+			height: 400px;
+			border-radius: 12px;
 			border: 1px solid var(--gray3);
-			min-height: 1px;
+
+			@include mobile {
+				height: 230px;
+				border-radius: 10px;
+			}
 
 			&.vert {
-				width: 240px;
-				border-radius: 12px;
+				height: 520px;
 
 				@include mobile {
-					width: 200px;
+					height: 360px;
 					border-radius: 10px;
-				}
-			}
-			&.hor {
-				width: 560px;
-				border-radius: 6px;
-
-				@include mobile {
-					width: 400px;
-				}
-
-				&.height {
-					width: auto;
-					height: 350px;
-
-					@include mobile {
-						width: auto;
-						height: 280px;
-					}
 				}
 			}
 		}
 	}
 	.tag {
 		background-color: var(--color-white);
+
+		&-list {
+			padding: 0 calc(var(--padding) * 2);
+		}
 	}
 }
 
@@ -272,7 +263,6 @@ main {
 	&-list {
 		display: flex;
 		flex-wrap: wrap;
-		padding: 0 calc(var(--padding) * 2);
 		box-sizing: border-box;
 
 		li {
