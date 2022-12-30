@@ -598,8 +598,8 @@ main {
   display: block;
   width: auto;
   height: 400px;
-  border-radius: 12px;
   border: 1px solid var(--gray3);
+  border-radius: var(--border-radius);
 }
 
 .project .preview-list video.vert,
@@ -708,7 +708,7 @@ main {
   }
 
   :root {
-    --padding: 8px;
+    --padding: 6px;
     --border-radius: 8px;
   }
 
@@ -788,13 +788,12 @@ main {
 
   .project .preview-list video,
   .project .preview-list img {
-    height: 250px;
-    border-radius: 10px;
+    height: 212px;
   }
 
   .project .preview-list video.vert,
   .project .preview-list img.vert {
-    height: 340px;
+    height: 380px;
   }
 
   .tag {
