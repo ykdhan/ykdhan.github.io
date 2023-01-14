@@ -194,7 +194,7 @@ button {
 }
 
 .type-normal {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
   color: var(--gray6);
 }
@@ -547,7 +547,7 @@ main {
 .project .intro {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 100%;
   padding: 0 calc(var(--padding) * 2);
   margin-bottom: 24px;
@@ -563,9 +563,33 @@ main {
 
 .project .desc {
   display: block;
-  font-size: 13px;
+  margin-left: var(--padding);
+  font-size: 14px;
   font-weight: 400;
   color: var(--gray6);
+}
+
+.project .link {
+  display: block;
+  padding: 4px 6px;
+  margin: 0;
+  margin-left: auto;
+  background-color: var(--color-white);
+  border: 1px solid var(--gray3);
+  border-radius: 2px;
+  transition: background-color 0.3s ease-out;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--gray6);
+}
+
+.project .link:hover,
+.project .link:focus {
+  background-color: var(--gray3);
+}
+
+.project .link.none {
+  background: none;
 }
 
 .project .preview-list {
@@ -627,8 +651,8 @@ main {
   background-color: var(--gray1);
   color: var(--gray7);
   border-radius: 6px;
-  transition: background-color 0.4s ease-out, color 0.4s ease-out;
-  font-size: 13px;
+  transition: background-color 0.3s ease-out, color 0.3s ease-out;
+  font-size: 14px;
   font-weight: 400;
   color: var(--gray6);
 }
@@ -778,8 +802,8 @@ main {
     font-size: 12px;
   }
 
-  .project .desc {
-    display: none;
+  .project .link {
+    font-size: 12px;
   }
 
   .project .preview-list {
@@ -788,7 +812,7 @@ main {
 
   .project .preview-list video,
   .project .preview-list img {
-    height: 212px;
+    height: 260px;
   }
 
   .project .preview-list video.vert,

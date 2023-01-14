@@ -89,8 +89,8 @@
 					<div class="project">
 						<p class="intro">
 							<span class="title">OG</span>
-							<span class="desc">NFT 큐레이션 앱 - iOS, Android</span>
-							<a class="link" href="https://og.xyz/" target="_blank">🔗</a>
+							<span class="desc">NFT 큐레이션 앱 (iOS, Android)</span>
+							<span class="link none">서비스 미출시</span>
 						</p>
 						<div class="swiper preview-list">
 							<div class="swiper-wrapper">
@@ -272,8 +272,8 @@
 					<div class="project">
 						<p class="intro">
 							<span class="title">LG U+ 보안관제시스템</span>
-							<span class="desc">Zabbix - 오픈소스</span>
-							<a class="link" href="https://jangsuculture.or.kr/" target="_blank">🔗</a>
+							<span class="desc">Zabbix (오픈소스)</span>
+							<span class="link none">서비스 미출시</span>
 						</p>
 						<div class="swiper preview-list">
 							<div class="swiper-wrapper">
@@ -319,11 +319,6 @@
 
 	<script>
 		console.log('YK.');
-
-		const cover = document.querySelector('.cover');
-		const wrapper = document.querySelector('.page-wrap');
-		const inner = document.querySelector('.page-inner');
-		const header = document.querySelector('header');
 
 		const mobileW = 768;
 
@@ -400,6 +395,11 @@
 		};
 
 		window.addEventListener('load', () => {
+			const cover = document.querySelector('.cover');
+			const wrapper = document.querySelector('.page-wrap');
+			const inner = document.querySelector('.page-inner');
+			const header = document.querySelector('header');
+
 			isMobileSize = window.innerWidth > mobileW;
 
 			wrapper.addEventListener('scroll', function (e) {
@@ -420,7 +420,7 @@
 				setTimeout(() => {
 					cover.classList.add('loaded');
 				}, 500);
-			}, 300);
+			}, 500);
 		});
 	</script>
 	<script type="module">

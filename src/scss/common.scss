@@ -141,7 +141,7 @@ main {
 	.intro {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: flex-start;
 		width: 100%;
 		padding: 0 calc(var(--padding) * 2);
 		margin-bottom: 24px;
@@ -157,10 +157,27 @@ main {
 	}
 	.desc {
 		display: block;
+		margin-left: var(--padding);
+		@include type-normal;
+	}
+	.link {
+		display: block;
+		padding: 4px 6px;
+		margin: 0;
+		margin-left: auto;
+		background-color: var(--color-white);
+		border: 1px solid var(--gray3);
+		border-radius: 2px;
+		transition: background-color 0.3s ease-out;
 		@include type-normal;
 
-		@include mobile {
-			display: none;
+		&:hover,
+		&:focus {
+			background-color: var(--gray3);
+		}
+
+		&.none {
+			background: none;
 		}
 	}
 
@@ -201,7 +218,7 @@ main {
 			@include border-radius;
 
 			@include mobile {
-				height: 212px;
+				height: 260px;
 			}
 
 			&.vert {
@@ -234,7 +251,7 @@ main {
 	background-color: var(--gray1);
 	color: var(--gray7);
 	border-radius: 6px;
-	transition: background-color 0.4s ease-out, color 0.4s ease-out;
+	transition: background-color 0.3s ease-out, color 0.3s ease-out;
 	@include type-normal;
 
 	@include mobile {
