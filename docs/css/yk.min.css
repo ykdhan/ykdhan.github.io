@@ -235,7 +235,6 @@ button {
 }
 
 .header {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   left: 0;
@@ -371,7 +370,6 @@ button {
 }
 
 .sticky-inner {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   height: var(--vh);
@@ -403,18 +401,7 @@ button {
 .cover span {
   display: block;
   font-size: 36px;
-  -webkit-animation: scaling 1s ease-in 0s infinite alternate;
   animation: scaling 1s ease-in 0s infinite alternate;
-}
-
-@-webkit-keyframes scaling {
-  0% {
-    transform: scale(1);
-  }
-
-  100% {
-    transform: scale(1.2);
-  }
 }
 
 @keyframes scaling {
@@ -516,7 +503,6 @@ main {
 }
 
 .package-guide span {
-  -webkit-animation: blink 2.4s infinite;
   animation: blink 2.4s infinite;
 }
 
@@ -752,7 +738,6 @@ main {
   margin-right: var(--padding);
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   pointer-events: none;
 }
@@ -789,7 +774,7 @@ main {
   line-height: 20px;
   margin: 0;
   margin-left: auto;
-  background-color: var(--color-white);
+  background-color: var(--gray0);
   border-radius: 8px;
   transition: background-color 0.3s ease-out;
 }
@@ -829,24 +814,6 @@ main {
   text-align: center;
   transform: translateY(100%);
   transition: transform 0.3s ease-out;
-}
-
-@-webkit-keyframes blink {
-  0% {
-    opacity: 0;
-  }
-
-  40% {
-    opacity: 1;
-  }
-
-  60% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
 }
 
 @keyframes blink {
@@ -942,6 +909,11 @@ main {
 
   #projects {
     gap: var(--padding);
+  }
+
+  #copyright .copyright {
+    font-size: 12px;
+    line-height: 16px;
   }
 
   .project {
