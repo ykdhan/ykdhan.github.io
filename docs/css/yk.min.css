@@ -194,14 +194,15 @@ button {
 }
 
 .type-normal {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 400;
+  line-height: 16px;
   color: var(--gray6);
 }
 
 .type-big {
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 600;
   color: var(--gray8);
 }
 
@@ -219,7 +220,7 @@ button {
   --color-gray400: #4f4f4f;
   --color-gray700: #2f2f2f;
   --gray0: #ffffff;
-  --gray1: #f0f2f5;
+  --gray1: #f5f7f9;
   --gray2: #f1f3f5;
   --gray3: #e1e1e6;
   --gray4: #c7c9cf;
@@ -229,9 +230,10 @@ button {
   --gray8: #2d3541;
   --gray9: #1b2026;
   --padding: 16px;
-  --border-radius: 10px;
-  --max-width: 740px;
-  --content-width: 720px;
+  --border-radius: 16px;
+  --border-radius-m: 8px;
+  --max-width: 720px;
+  --content-width: 700px;
 }
 
 .header {
@@ -260,10 +262,10 @@ button {
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: calc(var(--padding) * 1.5) var(--padding);
+  padding: var(--padding);
   background-color: var(--gray0);
   border-bottom: 1px solid transparent;
-  border-radius: 20px;
+  border-radius: var(--border-radius);
   box-sizing: border-box;
   transition: border-radius ease-out 0.3s, border-color ease-out 0.3s;
 }
@@ -525,8 +527,8 @@ main {
 .banner .title {
   display: block;
   margin-bottom: var(--padding);
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 600;
   color: var(--gray8);
   color: var(--gray8);
 }
@@ -549,12 +551,19 @@ main {
 
 #copyright {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: var(--padding);
+  align-items: center;
+}
+
+#copyright .tag {
+  background-color: var(--gray0);
+  cursor: pointer;
 }
 
 #copyright .copyright {
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 13px;
+  line-height: 16px;
 }
 
 .project {
@@ -562,9 +571,9 @@ main {
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
-  padding: calc(var(--padding) * 2) 0;
+  padding: var(--padding) 0;
   background-color: var(--gray0);
-  border-radius: 20px;
+  border-radius: var(--border-radius);
 }
 
 .project .image {
@@ -578,7 +587,7 @@ main {
   height: auto;
   max-height: 300px;
   border: 2px solid var(--gray1);
-  border-radius: 4px;
+  border-radius: var(--border-radius-m);
   -o-object-fit: cover;
   object-fit: cover;
 }
@@ -586,7 +595,7 @@ main {
 .project .intro {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  gap: var(--padding);
   width: 100%;
   padding: 0 var(--padding);
   box-sizing: border-box;
@@ -599,23 +608,34 @@ main {
 
 .project .info .title {
   display: block;
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  color: var(--gray6);
   font-weight: 600;
-  line-height: 20px;
   color: var(--gray8);
 }
 
-.project .info .desc {
+.project .info .description {
   display: block;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 16px;
+  color: var(--gray6);
+}
+
+.project .info .company {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  color: var(--gray6);
 }
 
 .project .preview-list {
   display: block;
   width: 100%;
-  padding: var(--padding);
+  padding: calc(var(--padding) / 2) var(--padding);
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -640,14 +660,14 @@ main {
 .project .preview-list img {
   display: block;
   width: auto;
-  height: 350px;
+  height: 200px;
   border: 4px solid var(--gray1);
   border-radius: var(--border-radius);
 }
 
 .project .preview-list video.vert,
 .project .preview-list img.vert {
-  height: 520px;
+  height: 320px;
 }
 
 .preview-popup {
@@ -758,14 +778,21 @@ main {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 32px;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 16px;
+  height: 30px;
   padding: 0 10px;
-  border-radius: 8px;
-  background-color: var(--gray1);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  color: var(--gray6);
   color: var(--gray8);
+  border-radius: var(--border-radius-m);
+  background-color: var(--gray1);
+  cursor: default;
+}
+
+.tag.company {
+  background-color: var(--gray0);
+  padding: 0;
 }
 
 .tag-list {
@@ -787,7 +814,7 @@ main {
   margin: 0;
   margin-left: auto;
   background-color: var(--gray0);
-  border-radius: 8px;
+  border-radius: var(--border-radius-m);
   transition: background-color 0.3s ease-out;
 }
 
@@ -822,7 +849,7 @@ main {
   line-height: 20px;
   color: var(--gray1);
   background-color: var(--gray9);
-  border-radius: 20px;
+  border-radius: var(--border-radius);
   text-align: center;
   transform: translateY(100%);
   transition: transform 0.3s ease-out;
@@ -881,16 +908,17 @@ main {
   }
 
   .type-big {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   :root {
     --padding: 12px;
-    --border-radius: 8px;
+    --border-radius: 12px;
+    --border-radius-m: 6px;
   }
 
   .header .inner {
-    padding: calc(var(--padding) * 1.5);
+    padding: var(--padding);
     border-radius: 0;
     border-color: var(--gray1);
   }
@@ -934,7 +962,7 @@ main {
   }
 
   .banner .title {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   #projects {
@@ -952,10 +980,22 @@ main {
 
   .project .info {
     flex-direction: column;
-    gap: 3px;
+    gap: calc(var(--padding) / 2);
   }
 
-  .project .info .desc {
+  .project .info .title {
+    font-size: 12px;
+  }
+
+  .project .info .description {
+    font-size: 12px;
+  }
+
+  .project .info .company {
+    font-size: 12px;
+  }
+
+  .project .info .company {
     font-size: 12px;
     line-height: 16px;
   }
@@ -966,12 +1006,12 @@ main {
 
   .project .preview-list video,
   .project .preview-list img {
-    height: 200px;
+    height: 160px;
   }
 
   .project .preview-list video.vert,
   .project .preview-list img.vert {
-    height: 380px;
+    height: 280px;
   }
 
   .preview-popup .preview-list {
@@ -979,12 +1019,21 @@ main {
   }
 
   .tag {
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 11px;
+    line-height: 14px;
+  }
+
+  .tag {
+    height: 28px;
+    padding: 0 8px;
   }
 
   .tag-list {
     gap: 8px;
+  }
+
+  .link {
+    height: 30px;
   }
 }
 /*# sourceMappingURL=.maps/yk.min.css.map */

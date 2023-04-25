@@ -142,11 +142,18 @@ main {
 
 #copyright {
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	gap: var(--padding);
+	align-items: center;
+
+	.tag {
+		background-color: var(--gray0);
+		cursor: pointer;
+	}
 
 	.copyright {
-		font-size: 14px;
-		line-height: 20px;
+		font-size: 13px;
+		line-height: 16px;
 
 		@include mobile {
 			font-size: 12px;
@@ -160,9 +167,9 @@ main {
 	flex-direction: column;
 	align-items: flex-start;
 	gap: 16px;
-	padding: calc(var(--padding) * 2) 0;
+	padding: var(--padding) 0;
 	background-color: var(--gray0);
-	border-radius: 20px;
+	border-radius: var(--border-radius);
 
 	@include mobile {
 		border-radius: 0;
@@ -178,7 +185,7 @@ main {
 			height: auto;
 			max-height: 300px;
 			border: 2px solid var(--gray1);
-			border-radius: 4px;
+			border-radius: var(--border-radius-m);
 			object-fit: cover;
 		}
 	}
@@ -186,7 +193,7 @@ main {
 	.intro {
 		display: flex;
 		align-items: center;
-		justify-content: flex-start;
+		gap: var(--padding);
 		width: 100%;
 		padding: 0 var(--padding);
 		box-sizing: border-box;
@@ -198,21 +205,22 @@ main {
 
 		@include mobile {
 			flex-direction: column;
-			gap: 3px;
+			gap: calc(var(--padding) / 2);
 		}
 
 		.title {
 			display: block;
-			font-size: 14px;
+			@include type-normal;
 			font-weight: 600;
-			line-height: 20px;
 			color: var(--gray8);
 		}
-		.desc {
+		.description {
 			display: block;
-			font-size: 14px;
-			font-weight: 400;
-			line-height: 20px;
+			@include type-normal;
+		}
+		.company {
+			display: block;
+			@include type-normal;
 
 			@include mobile {
 				font-size: 12px;
@@ -224,7 +232,7 @@ main {
 	.preview-list {
 		display: block;
 		width: 100%;
-		padding: var(--padding);
+		padding: calc(var(--padding) / 2) var(--padding);
 		box-sizing: border-box;
 		overflow: hidden;
 
@@ -252,19 +260,19 @@ main {
 		img {
 			display: block;
 			width: auto;
-			height: 350px;
+			height: 200px;
 			border: 4px solid var(--gray1);
 			@include border-radius;
 
 			@include mobile {
-				height: 200px;
+				height: 160px;
 			}
 
 			&.vert {
-				height: 520px;
+				height: 320px;
 
 				@include mobile {
-					height: 380px;
+					height: 280px;
 				}
 			}
 		}
@@ -381,18 +389,22 @@ main {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	height: 32px;
-	font-size: 13px;
-	font-weight: 400;
-	line-height: 16px;
+	height: 30px;
 	padding: 0 10px;
-	border-radius: 8px;
-	background-color: var(--gray1);
+	@include type-small;
 	color: var(--gray8);
+	border-radius: var(--border-radius-m);
+	background-color: var(--gray1);
+	cursor: default;
+
+	&.company {
+		background-color: var(--gray0);
+		padding: 0;
+	}
 
 	@include mobile {
-		font-size: 12px;
-		line-height: 16px;
+		height: 28px;
+		padding: 0 8px;
 	}
 
 	&-list {
@@ -419,8 +431,12 @@ main {
 	margin: 0;
 	margin-left: auto;
 	background-color: var(--gray0);
-	border-radius: 8px;
+	border-radius: var(--border-radius-m);
 	transition: background-color 0.3s ease-out;
+
+	@include mobile {
+		height: 30px;
+	}
 
 	&:hover,
 	&:focus {
@@ -455,7 +471,7 @@ main {
 		line-height: 20px;
 		color: var(--gray1);
 		background-color: var(--gray9);
-		border-radius: 20px;
+		border-radius: var(--border-radius);
 		text-align: center;
 		transform: translateY(100%);
 		transition: transform 0.3s ease-out;
