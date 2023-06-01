@@ -403,18 +403,7 @@ button {
 .cover span {
   display: block;
   font-size: 36px;
-  -webkit-animation: scaling 1s ease-in 0s infinite alternate;
   animation: scaling 1s ease-in 0s infinite alternate;
-}
-
-@-webkit-keyframes scaling {
-  0% {
-    transform: scale(1);
-  }
-
-  100% {
-    transform: scale(1.2);
-  }
 }
 
 @keyframes scaling {
@@ -516,7 +505,6 @@ main {
 }
 
 .package-guide span {
-  -webkit-animation: blink 2.4s infinite;
   animation: blink 2.4s infinite;
 }
 
@@ -853,24 +841,6 @@ main {
   text-align: center;
   transform: translateY(100%);
   transition: transform 0.3s ease-out;
-}
-
-@-webkit-keyframes blink {
-  0% {
-    opacity: 0;
-  }
-
-  40% {
-    opacity: 1;
-  }
-
-  60% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
 }
 
 @keyframes blink {
