@@ -6,7 +6,7 @@ interface Props {
 
 const ProjectTag = ({ title }: Props) => {
   return (
-    <li
+    <span
       style={{
         display: "inline-flex",
         alignItems: "center",
@@ -15,19 +15,13 @@ const ProjectTag = ({ title }: Props) => {
         paddingRight: 8,
         border: "1px solid #30363d",
         borderRadius: 18,
+        fontFamily: FONT.Regular,
+        fontSize: 12,
+        color: "#7D8590",
       }}
     >
-      <span
-        style={{
-          fontFamily: FONT.Regular,
-          fontSize: 12,
-          lineHeight: 18,
-          color: "#7D8590",
-        }}
-      >
-        {title}
-      </span>
-    </li>
+      {title}
+    </span>
   );
 };
 

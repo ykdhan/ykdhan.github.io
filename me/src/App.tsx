@@ -3,16 +3,19 @@ import Header from "./features/header/components/Header";
 import Project from "./features/project/components/Project";
 import DATA from "../DATA.json";
 import { FONT } from "./features/app/fonts";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { appState } from "./features/app/states/appState";
 import { useRecoilState } from "recoil";
+import Cover from "./features/cover/components/Cover";
 
 function App() {
   const [app, setApp] = useRecoilState(appState);
+  const [show, setShow] = useState(false);
   const resizeTimeout = useRef(0);
 
   useEffect(() => {
     onResize();
+    setTimeout(() => setShow(true), 1000);
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
   }, []);
@@ -33,6 +36,7 @@ function App() {
 
   return (
     <>
+      {!show && <Cover />}
       <Header />
       <main
         style={{
@@ -53,7 +57,7 @@ function App() {
           style={{
             display: "grid",
             gridTemplateColumns: app.isMobile ? "1fr" : "1fr 1fr",
-            gap: 10,
+            columnGap: 10,
             rowGap: 12,
             listStyle: "none",
           }}

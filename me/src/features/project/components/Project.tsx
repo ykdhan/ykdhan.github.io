@@ -98,25 +98,25 @@ const Project = ({ title, description, tags, languages, link }: Props) => {
           display: "flex",
           flexDirection: "row",
           flexWrap: "wrap",
-          gap: app.isMobile ? 12 : 16,
+          columnGap: app.isMobile ? 12 : 16,
           rowGap: 8,
         }}
       >
         {languages.map((language, index) =>
           language === "Responsive" ? (
-            <span style={{ display: "block", width: 20, height: 20 }}>
+            <li style={{ display: "block", width: 20, height: 20 }}>
               {ICON.responsive}
-            </span>
+            </li>
           ) : language === "SEO" ? (
-            <span
+            <li
               style={{ display: "block", width: 16, height: 18, paddingTop: 2 }}
             >
               {ICON.seo}
-            </span>
+            </li>
           ) : language === "Localization" ? (
-            <span style={{ display: "block", width: 18, height: 18 }}>
+            <li style={{ display: "block", width: 18, height: 18 }}>
               {ICON.localization}
-            </span>
+            </li>
           ) : (
             <ProjectLanguage
               key={`${title}-lang-${index}`}
