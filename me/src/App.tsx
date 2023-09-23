@@ -12,6 +12,7 @@ function App() {
   const resizeTimeout = useRef(0);
 
   useEffect(() => {
+    onResize();
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
   }, []);
