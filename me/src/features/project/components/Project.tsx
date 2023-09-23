@@ -2,6 +2,8 @@ import ProjectTag from "./ProjectTag";
 import { FONT } from "../../app/fonts";
 import { ICON } from "../../app/icons";
 import ProjectLanguage from "./ProjectLanguage";
+import { useRecoilState } from "recoil";
+import { appState } from "../../app/states/appState";
 
 const LANGUAGE_COLORS = {
   HTML: "#e44b23",
@@ -36,6 +38,8 @@ interface Props {
 }
 
 const Project = ({ title, description, tags, languages, link }: Props) => {
+  const [app, _] = useRecoilState(appState);
+
   return (
     <li
       style={{
@@ -78,25 +82,24 @@ const Project = ({ title, description, tags, languages, link }: Props) => {
           <ProjectTag key={`${title}-tag-${index}`} title={tag} />
         ))}
       </p>
-      {description && (
-        <p
-          style={{
-            fontFamily: FONT.Regular,
-            fontSize: 14,
-            color: "#7D8590",
-            marginBottom: 24,
-            cursor: "default",
-          }}
-        >
-          {description}
-        </p>
-      )}
+      <p
+        style={{
+          fontFamily: FONT.Regular,
+          fontSize: 14,
+          color: "#7D8590",
+          marginBottom: 24,
+          cursor: "default",
+        }}
+      >
+        {description}
+      </p>
       <ul
         style={{
           display: "flex",
           flexDirection: "row",
           flexWrap: "wrap",
-          gap: 16,
+          gap: app.isMobile ? 12 : 16,
+          rowGap: 8,
         }}
       >
         {languages.map((language, index) =>
