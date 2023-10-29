@@ -75,7 +75,7 @@ const Project = ({ title, description, tags, languages, link }: Props) => {
               {title}
             </a>
           ) : (
-            <span style={{ opacity: 0.6 }}>{title}</span>
+            <span style={{ opacity: 0.5 }}>{title}</span>
           )}
         </span>
         {tags?.map((tag, index) => (
