@@ -13,7 +13,7 @@ const Cover = () => {
         bottom: 0,
         left: 0,
         right: 0,
-        backgroundColor: "#0d1117",
+        backgroundColor: "#141414",
         opacity: opacity,
         zIndex: 100,
         pointerEvents: "none",

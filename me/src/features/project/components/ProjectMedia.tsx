@@ -24,7 +24,7 @@ const LeftButton = styled.button`
   font-size: 20px;
   font-weight: bold;
   line-height: 1.2;
-  z-index: 10;
+  z-index: 3;
   opacity: ${(props) => props.disabled ? 0.3 : 1};
 `;
 
@@ -46,7 +46,7 @@ const RightButton = styled.button`
   font-size: 20px;
   font-weight: bold;
   line-height: 1.2;
-  z-index: 10;
+  z-index: 3;
   opacity: ${(props) => props.disabled ? 0.3 : 1};
 `;
 

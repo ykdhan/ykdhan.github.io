@@ -17,7 +17,7 @@ const Header = ({size}: Props) => {
         padding: app.isMobile ? "16px 0" : "24px 0",
         backgroundColor: "#141414",
         borderBottom: "1px solid #343434",
-        zIndex: 100,
+        zIndex: 10,
         cursor: "default",
       }}
     >
@@ -40,8 +40,8 @@ const Header = ({size}: Props) => {
             backgroundColor: "rgba(255, 255, 255, 0.1)",
             transition: "width 0.3s, height 0.3s",
             ...(size === "small" && {
-              width: app.isMobile ? 48 : 56,
-              height: app.isMobile ? 48 : 56,
+              width: app.isMobile ? 40 : 56,
+              height: app.isMobile ? 40 : 56,
             }),
           }}
         >
@@ -50,7 +50,7 @@ const Header = ({size}: Props) => {
               fontSize: app.isMobile ? 32 : 56,
               transition: "font-size 0.3s",
               ...(size === "small" && {
-                fontSize: app.isMobile ? 24 : 40,
+                fontSize: app.isMobile ? 20 : 40,
               })
             }}
           >
