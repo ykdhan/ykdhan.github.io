@@ -17,7 +17,7 @@ const ProjectTag = ({ title }: Props) => {
         borderRadius: 18,
         fontFamily: FONT.Regular,
         fontSize: 12,
-        color: "#7D8590",
+        color: "#A4A4A4",
       }}
     >
       {title}

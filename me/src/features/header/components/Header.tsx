@@ -1,18 +1,13 @@
 import { useRecoilState } from "recoil";
-import Button from "../../app/components/Button";
 import { FONT } from "../../app/fonts";
 import { appState } from "../../app/states/appState";
 
-const Header = () => {
+interface Props {
+  size: "normal" | "small";
+}
+
+const Header = ({size}: Props) => {
   const [app, _] = useRecoilState(appState);
-
-  const onClickGithub = () => {
-    window.open("https://github.com/ykdhan", "_blank");
-  };
-
-  const onClickContact = () => {
-    window.open("mailto:ykdhan@naver.com");
-  };
 
   return (
     <header
@@ -20,9 +15,9 @@ const Header = () => {
         position: "sticky",
         top: 0,
         padding: app.isMobile ? "16px 0" : "24px 0",
-        backgroundColor: "#0d1117",
-        borderBottom: "1px solid #30363d",
-        zIndex: 10,
+        backgroundColor: "#141414",
+        borderBottom: "1px solid #343434",
+        zIndex: 100,
         cursor: "default",
       }}
     >
@@ -39,15 +34,24 @@ const Header = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            width: app.isMobile ? 60 : 100,
-            height: app.isMobile ? 60 : 100,
+            width: app.isMobile ? 56 : 80,
+            height: app.isMobile ? 56 : 80,
             borderRadius: 6,
             backgroundColor: "rgba(255, 255, 255, 0.1)",
+            transition: "width 0.3s, height 0.3s",
+            ...(size === "small" && {
+              width: app.isMobile ? 48 : 56,
+              height: app.isMobile ? 48 : 56,
+            }),
           }}
         >
           <span
             style={{
-              fontSize: app.isMobile ? 36 : 60,
+              fontSize: app.isMobile ? 32 : 56,
+              transition: "font-size 0.3s",
+              ...(size === "small" && {
+                fontSize: app.isMobile ? 24 : 40,
+              })
             }}
           >
             👨🏻‍💻
@@ -63,8 +67,6 @@ const Header = () => {
           YK
         </h1>
         <div style={{ display: "flex", flexDirection: "row", gap: 10 }}>
-          <Button onClick={onClickGithub}>Github</Button>
-          <Button onClick={onClickContact}>Contact</Button>
         </div>
       </div>
     </header>

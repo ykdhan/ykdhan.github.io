@@ -4,6 +4,7 @@ import { ICON } from "../../app/icons";
 import ProjectLanguage from "./ProjectLanguage";
 import { useRecoilState } from "recoil";
 import { appState } from "../../app/states/appState";
+import ProjectMedia from "./ProjectMedia";
 
 const LANGUAGE_COLORS = {
   HTML: "#e44b23",
@@ -33,11 +34,13 @@ interface Props {
   title: string;
   description: string;
   languages: string[];
+  media: { type: string, source: string }[];
   tags?: string[];
   link?: string;
+  mediaDirection?: string;
 }
 
-const Project = ({ title, description, tags, languages, link }: Props) => {
+const Project = ({ title, description, tags, languages, media, link, mediaDirection }: Props) => {
   const [app, _] = useRecoilState(appState);
 
   return (
@@ -46,8 +49,10 @@ const Project = ({ title, description, tags, languages, link }: Props) => {
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
-        padding: 16,
-        border: "1px solid #30363d",
+        paddingTop: 16,
+        paddingBottom: 16,
+        paddingLeft: 8,
+        paddingRight: 8,
         borderRadius: 6,
         boxSizing: "border-box",
         cursor: "default",
@@ -67,7 +72,7 @@ const Project = ({ title, description, tags, languages, link }: Props) => {
           style={{
             fontFamily: FONT.Bold,
             fontSize: 16,
-            color: "#2f81f7",
+            color: "#E4E4E4",
           }}
         >
           {link ? (
@@ -75,7 +80,7 @@ const Project = ({ title, description, tags, languages, link }: Props) => {
               {title}
             </a>
           ) : (
-            <span style={{ opacity: 0.5 }}>{title}</span>
+            <span>{title}</span>
           )}
         </span>
         {tags?.map((tag, index) => (
@@ -86,7 +91,7 @@ const Project = ({ title, description, tags, languages, link }: Props) => {
         style={{
           fontFamily: FONT.Regular,
           fontSize: 14,
-          color: "#7D8590",
+          color: "#A4A4A4",
           marginBottom: 24,
           cursor: "default",
         }}
@@ -127,6 +132,7 @@ const Project = ({ title, description, tags, languages, link }: Props) => {
           ),
         )}
       </ul>
+      <ProjectMedia media={media} direction={mediaDirection} />
     </li>
   );
 };

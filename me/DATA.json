@@ -2,45 +2,152 @@
   "projects": [
     {
       "company": "Plang",
-      "title": "Chilling",
-      "description": "7-Minute English Conversation Mobile Application",
-      "languages": ["React", "ReactNative", "TypeScript", "Redux", "ReduxSaga"],
-      "link": "https://apps.apple.com/kr/app/%EC%B9%A0%EB%A7%81-chiling-7%EB%B6%84%EA%B0%84%EC%9D%98-%EC%96%B8%EC%96%B4%EA%B5%90%ED%99%98-1-1%EC%98%81%EC%96%B4%ED%9A%8C%ED%99%94/id6450523365"
-    },
-    {
-      "company": "Plang",
       "title": "Plang",
       "description": "AI-Driven English Conversation Mobile Application",
       "languages": ["React", "ReactNative", "TypeScript", "Redux", "ReduxSaga"],
       "link": "https://apps.apple.com/us/app/%ED%94%8C%EB%9E%AD-al-%EC%98%81%EC%96%B4%ED%9A%8C%ED%99%94-%EC%8A%A4%ED%94%BC%ED%82%B9-%EB%B0%9C%EC%9D%8C/id1384279650",
-      "popular": true
+      "popular": true,
+      "media": []
     },
     {
       "company": "Feeel-D",
       "title": "Markhub",
       "description": "Communication Software for Design Project",
       "languages": ["Flutter", "GetX", "Firebase"],
-      "tags": ["Freelance"]
+      "tags": ["Freelance"],
+      "media": [
+        {
+          "type": "image",
+          "source": "/images/project/preview-markhub-1.png"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-markhub-2.png"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-markhub-3.png"
+        }
+      ]
     },
     {
       "company": "FLFI",
       "title": "OG-Community",
       "description": "OG : Crypto Community",
       "languages": ["Vue", "Nuxt", "TypeScript", "Pinia", "Vite"],
-      "link": "https://og.xyz"
+      "link": "https://og.xyz",
+      "media": [
+        {
+          "type": "image",
+          "source": "/images/project/preview-og-xyz-1.png"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-og-xyz-2.png"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-og-xyz-3.png"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-og-xyz-4.png"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-og-xyz-5.png"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-og-xyz-6.png"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-og-xyz-7.png"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-og-xyz-8.png"
+        }
+      ]
     },
     {
       "company": "FLFI",
       "title": "OG-NFT-Curation",
       "description": "OG : NFT Curation Mobile Application",
-      "languages": ["Flutter", "Firebase"]
+      "languages": ["Flutter", "Firebase"],
+      "mediaDirection": "vertical",
+      "media": [
+        {
+          "type": "image",
+          "source": "/images/project/preview-og-1.png"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-og-2.png"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-og-3.png"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-og-4.png"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-og-5.png"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-og-6.png"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-og-7.png"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-og-8.png"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-og-9.png"
+        }
+      ]
     },
     {
       "company": "Fave",
       "title": "Galaxy-Z-Fold4-Highlights",
       "description": "Samsung Galaxy Unpacked",
       "languages": ["HTML", "SASS", "jQuery"],
-      "link": "https://www.samsung.com/global/galaxy/galaxy-z-fold4/"
+      "link": "https://www.samsung.com/global/galaxy/galaxy-z-fold4/",
+      "media": [
+        {
+          "type": "video",
+          "source": "/videos/project/preview-fold4-1.mp4"
+        },
+        {
+          "type": "video",
+          "source": "/videos/project/preview-fold4-2.mp4"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-fold4-1.png"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-fold4-2.png"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-fold4-3.png"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-fold4-4.png"
+        }
+      ]
     },
     {
       "company": "Fave",
@@ -48,34 +155,164 @@
       "description": "Fave Official Website in 3D",
       "languages": ["Three.js", "Gulp.js", "JavaScript", "HTML", "SASS"],
       "link": "https://fave.kr",
-      "popular": true
+      "popular": true,
+      "media": [
+        {
+          "type": "video",
+          "source": "/videos/project/preview-fave-1.mp4"
+        },
+        {
+          "type": "video",
+          "source": "/videos/project/preview-fave-2.mp4"
+        },
+        {
+          "type": "video",
+          "source": "/videos/project/preview-fave-3.mp4"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-fave-1.png"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-fave-2.png"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-fave-3.png"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-fave-4.png"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-fave-5.png"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-fave-6.png"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-fave-7.png"
+        }
+      ]
     },
     {
       "company": "Fave",
       "title": "Galaxy-S22-Ultra-Highlights",
       "description": "Samsung Galaxy Unpacked",
       "languages": ["HTML", "SASS", "jQuery"],
-      "link": "https://www.samsung.com/global/galaxy/galaxy-s22-ultra/"
+      "link": "https://www.samsung.com/global/galaxy/galaxy-s22-ultra/",
+      "media": [
+        {
+          "type": "video",
+          "source": "/videos/project/preview-s22-1.mp4"
+        },
+        {
+          "type": "video",
+          "source": "/videos/project/preview-s22-2.mp4"
+        },
+        {
+          "type": "video",
+          "source": "/videos/project/preview-s22-3.mp4"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-s22-1.png"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-s22-2.png"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-s22-3.png"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-s22-4.png"
+        }
+      ]
     },
     {
       "company": "Fave",
       "title": "Galaxy-Z-Fold3-5G-Highlights",
       "description": "Samsung Galaxy Unpacked",
-      "languages": ["Three.js", "HTML", "SASS", "jQuery"]
+      "languages": ["Three.js", "HTML", "SASS", "jQuery"],
+      "media": [
+        {
+          "type": "video",
+          "source": "/videos/project/preview-fold3-1.mp4"
+        },
+        {
+          "type": "video",
+          "source": "/videos/project/preview-fold3-2.mp4"
+        },
+        {
+          "type": "video",
+          "source": "/videos/project/preview-fold3-3.mp4"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-fold3-1.png"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-fold3-2.png"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-fold3-3.png"
+        }
+      ]
     },
     {
       "company": "Fave",
       "title": "Jangsu-Cultural-Center",
       "description": "Cultural Center Website",
       "languages": ["HTML", "SASS", "jQuery"],
-      "link": "https://jangsuculture.or.kr/"
+      "link": "https://jangsuculture.or.kr/",
+      "media": [
+        {
+          "type": "image",
+          "source": "/images/project/preview-jangsu-1.png"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-jangsu-2.png"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-jangsu-3.png"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-jangsu-4.png"
+        }
+      ]
     },
     {
       "company": "Secureflare",
       "title": "Web-Monitoring-Application",
       "description": "LG U+ Web Monitoring Application with Zabbix",
       "tags": ["OpenSource"],
-      "languages": ["PHP", "Linux"]
+      "languages": ["PHP", "Linux"],
+      "media": [
+        {
+          "type": "image",
+          "source": "/images/project/preview-secureflare-1.png"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-secureflare-2.png"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-secureflare-3.png"
+        }
+      ]
     }
   ]
 }

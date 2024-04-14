@@ -6,13 +6,13 @@ body {
   @include font-regular;
   font-size: 12px;
   line-height: 16px;
-  background-color: #0d1117;
-  color: #fff;
+  background-color: #141414;
+  color: #E4E4E4;
 }
 
 #root {
   width: 100%;
-  max-width: 1200px;
+  max-width: 720px;
   margin: 0 auto;
   padding: 24px 18px;
   box-sizing: border-box;
