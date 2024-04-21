@@ -7,7 +7,41 @@
       "languages": ["React", "ReactNative", "TypeScript", "Redux", "ReduxSaga"],
       "link": "https://apps.apple.com/us/app/%ED%94%8C%EB%9E%AD-al-%EC%98%81%EC%96%B4%ED%9A%8C%ED%99%94-%EC%8A%A4%ED%94%BC%ED%82%B9-%EB%B0%9C%EC%9D%8C/id1384279650",
       "popular": true,
-      "media": []
+      "mediaDirection": "vertical",
+      "media": [
+        {
+          "type": "video",
+          "source": "/videos/project/preview-plang-m-1.mp4"
+        },
+        {
+          "type": "video",
+          "source": "/videos/project/preview-plang-m-2.mp4"
+        },
+        {
+          "type": "video",
+          "source": "/videos/project/preview-plang-m-3.mp4"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-plang-m-1.png"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-plang-m-2.png"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-plang-m-3.png"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-plang-m-4.png"
+        },
+        {
+          "type": "image",
+          "source": "/images/project/preview-plang-m-5.png"
+        }
+      ]
     },
     {
       "company": "Feeel-D",

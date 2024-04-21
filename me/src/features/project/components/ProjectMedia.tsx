@@ -52,75 +52,76 @@ const RightButton = styled.button`
 
 const ProjectMedia = ({media, direction = 'horizontal'}: Props) => {
   const [index, setIndex] = useState(0);
+  const [offsetWidth, setOffsetWidth] = useState(0);
+  const [containerWidth, setContainerWidth] = useState(0);
+
+  const width = useMemo(() => (offsetWidth + 8) / media.length, [offsetWidth, media.length]);
+  const maxWidth = useMemo(() => offsetWidth - containerWidth, [offsetWidth, containerWidth]);
+  const translateX = useMemo(() => Math.max(-maxWidth, index * -width), [index, width, maxWidth]);
 
   if (media.length === 0) {
     return null;
   }
 
-  const items = useMemo(() => {
-    return [
-
-        media[index === 0 ? media.length - 1 : index - 1],
-        media[index],
-        media[index === media.length - 1 ? 0 : index + 1]
-    ]
-  }, [index, media]);
-
   return (
-      <div style={{position: 'relative', marginTop: 24}}>
+    <div
+      onLoad={(e) => setContainerWidth(e.currentTarget.offsetWidth)}
+      onResize={(e) => setContainerWidth(e.currentTarget.offsetWidth)}
+      style={{
+        position: 'relative', width: '100%', marginTop: 24,
+        height: direction === 'vertical' ? 360 : 240,
+        overflow: 'hidden'
+      }}
+    >
       <ul
-          style={{
-            position: 'relative',
-            display: 'flex',
-            flex: 1,
-            height: direction === 'vertical' ? 360 : 240,
-            overflow: 'hidden',
-          }}
+        onLoad={(e) => setOffsetWidth(e.currentTarget.offsetWidth)}
+        onResize={(e) => setOffsetWidth(e.currentTarget.offsetWidth)}
+        style={{
+          position: 'absolute',
+          display: 'flex',
+          gap: 8,
+          top: 0,
+          bottom: 0,
+          transform: `translateX(${translateX}px)`,
+          transition: 'transform 0.3s ease-out',
+        }}
       >
-        {items.map((item, i) => (
-          <li key={i} style={{
-                position: 'absolute',
-                left: 0,
-                right: 0,
-                top: 0,
-                bottom: 0,
-                display: "block",
-                width: '100%',
-                height: '100%',
-                ...(i === 0 ? {transform: 'translateX(-100%)'} : i === 2 ? {transform: 'translateX(100%)'} : {transform: 'translateX(0)', zIndex: 1}),
-              }}>
+        {media.map((item, i) => (
+          <li key={i} style={{display: "block"}}>
             {item.type === 'video' &&
-                <video src={item.source} playsInline autoPlay muted loop style={{width: '100%', height: '100%'}}/>}
+                <video src={item.source} playsInline autoPlay muted loop style={{
+                  width: 'auto', height: '100%', borderRadius: 8, overflow: 'hidden'
+                }}/>}
             {item.type === 'image' && <img src={item.source} alt={''} style={{
-              width: '100%',
+              width: 'auto',
               height: '100%',
-              objectFit: 'contain',
+              borderRadius: 8,
+              overflow: 'hidden'
             }}/>}
           </li>
         ))}
       </ul>
-        {items.length > 0 && <LeftButton type={'button'} onClick={() => setIndex(index - 1)} disabled={index === 0}>
-            <div style={{
-              width: 0,
-              height: 0,
-              borderLeft: "8px solid transparent",
-              borderRight: "8px solid transparent",
-              borderBottom: "8px solid #141414",
-              transform: 'rotate(-90deg) translateY(-1px)',
-            }} />
-        </LeftButton>}
-        {items.length > 0 &&
-            <RightButton type={'button'} onClick={() => setIndex(index + 1)} disabled={index === media.length - 1}>
-                <div style={{
-                  width: 0,
-                  height: 0,
-                  borderLeft: "8px solid transparent",
-                  borderRight: "8px solid transparent",
-                  borderBottom: "8px solid #141414",
-                  transform: 'rotate(90deg) translateY(-1px)',
-                }}/>
-            </RightButton>}
-      </div>
+      {media.length > 0 && <LeftButton type={'button'} onClick={() => setIndex(index - 1)} disabled={translateX === 0}>
+        <div style={{
+          width: 0,
+          height: 0,
+          borderLeft: "8px solid transparent",
+          borderRight: "8px solid transparent",
+          borderBottom: "8px solid #141414",
+          transform: 'rotate(-90deg) translateY(-1px)',
+        }} />
+      </LeftButton>}
+      {media.length > 0 && <RightButton type={'button'} onClick={() => setIndex(index + 1)} disabled={translateX <= -maxWidth}>
+        <div style={{
+          width: 0,
+          height: 0,
+          borderLeft: "8px solid transparent",
+          borderRight: "8px solid transparent",
+          borderBottom: "8px solid #141414",
+          transform: 'rotate(90deg) translateY(-1px)',
+        }}/>
+      </RightButton>}
+    </div>
   );
 };
 

@@ -49,6 +49,7 @@ const Project = ({ title, description, tags, languages, media, link, mediaDirect
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
+        width: '100%',
         paddingTop: 16,
         paddingBottom: 16,
         paddingLeft: 8,
@@ -56,6 +57,7 @@ const Project = ({ title, description, tags, languages, media, link, mediaDirect
         borderRadius: 6,
         boxSizing: "border-box",
         cursor: "default",
+        overflow: "hidden",
       }}
     >
       <p

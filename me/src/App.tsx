@@ -2,7 +2,7 @@ import "./assets/scss/common.scss";
 import Header from "./features/header/components/Header";
 import Project from "./features/project/components/Project";
 import DATA from "../DATA.json";
-import { useEffect, useRef, useState } from "react";
+import {Fragment, useEffect, useRef, useState} from "react";
 import { appState } from "./features/app/states/appState";
 import { useRecoilState } from "recoil";
 import Cover from "./features/cover/components/Cover";
@@ -65,19 +65,19 @@ function App() {
           }}
         >
           {DATA.projects.map((project, index) => (
-              <>
-            <Project
-              key={index}
-              title={project.company + "/" + project.title}
-              description={project.description}
-              languages={project.languages}
-              tags={project.tags}
-              link={project.link}
-              media={project.media}
-              mediaDirection={project.mediaDirection}
-            />
-                {index !== DATA.projects.length -1 && <div style={{backgroundColor: '#242424', height: 1}}/>}
-              </>
+            <Fragment key={index}>
+              <Project
+                key={index}
+                title={project.company + "/" + project.title}
+                description={project.description}
+                languages={project.languages}
+                tags={project.tags}
+                link={project.link}
+                media={project.media}
+                mediaDirection={project.mediaDirection}
+              />
+              {index !== DATA.projects.length -1 && <div style={{backgroundColor: '#242424', height: 1}}/>}
+            </Fragment>
           ))}
         </ul>
       </main>
