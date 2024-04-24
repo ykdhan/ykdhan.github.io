@@ -14,7 +14,7 @@ const Header = ({size}: Props) => {
       style={{
         position: "sticky",
         top: 0,
-        padding: app.isMobile ? "16px 0" : "24px 0",
+        padding: app.isMobile ? "16px" : "24px 0",
         backgroundColor: "#141414",
         borderBottom: "1px solid #343434",
         zIndex: 10,

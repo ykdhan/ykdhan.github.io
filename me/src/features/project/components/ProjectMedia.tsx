@@ -1,5 +1,7 @@
 import {useMemo, useState} from "react";
 import styled from "styled-components";
+import {useRecoilState} from "recoil";
+import {appState} from "../../app/states/appState";
 
 interface Props {
   media: { type: string, source: string }[];
@@ -51,12 +53,14 @@ const RightButton = styled.button`
 `;
 
 const ProjectMedia = ({media, direction = 'horizontal'}: Props) => {
+  const [app, _] = useRecoilState(appState);
   const [index, setIndex] = useState(0);
   const [offsetWidth, setOffsetWidth] = useState(0);
   const [containerWidth, setContainerWidth] = useState(0);
 
-  const width = useMemo(() => (offsetWidth + 8) / media.length, [offsetWidth, media.length]);
-  const maxWidth = useMemo(() => offsetWidth - containerWidth, [offsetWidth, containerWidth]);
+  const leftOffset = useMemo(() => app.isMobile ? 16 : 0, [app.isMobile]);
+  const width = useMemo(() => (offsetWidth + 8) / media.length, [offsetWidth, media.length, app.isMobile]);
+  const maxWidth = useMemo(() => offsetWidth - containerWidth + leftOffset, [offsetWidth, containerWidth, leftOffset]);
   const translateX = useMemo(() => Math.max(-maxWidth, index * -width), [index, width, maxWidth]);
 
   if (media.length === 0) {
@@ -69,7 +73,7 @@ const ProjectMedia = ({media, direction = 'horizontal'}: Props) => {
       onResize={(e) => setContainerWidth(e.currentTarget.offsetWidth)}
       style={{
         position: 'relative', width: '100%', marginTop: 24,
-        height: direction === 'vertical' ? 360 : 240,
+        height: direction === 'vertical' ? 240 : 160,
         overflow: 'hidden'
       }}
     >
@@ -82,6 +86,7 @@ const ProjectMedia = ({media, direction = 'horizontal'}: Props) => {
           gap: 8,
           top: 0,
           bottom: 0,
+          left: leftOffset,
           transform: `translateX(${translateX}px)`,
           transition: 'transform 0.3s ease-out',
         }}
