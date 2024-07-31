@@ -1,4 +1,4 @@
-import {useMemo, useState} from "react";
+import {useEffect, useMemo, useRef, useState} from "react";
 import styled from "styled-components";
 import {useRecoilState} from "recoil";
 import {appState} from "../../app/states/appState";
@@ -54,14 +54,30 @@ const RightButton = styled.button`
 
 const ProjectMedia = ({media, direction = 'horizontal'}: Props) => {
   const [app, _] = useRecoilState(appState);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const videoRefs = useRef<HTMLVideoElement[]>([]);
+
   const [index, setIndex] = useState(0);
   const [offsetWidth, setOffsetWidth] = useState(0);
   const [containerWidth, setContainerWidth] = useState(0);
 
   const leftOffset = useMemo(() => app.isMobile ? 16 : 0, [app.isMobile]);
   const width = useMemo(() => (offsetWidth + 8) / media.length, [offsetWidth, media.length, app.isMobile]);
-  const maxWidth = useMemo(() => offsetWidth - containerWidth + leftOffset, [offsetWidth, containerWidth, leftOffset]);
+  const maxWidth = useMemo(() =>
+    offsetWidth - containerWidth + leftOffset * 2,
+    [offsetWidth, containerWidth, leftOffset, app.isMobile]
+  );
   const translateX = useMemo(() => Math.max(-maxWidth, index * -width), [index, width, maxWidth]);
+
+  useEffect(() => {
+    setContainerWidth(containerRef.current?.getBoundingClientRect().width || 0);
+  }, [app.width]);
+
+  useEffect(() => {
+    videoRefs.current.forEach((video) => {
+      video.load();
+    });
+  }, []);
 
   if (media.length === 0) {
     return null;
@@ -69,8 +85,7 @@ const ProjectMedia = ({media, direction = 'horizontal'}: Props) => {
 
   return (
     <div
-      onLoad={(e) => setContainerWidth(e.currentTarget.offsetWidth)}
-      onResize={(e) => setContainerWidth(e.currentTarget.offsetWidth)}
+      ref={containerRef}
       style={{
         position: 'relative', width: '100%', marginTop: 24,
         height: direction === 'vertical' ? 240 : 160,
@@ -96,7 +111,11 @@ const ProjectMedia = ({media, direction = 'horizontal'}: Props) => {
             {item.type === 'video' &&
                 <video src={item.source} playsInline autoPlay muted loop style={{
                   width: 'auto', height: '100%', borderRadius: 8, overflow: 'hidden'
-                }}/>}
+                }} ref={(el) => {
+                  if (el && i < 2) {
+                    videoRefs.current.push(el);
+                  }
+                }} preload={'auto'} />}
             {item.type === 'image' && <img src={item.source} alt={''} style={{
               width: 'auto',
               height: '100%',

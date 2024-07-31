@@ -1,10 +1,10 @@
 {
   "projects": [
     {
-      "company": "Plang",
+      "company": "Plang Inc.",
       "title": "Plang",
       "description": "AI-Driven English Conversation Mobile Application",
-      "languages": ["React", "ReactNative", "TypeScript", "Redux", "ReduxSaga"],
+      "languages": ["React", "ReactNative", "TypeScript", "Redux", "ReduxSaga", "RubyOnRails"],
       "link": "https://apps.apple.com/us/app/%ED%94%8C%EB%9E%AD-al-%EC%98%81%EC%96%B4%ED%9A%8C%ED%99%94-%EC%8A%A4%ED%94%BC%ED%82%B9-%EB%B0%9C%EC%9D%8C/id1384279650",
       "popular": true,
       "mediaDirection": "vertical",
@@ -44,10 +44,11 @@
       ]
     },
     {
-      "company": "Feeel-D",
+      "company": "feeel.d Inc.",
       "title": "Markhub",
       "description": "Communication Software for Design Project",
       "languages": ["Flutter", "GetX", "Firebase"],
+      "link": "https://markhub.info/",
       "tags": ["Freelance"],
       "media": [
         {
@@ -66,10 +67,9 @@
     },
     {
       "company": "FLFI",
-      "title": "OG-Community",
-      "description": "OG : Crypto Community",
+      "title": "OG.xyz",
+      "description": "Crypto Community Website",
       "languages": ["Vue", "Nuxt", "TypeScript", "Pinia", "Vite"],
-      "link": "https://og.xyz",
       "media": [
         {
           "type": "image",
@@ -107,8 +107,8 @@
     },
     {
       "company": "FLFI",
-      "title": "OG-NFT-Curation",
-      "description": "OG : NFT Curation Mobile Application",
+      "title": "OG",
+      "description": "NFT Curation Mobile Application",
       "languages": ["Flutter", "Firebase"],
       "mediaDirection": "vertical",
       "media": [
@@ -151,8 +151,8 @@
       ]
     },
     {
-      "company": "Fave",
-      "title": "Galaxy-Z-Fold4-Highlights",
+      "company": "Fave Inc.",
+      "title": "Galaxy Z Fold4 Highlights",
       "description": "Samsung Galaxy Unpacked",
       "languages": ["HTML", "SASS", "jQuery"],
       "link": "https://www.samsung.com/global/galaxy/galaxy-z-fold4/",
@@ -184,8 +184,8 @@
       ]
     },
     {
-      "company": "Fave",
-      "title": "Fave-3D",
+      "company": "Fave Inc.",
+      "title": "Fave.kr",
       "description": "Fave Official Website in 3D",
       "languages": ["Three.js", "Gulp.js", "JavaScript", "HTML", "SASS"],
       "link": "https://fave.kr",
@@ -234,11 +234,10 @@
       ]
     },
     {
-      "company": "Fave",
-      "title": "Galaxy-S22-Ultra-Highlights",
+      "company": "Fave Inc.",
+      "title": "Galaxy S22 Ultra Highlights",
       "description": "Samsung Galaxy Unpacked",
       "languages": ["HTML", "SASS", "jQuery"],
-      "link": "https://www.samsung.com/global/galaxy/galaxy-s22-ultra/",
       "media": [
         {
           "type": "video",
@@ -271,8 +270,8 @@
       ]
     },
     {
-      "company": "Fave",
-      "title": "Galaxy-Z-Fold3-5G-Highlights",
+      "company": "Fave Inc.",
+      "title": "Galaxy Z Fold3 5G Highlights",
       "description": "Samsung Galaxy Unpacked",
       "languages": ["Three.js", "HTML", "SASS", "jQuery"],
       "media": [
@@ -303,9 +302,9 @@
       ]
     },
     {
-      "company": "Fave",
-      "title": "Jangsu-Cultural-Center",
-      "description": "Cultural Center Website",
+      "company": "Fave Inc.",
+      "title": "Jangsu Cultural Center",
+      "description": "Jangsu Cultural Center Website",
       "languages": ["HTML", "SASS", "jQuery"],
       "link": "https://jangsuculture.or.kr/",
       "media": [
@@ -328,8 +327,8 @@
       ]
     },
     {
-      "company": "Secureflare",
-      "title": "Web-Monitoring-Application",
+      "company": "Secureflare Inc.",
+      "title": "Web Monitoring Application",
       "description": "LG U+ Web Monitoring Application with Zabbix",
       "tags": ["OpenSource"],
       "languages": ["PHP", "Linux"],

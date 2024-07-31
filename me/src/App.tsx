@@ -59,8 +59,7 @@ function App() {
           style={{
             display: "grid",
             gridTemplateColumns: "1fr",
-            columnGap: 10,
-            rowGap: 12,
+            gap: 24,
             listStyle: "none",
           }}
         >
@@ -68,15 +67,14 @@ function App() {
             <Fragment key={index}>
               <Project
                 key={index}
-                title={project.company + "/" + project.title}
+                company={project.company}
+                title={project.title}
                 description={project.description}
                 languages={project.languages}
-                tags={project.tags}
                 link={project.link}
                 media={project.media}
                 mediaDirection={project.mediaDirection}
               />
-              {index !== DATA.projects.length -1 && <div style={{backgroundColor: '#242424', height: 1}}/>}
             </Fragment>
           ))}
         </ul>

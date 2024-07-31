@@ -7,6 +7,7 @@ export const LANGUAGE_COLORS = {
   Redux: "#764abc",
   ReduxSaga: "#764abc",
   ReduxToolkit: "#764abc",
+  RubyOnRails: "#cc0000",
   Vue: "#42b883",
   Nuxt: "#02dc81",
   Pinia: "#ffd858",

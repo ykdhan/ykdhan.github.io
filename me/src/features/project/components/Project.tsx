@@ -1,22 +1,22 @@
-import ProjectTag from "./ProjectTag";
 import { FONT } from "../../app/fonts";
 import ProjectLanguage from "./ProjectLanguage";
 import { useRecoilState } from "recoil";
 import { appState } from "../../app/states/appState";
 import ProjectMedia from "./ProjectMedia";
-import {LANGUAGE_COLORS} from "../consts";
+import { LANGUAGE_COLORS } from "../consts";
+import icLink from "../../../assets/images/ic_link.svg";
 
 interface Props {
   title: string;
   description: string;
+  company: string;
   languages: string[];
   media: { type: string, source: string }[];
-  tags?: string[];
   link?: string;
   mediaDirection?: string;
 }
 
-const Project = ({ title, description, tags, languages, media, link, mediaDirection }: Props) => {
+const Project = ({ title, description, company, languages, media, link, mediaDirection }: Props) => {
   const [app, _] = useRecoilState(appState);
 
   return (
@@ -40,25 +40,34 @@ const Project = ({ title, description, tags, languages, media, link, mediaDirect
             flexWrap: "wrap",
             alignItems: "center",
             gap: 8,
-            marginBottom: 8,
+            height: 24,
+            marginBottom: 8
           }}>
           <span
             style={{
               fontFamily: FONT.Bold,
-              fontSize: 16,
-              color: "#E4E4E4",
+              fontSize: 18,
+              color: "#E4E4E4"
             }}>
-            {link ? (
-              <a href={link} target="_blank">
-                {title}
-              </a>
-            ) : (
-              <span>{title}</span>
-            )}
+            {title}
           </span>
-          {tags?.map((tag, index) => (
-            <ProjectTag key={`${title}-tag-${index}`} title={tag} />
-          ))}
+          <span
+            style={{
+              flex: 1,
+              fontSize: 18,
+              color: "#747474",
+            }}>
+            {company}
+          </span>
+          {link &&
+            <a href={link} target="_blank" style={{
+              display: "block",
+              width: 24,
+              height: 24,
+            }}>
+              <img src={icLink} style={{width: 24, height: 24}} />
+            </a>
+          }
         </p>
         <p
           style={{
