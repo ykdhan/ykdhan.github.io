@@ -1,7 +1,7 @@
 import {useEffect, useMemo, useRef, useState} from "react";
 import styled from "styled-components";
 import {useRecoilState} from "recoil";
-import {appState} from "../../app/states/appState";
+import {appState} from "../states/appState.ts";
 
 interface Props {
   media: { type: string, source: string }[];

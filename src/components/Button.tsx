@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { FONT } from "../fonts";
-import { appState } from "../states/appState";
+import { FONT } from "../lib/fonts.ts";
+import { appState } from "../states/appState.ts";
 import { useRecoilState } from "recoil";
 
 interface Props {

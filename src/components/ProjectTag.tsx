@@ -1,4 +1,4 @@
-import { FONT } from "../../app/fonts";
+import { FONT } from "../lib/fonts.ts";
 
 interface Props {
   title: string;

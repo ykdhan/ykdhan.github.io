@@ -1,11 +1,11 @@
 import "./assets/scss/common.scss";
-import Header from "./features/header/components/Header";
-import Project from "./features/project/components/Project";
+import Header from "./components/Header.tsx";
+import Project from "./components/Project.tsx";
 import DATA from "../DATA.json";
 import {Fragment, useEffect, useRef, useState} from "react";
-import { appState } from "./features/app/states/appState";
+import { appState } from "./states/appState";
 import { useRecoilState } from "recoil";
-import Cover from "./features/cover/components/Cover";
+import Cover from "./components/Cover.tsx";
 
 const OFFSET = 24;
 

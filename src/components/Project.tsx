@@ -1,10 +1,10 @@
-import { FONT } from "../../app/fonts";
-import ProjectLanguage from "./ProjectLanguage";
+import { FONT } from "../lib/fonts.ts";
+import ProjectLanguage from "./ProjectLanguage.tsx";
 import { useRecoilState } from "recoil";
-import { appState } from "../../app/states/appState";
-import ProjectMedia from "./ProjectMedia";
+import { appState } from "../states/appState.ts";
+import ProjectMedia from "./ProjectMedia.tsx";
 import { LANGUAGE_COLORS } from "../consts";
-import icLink from "../../../assets/images/ic_link.svg";
+import icLink from "../assets/images/ic_link.svg";
 
 interface Props {
   title: string;

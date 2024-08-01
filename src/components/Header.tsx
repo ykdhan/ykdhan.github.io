@@ -1,6 +1,6 @@
 import { useRecoilState } from "recoil";
-import { FONT } from "../../app/fonts";
-import { appState } from "../../app/states/appState";
+import { FONT } from "../lib/fonts.ts";
+import { appState } from "../states/appState.ts";
 
 interface Props {
   size: "normal" | "small";
