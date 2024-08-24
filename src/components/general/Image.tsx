@@ -3,6 +3,7 @@ import { useInView, animated } from "@react-spring/web";
 
 const Image = ({ src, alt = "", style, placeholder, ...props }) => {
   const [ref, inView] = useInView({
+    root: document.getElementsByTagName("main")[0],
     triggerOnce: true,
     rootMargin: "400px"
   });

@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 const Video = ({ src, style, ...props }) => {
   const videoRef = useRef(null);
   const [ref, inView] = useInView({
+    root: document.getElementsByTagName("main")[0],
     rootMargin: "400px"
   });
   const [loaded, setLoaded] = useState(false);
