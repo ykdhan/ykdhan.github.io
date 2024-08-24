@@ -1,13 +1,29 @@
-import { useInView, animated } from "@react-spring/web";
 import { useEffect, useRef, useState } from "react";
 
 const Video = ({ src, style, ...props }) => {
+  const ref = useRef(null);
   const videoRef = useRef(null);
-  const [ref, inView] = useInView({
-    root: document.getElementsByTagName("main")[0],
-    rootMargin: "400px"
-  });
   const [loaded, setLoaded] = useState(false);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const root = document.getElementsByTagName("main")[0] as Element;
+    if (!root || !ref.current) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setInView(entry.isIntersecting);
+      },
+      {
+        root,
+        rootMargin: "400px"
+      }
+    );
+    observer.observe(ref.current as Element);
+    return () => {
+      observer.disconnect();
+    };
+  }, [ref.current]);
 
   useEffect(() => {
     if (inView) {
@@ -23,7 +39,7 @@ const Video = ({ src, style, ...props }) => {
   }, [inView]);
 
   return (
-    <animated.div ref={ref} style={style}>
+    <div ref={ref} style={style}>
       <video
         ref={videoRef}
         src={src}
@@ -41,7 +57,7 @@ const Video = ({ src, style, ...props }) => {
         }}
         {...props}
       />
-    </animated.div>
+    </div>
   );
 };
 

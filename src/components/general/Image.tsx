@@ -1,14 +1,31 @@
-import { useEffect, useState } from "react";
-import { useInView, animated } from "@react-spring/web";
+import { useEffect, useRef, useState } from "react";
 
 const Image = ({ src, alt = "", style, placeholder, ...props }) => {
-  const [ref, inView] = useInView({
-    root: document.getElementsByTagName("main")[0],
-    triggerOnce: true,
-    rootMargin: "400px"
-  });
+  const ref = useRef(null);
   const [loaded, setLoaded] = useState(false);
+  const [inView, setInView] = useState(false);
   const [currentSrc, setCurrentSrc] = useState(placeholder || "");
+
+  useEffect(() => {
+    const root = document.getElementsByTagName("main")[0] as Element;
+    if (!root || !ref.current) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!inView) {
+          setInView(entry.isIntersecting);
+        }
+      },
+      {
+        root,
+        rootMargin: "400px"
+      }
+    );
+    observer.observe(ref.current as Element);
+    return () => {
+      observer.disconnect();
+    };
+  }, [ref.current]);
 
   useEffect(() => {
     if (inView && !loaded) {
@@ -22,7 +39,7 @@ const Image = ({ src, alt = "", style, placeholder, ...props }) => {
   }, [inView, src]);
 
   return (
-    <animated.div ref={ref} style={{ ...style, pointerEvents: "none" }}>
+    <div ref={ref} style={{ ...style, pointerEvents: "none" }}>
       <>
         {currentSrc && (
           <img
@@ -37,7 +54,7 @@ const Image = ({ src, alt = "", style, placeholder, ...props }) => {
           />
         )}
       </>
-    </animated.div>
+    </div>
   );
 };
 
