@@ -1,4 +1,8 @@
 {
+  "introduction": [
+    "I'm a developer who aims to provide convenient and unique user experiences, drawing from my diverse background of attending schools in several different countries, and studying Computer Science in the United States.",
+    "Believing that a truly influential developer needs knowledge and experience across all development areas, I strive to broaden my expertise in various fields. Passionate about delivering beneficial services to others, I enthusiastically learn about UI and UX, keeping up with the latest trends to develop cutting-edge services."
+  ],
   "projects": [
     {
       "company": "Plang Inc.",
@@ -7,6 +11,7 @@
       "languages": ["React", "ReactNative", "TypeScript", "Redux", "ReduxSaga", "RubyOnRails"],
       "link": "https://apps.apple.com/us/app/%ED%94%8C%EB%9E%AD-al-%EC%98%81%EC%96%B4%ED%9A%8C%ED%99%94-%EC%8A%A4%ED%94%BC%ED%82%B9-%EB%B0%9C%EC%9D%8C/id1384279650",
       "popular": true,
+      "color": "#12bc78",
       "mediaDirection": "vertical",
       "media": [
         {
@@ -48,6 +53,7 @@
       "title": "Markhub",
       "description": "Communication Software for Design Project",
       "languages": ["Flutter", "GetX", "Firebase"],
+      "color": "#0c0c0c",
       "link": "https://markhub.info/",
       "tags": ["Freelance"],
       "media": [
@@ -70,6 +76,7 @@
       "title": "OG.xyz",
       "description": "Crypto Community Website",
       "languages": ["Vue", "Nuxt", "TypeScript", "Pinia", "Vite"],
+      "color": "#3ce642",
       "media": [
         {
           "type": "image",
@@ -110,6 +117,7 @@
       "title": "OG",
       "description": "NFT Curation Mobile Application",
       "languages": ["Flutter", "Firebase"],
+      "color": "#ff5135",
       "mediaDirection": "vertical",
       "media": [
         {
@@ -155,6 +163,7 @@
       "title": "Galaxy Z Fold4 Highlights",
       "description": "Samsung Galaxy Unpacked",
       "languages": ["HTML", "SASS", "jQuery"],
+      "color": "#96b6c8",
       "link": "https://www.samsung.com/global/galaxy/galaxy-z-fold4/",
       "media": [
         {
@@ -188,6 +197,7 @@
       "title": "Fave.kr",
       "description": "Fave Official Website in 3D",
       "languages": ["Three.js", "Gulp.js", "JavaScript", "HTML", "SASS"],
+      "color": "#4b377b",
       "link": "https://fave.kr",
       "popular": true,
       "media": [
@@ -237,6 +247,7 @@
       "company": "Fave Inc.",
       "title": "Galaxy S22 Ultra Highlights",
       "description": "Samsung Galaxy Unpacked",
+      "color": "#b27d89",
       "languages": ["HTML", "SASS", "jQuery"],
       "media": [
         {
@@ -273,6 +284,7 @@
       "company": "Fave Inc.",
       "title": "Galaxy Z Fold3 5G Highlights",
       "description": "Samsung Galaxy Unpacked",
+      "color": "#363636",
       "languages": ["Three.js", "HTML", "SASS", "jQuery"],
       "media": [
         {
@@ -305,6 +317,7 @@
       "company": "Fave Inc.",
       "title": "Jangsu Cultural Center",
       "description": "Jangsu Cultural Center Website",
+      "color": "#eea84c",
       "languages": ["HTML", "SASS", "jQuery"],
       "link": "https://jangsuculture.or.kr/",
       "media": [
@@ -330,6 +343,7 @@
       "company": "Secureflare Inc.",
       "title": "Web Monitoring Application",
       "description": "LG U+ Web Monitoring Application with Zabbix",
+      "color": "#d31f32",
       "tags": ["OpenSource"],
       "languages": ["PHP", "Linux"],
       "media": [

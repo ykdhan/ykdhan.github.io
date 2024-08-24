@@ -1,92 +1,77 @@
-import { FONT } from "../lib/fonts.ts";
-import ProjectLanguage from "./ProjectLanguage.tsx";
+import ProjectLanguage from "./ProjectLanguage";
 import { useRecoilState } from "recoil";
-import { appState } from "../states/appState.ts";
-import ProjectMedia from "./ProjectMedia.tsx";
+import { appState } from "../states/appState";
+import ProjectMedia from "./ProjectMedia";
 import { LANGUAGE_COLORS } from "../consts";
-import icLink from "../assets/images/ic_link.svg";
+import Text from "./general/Text";
+import Link from "./general/Link";
 
 interface Props {
   title: string;
   description: string;
   company: string;
   languages: string[];
-  media: { type: string, source: string }[];
+  media: { type: string; source: string }[];
   link?: string;
   mediaDirection?: string;
 }
 
-const Project = ({ title, description, company, languages, media, link, mediaDirection }: Props) => {
+const Project = ({
+  title,
+  description,
+  company,
+  languages,
+  media,
+  link,
+  mediaDirection
+}: Props) => {
   const [app, _] = useRecoilState(appState);
 
   return (
-    <li
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
-        width: '100%',
-        padding: app.isMobile ? '16px 0' : '16px 8px',
-        borderRadius: 6,
-        boxSizing: "border-box",
-        cursor: "default",
-        overflow: "hidden",
-      }}>
-      <div style={{padding: app.isMobile ? '0 16px' : '0'}}>
-        <p
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            flexWrap: "wrap",
-            alignItems: "center",
-            gap: 8,
-            height: 24,
-            marginBottom: 8
-          }}>
-          <span
+    <div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "flex-start",
+          gap: 20,
+          marginBottom: 32
+        }}
+      >
+        <div>
+          <div
             style={{
-              fontFamily: FONT.Bold,
-              fontSize: 18,
-              color: "#E4E4E4"
-            }}>
-            {title}
-          </span>
-          <span
+              display: "flex",
+              flexDirection: app.isMobile ? "column" : "row",
+              flexWrap: "wrap",
+              alignItems: app.isMobile ? "flex-start" : "center",
+              gap: app.isMobile ? 8 : 16,
+              marginBottom: 4
+            }}
+          >
+            <Text bold style={{ fontSize: app.isMobile ? 18 : 20 }}>
+              {title}
+            </Text>
+            <Text style={{ fontSize: app.isMobile ? 16 : 18 }}>{company}</Text>
+          </div>
+          <Text
+            color={"var(--color-font-light2)"}
             style={{
-              flex: 1,
-              fontSize: 18,
-              color: "#747474",
-            }}>
-            {company}
-          </span>
-          {link &&
-            <a href={link} target="_blank" style={{
-              display: "block",
-              width: 24,
-              height: 24,
-            }}>
-              <img src={icLink} style={{width: 24, height: 24}} />
-            </a>
-          }
-        </p>
-        <p
-          style={{
-            fontFamily: FONT.Regular,
-            fontSize: 14,
-            color: "#A4A4A4",
-            marginBottom: 24,
-            cursor: "default",
-          }}>
-          {description}
-        </p>
+              fontSize: 14
+            }}
+          >
+            {description}
+          </Text>
+        </div>
         <ul
           style={{
             display: "flex",
             flexDirection: "row",
             flexWrap: "wrap",
             columnGap: app.isMobile ? 12 : 16,
-            rowGap: 8,
-          }}>
+            rowGap: 16
+          }}
+        >
           {languages.map((language, index) => (
             <ProjectLanguage
               key={`${title}-lang-${index}`}
@@ -96,9 +81,10 @@ const Project = ({ title, description, company, languages, media, link, mediaDir
             />
           ))}
         </ul>
+        {link && <Link link={link} />}
       </div>
       <ProjectMedia media={media} direction={mediaDirection} />
-    </li>
+    </div>
   );
 };
 

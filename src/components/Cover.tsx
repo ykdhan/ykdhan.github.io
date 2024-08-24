@@ -13,13 +13,13 @@ const Cover = () => {
         bottom: 0,
         left: 0,
         right: 0,
-        backgroundColor: "#141414",
+        backgroundColor: "var(--color-bg-dark)",
         opacity: opacity,
-        zIndex: 100,
+        zIndex: 1000,
         pointerEvents: "none",
         cursor: "default",
-        transition: "opacity 400ms ease-in-out",
-        transitionDelay: "300ms",
+        transition: "opacity 500ms ease-in-out",
+        transitionDelay: "300ms"
       }}
     />
   );

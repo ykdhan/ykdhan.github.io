@@ -1,4 +1,4 @@
-import { FONT } from "../lib/fonts.ts";
+import Text from "./general/Text";
 
 interface Props {
   title: string;
@@ -6,7 +6,7 @@ interface Props {
 
 const ProjectTag = ({ title }: Props) => {
   return (
-    <span
+    <Text
       style={{
         display: "inline-flex",
         alignItems: "center",
@@ -15,13 +15,12 @@ const ProjectTag = ({ title }: Props) => {
         paddingRight: 8,
         border: "1px solid #30363d",
         borderRadius: 18,
-        fontFamily: FONT.Regular,
         fontSize: 12,
-        color: "#A4A4A4",
+        color: "#A4A4A4"
       }}
     >
       {title}
-    </span>
+    </Text>
   );
 };
 

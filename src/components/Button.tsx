@@ -20,6 +20,7 @@ const Button = ({ onClick, children }: Props) => {
 
   return (
     <button
+      className="font-regular"
       type="button"
       onClick={onClick}
       onMouseEnter={onMouseEnter}
@@ -36,7 +37,7 @@ const Button = ({ onClick, children }: Props) => {
         fontFamily: FONT.Regular,
         fontSize: 14,
         transition:
-          "background-color 0.1s ease-in-out, border-color 0.1s ease-in-out",
+          "background-color 0.1s ease-in-out, border-color 0.1s ease-in-out"
       }}
     >
       {children}

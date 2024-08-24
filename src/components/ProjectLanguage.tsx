@@ -1,4 +1,4 @@
-import { FONT } from "../lib/fonts.ts";
+import Text from "./general/Text";
 
 interface Props {
   title: string;
@@ -12,23 +12,41 @@ const ProjectLanguage = ({ title, color }: Props) => {
         display: "flex",
         flexDirection: "row",
         alignItems: "center",
-        gap: 4,
-        fontFamily: FONT.Regular,
-        fontSize: 12,
-        color: "#A4A4A4",
+        gap: 6
       }}
     >
-      <span
+      <div
         style={{
-          display: "block",
-          width: 12,
-          height: 12,
-          borderRadius: 12,
-          border: "1px solid rgba(255, 255, 255, 0.2)",
-          backgroundColor: color,
+          position: "relative",
+          width: 16,
+          height: 16,
+          justifyContent: "center",
+          alignItems: "center"
         }}
-      />
-      {title}
+      >
+        <span
+          style={{
+            position: "absolute",
+            top: 3,
+            display: "block",
+            width: 16,
+            height: 10,
+            backgroundColor: color
+          }}
+        />
+        <span
+          style={{
+            marginLeft: 3,
+            display: "block",
+            width: 10,
+            height: 16,
+            backgroundColor: color
+          }}
+        />
+      </div>
+      <Text color={"var(--color-font-light2)"} style={{ fontSize: 12 }}>
+        {title}
+      </Text>
     </li>
   );
 };

@@ -1,30 +1,30 @@
 import "./assets/scss/common.scss";
-import Header from "./components/Header.tsx";
-import Project from "./components/Project.tsx";
+import { useEffect, useRef } from "react";
+import Header from "./components/Header";
+import Project from "./components/Project";
 import DATA from "../DATA.json";
-import {Fragment, useEffect, useRef, useState} from "react";
 import { appState } from "./states/appState";
 import { useRecoilState } from "recoil";
-import Cover from "./components/Cover.tsx";
-
-const OFFSET = 24;
+import Page from "./components/general/Page";
+import Text from "./components/general/Text";
+import Section from "./components/Section";
+import Cover from "./components/Cover";
 
 function App() {
-  const [_, setApp] = useRecoilState(appState);
-  const [show, setShow] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const [app, setApp] = useRecoilState(appState);
   const resizeTimeout = useRef(0);
 
   useEffect(() => {
     onResize();
-    setTimeout(() => setShow(true), 1000);
     window.addEventListener("resize", onResize);
     window.addEventListener("scroll", onScroll);
     return () => {
       window.removeEventListener("resize", onResize);
       window.removeEventListener("scroll", onScroll);
-    }
+    };
   }, []);
+
+  const onScroll = () => {};
 
   const onResize = () => {
     clearTimeout(resizeTimeout.current);
@@ -34,52 +34,51 @@ function App() {
           ...prev,
           width: window.innerWidth,
           height: window.innerHeight,
-          isMobile: window.innerWidth < 800,
+          isMobile: window.innerWidth < 800
         })),
-      200,
+      200
     );
   };
 
-  const onScroll = (e: Event) => {
-    const scrollTop = (e.target as Document).documentElement.scrollTop;
-    setScrolled(scrollTop > OFFSET);
-  }
-
   return (
-    <>
-      {!show && <Cover />}
-      <Header size={scrolled ? 'small' : 'normal'} />
-      <main
+    <Page>
+      <Header />
+      <Section
+        innerStyle={{ display: "flex", flexDirection: "column", gap: 8 }}
+      >
+        {DATA.introduction.map((item, i) => (
+          <Text key={i} style={{ fontSize: app.isMobile ? 16 : 18 }}>
+            {item}
+          </Text>
+        ))}
+      </Section>
+      <Section
         style={{
-          padding: "24px 0",
+          paddingTop: app.isMobile ? 64 : 80,
+          paddingBottom: app.isMobile ? 64 : 80
+        }}
+        innerStyle={{
+          display: "flex",
+          flexDirection: "column",
+          gap: app.isMobile ? 64 : 80,
+          listStyle: "none"
         }}
       >
-        <ul
-          id="projects"
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr",
-            gap: 24,
-            listStyle: "none",
-          }}
-        >
-          {DATA.projects.map((project, index) => (
-            <Fragment key={index}>
-              <Project
-                key={index}
-                company={project.company}
-                title={project.title}
-                description={project.description}
-                languages={project.languages}
-                link={project.link}
-                media={project.media}
-                mediaDirection={project.mediaDirection}
-              />
-            </Fragment>
-          ))}
-        </ul>
-      </main>
-    </>
+        {DATA.projects.map((project, index) => (
+          <Project
+            key={index}
+            company={project.company}
+            title={project.title}
+            description={project.description}
+            languages={project.languages}
+            link={project.link}
+            media={project.media}
+            mediaDirection={project.mediaDirection}
+          />
+        ))}
+      </Section>
+      <Cover />
+    </Page>
   );
 }
 

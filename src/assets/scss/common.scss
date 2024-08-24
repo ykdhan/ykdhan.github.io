@@ -1,23 +1,35 @@
 @import "./reset";
 @import "./fonts";
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
-  @include font-regular;
+  @include font-pixelify;
   font-size: 12px;
-  line-height: 16px;
-  background-color: #141414;
-  color: #E4E4E4;
+  line-height: 1.4;
+  overflow: hidden;
+  background: var(--color-bg-dark);
 }
 
 #root {
-  width: 100%;
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 24px 18px;
-  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
 
-  @media (max-width: 800px) {
-    padding: 24px 0;
+:root {
+  --color-font-light: #fcfcfc;
+  --color-font-light2: #cfcfcf;
+  --color-bg-dark: #141414;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
   }
 }
