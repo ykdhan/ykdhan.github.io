@@ -3,11 +3,11 @@ export const LANGUAGE_COLORS = {
   SASS: "#cf649a",
   jQuery: "#0769ad",
   React: "#159eca",
-  ReactNative: "#61dafb",
+  "React Native": "#61dafb",
   Redux: "#764abc",
-  ReduxSaga: "#764abc",
-  ReduxToolkit: "#764abc",
-  RubyOnRails: "#cc0000",
+  "Redux Saga": "#764abc",
+  "Redux Toolkit": "#764abc",
+  "Ruby on Rails": "#cc0000",
   Vue: "#42b883",
   Nuxt: "#02dc81",
   Pinia: "#ffd858",
@@ -20,5 +20,5 @@ export const LANGUAGE_COLORS = {
   GetX: "#8f14fe",
   Linux: "#f5f5f5",
   "Three.js": "#000000",
-  "Gulp.js": "#cf4647",
+  "Gulp.js": "#cf4647"
 };
