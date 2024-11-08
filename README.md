@@ -1,3 +1,3 @@
-# Portfolio Website (ykdhan.com)
+# Portfolio Website
 
 Website introducing Youngkwang Han.
