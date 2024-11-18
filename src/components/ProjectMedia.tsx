@@ -2,6 +2,7 @@ import Video from "./general/Video";
 import Image from "./general/Image";
 import { useRecoilState } from "recoil";
 import { appState } from "../states/appState";
+import { Fragment } from "react";
 
 interface Props {
   media: { type: string; source: string }[];
@@ -9,49 +10,28 @@ interface Props {
 }
 
 const ProjectMedia = ({ media, direction = "horizontal" }: Props) => {
-  const [app] = useRecoilState(appState);
-
   if (media.length === 0) {
     return null;
   }
 
   return (
-    <ul style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+    <ul
+      style={{
+        display: "grid",
+        gridTemplateColumns:
+          direction === "horizontal" ? "1fr 1fr" : "1fr 1fr 1fr",
+        gap: "10px"
+      }}
+    >
       {media.map((item, i) => (
-        <li
-          key={i}
-          style={{
-            display: "block",
-            height: app.isMobile
-              ? direction === "horizontal"
-                ? 80
-                : 140
-              : direction === "horizontal"
-                ? 120
-                : 200
-          }}
-        >
+        <Fragment key={i}>
           {item.type === "video" && (
-            <Video
-              src={item.source}
-              style={{
-                width: "auto",
-                height: "100%",
-                overflow: "hidden"
-              }}
-            />
+            <Video style={{ borderRadius: "8px" }} src={item.source} />
           )}
           {item.type === "image" && (
-            <Image
-              src={item.source}
-              style={{
-                width: "auto",
-                height: "100%",
-                overflow: "hidden"
-              }}
-            />
+            <Image style={{ borderRadius: "8px" }} src={item.source} />
           )}
-        </li>
+        </Fragment>
       ))}
     </ul>
   );

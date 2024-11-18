@@ -17,7 +17,7 @@ const Text = ({
   return (
     <span
       style={{
-        fontFamily: FONT.Pixel,
+        fontFamily: bold ? FONT.Bold : FONT.Regular,
         fontWeight: bold ? FONT_WEIGHT.Bold : FONT_WEIGHT.Regular,
         fontSize: 14,
         lineHeight: 1.4,

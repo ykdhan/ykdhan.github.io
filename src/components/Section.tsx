@@ -16,7 +16,6 @@ const Section = ({ children, style = {}, innerStyle = {} }: Props) => {
         style={{
           width: "100%",
           padding: app.isMobile ? "32px 20px" : "40px 32px",
-          paddingRight: app.isMobile ? "8dvw" : "10dvw",
           margin: "0 auto",
           ...innerStyle
         }}

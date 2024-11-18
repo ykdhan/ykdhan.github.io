@@ -27,21 +27,12 @@ const Header = () => {
           gap: 16
         }}
       >
-        <div style={{ display: "flex", flexDirection: "column" }}>
-          <Text
-            bold
-            style={{
-              fontSize: app.isMobile ? 20 : 24
-            }}
-          >
-            {"YK"}
+        <div style={{ display: "flex", flexDirection: "row", gap: 10 }}>
+          <Text style={{ fontSize: app.isMobile ? 20 : 24 }}>
+            {"풀스택 개발자"}
           </Text>
-          <Text
-            style={{
-              fontSize: app.isMobile ? 16 : 24
-            }}
-          >
-            {"Full-stack developer"}
+          <Text bold style={{ fontSize: app.isMobile ? 20 : 24 }}>
+            {"한영광"}
           </Text>
         </div>
         <Link link={"mailto:ykdhan@gmail.com"} title={"Contact"} />

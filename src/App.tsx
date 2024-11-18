@@ -67,9 +67,9 @@ function App() {
         {DATA.projects.map((project, index) => (
           <Project
             key={index}
-            company={project.company}
-            title={project.title}
-            description={project.description}
+            company={project.company[app.locale]}
+            title={project.title[app.locale]}
+            description={project.description[app.locale]}
             languages={project.languages}
             link={project.link}
             media={project.media}

@@ -1,13 +1,23 @@
 {
   "introduction": [
-    "I'm a developer who aims to provide convenient and unique user experiences, drawing from my diverse background of attending schools in several different countries, and studying Computer Science in the United States.",
-    "Believing that a truly influential developer needs knowledge and experience across all development areas, I strive to broaden my expertise in various fields. Passionate about delivering beneficial services to others, I enthusiastically learn about UI and UX, keeping up with the latest trends to develop cutting-edge services."
+    "열정을 가지고 사람들에게 즐거움을 주고 기억에 남는 서비스를 만들고 있는 개발자입니다.",
+    "유익한 서비스를 제공하기 위해, 최신 트렌드를 따르며 사용자 경험(UX)과 사용자 인터페이스(UI)에 깊은 관심을 가지고 적극적으로 기여하고 있습니다",
+    "또한, 영향력 있는 개발자가 되기 위해, 가능한 모든 개발 분야의 지식과 경험을 쌓으려고 다양한 기회를 찾고 노력하고 있습니다."
   ],
   "projects": [
     {
-      "company": "Plang Inc.",
-      "title": "Plang",
-      "description": "AI-Driven English Conversation Mobile Application",
+      "company": {
+        "ko": "플랭",
+        "en": "Plang Inc."
+      },
+      "title": {
+        "ko": "플랭",
+        "en": "Plang"
+      },
+      "description": {
+        "ko": "AI 개인맞춤 영어회화 모바일 어플리케이션",
+        "en": "AI-Driven English Conversation Mobile Application"
+      },
       "languages": ["React", "React Native", "TypeScript", "Redux", "Redux Saga", "Ruby on Rails"],
       "link": "https://apps.apple.com/us/app/%ED%94%8C%EB%9E%AD-al-%EC%98%81%EC%96%B4%ED%9A%8C%ED%99%94-%EC%8A%A4%ED%94%BC%ED%82%B9-%EB%B0%9C%EC%9D%8C/id1384279650",
       "popular": true,
@@ -25,33 +35,22 @@
         {
           "type": "video",
           "source": "/videos/project_m/preview-plang-m-3.mp4"
-        },
-        {
-          "type": "image",
-          "source": "/images/project_m/preview-plang-m-1.png"
-        },
-        {
-          "type": "image",
-          "source": "/images/project_m/preview-plang-m-2.png"
-        },
-        {
-          "type": "image",
-          "source": "/images/project_m/preview-plang-m-3.png"
-        },
-        {
-          "type": "image",
-          "source": "/images/project_m/preview-plang-m-4.png"
-        },
-        {
-          "type": "image",
-          "source": "/images/project_m/preview-plang-m-5.png"
         }
       ]
     },
     {
-      "company": "feeel.d Inc.",
-      "title": "Markhub",
-      "description": "Communication Software for Design Project",
+      "company":  {
+        "ko": "필디",
+        "en": "feel.D Inc."
+      },
+      "title": {
+        "ko": "마크헙",
+        "en": "Markhub"
+      },
+      "description": {
+        "ko": "디자인 프로젝트를 위한 커뮤니케이션 서비스",
+        "en": "Communication Software for Design Project"
+      },
       "languages": ["Flutter", "GetX", "Firebase"],
       "color": "#0c0c0c",
       "link": "https://markhub.info/",
@@ -59,22 +58,27 @@
       "media": [
         {
           "type": "image",
-          "source": "/images/project_m/preview-markhub-1.png"
+          "source": "/images/project_m/preview-markhub-1.jpg"
         },
         {
           "type": "image",
-          "source": "/images/project_m/preview-markhub-2.png"
-        },
-        {
-          "type": "image",
-          "source": "/images/project_m/preview-markhub-3.png"
+          "source": "/images/project_m/preview-markhub-2.jpg"
         }
       ]
     },
     {
-      "company": "FLFI",
-      "title": "OG.xyz",
-      "description": "Crypto Community Website",
+      "company": {
+        "ko": "플피",
+        "en": "FLFI"
+      },
+      "title": {
+        "ko": "OG.xyz",
+        "en": "OG.xyz"
+      },
+      "description": {
+        "ko": "암호화폐 커뮤니티 웹사이트",
+        "en": "Crypto Community Website"
+      },
       "languages": ["Vue", "Nuxt", "TypeScript", "Pinia", "Vite"],
       "color": "#3ce642",
       "media": [
@@ -85,44 +89,29 @@
         {
           "type": "image",
           "source": "/images/project_m/preview-og-xyz-2.png"
-        },
-        {
-          "type": "image",
-          "source": "/images/project_m/preview-og-xyz-3.png"
-        },
-        {
-          "type": "image",
-          "source": "/images/project_m/preview-og-xyz-4.png"
-        },
-        {
-          "type": "image",
-          "source": "/images/project_m/preview-og-xyz-5.png"
-        },
-        {
-          "type": "image",
-          "source": "/images/project_m/preview-og-xyz-6.png"
-        },
-        {
-          "type": "image",
-          "source": "/images/project_m/preview-og-xyz-7.png"
-        },
-        {
-          "type": "image",
-          "source": "/images/project_m/preview-og-xyz-8.png"
         }
       ]
     },
     {
-      "company": "FLFI",
-      "title": "OG",
-      "description": "NFT Curation Mobile Application",
+      "company": {
+        "ko": "플피",
+        "en": "FLFI"
+      },
+      "title": {
+        "ko": "OG",
+        "en": "OG"
+      },
+      "description": {
+        "ko": "NFT 큐레이션 모바일 어플리케이션",
+        "en": "NFT Curation Mobile Application"
+      },
       "languages": ["Flutter", "Firebase"],
       "color": "#ff5135",
       "mediaDirection": "vertical",
       "media": [
         {
           "type": "image",
-          "source": "/images/project_m/preview-og-1.png"
+          "source": "/images/project_m/preview-og-3.png"
         },
         {
           "type": "image",
@@ -130,38 +119,23 @@
         },
         {
           "type": "image",
-          "source": "/images/project_m/preview-og-3.png"
-        },
-        {
-          "type": "image",
-          "source": "/images/project_m/preview-og-4.png"
-        },
-        {
-          "type": "image",
-          "source": "/images/project_m/preview-og-5.png"
-        },
-        {
-          "type": "image",
-          "source": "/images/project_m/preview-og-6.png"
-        },
-        {
-          "type": "image",
           "source": "/images/project_m/preview-og-7.png"
-        },
-        {
-          "type": "image",
-          "source": "/images/project_m/preview-og-8.png"
-        },
-        {
-          "type": "image",
-          "source": "/images/project_m/preview-og-9.png"
         }
       ]
     },
     {
-      "company": "Fave Inc.",
-      "title": "Galaxy Z Fold4 Highlights",
-      "description": "Samsung Galaxy Unpacked",
+      "company": {
+        "ko": "페이브",
+        "en": "Fave Inc."
+      },
+      "title": {
+        "ko": "갤럭시 Z 폴드4 하이라이트",
+        "en": "Galaxy Z Fold4 Highlights"
+      },
+      "description": {
+        "ko": "삼성 갤럭시 언팩 웹사이트",
+        "en": "Samsung Galaxy Unpacked"
+      },
       "languages": ["HTML", "SASS", "jQuery"],
       "color": "#96b6c8",
       "link": "https://www.samsung.com/global/galaxy/galaxy-z-fold4/",
@@ -173,29 +147,22 @@
         {
           "type": "video",
           "source": "/videos/project_m/preview-fold4-2.mp4"
-        },
-        {
-          "type": "image",
-          "source": "/images/project_m/preview-fold4-1.png"
-        },
-        {
-          "type": "image",
-          "source": "/images/project_m/preview-fold4-2.png"
-        },
-        {
-          "type": "image",
-          "source": "/images/project_m/preview-fold4-3.png"
-        },
-        {
-          "type": "image",
-          "source": "/images/project_m/preview-fold4-4.png"
         }
       ]
     },
     {
-      "company": "Fave Inc.",
-      "title": "Fave.kr",
-      "description": "Fave Official Website in 3D",
+      "company": {
+        "ko": "페이브",
+        "en": "Fave Inc."
+      },
+      "title": {
+        "ko": "Fave.kr",
+        "en": "Fave.kr"
+      },
+      "description": {
+        "ko": "Fave 공식 3D 웹사이트",
+        "en": "Fave Official Website in 3D"
+      },
       "languages": ["Three.js", "Gulp.js", "JavaScript", "HTML", "SASS"],
       "color": "#4b377b",
       "link": "https://fave.kr",
@@ -208,52 +175,25 @@
         {
           "type": "video",
           "source": "/videos/project_m/preview-fave-2.mp4"
-        },
-        {
-          "type": "video",
-          "source": "/videos/project_m/preview-fave-3.mp4"
-        },
-        {
-          "type": "image",
-          "source": "/images/project_m/preview-fave-1.png"
-        },
-        {
-          "type": "image",
-          "source": "/images/project_m/preview-fave-2.png"
-        },
-        {
-          "type": "image",
-          "source": "/images/project_m/preview-fave-3.png"
-        },
-        {
-          "type": "image",
-          "source": "/images/project_m/preview-fave-4.png"
-        },
-        {
-          "type": "image",
-          "source": "/images/project_m/preview-fave-5.png"
-        },
-        {
-          "type": "image",
-          "source": "/images/project_m/preview-fave-6.png"
-        },
-        {
-          "type": "image",
-          "source": "/images/project_m/preview-fave-7.png"
         }
       ]
     },
     {
-      "company": "Fave Inc.",
-      "title": "Galaxy S22 Ultra Highlights",
-      "description": "Samsung Galaxy Unpacked",
+      "company": {
+        "ko": "페이브",
+        "en": "Fave Inc."
+      },
+      "title": {
+        "ko": "갤럭시 S22 울트라 하이라이트",
+        "en": "Galaxy S22 Ultra Highlights"
+      },
+      "description": {
+        "ko": "삼성 갤럭시 언팩 웹사이트",
+        "en": "Samsung Galaxy Unpacked"
+      },
       "color": "#b27d89",
       "languages": ["HTML", "SASS", "jQuery"],
       "media": [
-        {
-          "type": "video",
-          "source": "/videos/project_m/preview-s22-1.mp4"
-        },
         {
           "type": "video",
           "source": "/videos/project_m/preview-s22-2.mp4"
@@ -261,36 +201,25 @@
         {
           "type": "video",
           "source": "/videos/project_m/preview-s22-3.mp4"
-        },
-        {
-          "type": "image",
-          "source": "/images/project_m/preview-s22-1.png"
-        },
-        {
-          "type": "image",
-          "source": "/images/project_m/preview-s22-2.png"
-        },
-        {
-          "type": "image",
-          "source": "/images/project_m/preview-s22-3.png"
-        },
-        {
-          "type": "image",
-          "source": "/images/project_m/preview-s22-4.png"
         }
       ]
     },
     {
-      "company": "Fave Inc.",
-      "title": "Galaxy Z Fold3 5G Highlights",
-      "description": "Samsung Galaxy Unpacked",
+      "company": {
+        "ko": "페이브",
+        "en": "Fave Inc."
+      },
+      "title": {
+        "ko": "갤럭시 Z 폴드3 5G 하이라이트",
+        "en": "Galaxy Z Fold3 5G Highlights"
+      },
+      "description": {
+        "ko": "삼성 갤럭시 언팩 웹사이트",
+        "en": "Samsung Galaxy Unpacked"
+      },
       "color": "#363636",
       "languages": ["Three.js", "HTML", "SASS", "jQuery"],
       "media": [
-        {
-          "type": "video",
-          "source": "/videos/project_m/preview-fold3-1.mp4"
-        },
         {
           "type": "video",
           "source": "/videos/project_m/preview-fold3-2.mp4"
@@ -298,25 +227,22 @@
         {
           "type": "video",
           "source": "/videos/project_m/preview-fold3-3.mp4"
-        },
-        {
-          "type": "image",
-          "source": "/images/project_m/preview-fold3-1.png"
-        },
-        {
-          "type": "image",
-          "source": "/images/project_m/preview-fold3-2.png"
-        },
-        {
-          "type": "image",
-          "source": "/images/project_m/preview-fold3-3.png"
         }
       ]
     },
     {
-      "company": "Fave Inc.",
-      "title": "Jangsu Cultural Center",
-      "description": "Jangsu Cultural Center Website",
+      "company": {
+        "ko": "페이브",
+        "en": "Fave Inc."
+      },
+      "title": {
+        "ko": "장수문화원",
+        "en": "Jangsu Cultural Center"
+      },
+      "description": {
+        "ko": "장수문화원 웹사이트",
+        "en": "Jangsu Cultural Center Website"
+      },
       "color": "#eea84c",
       "languages": ["HTML", "SASS", "jQuery"],
       "link": "https://jangsuculture.or.kr/",
@@ -328,21 +254,22 @@
         {
           "type": "image",
           "source": "/images/project_m/preview-jangsu-2.png"
-        },
-        {
-          "type": "image",
-          "source": "/images/project_m/preview-jangsu-3.png"
-        },
-        {
-          "type": "image",
-          "source": "/images/project_m/preview-jangsu-4.png"
         }
       ]
     },
     {
-      "company": "Secureflare Inc.",
-      "title": "Web Monitoring Application",
-      "description": "LG U+ Web Monitoring Application with Zabbix",
+      "company": {
+        "ko": "시큐어플레어",
+        "en": "Secureflare Inc."
+      },
+      "title": {
+        "ko": "웹 모니터링 어플리케이션",
+        "en": "Web Monitoring Application"
+      },
+      "description": {
+        "ko": "Zabbix 기반 LG U+ 웹 모니터링 어플리케이션",
+        "en": "LG U+ Web Monitoring Application with Zabbix"
+      },
       "color": "#d31f32",
       "tags": ["OpenSource"],
       "languages": ["PHP", "Linux"],
@@ -354,10 +281,6 @@
         {
           "type": "image",
           "source": "/images/project_m/preview-secureflare-2.png"
-        },
-        {
-          "type": "image",
-          "source": "/images/project_m/preview-secureflare-3.png"
         }
       ]
     }

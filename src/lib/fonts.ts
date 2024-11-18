@@ -1,9 +1,6 @@
 export enum FONT {
   Regular = "Pretendard-Regular",
-  Bold = "Pretendard-Bold",
-  Pixel = "Silkscreen"
-  // Pixel = "Press Start 2P"
-  // Pixel = "Pixelify Sans"
+  Bold = "Pretendard-Bold"
 }
 
 export enum FONT_WEIGHT {

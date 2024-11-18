@@ -5,6 +5,7 @@ export interface AppState {
   height: number;
   isMobile: boolean;
   darkmode: boolean;
+  locale: "ko" | "en";
 }
 
 export const appState = atom<AppState>({
@@ -13,6 +14,7 @@ export const appState = atom<AppState>({
     width: 0,
     height: 0,
     isMobile: false,
-    darkmode: false
+    darkmode: false,
+    locale: "ko"
   }
 });

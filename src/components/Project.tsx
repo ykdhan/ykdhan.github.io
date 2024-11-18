@@ -42,22 +42,29 @@ const Project = ({
           <div
             style={{
               display: "flex",
-              flexDirection: app.isMobile ? "column" : "row",
+              flexDirection: "row",
               flexWrap: "wrap",
-              alignItems: app.isMobile ? "flex-start" : "center",
-              gap: app.isMobile ? 8 : 16,
-              marginBottom: 4
+              alignItems: "center",
+              gap: app.isMobile ? 8 : 10,
+              marginBottom: 6
             }}
           >
             <Text bold style={{ fontSize: app.isMobile ? 18 : 20 }}>
               {title}
             </Text>
-            <Text style={{ fontSize: app.isMobile ? 16 : 18 }}>{company}</Text>
+            <Text
+              style={{
+                fontSize: app.isMobile ? 18 : 20,
+                color: "var(--color-font-light2)"
+              }}
+            >
+              {company}
+            </Text>
           </div>
           <Text
             color={"var(--color-font-light2)"}
             style={{
-              fontSize: 14
+              fontSize: 15
             }}
           >
             {description}
@@ -76,7 +83,6 @@ const Project = ({
             <ProjectLanguage
               key={`${title}-lang-${index}`}
               title={language}
-              // @ts-ignore
               color={LANGUAGE_COLORS[language]}
             />
           ))}

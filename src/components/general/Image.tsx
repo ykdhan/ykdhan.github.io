@@ -40,20 +40,20 @@ const Image = ({ src, alt = "", style, placeholder, ...props }) => {
 
   return (
     <div ref={ref} style={{ ...style, pointerEvents: "none" }}>
-      <>
-        {currentSrc && (
-          <img
-            src={currentSrc}
-            alt={alt}
-            style={{
-              ...style,
-              opacity: loaded ? 1 : 0,
-              transition: "opacity 0.3s ease-in-out"
-            }}
-            {...props}
-          />
-        )}
-      </>
+      {currentSrc && (
+        <img
+          src={currentSrc}
+          alt={alt}
+          style={{
+            ...style,
+            width: "100%",
+            height: "100%",
+            opacity: loaded ? 1 : 0,
+            transition: "opacity 0.3s ease-in-out"
+          }}
+          {...props}
+        />
+      )}
     </div>
   );
 };

@@ -44,7 +44,7 @@ const ProjectLanguage = ({ title, color }: Props) => {
           }}
         />
       </div>
-      <Text color={"var(--color-font-light2)"} style={{ fontSize: 12 }}>
+      <Text color={"var(--color-font-light2)"} style={{ fontSize: 14 }}>
         {title}
       </Text>
     </li>

@@ -21,7 +21,7 @@ const Link = ({ link, title = "Link" }: Props) => {
     >
       <Text
         color={"var(--color-font-light2)"}
-        style={{ fontSize: app.isMobile ? 13 : 14 }}
+        style={{ fontSize: app.isMobile ? 14 : 16 }}
       >
         {title}
       </Text>
