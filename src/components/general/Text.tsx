@@ -8,12 +8,7 @@ type Props = {
   style?: CSSProperties;
 };
 
-const Text = ({
-  bold = false,
-  color = "var(--color-font-light)",
-  children,
-  style = {}
-}: Props) => {
+const Text = ({ bold = false, color, children, style = {} }: Props) => {
   return (
     <span
       style={{

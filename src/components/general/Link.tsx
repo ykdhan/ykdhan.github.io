@@ -4,7 +4,7 @@ import { appState } from "../../states/appState";
 
 interface Props {
   link: string;
-  title?: string;
+  title: string;
 }
 
 const Link = ({ link, title }: Props) => {
@@ -15,16 +15,11 @@ const Link = ({ link, title }: Props) => {
       target="_blank"
       style={{
         display: "inline-block",
-        padding: "2px 6px 4px",
-        border: "2px solid var(--color-font-light2)",
-        borderRadius: 4
+        padding: "6px 8px"
       }}
     >
-      <Text
-        color={"var(--color-font-light2)"}
-        style={{ fontSize: app.isMobile ? 14 : 16 }}
-      >
-        {title ?? (app.locale === "ko" ? "링크" : "Link")}
+      <Text style={{ fontSize: app.isMobile ? 20 : 24, pointerEvents: "none" }}>
+        {title}
       </Text>
     </a>
   );

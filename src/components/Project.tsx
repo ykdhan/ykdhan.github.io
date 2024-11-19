@@ -36,41 +36,53 @@ const Project = ({
           display: "flex",
           flexDirection: "column",
           alignItems: "flex-start",
-          gap: 20,
+          gap: 24,
           marginBottom: 32
         }}
       >
-        <div>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              flexWrap: "wrap",
-              alignItems: "center",
-              gap: app.isMobile ? 8 : 10,
-              marginBottom: 6
-            }}
-          >
-            <Text bold style={{ fontSize: app.isMobile ? 18 : 20 }}>
-              {title}
-            </Text>
-            <Text
+        <div
+          style={{
+            display: "flex",
+            width: "100%",
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "space-between"
+          }}
+        >
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <div
               style={{
-                fontSize: app.isMobile ? 18 : 20,
-                color: "var(--color-font-light2)"
+                display: "flex",
+                flexDirection: "row",
+                flexWrap: "wrap",
+                alignItems: "center",
+                gap: app.isMobile ? 8 : 10,
+                marginBottom: 6
               }}
             >
-              {company}
+              <Text bold style={{ fontSize: app.isMobile ? 18 : 20 }}>
+                {title}
+              </Text>
+              <Text
+                style={{
+                  fontSize: app.isMobile ? 18 : 20,
+                  color: "var(--color-font-light2)"
+                }}
+              >
+                {company}
+              </Text>
+            </div>
+            <Text
+              color={"var(--color-font-light2)"}
+              style={{
+                fontSize: 15
+              }}
+            >
+              {description}
             </Text>
           </div>
-          <Text
-            color={"var(--color-font-light2)"}
-            style={{
-              fontSize: 15
-            }}
-          >
-            {description}
-          </Text>
+
+          {link && <Link link={link} title={"🔗"} />}
         </div>
         <ul
           style={{
@@ -104,16 +116,25 @@ const Project = ({
                 gap: 6
               }}
             >
-              <Text style={{ fontSize: 16 }} key={index}>
+              <Text
+                style={{ fontSize: 16, color: "var(--color-font-light3)" }}
+                key={index}
+              >
                 {"•"}
               </Text>
-              <Text style={{ flex: 1, fontSize: 16 }} key={index}>
+              <Text
+                style={{
+                  flex: 1,
+                  fontSize: 16,
+                  color: "var(--color-font-light3)"
+                }}
+                key={index}
+              >
                 {item}
               </Text>
             </li>
           ))}
         </ul>
-        {link && <Link link={link} />}
       </div>
       <ProjectMedia media={media} direction={mediaDirection} />
     </div>

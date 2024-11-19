@@ -11,6 +11,7 @@ body {
   font-size: 14px;
   line-height: 1.4;
   letter-spacing: -0.03rem;
+  color: var(--color-font-light2);
   background: var(--color-bg-dark);
 }
 
@@ -22,7 +23,8 @@ body {
 
 :root {
   --color-font-light: #fcfcfc;
-  --color-font-light2: #cfcfcf;
+  --color-font-light2: #e0e0e0;
+  --color-font-light3: #bdbdbd;
   --color-bg-dark: #141414;
 }
 
