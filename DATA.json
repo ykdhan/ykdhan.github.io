@@ -19,6 +19,16 @@
         "en": "AI-Driven English Conversation Mobile Application"
       },
       "languages": ["React", "React Native", "TypeScript", "Redux", "Redux Saga", "Ruby on Rails"],
+      "contribution": {
+        "ko":[
+        "Redux-Saga를 활용하여 전체적인 앱 비즈니스 로직 개발",
+        "Presentational/Container 디자인 패턴을 활용하여 View Component 추상화 및 분리",
+        "Factory 디자인 패턴과 Custom Hook을 활용한 다국어 asset 관리 및 재사용",
+        "AB Test를 활용한 사용자 경험 개선",
+        "AppStore, GooglePlay 배포 및 앱 버전 관리"
+        ],
+        "en": []
+      },
       "link": "https://apps.apple.com/us/app/%ED%94%8C%EB%9E%AD-al-%EC%98%81%EC%96%B4%ED%9A%8C%ED%99%94-%EC%8A%A4%ED%94%BC%ED%82%B9-%EB%B0%9C%EC%9D%8C/id1384279650",
       "popular": true,
       "color": "#12bc78",
@@ -51,7 +61,17 @@
         "ko": "디자인 프로젝트를 위한 커뮤니케이션 서비스",
         "en": "Communication Software for Design Project"
       },
-      "languages": ["Flutter", "GetX", "Firebase"],
+      "languages": ["Flutter", "GetX", "Firebase", "GraphQL"],
+      "contribution": {
+        "ko": [
+          "Flutter를 활용한 웹 어플리케이션 개발",
+          "GetX를 활용한 상태관리 및 라우팅",
+          "Firebase, GraphQL을 활용한 데이터 통신",
+          "Text Editor 모듈 개발",
+          "반응형, 크로스 브라우징, 웹 퍼포먼스 최적화"
+        ],
+        "en": []
+      },
       "color": "#0c0c0c",
       "link": "https://markhub.info/",
       "tags": ["Freelance"],
@@ -80,6 +100,17 @@
         "en": "Crypto Community Website"
       },
       "languages": ["Vue", "Nuxt", "TypeScript", "Pinia", "Vite"],
+      "contribution": {
+        "ko": [
+          "Vue.js를 활용한 UI 컴포넌트 개발",
+          "Nuxt.js를 활용한 Server-Side Rendering 구현 및 SEO 최적화",
+          "유저별 커스텀 레이아웃의 다이나믹 홈 화면 구현 및 렌더링 최적화",
+          "Pinterest와 같은 다이나믹 레이아웃의 Infinite Scroll 구현",
+          "오픈소스를 활용한 게시판 Text Editor 개발",
+          "반응형, 크로스 브라우징, 웹 퍼포먼스 최적화"
+        ],
+        "en": []
+      },
       "color": "#3ce642",
       "media": [
         {
@@ -106,6 +137,14 @@
         "en": "NFT Curation Mobile Application"
       },
       "languages": ["Flutter", "Firebase"],
+      "contribution": {
+        "ko": [
+          "사용해 보지 않은 Flutter를 도입하여 모바일 어플리케이션 개발",
+          "Metamask와 같은 Web3 지갑 연동",
+          "3개월 내 AppStore, GooglePlay 베타 앱 출시"
+        ],
+        "en": []
+      },
       "color": "#ff5135",
       "mediaDirection": "vertical",
       "media": [
@@ -137,6 +176,15 @@
         "en": "Samsung Galaxy Unpacked"
       },
       "languages": ["HTML", "SASS", "jQuery"],
+      "contribution": {
+        "ko": [
+          "영상을 활용한 스크롤 애니메이션 구현",
+          "웹 표준, 접근성을 고려한 반응형 웹사이트 제작",
+          "SEO, 크로스 브라우징, 웹 퍼포먼스 최적화",
+          "다국어 지원을 위한 i18n 구현"
+        ],
+        "en": []
+      },
       "color": "#96b6c8",
       "link": "https://www.samsung.com/global/galaxy/galaxy-z-fold4/",
       "media": [
@@ -164,6 +212,20 @@
         "en": "Fave Official Website in 3D"
       },
       "languages": ["Three.js", "Gulp.js", "JavaScript", "HTML", "SASS"],
+      "contribution": {
+        "ko": [
+          "Three.js를 활용한 3D 모션 구현",
+          "2D에서 3D로의 전환 애니메이션 구현",
+          "스크롤 기반 애니메이션 구현 및 렌더링 최적화",
+          "3D 모델, 빛, 카메라 제어 및 텍스처 매핑",
+          "Gulp.js를 활용한 프로젝트 빌드 및 번들링",
+          "웹 표준, 접근성을 고려한 반응형 웹사이트 제작",
+          "SEO, 크로스 브라우징, 웹 퍼포먼스 최적화",
+          "AWWWARDS 'Honorable Mention' 선정",
+          "GSAP 'Site of the Day' 선정"
+        ],
+        "en":  []
+      },
       "color": "#4b377b",
       "link": "https://fave.kr",
       "popular": true,
@@ -193,6 +255,15 @@
       },
       "color": "#b27d89",
       "languages": ["HTML", "SASS", "jQuery"],
+      "contribution": {
+        "ko":[
+          "영상, 이미지를 활용한 스크롤 기반 애니메이션 구현",
+          "웹 표준, 접근성을 고려한 반응형 웹사이트 제작",
+          "SEO, 크로스 브라우징, 웹 퍼포먼스 최적화",
+          "다국어 지원을 위한 i18n 구현"
+        ],
+        "en": []
+      },
       "media": [
         {
           "type": "video",
@@ -219,6 +290,16 @@
       },
       "color": "#363636",
       "languages": ["Three.js", "HTML", "SASS", "jQuery"],
+      "contribution": {
+        "ko": [
+          "Three.js를 활용한 3D 모션 구현",
+          "스크롤 기반 애니메이션 구현",
+          "웹 표준, 접근성을 고려한 반응형 웹사이트 제작",
+          "SEO, 크로스 브라우징, 웹 퍼포먼스 최적화",
+          "다국어 지원을 위한 i18n 구현"
+        ],
+        "en": []
+      },
       "media": [
         {
           "type": "video",
@@ -245,6 +326,13 @@
       },
       "color": "#eea84c",
       "languages": ["HTML", "SASS", "jQuery"],
+      "contribution": {
+        "ko": [
+          "웹 표준, 접근성을 고려한 반응형 웹사이트 제작",
+          "크로스 브라우징 및 웹 퍼포먼스 최적화"
+        ],
+        "en": []
+      },
       "link": "https://jangsuculture.or.kr/",
       "media": [
         {
@@ -273,6 +361,16 @@
       "color": "#d31f32",
       "tags": ["OpenSource"],
       "languages": ["PHP", "Linux"],
+      "contribution": {
+    "ko":[
+      "오픈소스 Zabbix를 활용한 네트워크 모니터링 앱 개발",
+      "Apache2 웹 서버, PostgreSQL 데이터베이스 구축",
+      "Docker를 활용한 환경 구축 및 배포 자동화",
+      "고가용성 및 확장성을 고려한 아키텍처 설계",
+      "회사 내부 요청사항에 맞는 UI, UX 변경"
+    ] ,
+    "en": []
+      },
       "media": [
         {
           "type": "image",

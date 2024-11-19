@@ -9,6 +9,7 @@ import Page from "./components/general/Page";
 import Text from "./components/general/Text";
 import Section from "./components/Section";
 import Cover from "./components/Cover";
+import Footer from "./components/Footer";
 
 function App() {
   const [app, setApp] = useRecoilState(appState);
@@ -71,12 +72,14 @@ function App() {
             title={project.title[app.locale]}
             description={project.description[app.locale]}
             languages={project.languages}
+            contribution={project.contribution}
             link={project.link}
             media={project.media}
             mediaDirection={project.mediaDirection}
           />
         ))}
       </Section>
+      <Footer />
       <Cover />
     </Page>
   );

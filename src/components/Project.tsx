@@ -11,6 +11,7 @@ interface Props {
   description: string;
   company: string;
   languages: string[];
+  contribution: string[];
   media: { type: string; source: string }[];
   link?: string;
   mediaDirection?: string;
@@ -21,6 +22,7 @@ const Project = ({
   description,
   company,
   languages,
+  contribution,
   media,
   link,
   mediaDirection
@@ -81,10 +83,34 @@ const Project = ({
         >
           {languages.map((language, index) => (
             <ProjectLanguage
-              key={`${title}-lang-${index}`}
+              key={index}
               title={language}
               color={LANGUAGE_COLORS[language]}
             />
+          ))}
+        </ul>
+        <ul
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: 12
+          }}
+        >
+          {contribution[app.locale].map((item, index) => (
+            <li
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                gap: 6
+              }}
+            >
+              <Text style={{ fontSize: 16 }} key={index}>
+                {"•"}
+              </Text>
+              <Text style={{ flex: 1, fontSize: 16 }} key={index}>
+                {item}
+              </Text>
+            </li>
           ))}
         </ul>
         {link && <Link link={link} />}

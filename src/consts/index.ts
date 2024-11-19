@@ -20,5 +20,6 @@ export const LANGUAGE_COLORS = {
   GetX: "#8f14fe",
   Linux: "#f5f5f5",
   "Three.js": "#000000",
-  "Gulp.js": "#cf4647"
+  "Gulp.js": "#cf4647",
+  GraphQL: "#f6009c"
 };

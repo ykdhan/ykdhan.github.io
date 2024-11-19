@@ -29,13 +29,16 @@ const Header = () => {
       >
         <div style={{ display: "flex", flexDirection: "row", gap: 10 }}>
           <Text style={{ fontSize: app.isMobile ? 20 : 24 }}>
-            {"풀스택 개발자"}
+            {app.locale === "ko" ? "풀스택 개발자" : "Fullstack Developer"}
           </Text>
           <Text bold style={{ fontSize: app.isMobile ? 20 : 24 }}>
-            {"한영광"}
+            {app.locale === "ko" ? "한영광" : "YK"}
           </Text>
         </div>
-        <Link link={"mailto:ykdhan@gmail.com"} title={"Contact"} />
+        <Link
+          link={"mailto:ykdhan@gmail.com"}
+          title={app.locale === "ko" ? "메일" : "Contact"}
+        />
       </div>
     </header>
   );

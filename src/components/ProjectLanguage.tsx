@@ -20,30 +20,10 @@ const ProjectLanguage = ({ title, color }: Props) => {
           position: "relative",
           width: 16,
           height: 16,
-          justifyContent: "center",
-          alignItems: "center"
+          borderRadius: 4,
+          backgroundColor: color
         }}
-      >
-        <span
-          style={{
-            position: "absolute",
-            top: 3,
-            display: "block",
-            width: 16,
-            height: 10,
-            backgroundColor: color
-          }}
-        />
-        <span
-          style={{
-            marginLeft: 3,
-            display: "block",
-            width: 10,
-            height: 16,
-            backgroundColor: color
-          }}
-        />
-      </div>
+      />
       <Text color={"var(--color-font-light2)"} style={{ fontSize: 14 }}>
         {title}
       </Text>
