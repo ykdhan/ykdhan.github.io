@@ -18,13 +18,13 @@ const ProjectLanguage = ({ title, color }: Props) => {
       <div
         style={{
           position: "relative",
-          width: 16,
-          height: 16,
+          width: 13,
+          height: 13,
           borderRadius: 4,
           backgroundColor: color
         }}
       />
-      <Text color={"var(--color-font-light2)"} style={{ fontSize: 14 }}>
+      <Text color={"var(--color-font-light3)"} style={{ fontSize: 14 }}>
         {title}
       </Text>
     </li>

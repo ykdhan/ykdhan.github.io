@@ -105,11 +105,12 @@ const Project = ({
           style={{
             display: "flex",
             flexDirection: "column",
-            gap: 12
+            gap: 10
           }}
         >
           {contribution[app.locale].map((item, index) => (
             <li
+              key={index}
               style={{
                 display: "flex",
                 flexDirection: "row",
@@ -117,18 +118,19 @@ const Project = ({
               }}
             >
               <Text
-                style={{ fontSize: 16, color: "var(--color-font-light3)" }}
-                key={index}
+                style={{
+                  fontSize: app.isMobile ? 14 : 16,
+                  color: "var(--color-font-light3)"
+                }}
               >
                 {"•"}
               </Text>
               <Text
                 style={{
                   flex: 1,
-                  fontSize: 16,
+                  fontSize: app.isMobile ? 14 : 16,
                   color: "var(--color-font-light3)"
                 }}
-                key={index}
               >
                 {item}
               </Text>

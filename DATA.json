@@ -21,10 +21,13 @@
       "languages": ["React", "React Native", "TypeScript", "Redux", "Redux Saga", "Ruby on Rails"],
       "contribution": {
         "ko":[
-        "Redux-Saga를 활용하여 전체적인 앱 비즈니스 로직 개발",
-        "Presentational/Container 디자인 패턴을 활용하여 View Component 추상화 및 분리",
-        "Factory 디자인 패턴과 Custom Hook을 활용한 다국어 asset 관리 및 재사용",
-        "AB Test를 활용한 사용자 경험 개선",
+        "Observer 디자인 패턴과 Redux-Saga를 활용한 전체적인 앱 비즈니스 로직 개발",
+        "Presentational/Container 디자인 패턴을 활용한 View Component 추상화 및 분리",
+        "Factory 디자인 패턴과 Custom Hook을 활용한 다국어 Asset 관리 및 재사용",
+        "필요에 따라서 재사용성과 확장성을 고려한 Object-Oriented Programming",
+        "React Native 및 Android, iOS Native 모듈 버전 관리",
+        "Ruby on Rails를 활용한 REST API 및 백그라운드 Worker 개발",
+        "Database Schema 설계 및 확장성을 고려한 데이터 모델링",
         "AppStore, GooglePlay 배포 및 앱 버전 관리"
         ],
         "en": []

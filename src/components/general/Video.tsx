@@ -7,16 +7,14 @@ const Video = ({ src, style, ...props }) => {
   const [inView, setInView] = useState(false);
 
   useEffect(() => {
-    const root = document.getElementsByTagName("main")[0] as Element;
-    if (!root || !ref.current) return;
+    if (!ref.current) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         setInView(entry.isIntersecting);
       },
       {
-        root,
-        rootMargin: "400px"
+        rootMargin: "300px"
       }
     );
     observer.observe(ref.current as Element);

@@ -7,8 +7,7 @@ const Image = ({ src, alt = "", style, placeholder, ...props }) => {
   const [currentSrc, setCurrentSrc] = useState(placeholder || "");
 
   useEffect(() => {
-    const root = document.getElementsByTagName("main")[0] as Element;
-    if (!root || !ref.current) return;
+    if (!ref.current) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -17,8 +16,7 @@ const Image = ({ src, alt = "", style, placeholder, ...props }) => {
         }
       },
       {
-        root,
-        rootMargin: "400px"
+        rootMargin: "300px"
       }
     );
     observer.observe(ref.current as Element);
