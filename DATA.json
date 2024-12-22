@@ -1,9 +1,16 @@
 {
-  "introduction": [
-    "열정을 가지고 사람들에게 즐거움을 주고 기억에 남는 서비스를 만들고 있는 개발자입니다.",
-    "유익한 서비스를 제공하기 위해, 최신 트렌드를 따르며 사용자 경험(UX)과 사용자 인터페이스(UI)에 깊은 관심을 가지고 적극적으로 기여하고 있습니다",
-    "또한, 영향력 있는 개발자가 되기 위해, 가능한 모든 개발 분야의 지식과 경험을 쌓으려고 다양한 기회를 찾고 노력하고 있습니다."
-  ],
+  "introduction": {
+    "ko": [
+      "열정을 가지고 사람들에게 즐거움을 주고 기억에 남는 서비스를 만들고 있는 개발자입니다.",
+      "유익한 서비스를 제공하기 위해, 최신 트렌드를 따르며 사용자 경험(UX)과 사용자 인터페이스(UI)에 깊은 관심을 가지고 적극적으로 기여하고 있습니다",
+      "또한, 영향력 있는 개발자가 되기 위해, 가능한 모든 개발 분야의 지식과 경험을 쌓으려고 다양한 기회를 찾고 노력하고 있습니다."
+    ],
+    "en": [
+      "With great passion, I create memorable services that bring joy to people.",
+      "In order to provide beneficial services, I actively follow the latest trends and contribute with a deep interest in user experience (UX) and user interface (UI).",
+      "Furthermore, to become an influential developer, I am seeking and striving for various opportunities to gain knowledge and experience in as many development fields as possible."
+    ]
+  },
   "projects": [
     {
       "company": {
@@ -21,16 +28,25 @@
       "languages": ["React", "React Native", "TypeScript", "Redux", "Redux Saga", "Ruby on Rails"],
       "contribution": {
         "ko":[
-        "Observer 디자인 패턴과 Redux-Saga를 활용한 전체적인 앱 비즈니스 로직 개발",
-        "Presentational/Container 디자인 패턴을 활용한 View Component 추상화 및 분리",
-        "Factory 디자인 패턴과 Custom Hook을 활용한 다국어 Asset 관리 및 재사용",
-        "필요에 따라서 재사용성과 확장성을 고려한 Object-Oriented Programming",
-        "React Native 및 Android, iOS Native 모듈 버전 관리",
-        "Ruby on Rails를 활용한 REST API 및 백그라운드 Worker 개발",
-        "Database Schema 설계 및 확장성을 고려한 데이터 모델링",
-        "AppStore, GooglePlay 배포 및 앱 버전 관리"
+          "Observer 디자인 패턴과 Redux-Saga를 활용한 전체적인 앱 비즈니스 로직 개발",
+          "Presentational/Container 디자인 패턴을 활용한 View Component 추상화 및 분리",
+          "Factory 디자인 패턴과 Custom Hook을 활용한 다국어 Asset 관리 및 재사용",
+          "재사용성과 확장성을 고려한 Object-Oriented Programming",
+          "React Native 및 Android, iOS Native 모듈 버전 관리",
+          "Ruby on Rails를 활용한 REST API 및 백그라운드 Worker 개발",
+          "Database Schema 설계 및 확장성을 고려한 데이터 모델링",
+          "AppStore, GooglePlay 배포 및 앱 버전 관리"
         ],
-        "en": []
+        "en": [
+          "Development of overall app business logic using the Observer design pattern and Redux-Saga",
+          "Abstraction and separation of View Components using the Presentational/Container design pattern",
+          "Multilingual asset management and reuse utilizing the Factory design pattern and Custom Hooks",
+          "Object-Oriented Programming considering reusability and scalability",
+          "Version management of React Native and Android, iOS Native modules",
+          "Development of REST API and background workers using Ruby on Rails",
+          "Database schema design and data modeling considering scalability",
+          "App distribution on AppStore and GooglePlay"
+        ]
       },
       "link": "https://apps.apple.com/us/app/%ED%94%8C%EB%9E%AD-al-%EC%98%81%EC%96%B4%ED%9A%8C%ED%99%94-%EC%8A%A4%ED%94%BC%ED%82%B9-%EB%B0%9C%EC%9D%8C/id1384279650",
       "popular": true,
@@ -73,7 +89,13 @@
           "Text Editor 모듈 개발",
           "반응형, 크로스 브라우징, 웹 퍼포먼스 최적화"
         ],
-        "en": []
+        "en": [
+          "Web application development using Flutter",
+          "State management and routing using GetX",
+          "Data communication using Firebase and GraphQL",
+          "Development of Text Editor module",
+          "Responsive design, cross-browser compatibility, and web performance optimization"
+        ]
       },
       "color": "#0c0c0c",
       "link": "https://markhub.info/",
@@ -112,7 +134,14 @@
           "오픈소스를 활용한 게시판 Text Editor 개발",
           "반응형, 크로스 브라우징, 웹 퍼포먼스 최적화"
         ],
-        "en": []
+        "en": [
+          "UI component development using Vue.js",
+          "Implementation of Server-Side Rendering and SEO optimization using Nuxt.js",
+          "Implementation of dynamic home screen with user-specific custom layouts and rendering optimization",
+          "Implementation of Infinite Scroll with dynamic layout similar to Pinterest",
+          "Development of Text Editor utilizing an open source project",
+          "Responsive design, cross-browser compatibility, and web performance optimization"
+        ]
       },
       "color": "#3ce642",
       "media": [
@@ -146,7 +175,11 @@
           "Metamask와 같은 Web3 지갑 연동",
           "3개월 내 AppStore, GooglePlay 베타 앱 출시"
         ],
-        "en": []
+        "en": [
+          "Mobile app development using Flutter",
+          "Integration with Web3 wallets such as Metamask",
+          "Beta version release on AppStore and GooglePlay within 3 months"
+        ]
       },
       "color": "#ff5135",
       "mediaDirection": "vertical",
@@ -186,7 +219,12 @@
           "SEO, 크로스 브라우징, 웹 퍼포먼스 최적화",
           "다국어 지원을 위한 i18n 구현"
         ],
-        "en": []
+        "en": [
+          "Implementation of scroll animation using videos",
+          "Creation of responsive websites considering web standards and accessibility",
+          "SEO, cross-browser compatibility, and web performance optimization",
+          "Implementation of i18n for multi-language support"
+        ]
       },
       "color": "#96b6c8",
       "link": "https://www.samsung.com/global/galaxy/galaxy-z-fold4/",
@@ -218,16 +256,26 @@
       "contribution": {
         "ko": [
           "Three.js를 활용한 3D 모션 구현",
+          "3D 모델, 빛, 카메라 제어 및 텍스처 매핑",
           "2D에서 3D로의 전환 애니메이션 구현",
           "스크롤 기반 애니메이션 구현 및 렌더링 최적화",
-          "3D 모델, 빛, 카메라 제어 및 텍스처 매핑",
           "Gulp.js를 활용한 프로젝트 빌드 및 번들링",
           "웹 표준, 접근성을 고려한 반응형 웹사이트 제작",
           "SEO, 크로스 브라우징, 웹 퍼포먼스 최적화",
           "AWWWARDS 'Honorable Mention' 선정",
           "GSAP 'Site of the Day' 선정"
         ],
-        "en":  []
+        "en":  [
+          "Implementation of 3D motion using Three.js",
+          "Control of 3D models, lights, cameras, and texture mapping",
+          "Implementation of transition animations from 2D to 3D",
+          "Implementation of scroll-based animations and rendering optimization",
+          "Project building and bundling using Gulp.js",
+          "Creation of responsive websites considering web standards and accessibility",
+          "SEO, cross-browser compatibility, and web performance optimization",
+          "Selected for AWWWARDS 'Honorable Mention'",
+          "Selected for GSAP 'Site of the Day'"
+        ]
       },
       "color": "#4b377b",
       "link": "https://fave.kr",
@@ -265,7 +313,12 @@
           "SEO, 크로스 브라우징, 웹 퍼포먼스 최적화",
           "다국어 지원을 위한 i18n 구현"
         ],
-        "en": []
+        "en": [
+          "Implementation of scroll-based animations using videos and images",
+          "Creation of responsive websites considering web standards and accessibility",
+          "SEO, cross-browser compatibility, and web performance optimization",
+          "Implementation of i18n for multi-language support"
+        ]
       },
       "media": [
         {
@@ -301,7 +354,13 @@
           "SEO, 크로스 브라우징, 웹 퍼포먼스 최적화",
           "다국어 지원을 위한 i18n 구현"
         ],
-        "en": []
+        "en": [
+          "Implementation of 3D motion using Three.js",
+          "Implementation of scroll-based animations",
+          "Creation of responsive websites considering web standards and accessibility",
+          "SEO, cross-browser compatibility, and web performance optimization",
+          "Implementation of i18n for multi-language support"
+        ]
       },
       "media": [
         {
@@ -334,7 +393,10 @@
           "웹 표준, 접근성을 고려한 반응형 웹사이트 제작",
           "크로스 브라우징 및 웹 퍼포먼스 최적화"
         ],
-        "en": []
+        "en": [
+          "Creation of responsive websites considering web standards and accessibility",
+          "Cross-browser compatibility and web performance optimization"
+        ]
       },
       "link": "https://jangsuculture.or.kr/",
       "media": [
@@ -365,14 +427,20 @@
       "tags": ["OpenSource"],
       "languages": ["PHP", "Linux"],
       "contribution": {
-    "ko":[
-      "오픈소스 Zabbix를 활용한 네트워크 모니터링 앱 개발",
-      "Apache2 웹 서버, PostgreSQL 데이터베이스 구축",
-      "Docker를 활용한 환경 구축 및 배포 자동화",
-      "고가용성 및 확장성을 고려한 아키텍처 설계",
-      "회사 내부 요청사항에 맞는 UI, UX 변경"
-    ] ,
-    "en": []
+        "ko":[
+          "오픈소스 Zabbix를 활용한 네트워크 모니터링 앱 개발",
+          "Apache2 웹 서버, PostgreSQL 데이터베이스 구축",
+          "Docker를 활용한 환경 구축 및 배포 자동화",
+          "고가용성 및 확장성을 고려한 아키텍처 설계",
+          "회사 내부 요청사항에 맞는 UI, UX 변경"
+        ] ,
+        "en": [
+          "Development of network monitoring app using open-source Zabbix",
+          "Setup of Apache2 web server and PostgreSQL database",
+          "Environment setup and deployment automation using Docker",
+          "Architecture design considering high availability and scalability",
+          "UI and UX modifications to meet internal company requirements"
+        ]
       },
       "media": [
         {

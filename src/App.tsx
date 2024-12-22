@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Project from "./components/Project";
 import DATA from "../DATA.json";
 import { appState } from "./states/appState";
+import { localeState } from "./states/localeState";
 import { useRecoilState } from "recoil";
 import Page from "./components/general/Page";
 import Text from "./components/general/Text";
@@ -13,6 +14,7 @@ import Footer from "./components/Footer";
 
 function App() {
   const [app, setApp] = useRecoilState(appState);
+  const [locale] = useRecoilState(localeState);
   const resizeTimeout = useRef(0);
 
   useEffect(() => {
@@ -47,7 +49,7 @@ function App() {
       <Section
         innerStyle={{ display: "flex", flexDirection: "column", gap: 8 }}
       >
-        {DATA.introduction.map((item, i) => (
+        {DATA.introduction[locale].map((item, i) => (
           <Text key={i} style={{ fontSize: app.isMobile ? 16 : 18 }}>
             {item}
           </Text>
@@ -68,11 +70,11 @@ function App() {
         {DATA.projects.map((project, index) => (
           <Project
             key={index}
-            company={project.company[app.locale]}
-            title={project.title[app.locale]}
-            description={project.description[app.locale]}
+            company={project.company[locale]}
+            title={project.title[locale]}
+            description={project.description[locale]}
             languages={project.languages}
-            contribution={project.contribution}
+            contribution={project.contribution[locale]}
             link={project.link}
             media={project.media}
             mediaDirection={project.mediaDirection}

@@ -108,7 +108,7 @@ const Project = ({
             gap: 10
           }}
         >
-          {contribution[app.locale].map((item, index) => (
+          {contribution.map((item, index) => (
             <li
               key={index}
               style={{
