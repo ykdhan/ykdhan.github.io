@@ -11,12 +11,10 @@ const Image = ({ src, alt = "", style, placeholder, ...props }) => {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (!inView) {
-          setInView(entry.isIntersecting);
-        }
+        setInView(entry.isIntersecting);
       },
       {
-        rootMargin: "300px"
+        rootMargin: "200px"
       }
     );
     observer.observe(ref.current as Element);
@@ -27,14 +25,14 @@ const Image = ({ src, alt = "", style, placeholder, ...props }) => {
 
   useEffect(() => {
     if (inView && !loaded) {
+      setLoaded(true);
       const img = new window.Image();
       img.src = src;
       img.onload = () => {
-        setLoaded(true);
         setCurrentSrc(src);
       };
     }
-  }, [inView, src]);
+  }, [inView]);
 
   return (
     <div ref={ref} style={{ ...style, pointerEvents: "none" }}>
@@ -45,9 +43,7 @@ const Image = ({ src, alt = "", style, placeholder, ...props }) => {
           style={{
             ...style,
             width: "100%",
-            height: "100%",
-            opacity: loaded ? 1 : 0,
-            transition: "opacity 0.3s ease-in-out"
+            height: "100%"
           }}
           {...props}
         />

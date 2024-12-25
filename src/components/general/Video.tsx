@@ -14,7 +14,7 @@ const Video = ({ src, style, ...props }) => {
         setInView(entry.isIntersecting);
       },
       {
-        rootMargin: "300px"
+        rootMargin: "200px"
       }
     );
     observer.observe(ref.current as Element);
