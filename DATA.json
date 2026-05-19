@@ -14,6 +14,42 @@
   "projects": [
     {
       "company": {
+        "ko": "아웃스쿨",
+        "en": "Outschool Inc."
+      },
+      "title": {
+        "ko": "아웃스쿨",
+        "en": "Outschool"
+      },
+      "description": {
+        "ko": "어린이 온라인 학습 플랫폼",
+        "en": "Online Learning Platform for Kids"
+      },
+      "languages": ["React", "TypeScript", "GraphQL", "PostgreSQL", "Express"],
+      "contribution": {
+        "ko": [
+          "React, TypeScript를 활용한 웹 어플리케이션 풀스택 개발",
+          "GraphQL을 활용한 API 설계 및 개발",
+          "Express 기반 백엔드 서버 개발",
+          "PostgreSQL을 활용한 데이터베이스 스키마 설계 및 데이터 모델링",
+          "재사용성과 확장성을 고려한 컴포넌트 추상화 및 개발",
+          "웹 퍼포먼스 최적화 및 사용자 경험(UX) 개선"
+        ],
+        "en": [
+          "Full-stack web application development using React and TypeScript",
+          "API design and development using GraphQL",
+          "Backend server development based on Express",
+          "Database schema design and data modeling using PostgreSQL",
+          "Component abstraction and development considering reusability and scalability",
+          "Web performance optimization and user experience (UX) improvement"
+        ]
+      },
+      "link": "https://outschool.com/",
+      "color": "#fa1f5a",
+      "media": []
+    },
+    {
+      "company": {
         "ko": "플랭",
         "en": "Plang Inc."
       },
