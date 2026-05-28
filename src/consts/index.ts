@@ -21,5 +21,7 @@ export const LANGUAGE_COLORS = {
   Linux: "#f5f5f5",
   "Three.js": "#000000",
   "Gulp.js": "#cf4647",
-  GraphQL: "#f6009c"
+  GraphQL: "#f6009c",
+  PostgreSQL: "#336791",
+  Express: "#259dca"
 };

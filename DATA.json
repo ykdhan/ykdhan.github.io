@@ -108,15 +108,15 @@
       "media": [
         {
           "type": "video",
-          "source": "/videos/project_m/preview-plang-m-1.mp4"
+          "source": "/videos/projects/preview-plang-m-1.mp4"
         },
         {
           "type": "video",
-          "source": "/videos/project_m/preview-plang-m-2.mp4"
+          "source": "/videos/projects/preview-plang-m-2.mp4"
         },
         {
           "type": "video",
-          "source": "/videos/project_m/preview-plang-m-3.mp4"
+          "source": "/videos/projects/preview-plang-m-3.mp4"
         }
       ]
     },
@@ -156,11 +156,11 @@
       "media": [
         {
           "type": "image",
-          "source": "/images/project_m/preview-markhub-1.jpg"
+          "source": "/images/projects/preview-markhub-1.jpg"
         },
         {
           "type": "image",
-          "source": "/images/project_m/preview-markhub-2.jpg"
+          "source": "/images/projects/preview-markhub-2.jpg"
         }
       ]
     },
@@ -200,11 +200,11 @@
       "media": [
         {
           "type": "image",
-          "source": "/images/project_m/preview-og-xyz-1.png"
+          "source": "/images/projects/preview-og-xyz-1.png"
         },
         {
           "type": "image",
-          "source": "/images/project_m/preview-og-xyz-2.png"
+          "source": "/images/projects/preview-og-xyz-2.png"
         }
       ]
     },
@@ -239,15 +239,15 @@
       "media": [
         {
           "type": "image",
-          "source": "/images/project_m/preview-og-3.png"
+          "source": "/images/projects/preview-og-3.png"
         },
         {
           "type": "image",
-          "source": "/images/project_m/preview-og-2.png"
+          "source": "/images/projects/preview-og-2.png"
         },
         {
           "type": "image",
-          "source": "/images/project_m/preview-og-7.png"
+          "source": "/images/projects/preview-og-7.png"
         }
       ]
     },
@@ -284,11 +284,11 @@
       "media": [
         {
           "type": "video",
-          "source": "/videos/project_m/preview-fold4-1.mp4"
+          "source": "/videos/projects/preview-fold4-1.mp4"
         },
         {
           "type": "video",
-          "source": "/videos/project_m/preview-fold4-2.mp4"
+          "source": "/videos/projects/preview-fold4-2.mp4"
         }
       ]
     },
@@ -336,11 +336,11 @@
       "media": [
         {
           "type": "video",
-          "source": "/videos/project_m/preview-fave-1.mp4"
+          "source": "/videos/projects/preview-fave-1.mp4"
         },
         {
           "type": "video",
-          "source": "/videos/project_m/preview-fave-2.mp4"
+          "source": "/videos/projects/preview-fave-2.mp4"
         }
       ]
     },
@@ -376,11 +376,11 @@
       "media": [
         {
           "type": "video",
-          "source": "/videos/project_m/preview-s22-2.mp4"
+          "source": "/videos/projects/preview-s22-2.mp4"
         },
         {
           "type": "video",
-          "source": "/videos/project_m/preview-s22-3.mp4"
+          "source": "/videos/projects/preview-s22-3.mp4"
         }
       ]
     },
@@ -418,11 +418,11 @@
       "media": [
         {
           "type": "video",
-          "source": "/videos/project_m/preview-fold3-2.mp4"
+          "source": "/videos/projects/preview-fold3-2.mp4"
         },
         {
           "type": "video",
-          "source": "/videos/project_m/preview-fold3-3.mp4"
+          "source": "/videos/projects/preview-fold3-3.mp4"
         }
       ]
     },
@@ -455,11 +455,11 @@
       "media": [
         {
           "type": "image",
-          "source": "/images/project_m/preview-jangsu-1.png"
+          "source": "/images/projects/preview-jangsu-1.png"
         },
         {
           "type": "image",
-          "source": "/images/project_m/preview-jangsu-2.png"
+          "source": "/images/projects/preview-jangsu-2.png"
         }
       ]
     },
@@ -498,11 +498,11 @@
       "media": [
         {
           "type": "image",
-          "source": "/images/project_m/preview-secureflare-1.png"
+          "source": "/images/projects/preview-secureflare-1.png"
         },
         {
           "type": "image",
-          "source": "/images/project_m/preview-secureflare-2.png"
+          "source": "/images/projects/preview-secureflare-2.png"
         }
       ]
     }
