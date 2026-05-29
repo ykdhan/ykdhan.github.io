@@ -51,7 +51,10 @@ export const STRINGS: Record<string, Dict> = {
   backTop: { ko: "맨 위로", en: "Back to top" },
 
   // contact form
-  contactPlaceholder: { ko: "메시지를 남겨주세요…", en: "Leave a quick message…" },
+  contactPlaceholder: {
+    ko: "연락처와 함께 메시지를 남겨주세요…",
+    en: "Your message + how to reach you…"
+  },
   contactSend: { ko: "전송", en: "Send" },
   contactSending: { ko: "보내는 중…", en: "Sending…" },
   contactSent: { ko: "보냈어요! 곧 답장드릴게요 ✦", en: "Sent! I'll get back to you ✦" },
