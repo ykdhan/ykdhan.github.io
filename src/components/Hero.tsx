@@ -28,13 +28,6 @@ export default function Hero() {
           <Reveal className="hero-lede" delay={0.25}>
             <Marked text={t("heroLede")} />
           </Reveal>
-
-          <Reveal className="hero-meta" delay={0.35} y={16}>
-            <span>{t("heroBased")}</span>
-            <span>
-              © <b>YK</b> — {STRINGS.nameFull[locale]}
-            </span>
-          </Reveal>
         </div>
       </div>
 

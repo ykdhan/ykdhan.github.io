@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLocale } from "../i18n/LocaleContext";
 import { useT } from "../i18n/strings";
-import { SITE } from "../data/portfolio";
 import { scrollToId } from "../hooks/useSmoothScroll";
 import GlitchText from "./GlitchText";
 
@@ -52,10 +51,6 @@ export default function Nav() {
             EN
           </button>
         </div>
-
-        <a className="sticker solid hide-sm" href={`mailto:${SITE.email}`}>
-          ✉ {locale === "ko" ? "메일" : "Email"}
-        </a>
       </div>
     </nav>
   );
