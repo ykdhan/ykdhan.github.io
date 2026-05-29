@@ -99,6 +99,8 @@ export function RevealText({
 
 /** Renders text, wrapping any *starred* phrase in a highlight that sweeps in. */
 export function Marked({ text }: { text: string }) {
+  // Split on the *highlight* markup, keeping the delimiters, then turn any
+  // literal newline inside a plain segment into a <br/>.
   const parts = text.split(/(\*[^*]+\*)/g);
   return (
     <>
@@ -108,7 +110,14 @@ export function Marked({ text }: { text: string }) {
             {p.slice(1, -1)}
           </span>
         ) : (
-          <span key={i}>{p}</span>
+          <span key={i}>
+            {p.split("\n").map((line, j, arr) => (
+              <span key={j}>
+                {line}
+                {j < arr.length - 1 && <br />}
+              </span>
+            ))}
+          </span>
         )
       )}
     </>
