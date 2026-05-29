@@ -1,90 +1,37 @@
-import "./assets/scss/common.scss";
-import { useEffect, useRef } from "react";
-import Header from "./components/Header";
-import Project from "./components/Project";
-import DATA from "../DATA.json";
-import { appState } from "./states/appState";
-import { localeState } from "./states/localeState";
-import { useRecoilState } from "recoil";
-import Page from "./components/general/Page";
-import Text from "./components/general/Text";
-import Section from "./components/Section";
-import Cover from "./components/Cover";
+import { useSmoothScroll } from "./hooks/useSmoothScroll";
+import { useLocale } from "./i18n/LocaleContext";
+import Grain from "./components/Grain";
+import ScrollProgress from "./components/ScrollProgress";
+import Nav from "./components/Nav";
+import Hero from "./components/Hero";
+import Marquee from "./components/Marquee";
+import About from "./components/About";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 
-function App() {
-  const [app, setApp] = useRecoilState(appState);
-  const [locale] = useRecoilState(localeState);
-  const resizeTimeout = useRef(0);
+export default function App() {
+  useSmoothScroll();
+  const { locale } = useLocale();
 
-  useEffect(() => {
-    onResize();
-    window.addEventListener("resize", onResize);
-    window.addEventListener("scroll", onScroll);
-    return () => {
-      window.removeEventListener("resize", onResize);
-      window.removeEventListener("scroll", onScroll);
-    };
-  }, []);
-
-  const onScroll = () => {};
-
-  const onResize = () => {
-    clearTimeout(resizeTimeout.current);
-    resizeTimeout.current = setTimeout(
-      () =>
-        setApp((prev) => ({
-          ...prev,
-          width: window.innerWidth,
-          height: window.innerHeight,
-          isMobile: window.innerWidth < 800
-        })),
-      200
-    );
-  };
+  const ticker =
+    locale === "ko"
+      ? ["풀스택 개발자", "웹", "모바일", "UX · UI", "React", "TypeScript", "끝까지 책임지는"]
+      : ["Fullstack Developer", "Web", "Mobile", "UX · UI", "React", "TypeScript", "End to end"];
 
   return (
-    <Page>
-      <Header />
-      <Section
-        innerStyle={{ display: "flex", flexDirection: "column", gap: 8 }}
-      >
-        {DATA.introduction[locale].map((item, i) => (
-          <Text key={i} style={{ fontSize: app.isMobile ? 16 : 18 }}>
-            {item}
-          </Text>
-        ))}
-      </Section>
-      <Section
-        style={{
-          paddingTop: app.isMobile ? 64 : 80,
-          paddingBottom: app.isMobile ? 64 : 80
-        }}
-        innerStyle={{
-          display: "flex",
-          flexDirection: "column",
-          gap: app.isMobile ? 64 : 80,
-          listStyle: "none"
-        }}
-      >
-        {DATA.projects.map((project, index) => (
-          <Project
-            key={index}
-            company={project.company[locale]}
-            title={project.title[locale]}
-            description={project.description[locale]}
-            languages={project.languages}
-            contribution={project.contribution[locale]}
-            link={project.link}
-            media={project.media}
-            mediaDirection={project.mediaDirection}
-          />
-        ))}
-      </Section>
-      <Footer />
-      <Cover />
-    </Page>
+    <>
+      <Grain />
+      <ScrollProgress />
+      <Nav />
+      <div className="app">
+        <Hero />
+        <Marquee items={ticker} duration="30s" />
+        <About />
+        <Skills />
+        <Projects />
+        <Footer />
+      </div>
+    </>
   );
 }
-
-export default App;
