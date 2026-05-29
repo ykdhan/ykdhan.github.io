@@ -15,7 +15,7 @@ export default function Hero() {
       <div className="container" style={{ position: "relative", zIndex: 1, width: "100%" }}>
         <Reveal className="hero-tag" y={16}>
           <span className="eyebrow">
-            {t("heroKicker")} · {STRINGS.nameFull[locale]}
+            {t("heroKicker")} · {new Date().getFullYear()} · {STRINGS.nameFull[locale]}
           </span>
         </Reveal>
 
@@ -30,7 +30,6 @@ export default function Hero() {
           </Reveal>
 
           <Reveal className="hero-meta" delay={0.35} y={16}>
-            <span className="ok">{t("heroOpen")}</span>
             <span>{t("heroBased")}</span>
             <span>
               © <b>YK</b> — {STRINGS.nameFull[locale]}

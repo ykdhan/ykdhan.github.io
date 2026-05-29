@@ -23,11 +23,6 @@ export default function Footer() {
           delay={0.05}
         />
 
-        <a className="footer-mail" href={`mailto:${SITE.email}`}>
-          <span className="line">{SITE.email}</span>
-          <span aria-hidden="true">↗</span>
-        </a>
-
         <Reveal delay={0.08} y={16}>
           <ContactForm />
         </Reveal>
@@ -40,7 +35,7 @@ export default function Footer() {
 
         <div className="footer-bottom">
           <span>
-            © {year} {SITE.name[locale]} — {t("rights")}
+            {year} {SITE.name[locale]}
           </span>
           <div className="footer-links">
             <a className="sticker" href={`mailto:${SITE.email}`}>

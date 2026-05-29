@@ -1,9 +1,9 @@
 {
   "introduction": {
     "ko": [
-      "열정을 가지고 사람들에게 즐거움을 주고 기억에 남는 서비스를 만들고 있는 개발자입니다.",
-      "유익한 서비스를 제공하기 위해, 최신 트렌드를 따르며 사용자 경험(UX)과 사용자 인터페이스(UI)에 깊은 관심을 가지고 적극적으로 기여하고 있습니다",
-      "또한, 영향력 있는 개발자가 되기 위해, 가능한 모든 개발 분야의 지식과 경험을 쌓으려고 다양한 기회를 찾고 노력하고 있습니다."
+      "쓰는 사람에게 즐거움을 주고, 오래 기억에 남는 서비스를 만드는 걸 가장 좋아하는 개발자입니다.",
+      "더 좋은 서비스를 위해 최신 트렌드를 꾸준히 따라가고, 사용자 경험(UX)과 인터페이스(UI) 디테일에 특히 진심입니다.",
+      "더 영향력 있는 개발자가 되고 싶어, 한 분야에 머무르지 않고 새로운 영역에도 망설임 없이 뛰어들며 경험의 폭을 넓혀 왔습니다."
     ],
     "en": [
       "With great passion, I create memorable services that bring joy to people.",
@@ -28,7 +28,7 @@
       "languages": ["React", "TypeScript", "GraphQL", "PostgreSQL", "Express"],
       "contribution": {
         "ko": [
-          "React, TypeScript를 활용한 웹 어플리케이션 풀스택 개발",
+          "React, TypeScript를 활용한 웹 앱 풀스택 개발",
           "GraphQL을 활용한 API 설계 및 개발",
           "Express 기반 백엔드 서버 개발",
           "PostgreSQL을 활용한 데이터베이스 스키마 설계 및 데이터 모델링",
@@ -67,7 +67,7 @@
         "en": "Plang"
       },
       "description": {
-        "ko": "AI 개인맞춤 영어회화 모바일 어플리케이션",
+        "ko": "AI 맞춤형 영어회화 앱",
         "en": "AI-Driven English Conversation Mobile Application"
       },
       "languages": ["React", "React Native", "TypeScript", "Redux", "Redux Saga", "Ruby on Rails"],
@@ -122,13 +122,13 @@
         "en": "Markhub"
       },
       "description": {
-        "ko": "디자인 프로젝트를 위한 커뮤니케이션 서비스",
+        "ko": "디자인 협업을 위한 커뮤니케이션 서비스",
         "en": "Communication Software for Design Project"
       },
       "languages": ["Flutter", "GetX", "Firebase", "GraphQL"],
       "contribution": {
         "ko": [
-          "Flutter를 활용한 웹 어플리케이션 개발",
+          "Flutter를 활용한 웹 앱 개발",
           "GetX를 활용한 상태관리 및 라우팅",
           "Firebase, GraphQL을 활용한 데이터 통신",
           "Text Editor 모듈 개발",
@@ -210,13 +210,13 @@
         "en": "OG"
       },
       "description": {
-        "ko": "NFT 큐레이션 모바일 어플리케이션",
+        "ko": "NFT 큐레이션 앱",
         "en": "NFT Curation Mobile Application"
       },
       "languages": ["Flutter", "Firebase"],
       "contribution": {
         "ko": [
-          "사용해 보지 않은 Flutter를 도입하여 모바일 어플리케이션 개발",
+          "사용해 보지 않은 Flutter를 도입하여 모바일 앱 개발",
           "Metamask와 같은 Web3 지갑 연동",
           "3개월 내 AppStore, GooglePlay 베타 앱 출시"
         ],
@@ -461,11 +461,11 @@
         "en": "Secureflare Inc."
       },
       "title": {
-        "ko": "웹 모니터링 어플리케이션",
+        "ko": "웹 모니터링 앱",
         "en": "Web Monitoring Application"
       },
       "description": {
-        "ko": "Zabbix 기반 LG U+ 웹 모니터링 어플리케이션",
+        "ko": "Zabbix 기반 LG U+ 웹 모니터링 앱",
         "en": "LG U+ Web Monitoring Application with Zabbix"
       },
       "color": "#d31f32",
