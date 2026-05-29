@@ -30,7 +30,7 @@ export const STRINGS: Record<string, Dict> = {
   skillsEyebrow: { ko: "스택", en: "Stack / the toolbox" },
   skillsTitle: { ko: "쓰는 도구들", en: "Tools of\nthe trade" },
   skillsNote: {
-    ko: "처음 보는 기술도 *빠르게 익혀서* 바로 실무에 씁니다. 노트북에 붙는 스티커처럼 계속 늘어나는 중.",
+    ko: "처음 보는 기술도 *빠르게 익혀서* 바로 실무에 씁니다",
     en: "I pick up new tools *fast* and ship with them. The sticker collection keeps growing."
   },
 
