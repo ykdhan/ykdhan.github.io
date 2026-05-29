@@ -50,7 +50,17 @@ export const STRINGS: Record<string, Dict> = {
     en: "Collabs, gigs, or just a hello — *drop me a line.*"
   },
   backTop: { ko: "맨 위로", en: "Back to top" },
-  rights: { ko: "전부 직접 만듦", en: "Handmade, all of it" }
+  rights: { ko: "전부 직접 만듦", en: "Handmade, all of it" },
+
+  // contact form
+  contactPlaceholder: { ko: "메시지를 남겨주세요…", en: "Leave a quick message…" },
+  contactSend: { ko: "전송", en: "Send" },
+  contactSending: { ko: "보내는 중…", en: "Sending…" },
+  contactSent: { ko: "보냈어요! 곧 답장할게요 ✦", en: "Sent! I'll get back to you ✦" },
+  contactError: {
+    ko: "전송이 안 됐어요. ykdhan@gmail.com 으로 부탁드려요.",
+    en: "Couldn't send — email me at ykdhan@gmail.com instead."
+  }
 };
 
 export const useT = (locale: Locale) => (key: keyof typeof STRINGS) =>

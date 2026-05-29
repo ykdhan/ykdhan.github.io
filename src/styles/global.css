@@ -947,13 +947,99 @@ html.lenis body {
 .footer-mail {
   display: inline-flex;
   align-items: center;
-  gap: 14px;
-  margin-top: 18px;
+  gap: 10px;
+  margin-top: 16px;
   font-family: var(--font-display);
-  font-size: clamp(22px, 5vw, 52px);
+  font-size: clamp(18px, 3.2vw, 32px);
   text-transform: uppercase;
   color: var(--neon);
   position: relative;
+}
+
+/* contact form (Slack webhook) */
+.contact {
+  margin-top: 24px;
+  max-width: 540px;
+}
+.contact-form {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+}
+.contact-input {
+  flex: 1;
+  min-width: 0;
+  height: 54px;
+  padding: 0 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1.5px solid var(--line-strong);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+.contact-input::placeholder {
+  color: var(--ink-3);
+}
+.contact-input:focus {
+  outline: none;
+  border-color: var(--neon);
+  background: rgba(216, 255, 53, 0.05);
+  box-shadow: 0 0 0 3px rgba(216, 255, 53, 0.12);
+}
+.contact-send {
+  flex: none;
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  background: var(--neon);
+  color: var(--on-neon);
+  border: 1.5px solid var(--neon);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.2s ease;
+}
+.contact-send svg {
+  width: 20px;
+  height: 20px;
+}
+.contact-send:hover:not(:disabled) {
+  transform: translateY(-2px) rotate(-3deg);
+  box-shadow: 0 0 18px rgba(216, 255, 53, 0.5);
+}
+.contact-send:active:not(:disabled) {
+  transform: translateY(0) rotate(0deg);
+}
+.contact-send:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.contact-status {
+  min-height: 18px;
+  margin-top: 10px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  color: var(--ink-3);
+}
+.contact-status.ok {
+  color: var(--neon);
+}
+.contact-status.err {
+  color: var(--neon-2);
+}
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(0, 0, 0, 0.25);
+  border-top-color: var(--on-neon);
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 .footer-mail .line {
   background-image: linear-gradient(var(--neon), var(--neon));
