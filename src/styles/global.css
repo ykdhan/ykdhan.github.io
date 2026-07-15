@@ -183,8 +183,16 @@ ul {
 
 .nav-logo {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 10px;
+}
+
+.nav-logo svg {
+  display: block;
+}
+
+.nav-logo-hex {
+  align-self: center;
 }
 
 .nav-logo-mark {

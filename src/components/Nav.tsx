@@ -1,6 +1,7 @@
 import { useLocale } from "../i18n/LocaleContext";
 import { useT } from "../i18n/strings";
 import { SITE } from "../data/experience";
+import LogoMark from "./LogoMark";
 
 const LINKS = [
   { id: "about", key: "navAbout" },
@@ -16,6 +17,7 @@ export default function Nav() {
   return (
     <header className="nav">
       <a className="nav-logo" href="#top" aria-label="YK — top">
+        <LogoMark />
         <span className="nav-logo-mark">{SITE.name}</span>
         <span className="nav-logo-hex">{SITE.hex}</span>
       </a>
