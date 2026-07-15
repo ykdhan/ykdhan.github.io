@@ -1,58 +1,41 @@
 import { useLocale } from "../i18n/LocaleContext";
-import { useT, STRINGS } from "../i18n/strings";
-import { Reveal, RevealText, Marked } from "./Reveal";
+import { useT } from "../i18n/strings";
+import { SITE } from "../data/experience";
+import Scramble from "./Scramble";
 
 export default function Hero() {
   const { locale } = useLocale();
   const t = useT(locale);
 
-  const line1 = locale === "ko" ? "풀스택" : "Fullstack";
-  const line2 = locale === "ko" ? "개발자" : "Developer";
-  const titleClass = `hero-title ${locale === "ko" ? "ko" : ""}`;
-
   return (
-    <header id="top" className="hero">
-      <div className="container" style={{ position: "relative", zIndex: 1, width: "100%" }}>
-        <Reveal className="hero-tag" y={16}>
-          <span className="eyebrow">
-            {t("heroKicker")} · {new Date().getFullYear()} · {STRINGS.nameFull[locale]}
-          </span>
-        </Reveal>
+    <section className="hero" id="top">
+      <p className="hero-kicker mono">
+        <span className="hero-dot" aria-hidden="true" />
+        {SITE.hex} — {t("heroKicker")}
+      </p>
 
-        <h1 className={titleClass}>
-          <RevealText text={line1} className="line outline" delay={0.05} />
-          <RevealText text={line2} className="line accent" delay={0.18} />
-        </h1>
+      <h1 className="hero-title">
+        <Scramble text={t("heroLine1")} />
+        <br />
+        <Scramble className="grad-text" text={t("heroLine2")} delay={250} />
+      </h1>
 
-        <div className="hero-sub">
-          <Reveal className="hero-lede" delay={0.25}>
-            <Marked text={t("heroLede")} />
-          </Reveal>
+      <p className="hero-sub">{t("heroSub")}</p>
 
-          <Reveal className="hero-meta" delay={0.35} y={16}>
-            <span>{t("heroBased")}</span>
-            <span>
-              © <b>YK</b> — {STRINGS.nameFull[locale]}
-            </span>
-          </Reveal>
-        </div>
+      <div className="hero-cta">
+        <a className="btn btn-primary" href="#contact">
+          {t("heroCta")}
+        </a>
+        <a className="btn" href="#work">
+          {t("heroCta2")}
+        </a>
       </div>
 
-      <div className="hero-watermark" aria-hidden="true">
-        YK
-      </div>
-
-      <a
-        className="scroll-cue"
-        href="#about"
-        onClick={(e) => {
-          e.preventDefault();
-          document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
-        }}
-      >
-        <span className="bar" />
-        {t("scrollCue")}
-      </a>
-    </header>
+      <ul className="hero-meta mono" aria-label="Highlights">
+        <li>{t("heroMeta1")}</li>
+        <li>{t("heroMeta2")}</li>
+        <li>{t("heroMeta3")}</li>
+      </ul>
+    </section>
   );
 }
