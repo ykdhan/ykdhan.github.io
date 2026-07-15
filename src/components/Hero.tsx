@@ -1,6 +1,5 @@
 import { useLocale } from "../i18n/LocaleContext";
 import { useT } from "../i18n/strings";
-import { SITE } from "../data/experience";
 import Scramble from "./Scramble";
 
 export default function Hero() {
@@ -11,7 +10,7 @@ export default function Hero() {
     <section className="hero" id="top">
       <p className="hero-kicker mono">
         <span className="hero-dot" aria-hidden="true" />
-        {SITE.hex} — {t("heroKicker")}
+        {t("heroKicker")}
       </p>
 
       <h1 className="hero-title">

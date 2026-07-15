@@ -2,7 +2,6 @@ import type { Locale } from "../i18n/LocaleContext";
 
 export const SITE = {
   name: "YK",
-  hex: "0x594B", // "YK" in ASCII hex — the brand motif
   email: "ykdhan@gmail.com",
   github: "https://github.com/ykdhan",
   linkedin: "https://www.linkedin.com/in/ykdhan"
