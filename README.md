@@ -4,7 +4,7 @@ Personal portfolio of **YK (Youngkwang Han)**, an AI-native fullstack developer.
 Live at **https://ykdhan.github.io**.
 
 Dark, minimal, AI × cryptography aesthetic: fine grid, drifting aurora glows,
-decrypt-style text scrambles, and the `0x594B` ("YK" in hex) brand motif.
+and decrypt-style text scrambles.
 Fully bilingual (English default / 한국어) with a one-click toggle.
 
 ## Stack

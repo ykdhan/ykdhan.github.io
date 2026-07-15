@@ -19,7 +19,6 @@ export default function Nav() {
       <a className="nav-logo" href="#top" aria-label="YK — top">
         <LogoMark />
         <span className="nav-logo-mark">{SITE.name}</span>
-        <span className="nav-logo-hex">{SITE.hex}</span>
       </a>
 
       <nav className="nav-links" aria-label="Sections">

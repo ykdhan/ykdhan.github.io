@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <p className="mono footer-hex">
-        © {new Date().getFullYear()} {SITE.name} · {SITE.hex}
+        © {new Date().getFullYear()} {SITE.name}
       </p>
       <p className="footer-built">{t("footerBuilt")}</p>
       <a className="mono footer-top" href="#top">

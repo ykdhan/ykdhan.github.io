@@ -9,7 +9,7 @@ export const SEO: Record<Locale, { title: string; description: string }> = {
       "YK (Youngkwang Han) is a fullstack developer who maximizes AI to ship web, mobile, and backend products effectively and efficiently."
   },
   ko: {
-    title: "YK — AI 네이티브 풀스택 개발자",
+    title: "YK — 풀스택 개발자",
     description:
       "YK(한영광)는 AI 활용을 극대화해 웹, 모바일, 백엔드 제품을 효과적이고 효율적으로 만드는 풀스택 개발자입니다."
   }
@@ -90,7 +90,7 @@ export const STRINGS: Record<string, Dict> = {
   },
 
   // footer
-  footerBuilt: { en: "Designed & built by YK × AI", ko: "YK × AI가 만들었습니다" },
+  footerBuilt: { en: "Designed & built by YK × AI", ko: "YK × AI" },
   backTop: { en: "Back to top", ko: "맨 위로" }
 };
 
