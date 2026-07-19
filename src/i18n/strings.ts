@@ -24,11 +24,11 @@ export const STRINGS: Record<string, Dict> = {
 
   // hero
   heroKicker: { en: "FULLSTACK DEVELOPER", ko: "풀스택 개발자" },
-  heroLine1: { en: "Human judgment,", ko: "사람의 판단," },
-  heroLine2: { en: "machine speed.", ko: "기계의 속도." },
+  heroLine1: { en: "Broad architecture,", ko: "폭넓은 아키텍처," },
+  heroLine2: { en: "fast, precise execution.", ko: "빠르고 정확한 실행." },
   heroSub: {
-    en: "I'm YK — an AI-native fullstack developer shipping everything from pixels to infrastructure.",
-    ko: "AI를 지렛대 삼아 화면부터 인프라까지 전부 만드는 풀스택 개발자 YK입니다."
+    en: "I'm YK, a fullstack developer. From system design across web, mobile, and backend to meticulous implementation — I deliver solutions fast.",
+    ko: "풀스택 개발자 YK입니다. 웹·모바일·백엔드를 아우르는 설계부터 꼼꼼한 구현까지, 솔루션을 빠르게 제공합니다."
   },
   heroCta: { en: "Get in touch", ko: "연락하기" },
   heroCta2: { en: "View work", ko: "작업 보기" },
@@ -44,25 +44,25 @@ export const STRINGS: Record<string, Dict> = {
 
   // about
   aboutLabel: { en: "ABOUT", ko: "소개" },
-  aboutTitle: { en: "AI is my force multiplier.", ko: "AI는 가장 강력한 지렛대입니다." },
+  aboutTitle: { en: "How I work.", ko: "일하는 방식." },
   aboutBody: {
-    en: "My workflow runs on AI. Agents take the repetitive work; my time goes to architecture, tradeoffs, and the last 1% of polish.",
-    ko: "업무는 AI 위에서 돌아갑니다. 반복 작업은 에이전트에게 맡기고, 저는 아키텍처와 트레이드오프, 마지막 1%의 완성도에 집중합니다."
+    en: "I start from architecture, keep the details tight, and use AI tooling to deliver fast without cutting quality.",
+    ko: "아키텍처 설계에서 출발해 디테일을 놓치지 않고, AI 툴링으로 품질을 지키면서 빠르게 결과를 만듭니다."
   },
-  aboutCard1Title: { en: "AI-Native Workflow", ko: "AI 네이티브 워크플로우" },
+  aboutCard1Title: { en: "Architecture", ko: "아키텍처" },
   aboutCard1Body: {
-    en: "Agentic coding, automated review, generated tests — AI in every step of the loop.",
-    ko: "에이전틱 코딩, 자동 리뷰, 테스트 생성 — 모든 단계에 AI를 녹입니다."
+    en: "System design across web, mobile, and backend — structures that scale and adapt.",
+    ko: "웹·모바일·백엔드를 아우르는 시스템 설계. 확장과 변화에 강한 구조를 만듭니다."
   },
-  aboutCard2Title: { en: "Fullstack, End to End", ko: "풀스택, 처음부터 끝까지" },
+  aboutCard2Title: { en: "Precision", ko: "꼼꼼함" },
   aboutCard2Body: {
-    en: "Web, mobile, APIs, databases, deployment — one person, the whole product.",
-    ko: "웹, 모바일, API, DB, 배포 — 혼자서도 제품 전체를 만듭니다."
+    en: "Reviews, tests, edge cases — problems caught before they ship.",
+    ko: "리뷰, 테스트, 엣지 케이스까지. 문제는 배포 전에 잡습니다."
   },
-  aboutCard3Title: { en: "Craft & Detail", ko: "디테일에 진심" },
+  aboutCard3Title: { en: "Speed", ko: "속도" },
   aboutCard3Body: {
-    en: "Obsessed with UX detail and performance. Users remember the details.",
-    ko: "UX 디테일과 퍼포먼스에 집착합니다. 결국 기억에 남는 건 디테일이니까요."
+    en: "An AI-native workflow that turns requirements into working solutions, fast.",
+    ko: "요구사항을 동작하는 솔루션으로 빠르게 구현합니다. AI 네이티브 워크플로우가 속도를 만듭니다."
   },
   aboutFact1: { en: "TAYLOR UNIVERSITY", ko: "테일러대학교" },
   aboutFact2: {
