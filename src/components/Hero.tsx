@@ -1,6 +1,7 @@
 import { useLocale } from "../i18n/LocaleContext";
 import { useT } from "../i18n/strings";
 import Scramble from "./Scramble";
+import HeroFX from "./HeroFX";
 
 export default function Hero() {
   const { locale } = useLocale();
@@ -8,6 +9,7 @@ export default function Hero() {
 
   return (
     <section className="hero" id="top">
+      <HeroFX />
       <p className="hero-kicker mono">
         <span className="hero-dot" aria-hidden="true" />
         {t("heroKicker")}
