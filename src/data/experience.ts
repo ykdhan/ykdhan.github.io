@@ -25,7 +25,8 @@ export const WORK: WorkEntry[] = [
       ko: "어린이 온라인 학습 플랫폼"
     },
     stack: ["React", "TypeScript", "GraphQL", "PostgreSQL"],
-    link: "https://outschool.com/"
+    link: "https://outschool.com/",
+    tag: { en: "Current", ko: "현재" }
   },
   {
     company: { en: "Plang", ko: "플랭" },

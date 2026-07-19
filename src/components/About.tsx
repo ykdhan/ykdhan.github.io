@@ -32,6 +32,13 @@ export default function About() {
           </Reveal>
         ))}
       </div>
+      <Reveal delay={280}>
+        <ul className="about-facts mono" aria-label="Facts">
+          <li>{t("aboutFact1")}</li>
+          <li>{t("aboutFact2")}</li>
+          <li>{t("aboutFact3")}</li>
+        </ul>
+      </Reveal>
     </section>
   );
 }
