@@ -32,15 +32,9 @@ export const STRINGS: Record<string, Dict> = {
   },
   heroCta: { en: "Get in touch", ko: "연락하기" },
   heroCta2: { en: "View work", ko: "작업 보기" },
-  heroMeta1: {
-    en: "FULLSTACK ENGINEER @ OUTSCHOOL",
-    ko: "아웃스쿨 풀스택 엔지니어"
-  },
-  heroMeta2: { en: "BASED IN SEOUL", ko: "서울 베이스" },
-  heroMeta3: {
-    en: "AI-NATIVE · 10+ PROJECTS",
-    ko: "AI 네이티브 · 10+ 프로젝트"
-  },
+  heroMeta1: { en: "WEB · MOBILE · BACKEND", ko: "웹 · 모바일 · 백엔드" },
+  heroMeta2: { en: "BASED IN THE UNIVERSE", ko: "우주 베이스" },
+  heroMeta3: { en: "AI-NATIVE WORKFLOW", ko: "AI 네이티브 워크플로우" },
 
   // about
   aboutLabel: { en: "ABOUT", ko: "소개" },
