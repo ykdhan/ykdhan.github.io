@@ -1,4 +1,4 @@
-import { synthesizeUtterance, type Utterance } from "../hud/core/voice";
+import { synthesizeUtterance, type Utterance } from "../hud/avatar/voice";
 
 /**
  * Plays streamed text as "speech": a queue of sentence-sized segments, each
@@ -22,6 +22,7 @@ export class Speaker {
   private spoken = "";
   private buffer = "";
   private playing = false;
+  private current = "";
   private ended = true;
   private raf = 0;
   private run = 0;
@@ -30,18 +31,21 @@ export class Speaker {
     this.cb = cb;
   }
 
-  /** Stops everything and clears the caption. */
+  /** Stops speaking and drops anything queued (the caller starts a new caption). */
   reset() {
+    // An interrupted line is completed instantly so the log never shows half a sentence.
+    const rest = this.current + this.queue.join("") + this.buffer;
+    if (this.playing || rest.trim()) this.cb.onCaption((this.spoken + rest).trim());
     this.run++;
     cancelAnimationFrame(this.raf);
     if ("speechSynthesis" in window) window.speechSynthesis.cancel();
     this.queue = [];
     this.spoken = "";
+    this.current = "";
     this.buffer = "";
     this.playing = false;
     this.ended = false;
     this.cb.onLevel(0);
-    this.cb.onCaption("");
   }
 
   /** Feed streamed text; complete sentences are queued as they arrive. */
@@ -97,10 +101,12 @@ export class Speaker {
     }
     if (!this.playing) this.cb.onStart();
     this.playing = true;
+    this.current = seg;
     const id = this.run;
     const done = () => {
       if (id !== this.run) return;
       this.spoken += seg;
+      this.current = "";
       this.next();
     };
     if (this.voice && "speechSynthesis" in window) this.speakAloud(seg, id, done);

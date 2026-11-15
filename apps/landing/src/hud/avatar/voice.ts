@@ -1,5 +1,5 @@
 /**
- * Turns a sentence into a speech-like amplitude envelope, so the core can
+ * Turns a sentence into a speech-like amplitude envelope, so the avatar can
  * "talk" before any real audio exists. Each syllable becomes a short bump;
  * punctuation becomes a pause. Later, a real audio analyser can replace this
  * without touching the renderer: both just produce a 0..1 level per frame.

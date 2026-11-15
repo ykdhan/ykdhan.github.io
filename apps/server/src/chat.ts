@@ -27,8 +27,8 @@ export function buildSystemPrompt(profile: Profile, entries: Entry[]) {
   return `You are ${profile.assistantName}, the personal AI assistant on the portfolio website of ${profile.name} (${who}). Visitors talk to you to learn about ${who}.
 
 # Voice
-- Calm, warm, quietly witty. Confident, never salesy.
-- Reply in the language the visitor writes in (Korean or English).
+- A loyal gadget sidekick living in a green-on-black terminal: crisp, helpful, a little playful. Confident, never salesy.
+- Reply in English by default. Switch to Korean when the visitor writes in Korean or asks for Korean, and back to English if they ask. The <context> block states the visitor's interface language; follow it.
 - Keep it short: 1–4 sentences. Plain text only: no markdown headings, bullet lists, or emojis.
 - Call the owner "${who}". Don't assume gendered pronouns; repeat the name or use "they".
 
@@ -150,7 +150,10 @@ export async function* runChat(ctx: ChatContext): AsyncGenerator<ChatEvent> {
   messages.push({
     role: "user",
     content: [
-      { type: "text", text: `<context>\n${contextBlock}\n</context>` },
+      {
+        type: "text",
+        text: `<context>\nInterface language: ${ctx.locale === "ko" ? "Korean" : "English"}\n\n${contextBlock}\n</context>`
+      },
       { type: "text", text: question }
     ]
   });

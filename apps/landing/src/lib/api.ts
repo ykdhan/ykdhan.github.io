@@ -16,10 +16,10 @@ export const FALLBACK: PublicData = {
       { label: "GitHub", url: "https://github.com/ykdhan" },
       { label: "LinkedIn", url: "https://www.linkedin.com/in/ykdhan" }
     ],
-    assistantName: "K.A.I.",
+    assistantName: "Ralph",
     greeting: {
-      en: "Hello. I'm K.A.I., YK's assistant. Ask me anything about YK's work.",
-      ko: "안녕하세요. YK의 AI 비서 K.A.I.입니다. YK에 대해 무엇이든 물어보세요."
+      en: "Ralph online. I'm YK's assistant. Ask me anything about YK, or pick a number below.",
+      ko: "Ralph 접속 완료. YK의 비서 랄프입니다. YK에 대해 무엇이든 물어보시거나, 아래 번호를 골라주세요."
     },
     suggestions: { en: [], ko: [] }
   },

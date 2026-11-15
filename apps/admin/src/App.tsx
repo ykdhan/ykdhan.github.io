@@ -42,7 +42,7 @@ function Login({ onDone }: { onDone(): void }) {
   return (
     <form className="login" onSubmit={submit}>
       <div className="login-orb" />
-      <h1>K.A.I. Admin</h1>
+      <h1>Ralph Admin</h1>
       <input
         type="password"
         autoFocus
@@ -82,7 +82,7 @@ export default function App() {
       <nav className="side">
         <div className="brand">
           <span className="brand-dot" />
-          K.A.I.
+          RALPH
         </div>
         {(Object.keys(PAGES) as PageKey[]).map((key) => (
           <a key={key} href={`#/${key}`} className={page === key ? "is-on" : ""}>

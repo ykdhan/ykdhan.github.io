@@ -2,36 +2,41 @@ import type { Locale } from "./LocaleContext";
 
 export const SEO: Record<Locale, { title: string; description: string }> = {
   en: {
-    title: "YK — AI-Native Fullstack Developer",
+    title: "YK — Ralph",
     description:
-      "Talk to K.A.I., the AI assistant of YK (Youngkwang Han), a Seoul-based fullstack developer shipping web, mobile, and backend products."
+      "Ask Ralph, the AI assistant of YK (Youngkwang Han), a Seoul-based fullstack developer shipping web, mobile, and backend products."
   },
   ko: {
-    title: "YK — 풀스택 개발자",
-    description:
-      "서울 기반 풀스택 개발자 YK(한영광)의 AI 비서 K.A.I.에게 무엇이든 물어보세요."
+    title: "YK — Ralph",
+    description: "서울 기반 풀스택 개발자 YK(한영광)의 AI 비서 Ralph에게 무엇이든 물어보세요."
   }
 };
 
 const S = {
-  placeholder: { en: "Ask anything about YK…", ko: "YK에 대해 무엇이든 물어보세요…" },
-  send: { en: "Send", ko: "전송" },
-  voiceOn: { en: "Voice on", ko: "음성 켜짐" },
-  voiceOff: { en: "Voice off", ko: "음성 꺼짐" },
-  close: { en: "Close", ko: "닫기" },
+  placeholder: { en: "type a question, or a number", ko: "질문을 입력하거나 번호를 누르세요" },
+  voiceOn: { en: "VOICE:ON", ko: "음성:켬" },
+  voiceOff: { en: "VOICE:OFF", ko: "음성:끔" },
   contact: { en: "Contact", ko: "연락처" },
   stack: { en: "Stack", ko: "기술 스택" },
-  forwarded: { en: "Question forwarded to YK", ko: "질문을 YK에게 전달했어요" },
-  sent: { en: "Message delivered to YK", ko: "메시지를 YK에게 전달했어요" },
+  forwarded: { en: "*** QUESTION FORWARDED TO YK ***", ko: "*** 질문을 YK에게 전달했습니다 ***" },
+  sent: { en: "*** MESSAGE DELIVERED TO YK ***", ko: "*** 메시지를 YK에게 전달했습니다 ***" },
   rateLimited: {
-    en: "I need a short break. Too many questions at once. Try again in a minute.",
-    ko: "잠시 숨 좀 돌릴게요. 질문이 너무 많았어요. 1분 뒤에 다시 물어봐 주세요."
+    en: "Too many questions at once. Give me a minute to cool down.",
+    ko: "질문이 너무 많았어요. 1분만 식히고 다시 물어봐 주세요."
   },
   offline: {
-    en: "My main core is offline right now. You can still reach YK directly. The details are beside me.",
-    ko: "지금은 메인 코어가 잠시 오프라인이에요. 옆의 연락처로 YK에게 직접 연락하실 수 있어요."
+    en: "My link to the server is down. You can still reach YK directly:",
+    ko: "지금은 서버와 연결이 끊겼어요. YK에게 직접 연락하실 수 있어요:"
   },
-  skip: { en: "Skip", ko: "건너뛰기" }
+  menu: { en: "QUICK MENU", ko: "빠른 메뉴" },
+  help: {
+    en: "Ask anything about YK in plain words. Commands: HELP, CLS (clear), LANG KO|EN, VOICE.",
+    ko: "YK에 대해 편하게 물어보세요. 명령어: HELP, CLS(화면 지우기), LANG KO|EN, VOICE."
+  },
+  bootMemory: { en: "MEMORY TEST ........... 640K OK", ko: "메모리 검사 ........... 640K OK" },
+  bootProfile: { en: "LOADING PROFILE: YK ...", ko: "프로필 불러오는 중: YK ..." },
+  bootOk: { en: "OK", ko: "OK" },
+  bootFail: { en: "OFFLINE (local mode)", ko: "오프라인 (로컬 모드)" }
 } satisfies Record<string, Record<Locale, string>>;
 
 export type StringKey = keyof typeof S;

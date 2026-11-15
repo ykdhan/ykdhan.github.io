@@ -34,7 +34,7 @@ export const DEFAULT_PROFILE: Profile = {
   summary: { en: "", ko: "" },
   email: "",
   links: [],
-  assistantName: "K.A.I.",
+  assistantName: "Ralph",
   greeting: { en: "", ko: "" },
   suggestions: { en: [], ko: [] },
   persona: ""

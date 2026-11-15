@@ -1,13 +1,13 @@
-# YK — K.A.I.
+# YK — Ralph
 
-Personal site of **YK (Youngkwang Han)**, rebuilt as a conversation: visitors talk
-to **K.A.I.**, an AI assistant that answers from YK's own data, opens panels for
+Personal site of **YK (Youngkwang Han)**, rebuilt as a green-on-black terminal:
+visitors talk to **Ralph**, an AI assistant that answers from YK's own data, opens panels for
 projects and skills, and forwards anything it can't answer, plus contact and
 collaboration requests, to Slack.
 
 ```
 apps/
-  landing/   Vite + React · the one-screen site with the WebGL light core   → Vercel
+  landing/   Vite + React · one-screen terminal with Ralph, an ASCII spider bot → Vercel
   admin/     Vite + React · manage profile, entries, memory, GitHub, inbox → Vercel
   server/    Node + Hono · chat (Claude), RAG memory, Slack, admin API     → Railway
 packages/
@@ -22,7 +22,7 @@ packages/
   prompt (persona, profile, entry index) is prompt-cached.
 - **Tools the model can call**
   - `show_panel`: project, experience, stack, or contact panel next to the answer
-  - `report_unanswered`: when the data doesn't answer the question, K.A.I. says
+  - `report_unanswered`: when the data doesn't answer the question, Ralph says
     so and the question goes to the inbox and Slack
   - `leave_message`: contact or collaboration proposals, with name and contact,
     to the inbox and Slack
@@ -32,9 +32,18 @@ packages/
   optional. If embeddings are unavailable, search falls back to keywords.
 - **Closing the loop**: in the admin inbox, answering an unanswered question saves
   it as an FAQ entry, so the assistant knows it next time.
-- **Core animation**: a fragment shader (domain-warped plasma, soft rays, ripples
-  on syllables). The text stream is turned into a speech-like amplitude envelope
-  that drives the light and the caption in sync. Optional browser TTS.
+- **Ralph**: a six-legged spider robot drawn in ASCII and redrawn at ~15 fps like
+  a CLI program (`hud/avatar/ralph.ts` is a pure `state, time, level -> lines`
+  function). Idle: breathes, blinks, shifts a leg. Listening: eyes wide, a leg
+  taps per keystroke. Thinking: legs drum, spinner above. Speaking: scuttles side
+  to side; eyes and mouth follow the voice. Offline: legs folded, zZ. The text
+  stream becomes a speech-like amplitude envelope that drives Ralph and the
+  typing in sync. Optional browser TTS. Panels render as DOS boxes in the log.
+- **Language**: English by default. Writing in Korean (or asking for Korean)
+  switches the whole UI and the answers to Korean; asking for English switches back.
+- **Terminal**: numbered quick menu (type `1`–`4`), commands `HELP`, `CLS`,
+  `LANG KO|EN`, `VOICE`. Font: [Galmuri](https://github.com/quiple/galmuri)
+  (SIL OFL), self-hosted.
 
 ## Develop
 
@@ -44,7 +53,7 @@ Requirements: Node 20+, Postgres 16 with `pgvector`.
 npm install
 cp apps/server/.env.example apps/server/.env   # fill in the values
 npm run dev:server    # http://localhost:8787  (migrates + seeds on first boot)
-npm run dev:landing   # http://localhost:5173  (/?core = motion playground)
+npm run dev:landing   # http://localhost:5173  (/?avatar = motion playground)
 npm run dev:admin     # http://localhost:5174
 ```
 
