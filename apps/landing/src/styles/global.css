@@ -1,0 +1,606 @@
+/* ============================================================
+   YK — K.A.I. landing
+   One screen: a body of light in the middle, a conversation below.
+   ============================================================ */
+
+:root {
+  --bg: #04050a;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-weak: rgba(255, 255, 255, 0.035);
+  --text: #eef1f7;
+  --muted: #8b93a3;
+  --faint: #5a6170;
+  --acc-a: #9be7ff;
+  --acc-b: #b3a6ff;
+  --grad: linear-gradient(100deg, var(--acc-a), var(--acc-b));
+  --glass: rgba(10, 14, 28, 0.55);
+  --glass-edge: rgba(155, 231, 255, 0.16);
+
+  --font-sans: "Space Grotesk", "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --pad: clamp(16px, 4vw, 40px);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+::selection {
+  background: rgba(155, 231, 255, 0.25);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ---------- background ---------- */
+
+.bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.bg-grid {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(var(--line-weak) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line-weak) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(ellipse 120% 70% at 50% 0%, black 10%, transparent 72%);
+  -webkit-mask-image: radial-gradient(ellipse 120% 70% at 50% 0%, black 10%, transparent 72%);
+  opacity: 0.6;
+}
+
+.bg-glow {
+  position: absolute;
+  width: 60vmax;
+  height: 60vmax;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.4;
+}
+
+.bg-glow-a {
+  top: -30vmax;
+  left: -12vmax;
+  background: radial-gradient(circle at center, rgba(120, 190, 255, 0.14), transparent 60%);
+  animation: drift-a 26s ease-in-out infinite alternate;
+}
+
+.bg-glow-b {
+  top: -22vmax;
+  right: -18vmax;
+  background: radial-gradient(circle at center, rgba(163, 140, 255, 0.12), transparent 60%);
+  animation: drift-b 32s ease-in-out infinite alternate;
+}
+
+.bg-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 140% 90% at 50% 40%, transparent 50%, rgba(0, 0, 0, 0.6));
+}
+
+@keyframes drift-a {
+  to {
+    transform: translate(9vmax, 7vmax) scale(1.12);
+  }
+}
+
+@keyframes drift-b {
+  to {
+    transform: translate(-8vmax, 9vmax) scale(1.08);
+  }
+}
+
+/* ---------- shell ---------- */
+
+.kai {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+}
+
+.kai-core {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.kai-status {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px var(--pad);
+  z-index: 3;
+}
+
+.kai-id {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+}
+
+.kai-dim {
+  color: var(--faint);
+}
+
+.kai-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--acc-a);
+  box-shadow: 0 0 12px var(--acc-a);
+  transition: background 0.5s, box-shadow 0.5s;
+}
+.kai-dot-thinking {
+  background: var(--acc-b);
+  box-shadow: 0 0 12px var(--acc-b);
+  animation: pulse 0.9s ease-in-out infinite;
+}
+.kai-dot-speaking {
+  animation: pulse 0.5s ease-in-out infinite;
+}
+.kai-dot-offline {
+  background: var(--faint);
+  box-shadow: none;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.35;
+  }
+}
+
+.kai-actions {
+  display: flex;
+  gap: 18px;
+  color: var(--muted);
+}
+.kai-actions button {
+  letter-spacing: inherit;
+  text-transform: inherit;
+  transition: color 0.2s;
+}
+.kai-actions button:hover,
+.kai-actions .is-on,
+.kai-actions [aria-pressed="true"] {
+  color: var(--acc-a);
+}
+
+/* ---------- transcript ---------- */
+
+.kai-transcript {
+  position: absolute;
+  left: 50%;
+  bottom: calc(150px + 2vh);
+  transform: translateX(-50%);
+  width: min(720px, calc(100% - 32px));
+  text-align: center;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.kai-question {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 8px;
+  opacity: 0.85;
+}
+.kai-question::before {
+  content: "— ";
+  color: var(--faint);
+}
+
+.kai-caption {
+  min-height: 1.6em;
+  max-height: 30vh;
+  overflow: hidden;
+  font-size: clamp(16px, 1.7vw, 20px);
+  line-height: 1.6;
+  color: var(--text);
+  text-shadow: 0 0 24px rgba(120, 160, 255, 0.45), 0 1px 2px rgba(0, 0, 0, 0.6);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+}
+
+.kai-cursor {
+  display: inline-block;
+  width: 0.45em;
+  height: 0.45em;
+  margin-left: 6px;
+  vertical-align: 0.1em;
+  border-radius: 50%;
+  background: var(--acc-a);
+  box-shadow: 0 0 12px var(--acc-a), 0 0 24px var(--acc-b);
+  animation: pulse 0.6s ease-in-out infinite;
+}
+
+/* ---------- notice ---------- */
+
+.kai-notice {
+  position: absolute;
+  top: 64px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--glass);
+  border: 1px solid var(--glass-edge);
+  color: var(--acc-a);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 4;
+  animation: notice 4.2s ease forwards;
+}
+
+@keyframes notice {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -8px);
+  }
+  8%,
+  85% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ---------- dock ---------- */
+
+.kai-dock {
+  position: absolute;
+  left: 50%;
+  bottom: max(20px, env(safe-area-inset-bottom));
+  transform: translateX(-50%);
+  width: min(720px, calc(100% - 32px));
+  display: grid;
+  gap: 12px;
+  z-index: 3;
+}
+
+.kai-chips {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.kai-chip {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(10, 14, 28, 0.35);
+  color: var(--muted);
+  font-size: 13px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+.kai-chip:hover {
+  color: var(--text);
+  border-color: rgba(155, 231, 255, 0.35);
+  background: rgba(155, 231, 255, 0.06);
+}
+
+.kai-field {
+  position: relative;
+}
+
+.kai-input {
+  width: 100%;
+  padding: 15px 56px 15px 20px;
+  font: inherit;
+  font-size: 15px;
+  color: var(--text);
+  background: var(--glass);
+  border: 1px solid var(--glass-edge);
+  border-radius: 16px;
+  outline: none;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+.kai-input:focus {
+  border-color: rgba(155, 231, 255, 0.45);
+  box-shadow: 0 0 0 4px rgba(155, 231, 255, 0.06), 0 0 40px rgba(120, 140, 255, 0.18);
+}
+.kai-input::placeholder {
+  color: var(--faint);
+}
+
+.kai-send {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: var(--grad);
+  color: #05060c;
+  font-weight: 700;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.kai-send:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+.kai-send:not(:disabled):hover {
+  transform: translateY(-50%) scale(1.05);
+}
+
+/* ---------- panels ---------- */
+
+.panels {
+  position: absolute;
+  right: var(--pad);
+  top: 50%;
+  transform: translateY(-58%);
+  width: min(340px, 30vw);
+  display: grid;
+  gap: 14px;
+  z-index: 2;
+}
+
+.panel {
+  position: relative;
+  padding: 20px 22px;
+  border-radius: 18px;
+  background: linear-gradient(160deg, rgba(155, 231, 255, 0.07), rgba(179, 166, 255, 0.04) 60%, transparent),
+    var(--glass);
+  border: 1px solid var(--glass-edge);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  animation: panel-in 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  max-height: 46vh;
+  overflow: auto;
+}
+
+@keyframes panel-in {
+  from {
+    opacity: 0;
+    transform: translateX(24px) scale(0.97);
+    filter: blur(10px);
+  }
+}
+
+.panel-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-size: 18px;
+  color: var(--faint);
+  line-height: 1;
+}
+.panel-close:hover {
+  color: var(--text);
+}
+
+.panel-kicker {
+  color: var(--acc-a);
+  margin-bottom: 6px;
+  font-size: 0.65rem;
+}
+
+.panel-title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.25;
+  background: linear-gradient(100deg, #fff, var(--acc-a) 60%, var(--acc-b));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.panel-title-sm {
+  font-size: 15px;
+}
+
+.panel-sub {
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.panel-period {
+  color: var(--faint);
+  margin-top: 4px;
+  font-size: 0.65rem;
+}
+
+.panel-body {
+  font-size: 13.5px;
+  color: #c7ccd8;
+  margin-top: 12px;
+  line-height: 1.6;
+}
+
+.panel-group + .panel-group {
+  margin-top: 12px;
+}
+
+.panel-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+.panel-tags li {
+  font-size: 12px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+}
+
+.panel-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 14px;
+  font-size: 13px;
+}
+.panel-links-col {
+  flex-direction: column;
+  gap: 6px;
+}
+.panel-links a {
+  color: var(--acc-a);
+}
+.panel-links a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- css fallback for the core (no WebGL) ---------- */
+
+.core-fallback {
+  background: radial-gradient(
+    circle at 50% 43%,
+    rgba(255, 255, 255, 0.9) 0,
+    rgba(155, 231, 255, 0.55) 4vmin,
+    rgba(120, 140, 255, 0.18) 18vmin,
+    transparent 34vmin
+  );
+  animation: core-breathe 4s ease-in-out infinite;
+  transition: filter 0.6s;
+}
+.core-fallback-speaking {
+  animation-duration: 0.9s;
+}
+.core-fallback-thinking {
+  filter: hue-rotate(40deg);
+}
+.core-fallback-offline {
+  filter: grayscale(1) brightness(0.5);
+}
+@keyframes core-breathe {
+  50% {
+    transform: scale(1.06);
+    opacity: 0.85;
+  }
+}
+
+/* ---------- small screens ---------- */
+
+@media (max-width: 760px) {
+  .kai-actions {
+    gap: 12px;
+  }
+  .panels {
+    left: 16px;
+    right: 16px;
+    top: 60px;
+    width: auto;
+    transform: none;
+  }
+  .panel:not(:last-child) {
+    display: none;
+  }
+  .panel {
+    max-height: 30vh;
+  }
+  .kai-transcript {
+    bottom: calc(170px + 1vh);
+  }
+  .kai-chips {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    scrollbar-width: none;
+  }
+  .kai-chip {
+    flex: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-glow-a,
+  .bg-glow-b,
+  .kai-dot,
+  .kai-cursor,
+  .panel,
+  .core-fallback {
+    animation: none;
+  }
+}
+
+/* ---------- motion playground (?core) ---------- */
+
+.demo-dock {
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  width: min(680px, calc(100% - 32px));
+  display: grid;
+  gap: 12px;
+}
+.demo-chip {
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+}
+.demo-chip.is-on {
+  color: var(--acc-a);
+  border-color: rgba(155, 231, 255, 0.4);
+}
