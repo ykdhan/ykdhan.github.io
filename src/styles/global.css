@@ -789,3 +789,131 @@ a.work-row:hover .work-arrow {
 .footer-top:hover {
   color: var(--text);
 }
+
+/* ============================================================
+   K.A.I. core prototype (?core)
+   ============================================================ */
+
+.kai {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+}
+
+.kai-core {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.kai-status {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 18px var(--pad);
+  color: var(--muted);
+}
+
+.kai-dim {
+  color: var(--faint);
+}
+
+.kai-state {
+  color: var(--acc-a);
+  transition: color 0.4s;
+}
+.kai-state-thinking {
+  color: var(--acc-b);
+}
+.kai-state-offline {
+  color: var(--faint);
+}
+
+.kai-caption {
+  position: absolute;
+  left: 50%;
+  bottom: calc(118px + 2vh);
+  transform: translateX(-50%);
+  width: min(680px, calc(100% - 32px));
+  min-height: 3.2em;
+  text-align: center;
+  font-size: clamp(15px, 1.6vw, 19px);
+  line-height: 1.6;
+  color: var(--text);
+  text-shadow: 0 0 18px rgba(155, 231, 255, 0.35);
+}
+
+.kai-cursor {
+  display: inline-block;
+  width: 0.5em;
+  height: 1em;
+  margin-left: 2px;
+  vertical-align: -0.12em;
+  background: var(--acc-a);
+  box-shadow: 0 0 10px var(--acc-a);
+  animation: kai-blink 0.9s steps(2) infinite;
+}
+
+@keyframes kai-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.kai-dock {
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  width: min(680px, calc(100% - 32px));
+  display: grid;
+  gap: 12px;
+}
+
+.kai-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.kai-chip {
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.68rem;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+.kai-chip:hover,
+.kai-chip.is-on {
+  color: var(--acc-a);
+  border-color: rgba(155, 231, 255, 0.4);
+  background: rgba(155, 231, 255, 0.06);
+}
+
+.kai-input {
+  width: 100%;
+  padding: 14px 18px;
+  font: inherit;
+  font-size: 15px;
+  color: var(--text);
+  background: rgba(4, 5, 10, 0.6);
+  border: 1px solid rgba(155, 231, 255, 0.22);
+  border-radius: 12px;
+  outline: none;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.kai-input:focus {
+  border-color: rgba(155, 231, 255, 0.55);
+  box-shadow: 0 0 24px rgba(155, 231, 255, 0.15);
+}
+.kai-input::placeholder {
+  color: var(--faint);
+}
