@@ -59,7 +59,7 @@ TEST_DATABASE_URL=postgres://… npm test -w @yk/server   # integration tests (m
 **Server → Railway**
 1. Create a project with a **pgvector** Postgres (Railway template "pgvector").
 2. Add a service from this repo. In *Settings → Config-as-code*, point it to
-   `apps/server/railway.json` (it builds `apps/server/Dockerfile` from the repo root).
+   `/apps/server/railway.json` (absolute path; it builds `apps/server/Dockerfile` from the repo root).
 3. Variables: `DATABASE_URL` (reference the Postgres service), `ANTHROPIC_API_KEY`,
    `SLACK_WEBHOOK_URL`, `ADMIN_PASSWORD`, `SESSION_SECRET` (`openssl rand -hex 32`),
    `CORS_ORIGINS` (the two Vercel URLs, comma separated). Optional: `GITHUB_TOKEN`,
